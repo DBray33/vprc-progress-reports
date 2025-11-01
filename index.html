@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley Peak Roofing - Progress Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            font-size: 17px;
+            line-height: 1.47;
+            letter-spacing: -0.022em;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* iOS-style Header */
+        .header {
+            background: rgba(28, 28, 30, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            padding: max(env(safe-area-inset-top), 20px) 20px 20px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .header p {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(235, 235, 245, 0.6);
+            letter-spacing: -0.08px;
+        }
+
+        .header .subtitle {
+            font-size: 11px;
+            color: rgba(235, 235, 245, 0.3);
+            margin-top: 2px;
+        }
+
+        /* iOS-style Content */
+        .content {
+            padding: 20px 16px;
+            padding-bottom: max(env(safe-area-inset-bottom), 20px);
+        }
+
+        .intro {
+            margin-bottom: 32px;
+        }
+
+        .intro h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .intro p {
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.6);
+            line-height: 1.4;
+        }
+
+        /* iOS-style Stats Cards */
+        .stats-banner {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stats-banner h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .stat-item {
+            background: rgba(58, 58, 60, 0.4);
+            border: 0.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 2px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: rgba(235, 235, 245, 0.6);
+            font-weight: 500;
+            letter-spacing: -0.06px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* iOS-style Report Cards */
+        .reports-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .report-card {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .report-card:active {
+            transform: scale(0.98);
+            background: rgba(58, 58, 60, 0.5);
+        }
+
+        .report-card:active::before {
+            opacity: 1;
+        }
+
+        .report-card.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .report-card.disabled:active {
+            transform: none;
+        }
+
+        .report-month {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .report-month i {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        .report-date {
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .report-highlights {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .report-highlights h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .report-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .report-highlights li {
+            padding: 4px 0;
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.8);
+            display: flex;
+            align-items: start;
+            gap: 8px;
+            line-height: 1.4;
+        }
+
+        .report-highlights li i {
+            color: #34C759;
+            margin-top: 2px;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .view-report {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            color: #0A84FF;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: -0.08px;
+        }
+
+        .view-report i {
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .report-card:active .view-report i {
+            transform: translateX(2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 24px 16px;
+            padding-bottom: max(env(safe-area-inset-bottom), 24px);
+            font-size: 11px;
+            color: rgba(235, 235, 245, 0.3);
+            border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+            margin-top: 32px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        /* Desktop adjustments */
+        @media (min-width: 768px) {
+            body {
+                font-size: 19px;
+            }
+
+            .container {
+                max-width: 980px;
+                margin: 0 auto;
+            }
+
+            .header {
+                padding: 32px 40px;
+                position: relative;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .header p {
+                font-size: 17px;
+            }
+
+            .content {
+                padding: 40px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+
+            .reports-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .reports-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Valley Peak Roofing</h1>
+            <p>Monthly SEO & Traffic Analysis Reports</p>
+            <p class="subtitle">Track your digital growth and performance metrics</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <h2>PERFORMANCE REPORTS</h2>
+                <p>Comprehensive SEO and traffic analysis dashboard tracking website performance, rankings, and lead generation success.</p>
+            </div>
+
+            <div class="stats-banner">
+                <h3>LATEST PERFORMANCE</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">871</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">136</div>
+                        <div class="stat-label">Organic Clicks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">17</div>
+                        <div class="stat-label">Form Submissions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">306</div>
+                        <div class="stat-label">Ranked Keywords</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">MONTHLY REPORTS</h2>
+
+            <div class="reports-grid">
+                <!-- October 2025 Report -->
+                <a href="reports/october-2025.html" class="report-card">
+                    <div class="report-month">
+                        <i class="fas fa-file-alt"></i>
+                        October 2025
+                    </div>
+                    <div class="report-date">
+                        <i class="far fa-calendar"></i> Reporting Period: Oct 1-31, 2025
+                    </div>
+                    <div class="report-highlights">
+                        <h4>KEY HIGHLIGHTS</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>871 users</strong> (+116.7% growth)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>17 form submissions</strong> (+41.7%)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>136 organic clicks</strong> (+33.3%)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>New #1 ranking</strong> for financing term</li>
+                        </ul>
+                    </div>
+                    <div class="view-report">
+                        View Full Report <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <!-- Placeholder for November 2025 Report -->
+                <div class="report-card disabled">
+                    <div class="report-month">
+                        <i class="fas fa-clock"></i>
+                        November 2025
+                    </div>
+                    <div class="report-date">
+                        <i class="far fa-calendar"></i> Coming Soon
+                    </div>
+                    <div class="report-highlights">
+                        <h4>IN PROGRESS</h4>
+                        <ul>
+                            <li><i class="fas fa-ellipsis-h"></i> Available in early December</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Prepared by Keystone Web Solutions</p>
+            <p>Professional SEO & Digital Marketing Services</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update stats banner with latest data dynamically if needed
+        // This can be extended in the future to pull from an API or data file
+    </script>
+</body>
+</html>
