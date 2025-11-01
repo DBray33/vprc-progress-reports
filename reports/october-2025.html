@@ -380,28 +380,47 @@
 
         .tooltip .tooltiptext {
             visibility: hidden;
-            width: 280px;
-            background-color: rgba(28, 28, 30, 0.95);
+            width: 260px;
+            max-width: calc(100vw - 32px);
+            background-color: rgba(28, 28, 30, 0.98);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             color: #fff;
             text-align: left;
             border-radius: 10px;
             border: 0.5px solid rgba(255, 255, 255, 0.2);
-            padding: 10px;
+            padding: 12px;
             position: fixed;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
             z-index: 9999;
             opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 12px;
-            line-height: 1.4;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.2s;
+            font-size: 13px;
+            line-height: 1.5;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
             pointer-events: none;
         }
 
-        .tooltip:hover .tooltiptext {
+        .tooltip:hover .tooltiptext,
+        .tooltip:active .tooltiptext {
             visibility: visible;
             opacity: 1;
+        }
+
+        /* Tooltip backdrop for mobile */
+        .tooltip:hover::before,
+        .tooltip:active::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 9998;
+            pointer-events: none;
         }
 
         /* Desktop */
