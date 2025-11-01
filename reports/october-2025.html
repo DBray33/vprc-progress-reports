@@ -381,7 +381,7 @@
         .tooltip .tooltiptext {
             visibility: hidden;
             width: 280px;
-            max-width: 320px;
+            max-width: calc(100vw - 32px);
             background-color: rgba(28, 28, 30, 0.98);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -391,8 +391,9 @@
             border: 0.5px solid rgba(255, 255, 255, 0.2);
             padding: 12px;
             position: absolute;
-            left: 105%;
-            top: -8px;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 9999;
             opacity: 0;
             transition: opacity 0.2s;
@@ -402,59 +403,32 @@
             pointer-events: none;
         }
 
-        /* Arrow pointing to the left */
+        /* Arrow pointing down */
         .tooltip .tooltiptext::before {
             content: '';
             position: absolute;
-            right: 100%;
-            top: 12px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
             border: 6px solid transparent;
-            border-right-color: rgba(255, 255, 255, 0.2);
+            border-top-color: rgba(255, 255, 255, 0.2);
         }
 
         .tooltip .tooltiptext::after {
             content: '';
             position: absolute;
-            right: 100%;
-            top: 13px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: -1px;
             border: 5px solid transparent;
-            border-right-color: rgba(28, 28, 30, 0.98);
+            border-top-color: rgba(28, 28, 30, 0.98);
         }
 
         .tooltip:hover .tooltiptext,
         .tooltip:active .tooltiptext {
             visibility: visible;
             opacity: 1;
-        }
-
-        /* Mobile: Center tooltip if it would go off-screen */
-        @media (max-width: 768px) {
-            .tooltip .tooltiptext {
-                left: 50%;
-                transform: translateX(-50%);
-                top: calc(100% + 10px);
-                max-width: calc(100vw - 32px);
-            }
-
-            .tooltip .tooltiptext::before {
-                right: auto;
-                left: 50%;
-                top: -12px;
-                transform: translateX(-50%);
-                border: 6px solid transparent;
-                border-bottom-color: rgba(255, 255, 255, 0.2);
-                border-right-color: transparent;
-            }
-
-            .tooltip .tooltiptext::after {
-                right: auto;
-                left: 50%;
-                top: -10px;
-                transform: translateX(-50%);
-                border: 5px solid transparent;
-                border-bottom-color: rgba(28, 28, 30, 0.98);
-                border-right-color: transparent;
-            }
         }
 
         /* Desktop */
