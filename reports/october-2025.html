@@ -1882,13 +1882,16 @@
             tooltip.addEventListener('mouseleave', function() {
                 this.querySelector('.tooltiptext').style.display = 'none';
             });
+        });
 
-            tooltip.addEventListener('touchend', function() {
-                var self = this;
-                setTimeout(function() {
-                    self.querySelector('.tooltiptext').style.display = 'none';
-                }, 2000);
-            });
+        // Hide all tooltips when clicking anywhere on the page
+        document.addEventListener('click', function(e) {
+            // Don't hide if clicking on a tooltip itself
+            if (!e.target.closest('.tooltip')) {
+                document.querySelectorAll('.tooltiptext').forEach(function(tooltip) {
+                    tooltip.style.display = 'none';
+                });
+            }
         });
     </script>
 </body>
