@@ -1859,18 +1859,26 @@
 
             // Position it directly above the element, centered
             var tooltipRect = tooltipText.getBoundingClientRect();
-            var left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-            var top = rect.top - tooltipRect.height - 10;
 
-            // Keep it on screen horizontally
-            if (left < 16) left = 16;
-            if (left + tooltipRect.width > window.innerWidth - 16) {
-                left = window.innerWidth - tooltipRect.width - 16;
+            // Account for page scroll position
+            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            var left = rect.left + scrollLeft + (rect.width / 2) - (tooltipRect.width / 2);
+            var top = rect.top + scrollTop - tooltipRect.height - 10;
+
+            // Keep it on screen horizontally (considering scroll)
+            var viewportLeft = scrollLeft + 16;
+            var viewportRight = scrollLeft + window.innerWidth - 16;
+
+            if (left < viewportLeft) left = viewportLeft;
+            if (left + tooltipRect.width > viewportRight) {
+                left = viewportRight - tooltipRect.width;
             }
 
             // Keep it on screen vertically - if it goes off top, show below instead
-            if (top < 16) {
-                top = rect.bottom + 10;
+            if (rect.top - tooltipRect.height - 10 < 0) {
+                top = rect.bottom + scrollTop + 10;
             }
 
             tooltipText.style.left = left + 'px';
