@@ -1857,11 +1857,11 @@
             // Show the tooltip
             tooltipText.style.display = 'block';
 
-            // Position it above the element, centered, moved up 8rem
+            // Position it above the element, centered, moved up 13rem
             var tooltipRect = tooltipText.getBoundingClientRect();
             var remInPixels = parseFloat(getComputedStyle(document.documentElement).fontSize);
             var left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
-            var top = rect.top - tooltipRect.height - 10 - (8 * remInPixels);
+            var top = rect.top - tooltipRect.height - 10 - (13 * remInPixels);
 
             // Keep it on screen
             if (left < 16) left = 16;
