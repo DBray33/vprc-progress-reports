@@ -379,7 +379,7 @@
         }
 
         .tooltip .tooltiptext {
-            visibility: hidden;
+            display: none;
             width: 280px;
             max-width: calc(100vw - 32px);
             background-color: rgba(28, 28, 30, 0.98);
@@ -390,13 +390,8 @@
             border-radius: 10px;
             border: 0.5px solid rgba(255, 255, 255, 0.2);
             padding: 12px;
-            position: absolute;
-            bottom: calc(100% + 10px);
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.2s;
+            position: fixed;
+            z-index: 10000;
             font-size: 12px;
             line-height: 1.4;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
@@ -423,12 +418,6 @@
             margin-top: -1px;
             border: 5px solid transparent;
             border-top-color: rgba(28, 28, 30, 0.98);
-        }
-
-        .tooltip:hover .tooltiptext,
-        .tooltip:active .tooltiptext {
-            visibility: visible;
-            opacity: 1;
         }
 
         /* Desktop */
@@ -1848,6 +1837,53 @@
                     }
                 }
             }
+        });
+
+        // Position tooltips dynamically
+        document.querySelectorAll('.tooltip').forEach(function(tooltip) {
+            tooltip.addEventListener('mouseenter', function(e) {
+                positionTooltip(this);
+            });
+
+            tooltip.addEventListener('touchstart', function(e) {
+                positionTooltip(this);
+            });
+        });
+
+        function positionTooltip(element) {
+            var tooltipText = element.querySelector('.tooltiptext');
+            var rect = element.getBoundingClientRect();
+
+            // Show the tooltip
+            tooltipText.style.display = 'block';
+
+            // Position it above the element, centered
+            var tooltipRect = tooltipText.getBoundingClientRect();
+            var left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+            var top = rect.top - tooltipRect.height - 10;
+
+            // Keep it on screen
+            if (left < 16) left = 16;
+            if (left + tooltipRect.width > window.innerWidth - 16) {
+                left = window.innerWidth - tooltipRect.width - 16;
+            }
+
+            tooltipText.style.left = left + 'px';
+            tooltipText.style.top = top + 'px';
+        }
+
+        // Hide tooltips on mouse leave
+        document.querySelectorAll('.tooltip').forEach(function(tooltip) {
+            tooltip.addEventListener('mouseleave', function() {
+                this.querySelector('.tooltiptext').style.display = 'none';
+            });
+
+            tooltip.addEventListener('touchend', function() {
+                var self = this;
+                setTimeout(function() {
+                    self.querySelector('.tooltiptext').style.display = 'none';
+                }, 2000);
+            });
         });
     </script>
 </body>
