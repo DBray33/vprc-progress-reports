@@ -204,6 +204,43 @@
             padding: 14px;
             position: relative;
             overflow: visible;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            border-color: rgba(10, 132, 255, 0.4);
+            background: rgba(28, 28, 30, 0.7);
+        }
+
+        .metric-card-content {
+            position: relative;
+        }
+
+        .metric-card-front,
+        .metric-card-back {
+            transition: opacity 0.3s ease;
+        }
+
+        .metric-card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            pointer-events: none;
+            font-size: 12px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.9);
+            padding-top: 20px;
+        }
+
+        .metric-card:hover .metric-card-front {
+            opacity: 0;
+        }
+
+        .metric-card:hover .metric-card-back {
+            opacity: 1;
         }
 
         .metric-card h4 {
@@ -581,9 +618,17 @@
                 </div>
                 <div class="metric-card">
                     <h4>Total Clicks</h4>
-                    <div class="metric-value">136</div>
-                    <div class="metric-change positive">
-                        <i class="fas fa-arrow-up"></i> +33.3% from Sept (102)
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">136</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +33.3% from Sept (102)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            <strong style="color: #0A84FF; display: block; margin-bottom: 8px;">Google Search Console Clicks</strong>
+                            Measures clicks from Google Search results only. This counts when someone clicks your site's link on a Google search results page. Different from GA4 users because GA4 includes ALL traffic sources (direct, social, email, etc.) while GSC only tracks Google Search.
+                        </div>
                     </div>
                 </div>
                 <div class="metric-card">
@@ -665,9 +710,17 @@
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Total Users</h4>
-                    <div class="metric-value">871</div>
-                    <div class="metric-change positive">
-                        <i class="fas fa-arrow-up"></i> +116.7% from Sept (402)
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">871</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +116.7% from Sept (402)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            <strong style="color: #0A84FF; display: block; margin-bottom: 8px;">Why is this different from GSC Clicks (136)?</strong>
+                            GA4 measures ALL users who land on your site from any source: Google Search, direct visits, bookmarks, social media, ads, email, or other search engines. GSC only counts clicks from Google Search. Your 136 Google clicks are included in the 871 total users, but the other 735 users came from different channels.
+                        </div>
                     </div>
                 </div>
                 <div class="metric-card">
