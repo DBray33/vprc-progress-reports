@@ -263,6 +263,31 @@
             border-radius: 12px;
         }
 
+        /* Custom scrollbar styling for dark theme */
+        .table-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: rgba(58, 58, 60, 0.4);
+            border-radius: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.6);
+            border-radius: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.8);
+        }
+
+        /* Firefox scrollbar */
+        .table-wrapper {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(99, 102, 241, 0.6) rgba(58, 58, 60, 0.4);
+        }
+
         table {
             width: 100%;
             min-width: 600px;
