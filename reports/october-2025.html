@@ -394,6 +394,84 @@
             max-height: 300px;
         }
 
+        /* Info Tooltip */
+        .info-tooltip {
+            position: relative;
+            display: inline-block;
+            margin-left: 6px;
+            cursor: help;
+        }
+
+        .info-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgba(10, 132, 255, 0.2);
+            color: #0A84FF;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .tooltip-content {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            max-width: 90vw;
+            background: rgba(28, 28, 30, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 11px;
+            line-height: 1.6;
+            color: rgba(235, 235, 245, 0.9);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            pointer-events: none;
+            transition: opacity 0.2s, visibility 0.2s;
+            text-align: left;
+        }
+
+        .tooltip-content::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: rgba(28, 28, 30, 0.98);
+        }
+
+        .info-tooltip:hover .tooltip-content,
+        .info-tooltip:active .tooltip-content {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-content strong {
+            color: #0A84FF;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .tooltip-content ul {
+            margin: 8px 0;
+            padding-left: 16px;
+        }
+
+        .tooltip-content li {
+            margin: 4px 0;
+        }
+
         /* Expandable Rows */
         .expandable-row {
             cursor: pointer;
@@ -549,7 +627,15 @@
                     <small>Note: GSC methodology baseline still stabilizing</small>
                 </div>
                 <div class="metric-card">
-                    <h4>Total Clicks</h4>
+                    <h4>Total Clicks
+                        <span class="info-tooltip">
+                            <span class="info-icon">i</span>
+                            <span class="tooltip-content">
+                                <strong>Google Search Console Clicks</strong>
+                                Measures clicks from Google Search results only. This counts when someone clicks your site's link on a Google search results page. Different from GA4 users because GA4 includes ALL traffic sources (direct, social, email, etc.) while GSC only tracks Google Search.
+                            </span>
+                        </span>
+                    </h4>
                     <div class="metric-value">136</div>
                     <div class="metric-change positive">
                         <i class="fas fa-arrow-up"></i> +33.3% from Sept (102)
@@ -633,7 +719,15 @@
             <h3>GOOGLE ANALYTICS 4 METRICS</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <h4>Total Users</h4>
+                    <h4>Total Users
+                        <span class="info-tooltip">
+                            <span class="info-icon">i</span>
+                            <span class="tooltip-content">
+                                <strong>Why is this different from GSC Clicks (136)?</strong>
+                                GA4 measures ALL users who land on your site from any source: Google Search, direct visits, bookmarks, social media, ads, email, or other search engines. GSC only counts clicks from Google Search. Your 136 Google clicks are included in the 871 total users, but the other 735 users came from different channels.
+                            </span>
+                        </span>
+                    </h4>
                     <div class="metric-value">871</div>
                     <div class="metric-change positive">
                         <i class="fas fa-arrow-up"></i> +116.7% from Sept (402)
