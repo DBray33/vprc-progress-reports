@@ -209,7 +209,8 @@
             height: 150px;
         }
 
-        .metric-card:hover {
+        .metric-card:hover,
+        .metric-card.active {
             border-color: rgba(10, 132, 255, 0.4);
             background: rgba(28, 28, 30, 0.7);
         }
@@ -236,11 +237,13 @@
             padding-top: 20px;
         }
 
-        .metric-card:hover .metric-card-front {
+        .metric-card:hover .metric-card-front,
+        .metric-card.active .metric-card-front {
             opacity: 0;
         }
 
-        .metric-card:hover .metric-card-back {
+        .metric-card:hover .metric-card-back,
+        .metric-card.active .metric-card-back {
             opacity: 1;
         }
 
@@ -2070,6 +2073,24 @@
                 nextRow.classList.toggle('show');
             }
         }
+
+        // Handle metric card taps for mobile
+        document.querySelectorAll('.metric-card').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                // Only on touch devices
+                if ('ontouchstart' in window) {
+                    // Toggle active class
+                    this.classList.toggle('active');
+
+                    // Close other cards
+                    document.querySelectorAll('.metric-card').forEach(function(otherCard) {
+                        if (otherCard !== card) {
+                            otherCard.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
 
         // Traffic Sources Chart with dark theme
         const trafficCtx = document.getElementById('trafficSourcesChart').getContext('2d');
