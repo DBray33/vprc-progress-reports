@@ -369,56 +369,6 @@
             max-height: 300px;
         }
 
-        /* Tooltip */
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted #0A84FF;
-            cursor: help;
-            color: #0A84FF;
-        }
-
-        .tooltip .tooltiptext {
-            display: none;
-            width: 280px;
-            max-width: calc(100vw - 32px);
-            background-color: rgba(28, 28, 30, 0.98);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            color: #fff;
-            text-align: left;
-            border-radius: 10px;
-            border: 0.5px solid rgba(255, 255, 255, 0.2);
-            padding: 12px;
-            position: fixed;
-            z-index: 10000;
-            font-size: 12px;
-            line-height: 1.4;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-            pointer-events: none;
-        }
-
-        /* Arrow pointing down */
-        .tooltip .tooltiptext::before {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 6px solid transparent;
-            border-top-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .tooltip .tooltiptext::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: -1px;
-            border: 5px solid transparent;
-            border-top-color: rgba(28, 28, 30, 0.98);
-        }
 
         /* Desktop */
         @media (min-width: 768px) {
@@ -950,67 +900,67 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong><span class="tooltip">Related Searches<span class="tooltiptext">Links to related search queries that appear at the bottom of Google search results pages</span></span></strong></td>
+                        <td><strong>Related Searches</strong></td>
                         <td>292</td>
                         <td>-</td>
                         <td>Appear in suggested searches</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Local Pack<span class="tooltiptext">The map + 3 business listings that appear at the top of local search results. Critical for "near me" searches.</span></span></strong></td>
+                        <td><strong>Local Pack</strong></td>
                         <td>235</td>
                         <td><span class="metric-change positive">+2 from Sept (233)</span></td>
                         <td>Strong local presence in 3-pack results</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Video<span class="tooltiptext">Your site appears in video search results. Usually means competitor videos are ranking for your keywords.</span></span></strong></td>
+                        <td><strong>Video</strong></td>
                         <td>212</td>
                         <td><span class="metric-change positive">+3 from Sept (209)</span></td>
                         <td>Appearing in video results</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Image Pack<span class="tooltiptext">The horizontal carousel of images that appears in Google results, usually for visual-heavy searches.</span></span></strong></td>
+                        <td><strong>Image Pack</strong></td>
                         <td>201</td>
                         <td><span class="metric-change negative">-3 from Sept (204)</span></td>
                         <td>Featured in image carousel results</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Sitelinks<span class="tooltiptext">Additional links under your main result that show important pages. Indicates Google views you as authoritative.</span></span></strong></td>
+                        <td><strong>Sitelinks</strong></td>
                         <td>188</td>
                         <td><span class="metric-change positive">+2 from Sept (186)</span></td>
                         <td>Brand authority showing expanded results</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Image<span class="tooltiptext">Individual images from your site appearing in Google Images or within regular search results.</span></span></strong></td>
+                        <td><strong>Image</strong></td>
                         <td>131</td>
                         <td><span class="metric-change positive">+3 from Sept (128)</span></td>
                         <td>Visual search presence</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">People Also Ask<span class="tooltiptext">The expandable question boxes that appear in search results. Getting featured here drives significant traffic.</span></span></strong></td>
+                        <td><strong>People Also Ask</strong></td>
                         <td>128</td>
                         <td><span class="metric-change positive">+5 from Sept (123)</span></td>
                         <td>Featured in PAA boxes</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">AI Overview<span class="tooltiptext">Google's AI-generated answer summaries at the top of results. Being cited here is valuable for future visibility.</span></span></strong></td>
+                        <td><strong>AI Overview</strong></td>
                         <td>64</td>
                         <td><span class="metric-change neutral">0 from Sept (64)</span></td>
                         <td>Cited in AI-generated answers</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Video Carousel<span class="tooltiptext">A scrollable row of video thumbnails in search results, typically for how-to or tutorial queries.</span></span></strong></td>
+                        <td><strong>Video Carousel</strong></td>
                         <td>30</td>
                         <td>-</td>
                         <td>Featured in video carousels</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Discussions and Forums<span class="tooltiptext">Reddit, forum threads, or discussion posts appearing in search results (new feature from Google).</span></span></strong></td>
+                        <td><strong>Discussions and Forums</strong></td>
                         <td>24</td>
                         <td>-</td>
                         <td>Appearing in forum discussions</td>
                     </tr>
                     <tr>
-                        <td><strong><span class="tooltip">Knowledge Panel<span class="tooltiptext">The info box on the right side of Google with business details, photos, and key facts about your brand.</span></span></strong></td>
+                        <td><strong>Knowledge Panel</strong></td>
                         <td>22</td>
                         <td>-</td>
                         <td>Brand knowledge graph presence</td>
@@ -1780,17 +1730,6 @@
     </div>
 
     <script>
-        // Position tooltips dynamically
-        document.querySelectorAll('.tooltip').forEach(function(tooltip) {
-            tooltip.addEventListener('mouseenter', function(e) {
-                var tooltipText = this.querySelector('.tooltiptext');
-                var rect = this.getBoundingClientRect();
-
-                tooltipText.style.top = (rect.top - tooltipText.offsetHeight - 10) + 'px';
-                tooltipText.style.left = (rect.left + (rect.width / 2) - (tooltipText.offsetWidth / 2)) + 'px';
-            });
-        });
-
         // Traffic Sources Chart with dark theme
         const trafficCtx = document.getElementById('trafficSourcesChart').getContext('2d');
         new Chart(trafficCtx, {
@@ -1836,69 +1775,6 @@
                         }
                     }
                 }
-            }
-        });
-
-        // Position tooltips dynamically
-        document.querySelectorAll('.tooltip').forEach(function(tooltip) {
-            tooltip.addEventListener('mouseenter', function(e) {
-                positionTooltip(this);
-            });
-
-            tooltip.addEventListener('touchstart', function(e) {
-                positionTooltip(this);
-            });
-        });
-
-        function positionTooltip(element) {
-            var tooltipText = element.querySelector('.tooltiptext');
-            var rect = element.getBoundingClientRect();
-
-            // Show the tooltip
-            tooltipText.style.display = 'block';
-
-            // Position it directly above the element, centered
-            var tooltipRect = tooltipText.getBoundingClientRect();
-
-            // Account for page scroll position
-            var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            var left = rect.left + scrollLeft + (rect.width / 2) - (tooltipRect.width / 2);
-            var top = rect.top + scrollTop - tooltipRect.height - 10;
-
-            // Keep it on screen horizontally (considering scroll)
-            var viewportLeft = scrollLeft + 16;
-            var viewportRight = scrollLeft + window.innerWidth - 16;
-
-            if (left < viewportLeft) left = viewportLeft;
-            if (left + tooltipRect.width > viewportRight) {
-                left = viewportRight - tooltipRect.width;
-            }
-
-            // Keep it on screen vertically - if it goes off top, show below instead
-            if (rect.top - tooltipRect.height - 10 < 0) {
-                top = rect.bottom + scrollTop + 10;
-            }
-
-            tooltipText.style.left = left + 'px';
-            tooltipText.style.top = top + 'px';
-        }
-
-        // Hide tooltips on mouse leave
-        document.querySelectorAll('.tooltip').forEach(function(tooltip) {
-            tooltip.addEventListener('mouseleave', function() {
-                this.querySelector('.tooltiptext').style.display = 'none';
-            });
-        });
-
-        // Hide all tooltips when clicking anywhere on the page
-        document.addEventListener('click', function(e) {
-            // Don't hide if clicking on a tooltip itself
-            if (!e.target.closest('.tooltip')) {
-                document.querySelectorAll('.tooltiptext').forEach(function(tooltip) {
-                    tooltip.style.display = 'none';
-                });
             }
         });
     </script>
