@@ -203,6 +203,7 @@
             border-radius: 12px;
             padding: 14px;
             position: relative;
+            overflow: visible;
         }
 
         .metric-card h4 {
@@ -418,12 +419,9 @@
         .tooltip-content {
             visibility: hidden;
             opacity: 0;
-            position: absolute;
-            bottom: calc(100% + 8px);
-            left: 50%;
-            transform: translateX(-50%);
+            position: fixed;
             width: 320px;
-            max-width: 90vw;
+            max-width: calc(100vw - 32px);
             background: rgba(28, 28, 30, 0.98);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -434,7 +432,7 @@
             line-height: 1.6;
             color: rgba(235, 235, 245, 0.9);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-            z-index: 10000;
+            z-index: 99999;
             pointer-events: none;
             transition: opacity 0.2s, visibility 0.2s;
             text-align: left;
@@ -1920,6 +1918,22 @@
                 nextRow.classList.toggle('show');
             }
         }
+
+        // Position tooltips on hover
+        document.querySelectorAll('.info-tooltip').forEach(function(tooltip) {
+            tooltip.addEventListener('mouseenter', function() {
+                const tooltipContent = this.querySelector('.tooltip-content');
+                const rect = this.getBoundingClientRect();
+
+                // Position above the icon
+                const left = rect.left + (rect.width / 2);
+                const top = rect.top - 8;
+
+                tooltipContent.style.left = left + 'px';
+                tooltipContent.style.top = top + 'px';
+                tooltipContent.style.transform = 'translate(-50%, -100%)';
+            });
+        });
 
         // Traffic Sources Chart with dark theme
         const trafficCtx = document.getElementById('trafficSourcesChart').getContext('2d');
