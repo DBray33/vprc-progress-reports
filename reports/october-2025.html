@@ -369,6 +369,48 @@
             max-height: 300px;
         }
 
+        /* Expandable Rows */
+        .expandable-row {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .expandable-row:hover {
+            background: rgba(58, 58, 60, 0.3);
+        }
+
+        .expandable-row:active {
+            background: rgba(58, 58, 60, 0.5);
+        }
+
+        .expand-icon {
+            font-size: 10px;
+            margin-left: 8px;
+            transition: transform 0.2s;
+            color: #0A84FF;
+        }
+
+        .expandable-row.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .expanded-content {
+            display: none;
+            background: rgba(10, 132, 255, 0.05);
+            border-left: 2px solid #0A84FF;
+        }
+
+        .expanded-content td {
+            padding: 16px 12px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            font-style: italic;
+        }
+
+        .expanded-content.show {
+            display: table-row;
+        }
 
         /* Desktop */
         @media (min-width: 768px) {
@@ -895,75 +937,96 @@
                         <th>SERP Feature</th>
                         <th>Keywords Captured</th>
                         <th>Change from Sept</th>
-                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Related Searches</strong></td>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Related Searches <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>292</td>
                         <td>-</td>
-                        <td>Appear in suggested searches</td>
                     </tr>
-                    <tr>
-                        <td><strong>Local Pack</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">Links to related search queries that appear at the bottom of Google search results pages</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Local Pack <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>235</td>
                         <td><span class="metric-change positive">+2 from Sept (233)</span></td>
-                        <td>Strong local presence in 3-pack results</td>
                     </tr>
-                    <tr>
-                        <td><strong>Video</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">The map + 3 business listings that appear at the top of local search results. Critical for "near me" searches.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Video <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>212</td>
                         <td><span class="metric-change positive">+3 from Sept (209)</span></td>
-                        <td>Appearing in video results</td>
                     </tr>
-                    <tr>
-                        <td><strong>Image Pack</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">Your site appears in video search results. Usually means competitor videos are ranking for your keywords.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Image Pack <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>201</td>
                         <td><span class="metric-change negative">-3 from Sept (204)</span></td>
-                        <td>Featured in image carousel results</td>
                     </tr>
-                    <tr>
-                        <td><strong>Sitelinks</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">The horizontal carousel of images that appears in Google results, usually for visual-heavy searches.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Sitelinks <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>188</td>
                         <td><span class="metric-change positive">+2 from Sept (186)</span></td>
-                        <td>Brand authority showing expanded results</td>
                     </tr>
-                    <tr>
-                        <td><strong>Image</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">Additional links under your main result that show important pages. Indicates Google views you as authoritative.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Image <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>131</td>
                         <td><span class="metric-change positive">+3 from Sept (128)</span></td>
-                        <td>Visual search presence</td>
                     </tr>
-                    <tr>
-                        <td><strong>People Also Ask</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">Individual images from your site appearing in Google Images or within regular search results.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>People Also Ask <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>128</td>
                         <td><span class="metric-change positive">+5 from Sept (123)</span></td>
-                        <td>Featured in PAA boxes</td>
                     </tr>
-                    <tr>
-                        <td><strong>AI Overview</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">The expandable question boxes that appear in search results. Getting featured here drives significant traffic.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>AI Overview <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>64</td>
                         <td><span class="metric-change neutral">0 from Sept (64)</span></td>
-                        <td>Cited in AI-generated answers</td>
                     </tr>
-                    <tr>
-                        <td><strong>Video Carousel</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">Google's AI-generated answer summaries at the top of results. Being cited here is valuable for future visibility.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Video Carousel <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>30</td>
                         <td>-</td>
-                        <td>Featured in video carousels</td>
                     </tr>
-                    <tr>
-                        <td><strong>Discussions and Forums</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">A scrollable row of video thumbnails in search results, typically for how-to or tutorial queries.</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Discussions and Forums <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>24</td>
                         <td>-</td>
-                        <td>Appearing in forum discussions</td>
                     </tr>
-                    <tr>
-                        <td><strong>Knowledge Panel</strong></td>
+                    <tr class="expanded-content">
+                        <td colspan="3">Reddit, forum threads, or discussion posts appearing in search results (new feature from Google).</td>
+                    </tr>
+                    <tr class="expandable-row" onclick="toggleRow(this)">
+                        <td><strong>Knowledge Panel <i class="fas fa-chevron-down expand-icon"></i></strong></td>
                         <td>22</td>
                         <td>-</td>
-                        <td>Brand knowledge graph presence</td>
+                    </tr>
+                    <tr class="expanded-content">
+                        <td colspan="3">The info box on the right side of Google with business details, photos, and key facts about your brand.</td>
                     </tr>
                 </tbody>
             </table></div>
@@ -1730,6 +1793,15 @@
     </div>
 
     <script>
+        // Toggle expandable rows
+        function toggleRow(row) {
+            row.classList.toggle('expanded');
+            const nextRow = row.nextElementSibling;
+            if (nextRow && nextRow.classList.contains('expanded-content')) {
+                nextRow.classList.toggle('show');
+            }
+        }
+
         // Traffic Sources Chart with dark theme
         const trafficCtx = document.getElementById('trafficSourcesChart').getContext('2d');
         new Chart(trafficCtx, {
