@@ -124,6 +124,24 @@
             -webkit-backdrop-filter: blur(10px);
         }
 
+        a.stat-item {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        a.stat-item:hover {
+            background: rgba(88, 88, 90, 0.5);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        a.stat-item:active {
+            transform: scale(0.98);
+        }
+
         .stat-value {
             font-size: 28px;
             font-weight: 700;
@@ -137,6 +155,27 @@
             color: rgba(235, 235, 245, 0.6);
             font-weight: 500;
             letter-spacing: -0.06px;
+        }
+
+        .stat-change {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .stat-change.positive {
+            color: #34C759;
+        }
+
+        .stat-change.negative {
+            color: #FF453A;
+        }
+
+        .stat-note {
+            font-size: 10px;
+            color: rgba(235, 235, 245, 0.4);
+            margin-top: 2px;
+            font-style: italic;
         }
 
         /* Section Title */
@@ -359,30 +398,58 @@
             </div>
 
             <div class="stats-banner">
-                <h3>LATEST PERFORMANCE</h3>
+                <h3>LATEST PERFORMANCE (NOVEMBER 2025)</h3>
                 <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value">871</div>
+                    <a href="reports/november-2025.html#ga4-metrics" class="stat-item">
+                        <div class="stat-value">943</div>
                         <div class="stat-label">Total Users</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">136</div>
+                        <div class="stat-change positive">+8.3%</div>
+                    </a>
+                    <a href="reports/november-2025.html#gsc-metrics" class="stat-item">
+                        <div class="stat-value">170</div>
                         <div class="stat-label">Organic Clicks</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">17</div>
+                        <div class="stat-change positive">+25.0%</div>
+                    </a>
+                    <a href="reports/november-2025.html#form-submissions" class="stat-item">
+                        <div class="stat-value">14</div>
                         <div class="stat-label">Form Submissions</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">306</div>
+                        <div class="stat-change negative">-17.6%</div>
+                        <div class="stat-note">Off-season for roofing</div>
+                    </a>
+                    <a href="reports/november-2025.html#keywords" class="stat-item">
+                        <div class="stat-value">366</div>
                         <div class="stat-label">Ranked Keywords</div>
-                    </div>
+                        <div class="stat-change positive">+19.6%</div>
+                    </a>
                 </div>
             </div>
 
             <h2 class="section-title">MONTHLY REPORTS</h2>
 
             <div class="reports-grid">
+                <!-- November 2025 Report -->
+                <a href="reports/november-2025.html" class="report-card">
+                    <div class="report-month">
+                        <i class="fas fa-file-alt"></i>
+                        November 2025
+                    </div>
+                    <div class="report-date">
+                        <i class="far fa-calendar"></i> Reporting Period: Nov 1-30, 2025
+                    </div>
+                    <div class="report-highlights">
+                        <h4>KEY HIGHLIGHTS</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>170 organic clicks</strong> (+25% growth)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>366 keywords</strong> (+19.6%)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>50.4% engagement</strong> (nearly doubled)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>ChatGPT leads</strong> - 21.4% from AI referrals</li>
+                        </ul>
+                    </div>
+                    <div class="view-report">
+                        View Full Report <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
                 <!-- October 2025 Report -->
                 <a href="reports/october-2025.html" class="report-card">
                     <div class="report-month">
@@ -405,23 +472,6 @@
                         View Full Report <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
-
-                <!-- Placeholder for November 2025 Report -->
-                <div class="report-card disabled">
-                    <div class="report-month">
-                        <i class="fas fa-clock"></i>
-                        November 2025
-                    </div>
-                    <div class="report-date">
-                        <i class="far fa-calendar"></i> Coming Soon
-                    </div>
-                    <div class="report-highlights">
-                        <h4>IN PROGRESS</h4>
-                        <ul>
-                            <li><i class="fas fa-ellipsis-h"></i> Available in early December</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
 

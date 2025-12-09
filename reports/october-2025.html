@@ -215,6 +215,26 @@
             background: rgba(28, 28, 30, 0.7);
         }
 
+        a.metric-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        a.metric-card.clickable-card {
+            border: 1px solid rgba(10, 132, 255, 0.3);
+        }
+
+        a.metric-card.clickable-card:hover {
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
+        }
+
+        a.metric-card.clickable-card:active {
+            transform: scale(0.98);
+        }
+
         .metric-card-content {
             position: relative;
         }
@@ -610,7 +630,7 @@
             <!-- Performance Metrics -->
             <h2><i class="fas fa-chart-line"></i> Performance Snapshot - October 2025</h2>
 
-            <h3>GOOGLE SEARCH CONSOLE METRICS</h3>
+            <h3 id="gsc-metrics">GOOGLE SEARCH CONSOLE METRICS</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Total Impressions</h4>
@@ -641,7 +661,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="metric-card">
+                <a href="#form-submissions" class="metric-card clickable-card">
                     <h4>Form Submissions</h4>
                     <div class="metric-card-content">
                         <div class="metric-card-front">
@@ -655,7 +675,7 @@
                             Number of times visitors completed and submitted contact forms on your website. These are direct leads requesting quotes or information.
                         </div>
                     </div>
-                </div>
+                </a>
                 <div class="metric-card">
                     <h4>Average CTR</h4>
                     <div class="metric-card-content">
@@ -779,7 +799,7 @@
                 </div>
             </div>
 
-            <h3>GOOGLE ANALYTICS 4 METRICS</h3>
+            <h3 id="ga4-metrics">GOOGLE ANALYTICS 4 METRICS</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Total Users</h4>
@@ -1178,116 +1198,6 @@
                 </tbody>
             </table></div>
 
-            <!-- SERP Features -->
-            <h2><i class="fas fa-search"></i> SERP Features Performance</h2>
-
-            <h3>FEATURES WHERE WE APPEAR (LINKING TO DOMAIN)</h3>
-            <div class="table-wrapper"><table>
-                <thead>
-                    <tr>
-                        <th>SERP Feature</th>
-                        <th>Keywords Captured</th>
-                        <th>Change from Sept</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Related Searches <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>292</td>
-                        <td>-</td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">Links to related search queries that appear at the bottom of Google search results pages</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Local Pack <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>235</td>
-                        <td><span class="metric-change positive">+2 from Sept (233)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">The map + 3 business listings that appear at the top of local search results. Critical for "near me" searches.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Video <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>212</td>
-                        <td><span class="metric-change positive">+3 from Sept (209)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">Your site appears in video search results. Usually means competitor videos are ranking for your keywords.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Image Pack <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>201</td>
-                        <td><span class="metric-change negative">-3 from Sept (204)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">The horizontal carousel of images that appears in Google results, usually for visual-heavy searches.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Sitelinks <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>188</td>
-                        <td><span class="metric-change positive">+2 from Sept (186)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">Additional links under your main result that show important pages. Indicates Google views you as authoritative.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Image <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>131</td>
-                        <td><span class="metric-change positive">+3 from Sept (128)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">Individual images from your site appearing in Google Images or within regular search results.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>People Also Ask <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>128</td>
-                        <td><span class="metric-change positive">+5 from Sept (123)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">The expandable question boxes that appear in search results. Getting featured here drives significant traffic.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>AI Overview <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>64</td>
-                        <td><span class="metric-change neutral">0 from Sept (64)</span></td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">Google's AI-generated answer summaries at the top of results. Being cited here is valuable for future visibility.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Video Carousel <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>30</td>
-                        <td>-</td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">A scrollable row of video thumbnails in search results, typically for how-to or tutorial queries.</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Discussions and Forums <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>24</td>
-                        <td>-</td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">Reddit, forum threads, or discussion posts appearing in search results (new feature from Google).</td>
-                    </tr>
-                    <tr class="expandable-row" onclick="toggleRow(this)">
-                        <td><strong>Knowledge Panel <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                        <td>22</td>
-                        <td>-</td>
-                    </tr>
-                    <tr class="expanded-content">
-                        <td colspan="3">The info box on the right side of Google with business details, photos, and key facts about your brand.</td>
-                    </tr>
-                </tbody>
-            </table></div>
-
-            <div class="insight-box">
-                <h4><i class="fas fa-lightbulb"></i> CRITICAL FINDING: SERP FEATURES STABILITY</h4>
-                <p><strong>Your SERP feature presence remains rock-solid:</strong> Holding 235 Local Pack positions (+2 from Sept), 188 Sitelinks (+2), and 212 Video appearances (+3). This demonstrates consistent authority across multiple Google result types—not just traditional organic rankings. Local Pack dominance (235 keywords) is particularly valuable for roofing, as these 3-pack results appear above regular organic listings and capture high-intent local searches.</p>
-                <p style="margin-top: 10px;"><strong>AI Overview opportunity:</strong> Appearing in 64 AI-generated answers positions you for the future of search as Google increasingly uses AI to answer queries directly.</p>
-            </div>
-
             <!-- Competitor Analysis -->
             <h2><i class="fas fa-users"></i> Competitor Landscape (SEMrush)</h2>
 
@@ -1365,7 +1275,7 @@
             </div>
 
             <!-- Keyword Rankings -->
-            <h2><i class="fas fa-trophy"></i> Keyword Rankings Performance</h2>
+            <h2 id="keywords"><i class="fas fa-trophy"></i> Keyword Rankings Performance</h2>
 
             <h3>KEYWORDS RANKING #1 (SEMRUSH ORGANIC - EXCLUDING LOCAL PACK)</h3>
             <div class="table-wrapper"><table>
@@ -1712,7 +1622,7 @@
             </table></div>
 
             <!-- Form Submissions & Conversions -->
-            <h2><i class="fas fa-paper-plane"></i> Form Submissions & Conversions</h2>
+            <h2 id="form-submissions"><i class="fas fa-paper-plane"></i> Form Submissions & Conversions</h2>
 
             <div class="metrics-grid">
                 <div class="metric-card">
