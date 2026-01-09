@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Valley Peak Roofing - December 2025 SEO Report</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            font-size: 15px;
+            line-height: 1.47;
+            letter-spacing: -0.022em;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* iOS-style Header */
+        .header {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 16px 16px 0 16px;
+        }
+
+        .back-button {
+            color: #0A84FF;
+            text-decoration: none;
+            font-size: 17px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .back-button i {
+            font-size: 18px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .header p {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(235, 235, 245, 0.6);
+            letter-spacing: -0.08px;
+        }
+
+        .date-info {
+            background: rgba(58, 58, 60, 0.4);
+            border: 0.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .date-info strong {
+            color: rgba(235, 235, 245, 0.8);
+            font-weight: 600;
+        }
+
+        /* Content */
+        .content {
+            padding: 16px;
+            padding-bottom: max(env(safe-area-inset-bottom), 16px);
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 28px 0 16px 0;
+            letter-spacing: -0.3px;
+            padding-left: 8px;
+            border-left: 3px solid #0A84FF;
+        }
+
+        h2 i {
+            margin-right: 8px;
+            color: #0A84FF;
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            margin: 20px 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 i {
+            margin-right: 6px;
+            font-size: 14px;
+        }
+
+        /* Executive Summary & Alerts */
+        .executive-summary,
+        .alert {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .alert {
+            border-left: 3px solid #FF9F0A;
+        }
+
+        .alert h3 {
+            color: #FF9F0A;
+            margin-top: 0;
+        }
+
+        .executive-summary h3 {
+            margin-top: 0;
+            color: #0A84FF;
+        }
+
+        .executive-summary p,
+        .alert p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            margin: 8px 0;
+        }
+
+        .executive-summary ul,
+        .alert ul {
+            margin: 12px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .executive-summary li,
+        .alert li {
+            padding: 8px 0;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            display: flex;
+            gap: 10px;
+        }
+
+        .executive-summary li i {
+            color: #34C759;
+            margin-top: 2px;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .metric-card {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 14px;
+            position: relative;
+            overflow: visible;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 150px;
+        }
+
+        .metric-card:hover,
+        .metric-card.active {
+            border-color: rgba(10, 132, 255, 0.4);
+            background: rgba(28, 28, 30, 0.7);
+        }
+
+        a.metric-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        a.metric-card.clickable-card {
+            border: 1px solid rgba(10, 132, 255, 0.3);
+        }
+
+        a.metric-card.clickable-card:hover {
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
+        }
+
+        a.metric-card.clickable-card:active {
+            transform: scale(0.98);
+        }
+
+        .metric-card-content {
+            position: relative;
+        }
+
+        .metric-card-front,
+        .metric-card-back {
+            transition: opacity 0.3s ease;
+        }
+
+        .metric-card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            pointer-events: none;
+            font-size: 10px;
+            line-height: 1.4;
+            color: rgba(235, 235, 245, 0.8);
+            padding-top: 20px;
+        }
+
+        .metric-card:hover .metric-card-front,
+        .metric-card.active .metric-card-front {
+            opacity: 0;
+        }
+
+        .metric-card:hover .metric-card-back,
+        .metric-card.active .metric-card-back {
+            opacity: 1;
+        }
+
+        .metric-card h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .metric-change {
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .metric-change.positive {
+            color: #34C759;
+        }
+
+        .metric-change.negative {
+            color: #FF453A;
+        }
+
+        .metric-change.neutral {
+            color: rgba(235, 235, 245, 0.6);
+        }
+
+        .metric-change i {
+            font-size: 10px;
+        }
+
+        .metric-card small {
+            display: block;
+            font-size: 10px;
+            color: rgba(235, 235, 245, 0.5);
+            margin-top: 6px;
+            line-height: 1.3;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 16px 0;
+            border-radius: 12px;
+        }
+
+        .table-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: rgba(58, 58, 60, 0.4);
+            border-radius: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.6);
+            border-radius: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.8);
+        }
+
+        .table-wrapper {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(99, 102, 241, 0.6) rgba(58, 58, 60, 0.4);
+        }
+
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 13px;
+        }
+
+        thead {
+            background: rgba(58, 58, 60, 0.5);
+        }
+
+        th {
+            color: rgba(235, 235, 245, 0.8);
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+            color: rgba(235, 235, 245, 0.8);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tbody tr {
+            background: transparent;
+        }
+
+        /* Insight Box */
+        .insight-box {
+            background: rgba(10, 132, 255, 0.15);
+            border: 0.5px solid rgba(10, 132, 255, 0.3);
+            border-left: 3px solid #0A84FF;
+            border-radius: 12px;
+            padding: 14px;
+            margin: 16px 0;
+        }
+
+        .insight-box h4 {
+            color: #0A84FF;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .insight-box h4 i {
+            margin-right: 6px;
+        }
+
+        .insight-box p,
+        .insight-box ul {
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+        }
+
+        .insight-box ul {
+            margin: 10px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .insight-box li {
+            padding: 6px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .insight-box li strong {
+            color: #ffffff;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        canvas {
+            max-height: 300px;
+        }
+
+        /* Expandable Rows */
+        .expandable-row {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .expandable-row:hover {
+            background: rgba(58, 58, 60, 0.3);
+        }
+
+        .expandable-row:active {
+            background: rgba(58, 58, 60, 0.5);
+        }
+
+        .expand-icon {
+            font-size: 10px;
+            margin-left: 8px;
+            transition: transform 0.2s;
+            color: #0A84FF;
+        }
+
+        .expandable-row.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .expanded-content {
+            display: none;
+            background: rgba(10, 132, 255, 0.05);
+            border-left: 2px solid #0A84FF;
+        }
+
+        .expanded-content td {
+            padding: 16px 12px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            font-style: italic;
+        }
+
+        .expanded-content.show {
+            display: table-row;
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 980px;
+                margin: 0 auto;
+            }
+
+            .header {
+                padding: 24px 32px;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            .content {
+                padding: 32px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .header {
+                background: #667eea;
+                color: white;
+                position: relative;
+            }
+
+            .metric-card,
+            .insight-box,
+            table {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-chevron-left"></i> Reports
+            </a>
+            <h1>December 2025 Report</h1>
+            <p>Valley Peak Roofing - Monthly SEO & Traffic Analysis</p>
+            <div class="date-info">
+                <strong>Reporting Period:</strong> December 1-31, 2025<br>
+                <strong>Report Created:</strong> January 8, 2026<br>
+                <strong>Days Post-Launch:</strong> 164 days (launched July 20, 2025)
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Executive Summary -->
+            <div class="executive-summary">
+                <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
+                <p>December showed mixed results: <strong>visibility expanded significantly</strong> (+49% keywords, +28% impressions) but <strong>conversions dropped sharply</strong> (-50% form submissions). The site now ranks for 545 keywords worth $11K in traffic value, but actual organic clicks fell 21% as average position slipped from 24.6 to 29.5.</p>
+
+                <div class="table-wrapper" style="margin-top: 16px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Key Metric</th>
+                                <th>Performance Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong>Keyword explosion <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td>545 keywords (+49% from 366) - largest single-month keyword growth to date</td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Valley Peak now ranks for 545 different search phrases - that's 179 more than November. Each keyword is a potential doorway for customers to find you. However, many of these new keywords are in lower positions (20-50+), which is why clicks haven't increased proportionally. The foundation is being built for future traffic growth as these rankings improve.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong>Traffic value surged <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td>$11,017 traffic value (+57% from $7K) - SEMrush's highest valuation yet</td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> If you had to buy this same visibility through Google Ads, it would cost $11,017 per month. This is the "free" value your SEO is delivering. The 57% increase shows that even though clicks dropped, you're ranking for more valuable keywords overall.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong>Organic clicks declined <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td>135 clicks (-21% from 170) - concerning decline despite impression growth</td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Fewer people clicked through to the website from Google search results. The site appeared in 70,000 searches (+28%) but got 35 fewer clicks than November. Average position slipped from 24.6 to 29.5 - when you rank lower, fewer people see and click your listing.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong>Form submissions dropped <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td>7 submissions (-50% from 14) - critical issue requiring investigation</td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Only 7 people filled out contact forms in December, down from 14 in November. Some of this is seasonal (December holidays slow roofing decisions), but this drop needs investigation. Form functionality should be tested, and landing page experience reviewed.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong>Paid Social traffic note <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td>380 sessions with 2.4% engagement, 0.4 seconds average time on site</td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> The paid social traffic is showing very low engagement. 380 visitors came through but most left within a second. Worth reviewing the campaign targeting to make sure the right audience is seeing the ads.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong>Commercial lead captured <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td>Comfort Inn hotel with attached restaurant needs full roof replacement</td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Despite lower overall volume, the leads include a high-value commercial opportunity for a full roof replacement on a hotel property.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="executive-summary" style="border-left: 3px solid #0A84FF;">
+                <h3 style="color: #0A84FF;"><i class="fas fa-comment-dots"></i> THE BOTTOM LINE</h3>
+                <p style="font-size: 14px; line-height: 1.7;">
+                    <strong>The visibility is there. We're ranking for more keywords than ever and showing up in more searches.</strong> The slower lead volume is expected for December.
+                </p>
+                <p style="font-size: 14px; line-height: 1.7;">
+                    I'm going to look into form functionality, page experience, and the zero-click pages that should be getting traffic but aren't.
+                </p>
+            </div>
+
+            <div class="alert" style="border-left-color: #FF9F0A;">
+                <h3 style="color: #FF9F0A;"><i class="fas fa-info-circle"></i> WHY CLICKS ARE DOWN</h3>
+                <p>We added 179 new keywords this month, but most of them are ranking in positions 20-50+ where clicks are rare. This pulls down the average position (24.6 to 29.5) and dilutes the CTR. The keywords that rank well are clicking fine. As the new rankings improve over time, clicks will follow.</p>
+            </div>
+
+            <!-- Performance Metrics -->
+            <h2><i class="fas fa-chart-line"></i> Performance Snapshot - December 2025</h2>
+
+            <h3 id="gsc-metrics">GOOGLE SEARCH CONSOLE METRICS</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Impressions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">70K</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +28.4% from Nov (54.5K)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            How many times your website appeared in Google search results. Each appearance counts as one impression, whether someone scrolled to see it or not.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Clicks</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">135</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -20.6% from Nov (170)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            The number of times people clicked through from Google search results to visit your website. This dropped despite more impressions due to lower average positions.
+                        </div>
+                    </div>
+                </div>
+                <a href="#form-submissions" class="metric-card clickable-card">
+                    <h4>Form Submissions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">7</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -50.0% from Nov (14)
+                            </div>
+                            <small>Source: Netlify Forms (spam excluded)</small>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of times visitors completed and submitted contact forms on your website. Expected seasonal slowdown - holiday timing + lower organic traffic.
+                        </div>
+                    </div>
+                </a>
+                <div class="metric-card">
+                    <h4>Average CTR</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">0.2%</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -0.1pp from Nov (0.3%)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            The percentage of people who saw your site in search results and actually clicked. Declined as position worsened and many new keywords rank in low positions.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Average Position</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">29.5</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -4.9 positions from Nov (24.6)
+                            </div>
+                            <small style="color: rgba(235, 235, 245, 0.6);">New keywords start lower</small>
+                        </div>
+                        <div class="metric-card-back">
+                            Average ranking across all keywords. This increased because 179 new keywords were added—new rankings typically start in lower positions, which pulls the average down.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>SEMRUSH METRICS (ESTIMATES & RANKINGS)</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Estimated Monthly Traffic</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">453</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +14.4% from Nov (396)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            SEMrush's prediction of how many organic visitors you could receive based on your keyword rankings and search volumes. This is potential traffic, not actual.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Ranked Keywords</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">545</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +48.9% from Nov (366)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Total number of keywords your website ranks for in Google search results. Largest single-month keyword gain - 179 new ranking opportunities.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Traffic Value</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">$11K</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +57.4% from Nov ($7K)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            The estimated monthly cost if you had to buy this same traffic through Google Ads. Highest SEMrush valuation ever - shows increasing keyword value.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Keywords in Position #1</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">6</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -2 from Nov (8)
+                            </div>
+                            <small>(organic only)</small>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of keywords where you rank in the very first organic spot on Google. Lost 2 #1 positions from November.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Branded Traffic (est.)</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">56</div>
+                            <div class="metric-change neutral">
+                                <i class="fas fa-equals"></i> 0% from Nov (56)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Estimated visitors who search for your business name specifically. These are people who already know your brand and are looking for you directly.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Non-Branded Traffic (est.)</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">397</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +16.8% from Nov (340)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Estimated visitors who find you through general service searches, not your business name. These are new potential customers discovering you for the first time.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="ga4-metrics">GOOGLE ANALYTICS 4 METRICS</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Users</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">1,120</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +18.8% from Nov (943)
+                            </div>
+                                                    </div>
+                        <div class="metric-card-back">
+                            Number of unique individuals who visited your website. If the same person visits twice, they're counted once.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>New Users</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">1,107</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +19.2% from Nov (929)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            First-time visitors to your website. Growth driven largely by Paid Social traffic that isn't actually engaging with the site.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Sessions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">1,250</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +16.4% from Nov (1,074)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Total number of visits to your website. One user can have multiple sessions if they visit on different days or after 30 minutes of inactivity.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Engaged Sessions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">454</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -16.1% from Nov (541)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Visits where someone spent meaningful time (10+ seconds), viewed multiple pages, or triggered a conversion event. Dropped significantly from November.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Engagement Rate</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">36.3%</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -14.1pp from Nov (50.4%)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Percentage of sessions that were "engaged" (10+ seconds, 2+ pages, or conversion). Dropped sharply due to low-quality Paid Social traffic diluting the metric.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Organic Search Sessions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">188</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -13.4% from Nov (217)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of visits that came specifically from Google, Bing, or other search engines. Declining despite massive impression growth due to position drops.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Organic Search Eng. Rate</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">57.4%</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -6.2pp from Nov (63.6%)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Percentage of search engine visits that were engaged. Still the second-best engagement rate after referral traffic.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-lightbulb"></i> KEY GA4 INSIGHTS</h4>
+                <ul>
+                    <li><strong>Paid Social:</strong> 380 sessions with 2.4% engagement rate. Low engagement compared to other channels.</li>
+                    <li><strong>Referral Quality Remains Strong:</strong> 221 sessions with 81% engagement rate and 3+ minutes average time. This is real, interested traffic - likely from directories, partners, or content mentions.</li>
+                    <li><strong>Organic Decline:</strong> Organic search sessions dropped 13% (217 → 188) despite massive impression growth. Position decline (24.6 → 29.5) is the likely culprit.</li>
+                    <li><strong>AI Traffic Growing:</strong> 10 sessions from chatgpt.com visible in referral sources, plus 1 from Perplexity. AI-driven discovery is becoming a real traffic channel.</li>
+                </ul>
+            </div>
+
+            <h3>TRAFFIC SOURCES BREAKDOWN (GA4)</h3>
+            <div class="chart-container">
+                <canvas id="trafficSourcesChart"></canvas>
+            </div>
+
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Sessions</th>
+                        <th>Engaged Sessions</th>
+                        <th>Engagement Rate</th>
+                        <th>Avg Engagement Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Direct</strong></td>
+                        <td>394</td>
+                        <td>133</td>
+                        <td>33.8%</td>
+                        <td>19.9s</td>
+                    </tr>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>Paid Social</strong></td>
+                        <td>380</td>
+                        <td>9</td>
+                        <td style="color: #FF453A;">2.4%</td>
+                        <td style="color: #FF453A;">0.4s</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td><strong>Referral</strong></td>
+                        <td>221</td>
+                        <td>179</td>
+                        <td style="color: #34C759;">81.0%</td>
+                        <td style="color: #34C759;">3m 21s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic Search</strong></td>
+                        <td>188</td>
+                        <td>108</td>
+                        <td>57.4%</td>
+                        <td>45.0s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic Social</strong></td>
+                        <td>55</td>
+                        <td>21</td>
+                        <td>38.2%</td>
+                        <td>13.2s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Unassigned</strong></td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>30.0%</td>
+                        <td>22.7s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic Video</strong></td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>100%</td>
+                        <td>14.0s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paid Other</strong></td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>0s</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>BACKLINK PROFILE (SEMRUSH)</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Backlinks</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">420</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +6.6% from Nov (394)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of external links from other websites pointing to yours. Backlinks are like votes of confidence that help Google trust your site.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Referring Domains</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">173</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +6.8% from Nov (162)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of unique websites that link to you. One website can create multiple backlinks, so this shows your link diversity.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Authority Score</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">10</div>
+                            <div class="metric-change neutral">
+                                <i class="fas fa-equals"></i> Same as Nov (10)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            SEMrush's 0-100 rating of your website's overall strength and trustworthiness. Holding steady at 10.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>AI SEARCH VISIBILITY</h3>
+            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">How often Valley Peak appears when people use AI assistants to find roofing services.</p>
+            <div class="metrics-grid" style="margin-bottom: 16px;">
+                <div class="metric-card">
+                    <h4>AI Visibility Score</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">24</div>
+                            <div class="metric-change neutral">
+                                <i class="fas fa-equals"></i> Same as Nov
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Combined score measuring how visible Valley Peak is across all AI platforms. Unchanged from November.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Mentions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">12</div>
+                            <div class="metric-change neutral">
+                                <i class="fas fa-equals"></i> Same as Nov
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of times AI assistants mentioned or recommended Valley Peak in responses.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Cited Pages</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">22</div>
+                            <div class="metric-change neutral">
+                                <i class="fas fa-equals"></i> Same as Nov
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of Valley Peak pages that AI platforms have cited as sources.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Mentions</th>
+                        <th>Cited Pages</th>
+                        <th>What It Is</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ChatGPT</strong></td>
+                        <td>3</td>
+                        <td>11</td>
+                        <td style="font-size: 11px; color: rgba(235, 235, 245, 0.6);">OpenAI's assistant - people ask it for roofer recommendations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Overview</strong></td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td style="font-size: 11px; color: rgba(235, 235, 245, 0.6);">AI summary boxes at top of Google search results</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Mode</strong></td>
+                        <td>5</td>
+                        <td>7</td>
+                        <td style="font-size: 11px; color: rgba(235, 235, 245, 0.6);">Google's conversational AI search experience</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gemini</strong></td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td style="font-size: 11px; color: rgba(235, 235, 245, 0.6);">Google's AI assistant</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-robot"></i> AI TRAFFIC IS REAL</h4>
+                <p>10 sessions from chatgpt.com visible in GA4 referral data, plus 1 from Perplexity. People are asking AI assistants "who's a good roofer in Bethlehem?" and being sent to Valley Peak. This channel will continue growing.</p>
+            </div>
+
+            <!-- SERP Features -->
+            <h2><i class="fas fa-star"></i> SERP Features Performance</h2>
+
+            <h3>FEATURES WHERE WE APPEAR (LINKING TO DOMAIN)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>SERP Feature</th>
+                        <th>Keywords Captured</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Image</strong></td>
+                        <td>27</td>
+                        <td>Appearing in image results</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Local Pack</strong></td>
+                        <td>22</td>
+                        <td>Google Maps 3-pack</td>
+                    </tr>
+                    <tr>
+                        <td><strong>People Also Ask</strong></td>
+                        <td>11</td>
+                        <td>FAQ boxes in search</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sitelinks</strong></td>
+                        <td>8</td>
+                        <td>Additional links under main result</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Overview</strong></td>
+                        <td>3</td>
+                        <td>Google's AI summaries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Image Pack</strong></td>
+                        <td>1</td>
+                        <td>Image carousel</td>
+                    </tr>
+                    <tr style="color: rgba(235, 235, 245, 0.5);">
+                        <td>Featured Snippet</td>
+                        <td>0</td>
+                        <td>Opportunity to capture</td>
+                    </tr>
+                    <tr style="color: rgba(235, 235, 245, 0.5);">
+                        <td>Video / Video Carousel</td>
+                        <td>0</td>
+                        <td>Not currently appearing</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Top Pages Analysis -->
+            <h2><i class="fas fa-file-alt"></i> Top Traffic Pages Analysis</h2>
+
+            <h3>HIGH-VALUE PAGES BY CLICKS (GSC)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Clicks</th>
+                        <th>Impressions</th>
+                        <th>CTR</th>
+                        <th>Avg Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Homepage (combined)</strong></td>
+                        <td>64</td>
+                        <td>25,911</td>
+                        <td>0.25%</td>
+                        <td>~15</td>
+                    </tr>
+                    <tr>
+                        <td>Best Month Roof Replacement (blog)</td>
+                        <td>12</td>
+                        <td>1,703</td>
+                        <td>0.70%</td>
+                        <td>11.3</td>
+                    </tr>
+                    <tr>
+                        <td>Roof Financing Options</td>
+                        <td>8</td>
+                        <td>1,042</td>
+                        <td>0.77%</td>
+                        <td>35.4</td>
+                    </tr>
+                    <tr>
+                        <td>Ice Dam Prevention (blog)</td>
+                        <td>6</td>
+                        <td>490</td>
+                        <td>1.22%</td>
+                        <td>17.7</td>
+                    </tr>
+                    <tr>
+                        <td>Can Roof Problem Wait Until Spring (blog)</td>
+                        <td>6</td>
+                        <td>351</td>
+                        <td style="color: #34C759;">1.71%</td>
+                        <td style="color: #34C759;">6.1</td>
+                    </tr>
+                    <tr>
+                        <td>Design Your Roof</td>
+                        <td>5</td>
+                        <td>3,195</td>
+                        <td>0.16%</td>
+                        <td>14.1</td>
+                    </tr>
+                    <tr>
+                        <td>Budget Roof Cost</td>
+                        <td>5</td>
+                        <td>2,198</td>
+                        <td>0.23%</td>
+                        <td>38.1</td>
+                    </tr>
+                    <tr>
+                        <td>Winter Siding Installation (blog)</td>
+                        <td>5</td>
+                        <td>478</td>
+                        <td>1.05%</td>
+                        <td>14.1</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>TOP PAGES BY VIEWS (GA4)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Views</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Homepage</td>
+                        <td>624</td>
+                        <td>Primary landing page</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>Winter Siding Installation (blog)</td>
+                        <td>457</td>
+                        <td style="color: #34C759;">Strong seasonal content!</td>
+                    </tr>
+                    <tr>
+                        <td>Roofing Blog & Tips</td>
+                        <td>52</td>
+                        <td>Blog index</td>
+                    </tr>
+                    <tr>
+                        <td>Budget Roof Cost</td>
+                        <td>51</td>
+                        <td>Cost calculator</td>
+                    </tr>
+                    <tr>
+                        <td>Roof Financing Options</td>
+                        <td>41</td>
+                        <td>Financing info</td>
+                    </tr>
+                    <tr>
+                        <td>Siding Installation</td>
+                        <td>35</td>
+                        <td>Service page</td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td>32</td>
+                        <td>Conversion page</td>
+                    </tr>
+                    <tr>
+                        <td>Our Work</td>
+                        <td>28</td>
+                        <td>Portfolio</td>
+                    </tr>
+                    <tr>
+                        <td>About</td>
+                        <td>27</td>
+                        <td>Trust building</td>
+                    </tr>
+                    <tr>
+                        <td>Service Areas</td>
+                        <td>26</td>
+                        <td>Location hub</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Competitor Analysis -->
+            <h2><i class="fas fa-users"></i> Competitor Landscape (SEMrush)</h2>
+
+            <h3>ORGANIC COMPETITION ANALYSIS</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Competitor</th>
+                        <th>Competition Level</th>
+                        <th>Common Keywords</th>
+                        <th>Total Keywords</th>
+                        <th>Traffic (est.)</th>
+                        <th>Traffic Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(10, 132, 255, 0.1);">
+                        <td><strong>Valley Peak Roofing</strong></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>545</td>
+                        <td>453</td>
+                        <td>$11,017</td>
+                    </tr>
+                    <tr>
+                        <td>whitesroofingsidingllc.com</td>
+                        <td>40%</td>
+                        <td>27</td>
+                        <td>121</td>
+                        <td>34</td>
+                        <td>$604</td>
+                    </tr>
+                    <tr>
+                        <td>alankunsmanroofing.com</td>
+                        <td>35%</td>
+                        <td>25</td>
+                        <td>138</td>
+                        <td>1,463</td>
+                        <td>$8,526</td>
+                    </tr>
+                    <tr>
+                        <td>homeshieldpros.com</td>
+                        <td>34%</td>
+                        <td>17</td>
+                        <td>191</td>
+                        <td>185</td>
+                        <td>$5,019</td>
+                    </tr>
+                    <tr>
+                        <td>scartelliremodeling.com</td>
+                        <td>20%</td>
+                        <td>9</td>
+                        <td>127</td>
+                        <td>34</td>
+                        <td>$176</td>
+                    </tr>
+                    <tr>
+                        <td>ziggysroofing.us</td>
+                        <td>14%</td>
+                        <td>14</td>
+                        <td>60</td>
+                        <td>5</td>
+                        <td>$90</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-lightbulb"></i> KEY COMPETITIVE INSIGHTS</h4>
+                <ul>
+                    <li><strong>Valley Peak leads in keywords and traffic value</strong> among tracked competitors. At 545 keywords, the site has 2.8x more rankings than homeshieldpros (191).</li>
+                    <li><strong>alankunsmanroofing.com punches above its weight:</strong> Only 138 keywords but 1,463 estimated traffic - that's 10.6 visitors per keyword. Valley Peak gets 0.83 visitors per keyword.</li>
+                    <li><strong>Study alankunsmanroofing.com:</strong> What pages drive their traffic? What keywords are they winning? Their efficiency suggests they've nailed commercial intent keywords.</li>
+                </ul>
+            </div>
+
+            <!-- Form Submissions & Conversions -->
+            <h2 id="form-submissions"><i class="fas fa-paper-plane"></i> Form Submissions & Conversions</h2>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Form Submissions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">7</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -50.0% from Nov (14)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Number of times visitors completed and submitted contact forms. Expected seasonal slowdown.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Conversion Rate (Overall)</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">0.63%</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -0.85pp from Nov (1.48%)
+                            </div>
+                            <small>7 submissions / 1,120 total users</small>
+                        </div>
+                        <div class="metric-card-back">
+                            Percentage of all website visits that resulted in a form submission. Diluted by low-quality Paid Social traffic.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Conversion Rate (Organic)</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">3.7%</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -5.05pp from Nov (8.75%)
+                            </div>
+                            <small>Est. from organic users</small>
+                        </div>
+                        <div class="metric-card-back">
+                            Percentage of organic search visits that converted. Significant drop from November's strong performance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>DECEMBER 2025 FORM SUBMISSIONS (LEGITIMATE LEADS ONLY)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th>Type</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dec 30</td>
+                        <td>Chris Bessiere</td>
+                        <td>Skylight leak, 4492 Bellflower Way</td>
+                        <td>Repair</td>
+                        <td>Skylight page</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 30</td>
+                        <td>Ziera</td>
+                        <td>1486 Holland Ave, Bethlehem 18017</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 30</td>
+                        <td>Marat Olfir</td>
+                        <td>1008 Lotus Ter, Lake Ariel - shingle + metal quotes</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>Dec 22</td>
+                        <td>Neel Patel</td>
+                        <td>Comfort Inn, 532 PA-940 White Haven</td>
+                        <td style="color: #34C759;">Commercial</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 21</td>
+                        <td>Ken Laudenslager</td>
+                        <td>Hail damage from recent storm</td>
+                        <td>Inspection</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 12</td>
+                        <td>George Herrera</td>
+                        <td>Roof and gutter estimate</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Dec 3</td>
+                        <td>Pete Collier</td>
+                        <td>Siding panel came off, Salisbury Twp</td>
+                        <td>Siding Repair</td>
+                        <td>Siding page</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>LEAD TYPE BREAKDOWN</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Lead Type</th>
+                        <th>Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Roof Replacement</td>
+                        <td>4</td>
+                        <td>57.1%</td>
+                    </tr>
+                    <tr>
+                        <td>Repair (Roof/Skylight/Siding)</td>
+                        <td>2</td>
+                        <td>28.6%</td>
+                    </tr>
+                    <tr>
+                        <td>Inspection</td>
+                        <td>1</td>
+                        <td>14.3%</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial</td>
+                        <td>1</td>
+                        <td>14.3%</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-building"></i> NOTABLE LEADS</h4>
+                <p><strong>Commercial Opportunity:</strong> Neel Patel - Comfort Inn & Suites with attached restaurant needing full roof replacement. High-value commercial lead.</p>
+                <p><strong>Poconos Expansion:</strong> Marat Olfir from Lake Ariel requesting both shingle and metal roof quotes plus attic insulation. Could be a lead from the location page.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-lightbulb"></i> FORM SUBMISSION INSIGHTS</h4>
+                <ul>
+                    <li><strong>50% Drop is Alarming but Context Matters:</strong> 5 of 7 leads came Dec 21-30, suggesting holiday week actually performed okay. Early December was dead (only 2 leads Dec 1-20).</li>
+                    <li><strong>Organic Traffic Down:</strong> With 13% fewer organic sessions, fewer potential converters reached the site.</li>
+                    <li><strong>Seasonality:</strong> December is historically slow for roofing. People delay decisions until after holidays.</li>
+                    <li><strong>Quality Over Quantity:</strong> The 7 leads include a commercial hotel project and a Poconos expansion inquiry - potentially high-value despite lower volume.</li>
+                </ul>
+            </div>
+
+            <!-- Keyword Rankings -->
+            <h2 id="keywords"><i class="fas fa-trophy"></i> Keyword Rankings Performance</h2>
+
+            <h3>KEYWORDS RANKING #1 (SEMRUSH ORGANIC - EXCLUDING LOCAL PACK)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Search Volume</th>
+                        <th>Traffic Est.</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>valley peak roofing</td>
+                        <td>70</td>
+                        <td>56</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>roofing bethlehem</td>
+                        <td>140</td>
+                        <td>9</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>james hardie siding installer bethlehem pa</td>
+                        <td>50</td>
+                        <td>6</td>
+                        <td>/james-hardie</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair bethlehem pa</td>
+                        <td>90</td>
+                        <td>5</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>roofing contractors bethlehem pa</td>
+                        <td>70</td>
+                        <td>4</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>roofing company bethlehem</td>
+                        <td>70</td>
+                        <td>1</td>
+                        <td>Homepage</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>LOCAL PACK #1 RANKINGS (TOP 10)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Search Volume</th>
+                        <th>Traffic Est.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>roofers bethlehem pa</td>
+                        <td>210</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>roofing bethlehem pa</td>
+                        <td>90</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair bethlehem pa</td>
+                        <td>90</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>peak and valley roofing</td>
+                        <td>170</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>bethlehem roofing</td>
+                        <td>70</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>commercial roofing bethlehem</td>
+                        <td>70</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>roofers in bethlehem pa</td>
+                        <td>70</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>roofing company bethlehem</td>
+                        <td>70</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair bethlehem</td>
+                        <td>70</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>roofing contractors bethlehem pa</td>
+                        <td>70</td>
+                        <td>17</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>TOP RANKINGS (POSITIONS 2-10)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Position</th>
+                        <th>Search Volume</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cheapest way to replace roof</td>
+                        <td>5</td>
+                        <td>30</td>
+                        <td>/blog/replacing-your-roof-on-a-budget</td>
+                    </tr>
+                    <tr>
+                        <td>roofing faq</td>
+                        <td>6</td>
+                        <td>1,300</td>
+                        <td>/roofing-siding-gutter-faqs</td>
+                    </tr>
+                    <tr>
+                        <td>roof hail damage repair</td>
+                        <td>6</td>
+                        <td>1,300</td>
+                        <td>/blog/hail-damage-roof-repair-steps</td>
+                    </tr>
+                    <tr>
+                        <td>roofing companies in pennsylvania</td>
+                        <td>7</td>
+                        <td>210</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>best time of year to replace a roof</td>
+                        <td>9</td>
+                        <td>40</td>
+                        <td>/blog/best-month-roof-replacement</td>
+                    </tr>
+                    <tr>
+                        <td>roofers bath</td>
+                        <td>10</td>
+                        <td>70</td>
+                        <td>/service-areas/roofing-bath-pa</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>KEYWORDS DRIVING TRAFFIC (GSC - TOP 15 BY CLICKS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Clicks</th>
+                        <th>Impressions</th>
+                        <th>Position</th>
+                        <th>CTR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>valley peak roofing</td>
+                        <td>20</td>
+                        <td>81</td>
+                        <td>1.15</td>
+                        <td>24.7%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing companies near me</td>
+                        <td>5</td>
+                        <td>534</td>
+                        <td>7.14</td>
+                        <td>0.9%</td>
+                    </tr>
+                    <tr>
+                        <td>valley peak roofing co.</td>
+                        <td>2</td>
+                        <td>21</td>
+                        <td>1.38</td>
+                        <td>9.5%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing contractors</td>
+                        <td>1</td>
+                        <td>1,800</td>
+                        <td>44.6</td>
+                        <td>0.06%</td>
+                    </tr>
+                    <tr>
+                        <td>roofers bethlehem pa</td>
+                        <td>1</td>
+                        <td>181</td>
+                        <td>10.0</td>
+                        <td>0.6%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing company in pennsylvania</td>
+                        <td>1</td>
+                        <td>110</td>
+                        <td>19.2</td>
+                        <td>0.9%</td>
+                    </tr>
+                    <tr>
+                        <td>owens corning visualizer</td>
+                        <td>1</td>
+                        <td>93</td>
+                        <td>5.6</td>
+                        <td>1.1%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing companies bethlehem pa</td>
+                        <td>1</td>
+                        <td>83</td>
+                        <td>1.2</td>
+                        <td>1.2%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing company near me</td>
+                        <td>1</td>
+                        <td>79</td>
+                        <td>3.6</td>
+                        <td>1.3%</td>
+                    </tr>
+                    <tr>
+                        <td>roofer near me</td>
+                        <td>1</td>
+                        <td>64</td>
+                        <td>9.4</td>
+                        <td>1.6%</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>PROBLEM KEYWORDS (HIGH IMPRESSIONS, ZERO CLICKS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Impressions</th>
+                        <th>Position</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>gutter repair</td>
+                        <td>2,637</td>
+                        <td>67.6</td>
+                        <td>Position too low</td>
+                    </tr>
+                    <tr>
+                        <td>gutter repair near me</td>
+                        <td>2,417</td>
+                        <td>45.0</td>
+                        <td>Position too low</td>
+                    </tr>
+                    <tr>
+                        <td>roofing faq</td>
+                        <td>1,696</td>
+                        <td>12.1</td>
+                        <td>Good position, weak title/snippet</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair</td>
+                        <td>519</td>
+                        <td>8.6</td>
+                        <td>Good position, high competition</td>
+                    </tr>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td>roofing near me</td>
+                        <td>433</td>
+                        <td style="color: #FF453A;">5.7</td>
+                        <td style="color: #FF453A;">Great position, still no clicks - investigate!</td>
+                    </tr>
+                    <tr>
+                        <td>hail damage roof repair</td>
+                        <td>409</td>
+                        <td>13.8</td>
+                        <td>Mid-position, seasonal</td>
+                    </tr>
+                    <tr>
+                        <td>roof replacement</td>
+                        <td>399</td>
+                        <td>10.7</td>
+                        <td>Competitive term</td>
+                    </tr>
+                    <tr>
+                        <td>gutter installation near me</td>
+                        <td>396</td>
+                        <td>69.6</td>
+                        <td>Position too low</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>PROBLEM PAGES (HIGH IMPRESSIONS, LOW/ZERO CLICKS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Impressions</th>
+                        <th>Clicks</th>
+                        <th>Position</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gutter Maintenance</td>
+                        <td>10,983</td>
+                        <td>0</td>
+                        <td>47.7</td>
+                        <td>Position way too low</td>
+                    </tr>
+                    <tr>
+                        <td>Lehigh County Services</td>
+                        <td>3,621</td>
+                        <td>0</td>
+                        <td>29.4</td>
+                        <td>Poor position</td>
+                    </tr>
+                    <tr>
+                        <td>Northampton County Services</td>
+                        <td>2,291</td>
+                        <td>0</td>
+                        <td>19.4</td>
+                        <td>Decent position, weak snippet</td>
+                    </tr>
+                    <tr>
+                        <td>Residential Roof Repairs</td>
+                        <td>2,176</td>
+                        <td>0</td>
+                        <td>13.5</td>
+                        <td>Good position, needs better meta</td>
+                    </tr>
+                    <tr>
+                        <td>Hail Damage blog</td>
+                        <td>2,041</td>
+                        <td>0</td>
+                        <td>33.1</td>
+                        <td>Mid position</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial Roofing</td>
+                        <td>1,949</td>
+                        <td>0</td>
+                        <td>36.1</td>
+                        <td>Mid position</td>
+                    </tr>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td>Roof Replacement Installation</td>
+                        <td>1,811</td>
+                        <td>0</td>
+                        <td style="color: #FF453A;">8.9</td>
+                        <td style="color: #FF453A;">GREAT position, 0 clicks - critical fix needed</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Wins & Opportunities -->
+            <h3>WINS IN DECEMBER</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Achievement</th>
+                        <th>Details</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Keyword Growth +49%</strong></td>
+                        <td>545 keywords (up from 366)</td>
+                        <td>Largest single-month keyword gain</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Traffic Value +57%</strong></td>
+                        <td>$11,017 (up from $7K)</td>
+                        <td>Highest SEMrush valuation ever</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impression Growth +28%</strong></td>
+                        <td>70K impressions (up from 54.5K)</td>
+                        <td>Expanded visibility footprint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backlink Growth +7%</strong></td>
+                        <td>420 backlinks, 173 domains</td>
+                        <td>Steady authority building</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commercial Lead Captured</strong></td>
+                        <td>Comfort Inn full roof replacement inquiry</td>
+                        <td>High-value opportunity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Poconos Traction</strong></td>
+                        <td>Lake Ariel lead from location page</td>
+                        <td>Expansion strategy working</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blog Performance</strong></td>
+                        <td>Winter/seasonal content driving clicks</td>
+                        <td>Content strategy validated</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>KEY OPPORTUNITIES</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Opportunity</th>
+                        <th>Current State</th>
+                        <th>Action Needed</th>
+                        <th>Potential Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>Roof Replacement page</strong></td>
+                        <td>Position 8.9, 1,811 impressions, 0 clicks</td>
+                        <td>Rewrite title/meta description urgently</td>
+                        <td>Could add 20+ clicks/month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gutter page</strong></td>
+                        <td>Position 47.7, 10,983 impressions</td>
+                        <td>Major content overhaul + internal links</td>
+                        <td>Long-term traffic opportunity</td>
+                    </tr>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>"roofing near me"</strong></td>
+                        <td>Position 5.7, 433 impressions, 0 clicks</td>
+                        <td>Test structured data, review SERP appearance</td>
+                        <td>Quick win if fixed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Residential Repairs page</strong></td>
+                        <td>Position 13.5, 2,176 impressions, 0 clicks</td>
+                        <td>Meta description + schema markup</td>
+                        <td>10-15 additional clicks</td>
+                    </tr>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>Paid Social</strong></td>
+                        <td>380 sessions, 2.4% engagement</td>
+                        <td>Pause or drastically revamp</td>
+                        <td>Review targeting</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Month Ahead Focus -->
+            <h2><i class="fas fa-bullseye"></i> Month Ahead Focus</h2>
+
+            <h3>PRIORITY 1: FIX ZERO-CLICK PAGES</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Action:</strong> Roof Replacement Installation page has position 8.9 with zero clicks from 1,811 impressions. This is broken.</p>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Implementation:</strong></p>
+            <ul style="margin: 12px 0; padding-left: 20px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                <li>Audit current title tag and meta description</li>
+                <li>Rewrite with compelling, click-worthy copy</li>
+                <li>Add schema markup (LocalBusiness, Service)</li>
+                <li>Test in Search Console URL inspection</li>
+                <li>Monitor CTR weekly</li>
+            </ul>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Expected Impact:</strong> Even 1% CTR = 18 clicks/month from this page alone.</p>
+
+            <h3>PRIORITY 2: INVESTIGATE CONVERSION DROP</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Action:</strong> Form submissions dropped 50%. Need to understand why.</p>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Implementation:</strong></p>
+            <ul style="margin: 12px 0; padding-left: 20px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                <li>Test all forms on desktop and mobile</li>
+                <li>Check Netlify form settings for any issues</li>
+                <li>Review GA4 for form abandonment signals</li>
+                <li>Compare December traffic quality vs November</li>
+                <li>Consider adding chat or callback option</li>
+            </ul>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Expected Impact:</strong> Return to 14+ monthly leads.</p>
+
+            <h3>PRIORITY 3: KILL OR FIX PAID SOCIAL</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Action:</strong> 380 sessions with 2.4% engagement is throwing money away.</p>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Implementation:</strong></p>
+            <ul style="margin: 12px 0; padding-left: 20px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                <li>Review campaign targeting and ad creative</li>
+                                <li>Either pause entirely or rebuild with lookalike audiences from actual converters</li>
+                <li>Reallocate budget to higher-performing channels</li>
+            </ul>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Expected Impact:</strong> Better ROI, cleaner analytics data.</p>
+
+            <h3>PRIORITY 4: IMPROVE POSITION FOR HIGH-IMPRESSION KEYWORDS</h3>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Action:</strong> Gutter-related keywords have 13,000+ impressions at positions 45-70. Moving to page 1 would unlock significant traffic.</p>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Implementation:</strong></p>
+            <ul style="margin: 12px 0; padding-left: 20px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                <li>Expand Gutter Maintenance page content significantly</li>
+                <li>Add FAQ section targeting "gutter repair near me" queries</li>
+                <li>Build internal links from blog posts and service pages</li>
+                <li>Consider creating separate gutter repair vs installation pages</li>
+            </ul>
+            <p style="font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); margin: 8px 0;"><strong>Expected Impact:</strong> Long-term: 50-100 additional monthly clicks from gutter keywords.</p>
+
+            <h3>SUCCESS METRICS FOR JANUARY 2026</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>KPI</th>
+                        <th>December Actual</th>
+                        <th>January Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Form submissions</td>
+                        <td>7</td>
+                        <td>12+</td>
+                    </tr>
+                    <tr>
+                        <td>Organic clicks (GSC)</td>
+                        <td>135</td>
+                        <td>160+</td>
+                    </tr>
+                    <tr>
+                        <td>Average position</td>
+                        <td>29.5</td>
+                        <td>&lt;27</td>
+                    </tr>
+                    <tr>
+                        <td>Roof Replacement page CTR</td>
+                        <td>0%</td>
+                        <td>1%+</td>
+                    </tr>
+                    <tr>
+                        <td>Paid Social engagement</td>
+                        <td>2.4%</td>
+                        <td>20%+ (or paused)</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Technical Notes -->
+            <h2><i class="fas fa-cog"></i> Technical Notes</h2>
+            <div class="executive-summary">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 6px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check" style="color: #34C759; margin-right: 8px;"></i> Site is 164 days post-launch (launched July 20, 2025)</li>
+                    <li style="padding: 6px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check" style="color: #34C759; margin-right: 8px;"></i> December data reflects full month (Dec 1-31, 2025)</li>
+                    <li style="padding: 6px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check" style="color: #34C759; margin-right: 8px;"></i> SEMrush keyword/traffic data is January 2026 snapshot</li>
+                                        <li style="padding: 6px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check" style="color: #34C759; margin-right: 8px;"></i> AI Visibility metrics unchanged from November (Score: 24, Mentions: 12, Cited Pages: 22)</li>
+                    <li style="padding: 6px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-robot" style="color: #0A84FF; margin-right: 8px;"></i> 10 sessions from chatgpt.com visible in GA4 referral data - AI traffic is real and growing</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Toggle expandable rows
+        function toggleRow(row) {
+            row.classList.toggle('expanded');
+            const expandedContent = row.nextElementSibling;
+            if (expandedContent && expandedContent.classList.contains('expanded-content')) {
+                expandedContent.classList.toggle('show');
+            }
+        }
+
+        // Mobile tap support for metric cards
+        document.querySelectorAll('.metric-card').forEach(card => {
+            card.addEventListener('touchstart', function() {
+                document.querySelectorAll('.metric-card').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.metric-card')) {
+                document.querySelectorAll('.metric-card').forEach(c => c.classList.remove('active'));
+            }
+        });
+
+        // Traffic Sources Chart
+        const ctx = document.getElementById('trafficSourcesChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Direct', 'Paid Social', 'Referral', 'Organic Search', 'Organic Social', 'Other'],
+                datasets: [{
+                    data: [394, 380, 221, 188, 55, 12],
+                    backgroundColor: [
+                        'rgba(10, 132, 255, 0.8)',
+                        'rgba(255, 69, 58, 0.8)',
+                        'rgba(52, 199, 89, 0.8)',
+                        'rgba(255, 159, 10, 0.8)',
+                        'rgba(175, 82, 222, 0.8)',
+                        'rgba(99, 102, 106, 0.8)'
+                    ],
+                    borderColor: 'rgba(0, 0, 0, 0.3)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: 'rgba(235, 235, 245, 0.8)',
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
