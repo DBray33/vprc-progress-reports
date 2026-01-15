@@ -18,6 +18,10 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
             background: #000000;
@@ -536,6 +540,301 @@
             }
         }
 
+        /* Copy Button */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(58, 58, 60, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: rgba(235, 235, 245, 0.8);
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 12px;
+        }
+
+        .copy-btn:hover {
+            background: rgba(88, 88, 90, 0.7);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-btn.copied {
+            background: rgba(52, 199, 89, 0.3);
+            border-color: rgba(52, 199, 89, 0.5);
+            color: #34C759;
+        }
+
+        .copy-btn i {
+            font-size: 11px;
+        }
+
+        .copy-full-report-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+            border: 1px solid rgba(10, 132, 255, 0.4);
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .copy-full-report-btn:hover {
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .copy-full-report-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-full-report-btn.copied {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%);
+            border-color: rgba(52, 199, 89, 0.6);
+        }
+
+        .copy-full-report-btn i {
+            font-size: 14px;
+        }
+
+        /* Task Tracker Section */
+        .task-tracker {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 16px;
+            padding: 20px 16px;
+            margin-top: 32px;
+        }
+
+        .task-tracker-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .task-tracker-header h2 {
+            margin: 0;
+            border: none;
+            padding: 0;
+            font-size: 18px;
+            color: #BF7FFF;
+        }
+
+        .task-tracker-header i {
+            color: #BF7FFF;
+        }
+
+        .task-tracker-subtitle {
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .task-summary {
+            background: rgba(52, 199, 89, 0.15);
+            border: 1px solid rgba(52, 199, 89, 0.3);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.9);
+        }
+
+        .task-summary strong {
+            color: #34C759;
+        }
+
+        .task-item {
+            background: rgba(28, 28, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .task-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .task-header:hover {
+            background: rgba(58, 58, 60, 0.4);
+        }
+
+        .task-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .task-number {
+            background: rgba(138, 43, 226, 0.3);
+            color: #BF7FFF;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .task-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .task-meta {
+            font-size: 11px;
+            color: rgba(235, 235, 245, 0.5);
+            margin-top: 2px;
+        }
+
+        .task-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #34C759;
+        }
+
+        .task-status i {
+            font-size: 14px;
+        }
+
+        .task-expand-icon {
+            color: rgba(235, 235, 245, 0.4);
+            font-size: 12px;
+            transition: transform 0.2s;
+            margin-left: 12px;
+        }
+
+        .task-item.expanded .task-expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .task-content {
+            display: none;
+            padding: 0 16px 16px 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .task-item.expanded .task-content {
+            display: block;
+        }
+
+        .task-section {
+            margin-top: 14px;
+        }
+
+        .task-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .task-problem {
+            background: rgba(255, 69, 58, 0.1);
+            border-left: 3px solid #FF453A;
+            padding: 10px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.8);
+            line-height: 1.5;
+        }
+
+        .task-root-cause {
+            background: rgba(255, 159, 10, 0.1);
+            border-left: 3px solid #FF9F0A;
+            padding: 10px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.8);
+            line-height: 1.5;
+        }
+
+        .task-changes-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            background: rgba(28, 28, 30, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .task-changes-table th {
+            background: rgba(58, 58, 60, 0.5);
+            padding: 10px;
+            text-align: left;
+            font-size: 10px;
+            color: rgba(235, 235, 245, 0.6);
+        }
+
+        .task-changes-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(235, 235, 245, 0.8);
+            vertical-align: top;
+        }
+
+        .task-changes-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .task-changes-table .before {
+            color: rgba(255, 69, 58, 0.8);
+            text-decoration: line-through;
+        }
+
+        .task-changes-table .after {
+            color: #34C759;
+        }
+
+        .priority-section {
+            margin-bottom: 20px;
+        }
+
+        .priority-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.7);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .priority-title i {
+            color: #BF7FFF;
+        }
+
         /* Print Styles */
         @media print {
             body {
@@ -574,6 +873,15 @@
         </div>
 
         <div class="content">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="copy-full-report-btn" onclick="copyFullReport()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+                    <i class="fas fa-copy"></i> Copy Full Report
+                </button>
+                <a href="#january-fixes" class="copy-full-report-btn" style="flex: 1; min-width: 200px; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
+                    <i class="fas fa-tasks"></i> View January Fixes
+                </a>
+            </div>
+
             <!-- Executive Summary -->
             <div class="executive-summary">
                 <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
@@ -937,6 +1245,7 @@
             </div>
 
             <h3>TRAFFIC SOURCES BREAKDOWN (GA4)</h3>
+            <div id="traffic-data">
             <div class="chart-container">
                 <canvas id="trafficSourcesChart"></canvas>
             </div>
@@ -1010,6 +1319,8 @@
                     </tr>
                 </tbody>
             </table></div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'traffic-data')"><i class="fas fa-copy"></i> Copy Data</button>
 
             <h3>BACKLINK PROFILE (SEMRUSH)</h3>
             <div class="metrics-grid">
@@ -1417,6 +1728,7 @@
             <!-- Form Submissions & Conversions -->
             <h2 id="form-submissions"><i class="fas fa-paper-plane"></i> Form Submissions & Conversions</h2>
 
+            <div id="leads-data">
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Total Form Submissions</h4>
@@ -1576,10 +1888,13 @@
                     <li><strong>Quality Over Quantity:</strong> The 7 leads include a commercial hotel project and a Poconos expansion inquiry - potentially high-value despite lower volume.</li>
                 </ul>
             </div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'leads-data')"><i class="fas fa-copy"></i> Copy Data</button>
 
             <!-- Keyword Rankings -->
             <h2 id="keywords"><i class="fas fa-trophy"></i> Keyword Rankings Performance</h2>
 
+            <div id="keywords-data">
             <h3>KEYWORDS RANKING #1 (SEMRUSH ORGANIC - EXCLUDING LOCAL PACK)</h3>
             <div class="table-wrapper"><table>
                 <thead>
@@ -1953,6 +2268,8 @@
                     </tr>
                 </tbody>
             </table></div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'keywords-data')"><i class="fas fa-copy"></i> Copy Data</button>
 
             <!-- Wins & Opportunities -->
             <h3>WINS IN DECEMBER</h3>
@@ -2145,10 +2462,664 @@
                 </ul>
             </div>
 
+            <!-- Task Tracker Section -->
+            <div id="january-fixes" class="task-tracker">
+                <div class="task-tracker-header">
+                    <i class="fas fa-tasks"></i>
+                    <h2>January 2026 Page Fixes</h2>
+                </div>
+                <p class="task-tracker-subtitle">Based on December 2025 SEO Report analysis. Click any task to see details.</p>
+
+                <div class="task-summary">
+                    <strong><i class="fas fa-check-circle"></i> All Tasks Complete</strong> — All zero-click pages and conversion tasks have been optimized. Changes will take 2-4 weeks to reflect in Google Search Console data. <strong>Next check:</strong> February 2026 SEO report.
+                </div>
+
+                <!-- Priority 1: Zero-Click Pages -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-exclamation-circle"></i> Priority 1: Zero-Click Pages (High Impressions, No Clicks)</div>
+
+                    <!-- Task 1 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">1</div>
+                                <div>
+                                    <div class="task-title">Roof Replacement Installation</div>
+                                    <div class="task-meta">1,811 impressions • Position 8.9</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">1,811 impressions, position 8.9, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Meta description was 244 characters (Google truncates at ~155). Key selling points never displayed.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">Roof Replacement & Installation Bethlehem PA | Valley Peak</td>
+                                        <td class="after">Roof Replacement Bethlehem PA | 0% Financing Available</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">244 chars, truncated, phone number wasting space</td>
+                                        <td class="after">BBB A+ rated roof replacement in Bethlehem & Lehigh Valley. Free inspection, lifetime warranty. 113 five-star reviews. Get your free quote today. (152 chars)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 2 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">2</div>
+                                <div>
+                                    <div class="task-title">Residential Roof Repairs</div>
+                                    <div class="task-meta">2,176 impressions • Position 13.5</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">2,176 impressions, position 13.5, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Title had filler words ("Professional Home"), meta description was 194 chars and truncated, contact section said "Replacement" instead of "Repair"</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">Professional Home Roof Repairs Bethlehem PA | Valley Peak</td>
+                                        <td class="after">Roof Repair Bethlehem PA | Same-Day Emergency Service</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">194 chars, phone number wasting space</td>
+                                        <td class="after">BBB A+ rated roof repairs in Bethlehem & Lehigh Valley. Same-day emergency service, insurance claims help, lifetime warranty. Free inspection. (148 chars)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Roof Repair Estimate"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 3 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">3</div>
+                                <div>
+                                    <div class="task-title">Northampton County Services</div>
+                                    <div class="task-meta">2,291 impressions • Position 19.4</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">2,291 impressions, position 19.4, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Meta description 206 chars (truncated), phone number wasting space, contact section said "Replacement" instead of generic "Roofing"</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">Northampton County Roofing | Valley Peak - Bethlehem & Easton PA</td>
+                                        <td class="after">Northampton County Roofing Contractor | Bethlehem & Easton PA</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">206 chars, phone number wasting space</td>
+                                        <td class="after">Trusted Northampton County roofer serving Bethlehem, Easton, Nazareth & 15+ communities. Ice dam experts, historic restoration, free inspections. BBB A+ rated.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Roofing Estimate"</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Typo</strong></td>
+                                        <td class="before">"hurrican"</td>
+                                        <td class="after">"hurricane"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 4 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">4</div>
+                                <div>
+                                    <div class="task-title">Lehigh County Services</div>
+                                    <div class="task-meta">3,621 impressions • Position 29.4</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">3,621 impressions, position 29.4, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Title said "Lehigh Valley" instead of "Lehigh County" (keyword mismatch), meta only 128 chars and missing trust signals, contact section said "Replacement"</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">Lehigh Valley Roofing Company | Roof Repair & Replacement</td>
+                                        <td class="after">Lehigh County Roofing Contractor | Allentown & Emmaus PA</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">Trusted Lehigh Valley roofing for repair & replacement in Allentown and Bethlehem. Free inspection in 1 week. Licensed & insured. (128 chars)</td>
+                                        <td class="after">BBB A+ rated Lehigh County roofer serving Allentown, Emmaus, Whitehall & 10+ communities. Free inspections, lifetime warranty. 113 five-star reviews.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Roofing Estimate"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 5 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">5</div>
+                                <div>
+                                    <div class="task-title">Gutter Maintenance</div>
+                                    <div class="task-meta">10,983 impressions • Position 47.7</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">10,983 impressions, position 47.7, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Meta description 195 chars (truncated), og:url and twitter:url referenced old filename, contact section said "Roof Replacement," financing section said "Quality Roofing"</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">Gutter Cleaning & Installation Bethlehem PA | Lehigh Valley Gutter Experts (71 chars)</td>
+                                        <td class="after">Gutter Installation Bethlehem PA | Free Inspection & Cleaning</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">195 chars, missing BBB A+</td>
+                                        <td class="after">BBB A+ rated gutter installation & cleaning in Bethlehem & Lehigh Valley. Seamless aluminum gutters, free inspection, same-day service. 113 five-star reviews.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>og:url</strong></td>
+                                        <td class="before">gutter-installation.html (old filename)</td>
+                                        <td class="after">gutter-maintenance-installation</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>twitter:url</strong></td>
+                                        <td class="before">gutter-installation.html (old filename)</td>
+                                        <td class="after">gutter-maintenance-installation</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Gutter Estimate"</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Financing H2</strong></td>
+                                        <td class="before">"Quality Roofing at a Price You Can Afford"</td>
+                                        <td class="after">"Quality Gutters at a Price You Can Afford"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 6 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">6</div>
+                                <div>
+                                    <div class="task-title">Homepage</div>
+                                    <div class="task-meta">166 impressions • Position 5.7</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">"roofing near me" at position 5.7 with 0 clicks — investigated and found Local Pack is eating those clicks. Fixed other issues found during audit.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">183 chars, phone number wasting space</td>
+                                        <td class="after">BBB A+ rated roofing company in Bethlehem, PA. Free inspection, lifetime warranty, 0% financing. 113 five-star reviews. Roof repair & replacement. (147 chars)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Schema</strong></td>
+                                        <td class="before">datePosted: 2025-01-01, expires: 2025-12-31</td>
+                                        <td class="after">datePosted: 2026-01-01, expires: 2026-12-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Hero</strong></td>
+                                        <td class="before">"115+ 5-Star Reviews"</td>
+                                        <td class="after">"113 5-Star Reviews"</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sidebar</strong></td>
+                                        <td class="before">"100+ 5-Star Reviews"</td>
+                                        <td class="after">"113 5-Star Reviews"</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Roofing Estimate"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 9 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">9</div>
+                                <div>
+                                    <div class="task-title">FAQ Page</div>
+                                    <div class="task-meta">1,696 impressions • Position 12.1</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">1,696 impressions, position 12.1, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Generic title with weak location ("PA" instead of "Bethlehem"), no differentiator. Meta description missing trust signals. Broken financing link.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">Roofing FAQs | Siding & Gutter Questions | Valley Peak PA</td>
+                                        <td class="after">Roofing FAQs | Lehigh Valley Homeowner Questions Answered</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">166 chars, generic, phone number</td>
+                                        <td class="after">44 roofing, siding & gutter questions answered. Costs, insurance, warranties, timelines. BBB A+ rated Bethlehem contractor. Free inspection. (139 chars)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>og:url</strong></td>
+                                        <td class="before">roofing-siding-gutter-faqs.html</td>
+                                        <td class="after">roofing-siding-gutter-faqs</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>twitter:url</strong></td>
+                                        <td class="before">roofing-siding-gutter-faqs.html</td>
+                                        <td class="after">roofing-siding-gutter-faqs</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Roofing Estimate"</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Broken link</strong></td>
+                                        <td class="before">financing.html</td>
+                                        <td class="after">roof-financing-options.html</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 10 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">10</div>
+                                <div>
+                                    <div class="task-title">Commercial Roofing</div>
+                                    <div class="task-meta">1,949 impressions • Position 36.1</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">1,949 impressions, position 36.1, zero clicks</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Page is in good shape — ranking issue is content depth/backlinks, not on-page SEO. Fixed URL inconsistencies.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>og:url</strong></td>
+                                        <td class="before">commercial-roofing.html</td>
+                                        <td class="after">commercial-roofing</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>twitter:url</strong></td>
+                                        <td class="before">commercial-roofing.html</td>
+                                        <td class="after">commercial-roofing</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">"Commercial Roofing Estimate"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 11 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">11</div>
+                                <div>
+                                    <div class="task-title">All Blog Posts (23 pages)</div>
+                                    <div class="task-meta">Share buttons, URLs, internal links</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Share buttons linking to wrong articles, .html extensions in URLs, broken internal links, generic contact headings.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Made Across All 23 Blog Posts</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Before</th>
+                                        <th>After</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Share buttons</strong></td>
+                                        <td class="before">Linking to wrong articles</td>
+                                        <td class="after">Fixed to link to correct article</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>og:url</strong></td>
+                                        <td class="before">.html extension</td>
+                                        <td class="after">Clean URL (no .html)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>twitter:url</strong></td>
+                                        <td class="before">.html extension</td>
+                                        <td class="after">Clean URL (no .html)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal links</strong></td>
+                                        <td class="before">budget-roof-cost.html, roof-financing-options.html</td>
+                                        <td class="after">../budget-roof-cost.html, ../roof-financing-options.html</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Contact H2</strong></td>
+                                        <td class="before">"Roof Replacement Estimate"</td>
+                                        <td class="after">Topic-appropriate headings</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 12 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">12</div>
+                                <div>
+                                    <div class="task-title">Blog Card Excerpts</div>
+                                    <div class="task-meta">Our Blog page</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Blog card descriptions were cutting off mid-word, creating awkward truncation.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Fix Applied</div>
+                                <div class="task-root-cause" style="background: rgba(52, 199, 89, 0.1); border-color: #34C759;">Descriptions now truncate cleanly at 120 characters with "..." instead of cutting off mid-word.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 13 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">13</div>
+                                <div>
+                                    <div class="task-title">Social Media Preview Images</div>
+                                    <div class="task-meta">47 pages updated</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">og:image and twitter:image meta tags were using generic/wrong images for social media previews.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Fix Applied</div>
+                                <div class="task-root-cause" style="background: rgba(52, 199, 89, 0.1); border-color: #34C759;">Updated og:image and twitter:image across entire site (47 files) to use each page's hero image for proper social media previews. Includes main pages, all 23 blog posts, and all 35 service area pages.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 2: Conversion Investigation -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-clipboard-check"></i> Priority 2: Conversion Investigation</div>
+
+                    <!-- Task 7 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">7</div>
+                                <div>
+                                    <div class="task-title">Test Form Functionality</div>
+                                    <div class="task-meta">All pages tested</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete (Dec)</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Status</div>
+                                <div class="task-root-cause" style="background: rgba(52, 199, 89, 0.1); border-color: #34C759;">Tested and verified in December 2025. All forms submitting correctly to Netlify.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 8 -->
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">8</div>
+                                <div>
+                                    <div class="task-title">Mobile Form Visibility</div>
+                                    <div class="task-meta">Free Estimate button added</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status"><i class="fas fa-check-circle"></i> Complete</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Mobile users had to open menu to find "Free Estimate" button. Floating phone button was redundant (bottom nav already has call button).</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Fix Applied</div>
+                                <div class="task-root-cause" style="background: rgba(52, 199, 89, 0.1); border-color: #34C759;">Added "Free Estimate" button below mobile navbar that triggers estimate modal. Gives mobile users visible form CTA without opening menu.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 
     <script>
+        // Copy to clipboard function
+        function copyToClipboard(btn, textId) {
+            const textElement = document.getElementById(textId);
+            const text = textElement.innerText;
+
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Data';
+                }, 2000);
+            });
+        }
+
         // Toggle expandable rows
         function toggleRow(row) {
             row.classList.toggle('expanded');
@@ -2156,6 +3127,11 @@
             if (expandedContent && expandedContent.classList.contains('expanded-content')) {
                 expandedContent.classList.toggle('show');
             }
+        }
+
+        // Toggle task items
+        function toggleTask(taskItem) {
+            taskItem.classList.toggle('expanded');
         }
 
         // Mobile tap support for metric cards
@@ -2171,6 +3147,154 @@
                 document.querySelectorAll('.metric-card').forEach(c => c.classList.remove('active'));
             }
         });
+
+        // Copy Full Report function
+        function copyFullReport() {
+            const report = `VALLEY PEAK ROOFING - DECEMBER 2025 SEO REPORT
+================================================
+Reporting Period: December 1-31, 2025
+Report Created: January 8, 2026
+Days Post-Launch: 164 days (launched July 20, 2025)
+
+EXECUTIVE SUMMARY
+-----------------
+December showed mixed results: visibility expanded significantly (+49% keywords, +28% impressions) but conversions dropped sharply (-50% form submissions). The site now ranks for 545 keywords worth $11K in traffic value, but actual organic clicks fell 21% as average position slipped from 24.6 to 29.5.
+
+Key Metrics:
+- Keyword explosion: 545 keywords (+49% from 366) - largest single-month growth
+- Traffic value surged: $11,017 (+57% from $7K) - highest valuation ever
+- Organic clicks declined: 135 clicks (-21% from 170)
+- Form submissions dropped: 7 submissions (-50% from 14)
+- Paid Social issue: 380 sessions with 2.4% engagement, 0.4s avg time
+- Commercial lead captured: Comfort Inn hotel full roof replacement
+
+THE BOTTOM LINE
+---------------
+The visibility is there. We're ranking for more keywords than ever and showing up in more searches. The slower lead volume is expected for December.
+
+Looking into: form functionality, page experience, and zero-click pages that should be getting traffic.
+
+WHY CLICKS ARE DOWN
+-------------------
+We added 179 new keywords this month, but most rank in positions 20-50+ where clicks are rare. This pulls down average position (24.6 to 29.5) and dilutes CTR. Keywords that rank well are clicking fine. As new rankings improve, clicks will follow.
+
+GOOGLE SEARCH CONSOLE METRICS
+-----------------------------
+Total Impressions: 70K (+28.4% from Nov)
+Total Clicks: 135 (-20.6% from Nov)
+Form Submissions: 7 (-50.0% from Nov)
+Average CTR: 0.2% (-0.1pp from Nov)
+Average Position: 29.5 (-4.9 positions from Nov)
+
+SEMRUSH METRICS
+---------------
+Estimated Monthly Traffic: 453 (+14.4% from Nov)
+Ranked Keywords: 545 (+48.9% from Nov)
+Traffic Value: $11K (+57.4% from Nov)
+Keywords in Position #1: 6 (-2 from Nov)
+Branded Traffic: 56 (unchanged)
+Non-Branded Traffic: 397 (+16.8% from Nov)
+
+GOOGLE ANALYTICS 4 METRICS
+--------------------------
+Total Users: 1,120 (+18.8% from Nov)
+New Users: 1,107 (+19.2% from Nov)
+Sessions: 1,250 (+16.4% from Nov)
+Engaged Sessions: 454 (-16.1% from Nov)
+Engagement Rate: 36.3% (-14.1pp from Nov)
+Organic Search Sessions: 188 (-13.4% from Nov)
+Organic Search Engagement Rate: 57.4% (-6.2pp from Nov)
+
+TRAFFIC SOURCES BREAKDOWN
+-------------------------
+Direct: 394 sessions, 33.8% engagement, 19.9s avg time
+Paid Social: 380 sessions, 2.4% engagement, 0.4s avg time (problem!)
+Referral: 221 sessions, 81.0% engagement, 3m 21s avg time (best!)
+Organic Search: 188 sessions, 57.4% engagement, 45.0s avg time
+Organic Social: 55 sessions, 38.2% engagement, 13.2s avg time
+
+BACKLINK PROFILE
+----------------
+Total Backlinks: 420 (+6.6% from Nov)
+Referring Domains: 173 (+6.8% from Nov)
+Authority Score: 10 (unchanged)
+
+AI SEARCH VISIBILITY
+--------------------
+AI Visibility Score: 24 (unchanged)
+Total Mentions: 12 (unchanged)
+Cited Pages: 22 (unchanged)
+ChatGPT: 3 mentions, 11 cited pages
+AI Overview: 1 mention, 3 cited pages
+AI Mode: 5 mentions, 7 cited pages
+Gemini: 3 mentions, 5 cited pages
+Note: 10 sessions from chatgpt.com visible in GA4 referral data
+
+FORM SUBMISSIONS (7 LEADS)
+--------------------------
+Dec 30 - Chris Bessiere: Skylight leak, 4492 Bellflower Way (Repair)
+Dec 30 - Ziera: 1486 Holland Ave, Bethlehem 18017 (Roof Replacement)
+Dec 30 - Marat Olfir: 1008 Lotus Ter, Lake Ariel - shingle + metal quotes (Roof Replacement)
+Dec 22 - Neel Patel: Comfort Inn, 532 PA-940 White Haven (Commercial) *HIGH VALUE*
+Dec 21 - Ken Laudenslager: Hail damage from recent storm (Inspection)
+Dec 12 - George Herrera: Roof and gutter estimate (Roof Replacement)
+Dec 3 - Pete Collier: Siding panel came off, Salisbury Twp (Siding Repair)
+
+KEYWORDS RANKING #1 (ORGANIC)
+-----------------------------
+valley peak roofing (70 vol, 56 traffic)
+roofing bethlehem (140 vol, 9 traffic)
+james hardie siding installer bethlehem pa (50 vol, 6 traffic)
+roof repair bethlehem pa (90 vol, 5 traffic)
+roofing contractors bethlehem pa (70 vol, 4 traffic)
+roofing company bethlehem (70 vol, 1 traffic)
+
+PROBLEM PAGES (HIGH IMPRESSIONS, ZERO CLICKS)
+---------------------------------------------
+Roof Replacement Installation: 1,811 impressions, position 8.9 - CRITICAL FIX NEEDED
+Gutter Maintenance: 10,983 impressions, position 47.7
+Lehigh County Services: 3,621 impressions, position 29.4
+Northampton County Services: 2,291 impressions, position 19.4
+Residential Roof Repairs: 2,176 impressions, position 13.5
+
+WINS IN DECEMBER
+----------------
+- Keyword Growth +49%: 545 keywords (largest single-month gain)
+- Traffic Value +57%: $11,017 (highest ever)
+- Impression Growth +28%: 70K impressions
+- Backlink Growth +7%: 420 backlinks, 173 domains
+- Commercial Lead: Comfort Inn full roof replacement
+- Poconos Traction: Lake Ariel lead from location page
+- Blog Performance: Winter/seasonal content driving clicks
+
+PRIORITIES FOR JANUARY
+----------------------
+1. FIX ZERO-CLICK PAGES: Roof Replacement page (pos 8.9, 0 clicks from 1,811 impressions)
+2. INVESTIGATE CONVERSION DROP: Form submissions down 50%
+3. KILL OR FIX PAID SOCIAL: 380 sessions with 2.4% engagement
+4. IMPROVE GUTTER KEYWORDS: 13,000+ impressions at positions 45-70
+
+SUCCESS METRICS FOR JANUARY 2026
+--------------------------------
+Form submissions: 7 → 12+ target
+Organic clicks: 135 → 160+ target
+Average position: 29.5 → <27 target
+Roof Replacement page CTR: 0% → 1%+ target
+Paid Social engagement: 2.4% → 20%+ (or paused)
+
+---
+Prepared by Keystone Web Solutions`;
+
+            navigator.clipboard.writeText(report).then(() => {
+                const btn = document.querySelector('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                }, 2000);
+            });
+        }
 
         // Traffic Sources Chart
         const ctx = document.getElementById('trafficSourcesChart').getContext('2d');

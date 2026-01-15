@@ -539,6 +539,44 @@
             }
         }
 
+        /* Copy Full Report Button */
+        .copy-full-report-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+            border: 1px solid rgba(10, 132, 255, 0.4);
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .copy-full-report-btn:hover {
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .copy-full-report-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-full-report-btn.copied {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%);
+            border-color: rgba(52, 199, 89, 0.6);
+        }
+
+        .copy-full-report-btn i {
+            font-size: 14px;
+        }
+
         /* Print Styles */
         @media print {
             body {
@@ -577,6 +615,10 @@
         </div>
 
         <div class="content">
+            <button class="copy-full-report-btn" onclick="copyFullReport()">
+                <i class="fas fa-copy"></i> Copy Full Report
+            </button>
+
             <!-- Executive Summary -->
             <div class="executive-summary">
                 <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
@@ -1975,6 +2017,81 @@
     </div>
 
     <script>
+        // Copy Full Report function
+        function copyFullReport() {
+            const report = `VALLEY PEAK ROOFING - OCTOBER 2025 SEO REPORT
+==============================================
+Reporting Period: October 1-31, 2025
+Report Created: November 1, 2025
+Days Post-Launch: 104 days (launched July 20, 2025)
+
+EXECUTIVE SUMMARY
+-----------------
+October 2025 marks a breakthrough month for Valley Peak Roofing with 136 organic clicks (+33.3%), 871 total users (+116.7%), and most importantly, 17 form submissions (+41.7% from September). Your website now ranks for 306 keywords with 9 organic #1 rankings.
+
+Key Metrics:
+- Massive traffic surge: 871 users vs 402 in September (doubled)
+- Clicks grew faster than impressions: +33.3% clicks
+- 17 form submissions: +41.7% from September
+- 9 organic #1 rankings including new financing term
+- Traffic value: $5,916 (+10.9%)
+- Ranked keywords: 306 (+10.5%)
+
+GOOGLE SEARCH CONSOLE METRICS
+-----------------------------
+Total Impressions: 46.9K (-0.7% from Sept)
+Total Clicks: 136 (+33.3% from Sept)
+Form Submissions: 17 (+41.7% from Sept)
+Average CTR: 0.29% (+0.08pp from Sept)
+Average Position: 21.7 (-3.5 positions improvement from Sept)
+
+SEMRUSH METRICS
+---------------
+Estimated Monthly Traffic: 327 (+10.5% from Sept)
+Ranked Keywords: 306 (+10.5% from Sept)
+Traffic Value: $5,916 (+10.9% from Sept)
+Keywords in Position #1: 9 (+1 from Sept)
+Branded Traffic: 56 (unchanged)
+Non-Branded Traffic: 278 (+14.0% from Sept)
+
+GOOGLE ANALYTICS 4 METRICS
+--------------------------
+Total Users: 871 (+116.7% from Sept)
+New Users: 862 (+119.1% from Sept)
+Sessions: 1,046 (+144.6% from Sept)
+Engaged Sessions: 292 (+8.1% from Sept)
+Engagement Rate: 27.2%
+Organic Search Sessions: 173 (+63.2% from Sept)
+
+FORM SUBMISSIONS (17 LEADS)
+---------------------------
+17 legitimate form submissions (+41.7% from September)
+Mix of roof replacements, repairs, inspections, and commercial inquiries
+Significant increase in lead volume
+
+WINS IN OCTOBER
+---------------
+- Traffic Doubled: 871 users (up from 402)
+- Clicks +33.3%: 136 organic clicks
+- Leads +41.7%: 17 form submissions
+- New #1 Ranking: Roof financing bethlehem pa
+- Keywords +10.5%: 306 total keywords
+- Traffic Value +10.9%: $5,916
+
+---
+Prepared by Keystone Web Solutions`;
+
+            navigator.clipboard.writeText(report).then(() => {
+                const btn = document.querySelector('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                }, 2000);
+            });
+        }
+
         // Toggle expandable rows
         function toggleRow(row) {
             row.classList.toggle('expanded');

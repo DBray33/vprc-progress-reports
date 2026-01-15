@@ -171,6 +171,43 @@
             color: #FF453A;
         }
 
+        .copy-full-report-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+            border: 1px solid rgba(10, 132, 255, 0.4);
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .copy-full-report-btn:hover {
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .copy-full-report-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-full-report-btn.copied {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%);
+            border-color: rgba(52, 199, 89, 0.6);
+        }
+
+        .copy-full-report-btn i {
+            font-size: 14px;
+        }
+
         .stat-note {
             font-size: 10px;
             color: rgba(235, 235, 245, 0.4);
@@ -392,6 +429,10 @@
         </div>
 
         <div class="content">
+            <button class="copy-full-report-btn" onclick="copyFullReport()">
+                <i class="fas fa-copy"></i> Copy Dashboard Summary
+            </button>
+
             <div class="intro">
                 <h2>PERFORMANCE REPORTS</h2>
                 <p>Comprehensive SEO and traffic analysis dashboard tracking website performance, rankings, and lead generation success.</p>
@@ -514,6 +555,57 @@
                 });
             });
         });
+
+        // Copy Full Dashboard function
+        function copyFullReport() {
+            const report = `VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY
+=============================================
+
+LATEST PERFORMANCE (DECEMBER 2025)
+----------------------------------
+Total Users: 1,120 (+18.8%)
+Organic Clicks: 135 (-20.6%)
+Form Submissions: 7 (-50.0%) - Holiday slowdown
+Ranked Keywords: 545 (+48.9%)
+
+AVAILABLE MONTHLY REPORTS
+-------------------------
+
+DECEMBER 2025 (Dec 1-31, 2025)
+Key Highlights:
+- 545 keywords (+49% - largest gain ever)
+- $11K traffic value (+57%)
+- 7 form submissions (-50%)
+- Paid Social issue - 2.4% engagement
+
+NOVEMBER 2025 (Nov 1-30, 2025)
+Key Highlights:
+- 170 organic clicks (+25% growth)
+- 366 keywords (+19.6%)
+- 50.4% engagement (nearly doubled)
+- ChatGPT leads - 21.4% from AI referrals
+
+OCTOBER 2025 (Oct 1-31, 2025)
+Key Highlights:
+- 871 users (+116.7% growth)
+- 17 form submissions (+41.7%)
+- 136 organic clicks (+33.3%)
+- New #1 ranking for financing term
+
+---
+Prepared by Keystone Web Solutions
+Professional SEO & Digital Marketing Services`;
+
+            navigator.clipboard.writeText(report).then(() => {
+                const btn = document.querySelector('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary';
+                }, 2000);
+            });
+        }
 
         // Update stats banner with latest data dynamically if needed
         // This can be extended in the future to pull from an API or data file

@@ -539,6 +539,44 @@
             }
         }
 
+        /* Copy Full Report Button */
+        .copy-full-report-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+            border: 1px solid rgba(10, 132, 255, 0.4);
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .copy-full-report-btn:hover {
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .copy-full-report-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-full-report-btn.copied {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%);
+            border-color: rgba(52, 199, 89, 0.6);
+        }
+
+        .copy-full-report-btn i {
+            font-size: 14px;
+        }
+
         /* Print Styles */
         @media print {
             body {
@@ -577,6 +615,10 @@
         </div>
 
         <div class="content">
+            <button class="copy-full-report-btn" onclick="copyFullReport()">
+                <i class="fas fa-copy"></i> Copy Full Report
+            </button>
+
             <!-- Executive Summary -->
             <div class="executive-summary">
                 <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
@@ -2522,6 +2564,113 @@
     </div>
 
     <script>
+        // Copy Full Report function
+        function copyFullReport() {
+            const report = `VALLEY PEAK ROOFING - NOVEMBER 2025 SEO REPORT
+================================================
+Reporting Period: November 1-30, 2025
+Report Created: December 8, 2025
+Days Post-Launch: 134 days (launched July 20, 2025)
+
+EXECUTIVE SUMMARY
+-----------------
+November 2025 delivered strong growth across most metrics: 170 organic clicks (+25%), 366 ranked keywords (+19.6%), and $7.0K traffic value (+18.6%). Engagement quality dramatically improved with overall engagement rate nearly doubling from 27.2% to 50.4%.
+
+Key Metrics:
+- Organic clicks grew: 170 clicks (+25% from Oct) - consistent monthly growth
+- Keyword visibility expanded: 366 keywords (+19.6%) - 60 new ranking opportunities
+- Traffic value increased: $7,017 (+18.6%) - growing SEO investment value
+- Engagement quality improved: 50.4% engagement rate (up from 27.2%)
+- AI referrals emerged: 21.4% of leads from ChatGPT - new traffic channel
+- Commercial interest captured: Multiple commercial roofing inquiries
+
+GOOGLE SEARCH CONSOLE METRICS
+-----------------------------
+Total Impressions: 54.5K (+16.2% from Oct)
+Total Clicks: 170 (+25% from Oct)
+Form Submissions: 14 (-17.6% from Oct)
+Average CTR: 0.3% (+0.06pp from Oct)
+Average Position: 24.6 (-2.9 positions from Oct)
+
+SEMRUSH METRICS
+---------------
+Estimated Monthly Traffic: 396 (+21.1% from Oct)
+Ranked Keywords: 366 (+19.6% from Oct)
+Traffic Value: $7,017 (+18.6% from Oct)
+Keywords in Position #1: 8 (unchanged)
+Branded Traffic: 56 (unchanged)
+Non-Branded Traffic: 340 (+22.3% from Oct)
+
+GOOGLE ANALYTICS 4 METRICS
+--------------------------
+Total Users: 943 (+8.3% from Oct)
+New Users: 929 (+7.8% from Oct)
+Sessions: 1,074 (+2.7% from Oct)
+Engaged Sessions: 541 (+85% from Oct)
+Engagement Rate: 50.4% (+23.2pp from Oct)
+Organic Search Sessions: 217 (+25.4% from Oct)
+Organic Search Engagement Rate: 63.6% (+18.7pp from Oct)
+
+TRAFFIC SOURCES BREAKDOWN
+-------------------------
+Organic Search: 217 sessions (20.2%), 63.6% engagement
+Direct: 354 sessions (33%), 41.8% engagement
+Referral: 351 sessions (32.7%), 57.5% engagement
+Organic Social: 90 sessions (8.4%), 24.4% engagement
+Unassigned: 62 sessions (5.8%), 38.7% engagement
+
+BACKLINK PROFILE
+----------------
+Total Backlinks: 394 (+2.3% from Oct)
+Referring Domains: 162 (+6.6% from Oct)
+Authority Score: 10 (unchanged)
+
+AI SEARCH VISIBILITY
+--------------------
+AI Visibility Score: 24
+Total Mentions: 12
+Cited Pages: 22
+Note: 21.4% of form submissions attributed to ChatGPT referrals
+
+FORM SUBMISSIONS (14 LEADS)
+---------------------------
+14 legitimate form submissions
+Lead types: Roof replacements, repairs, inspections, commercial inquiries
+Notable: 3 leads (21.4%) came from ChatGPT referral traffic
+
+KEYWORDS RANKING #1 (ORGANIC)
+-----------------------------
+valley peak roofing (70 vol)
+roofing bethlehem (140 vol)
+roof repair bethlehem pa (90 vol)
+roofing contractors bethlehem pa (70 vol)
+roofing company bethlehem (70 vol)
+james hardie siding installer bethlehem pa (50 vol)
+roof financing bethlehem pa (30 vol)
+bethlehem roofers (20 vol)
+
+WINS IN NOVEMBER
+----------------
+- Organic Clicks +25%: 170 clicks (consistent monthly growth)
+- Keywords +19.6%: 366 keywords (60 new rankings)
+- Engagement Nearly Doubled: 50.4% (up from 27.2%)
+- AI Traffic Emerging: 21.4% of leads from ChatGPT
+- Referral Traffic Quality: 57.5% engagement rate
+
+---
+Prepared by Keystone Web Solutions`;
+
+            navigator.clipboard.writeText(report).then(() => {
+                const btn = document.querySelector('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                }, 2000);
+            });
+        }
+
         // Toggle expandable rows
         function toggleRow(row) {
             row.classList.toggle('expanded');
