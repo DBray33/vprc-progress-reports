@@ -620,17 +620,46 @@
             </button>
 
             <!-- Table of Contents -->
-            <nav style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
-                <h3 style="margin: 0 0 12px 0; font-size: 13px; color: rgba(235, 235, 245, 0.6);"><i class="fas fa-list" style="margin-right: 8px;"></i>TABLE OF CONTENTS</h3>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 24px;">
-                    <a href="#executive-summary" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-file-alt" style="color: #0A84FF; width: 16px;"></i> Executive Summary</a>
-                    <a href="#performance-snapshot" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-chart-line" style="color: #34C759; width: 16px;"></i> Performance Snapshot</a>
-                    <a href="#top-pages" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-file-alt" style="color: #FF9F0A; width: 16px;"></i> Top Traffic Pages</a>
-                    <a href="#competitors" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-users" style="color: #FF453A; width: 16px;"></i> Competitor Landscape</a>
-                    <a href="#month-ahead" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-bullseye" style="color: #BF5AF2; width: 16px;"></i> Month Ahead Focus</a>
-                    <a href="#technical-notes" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-wrench" style="color: #64D2FF; width: 16px;"></i> Technical Notes</a>
+            <details class="toc-dropdown" style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 20px;">
+                <summary style="padding: 14px 16px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none; font-size: 14px; font-weight: 600; color: #fff;">
+                    <span><i class="fas fa-list" style="margin-right: 10px; color: #0A84FF;"></i>Table of Contents</span>
+                    <i class="fas fa-chevron-down toc-chevron" style="color: rgba(235, 235, 245, 0.6); transition: transform 0.3s;"></i>
+                </summary>
+                <div style="padding: 0 16px 16px 16px;">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px;">
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">Main Sections</p>
+                        <a href="#executive-summary" class="toc-link"><i class="fas fa-file-alt" style="color: #0A84FF;"></i> Executive Summary</a>
+                        <a href="#performance-snapshot" class="toc-link"><i class="fas fa-chart-line" style="color: #34C759;"></i> Performance Snapshot</a>
+                        <a href="#top-pages" class="toc-link"><i class="fas fa-file-alt" style="color: #FF9F0A;"></i> Top Traffic Pages</a>
+                        <a href="#competitors" class="toc-link"><i class="fas fa-users" style="color: #FF453A;"></i> Competitor Landscape</a>
+                        <a href="#month-ahead" class="toc-link"><i class="fas fa-bullseye" style="color: #BF5AF2;"></i> Month Ahead Focus</a>
+                        <a href="#technical-notes" class="toc-link"><i class="fas fa-wrench" style="color: #64D2FF;"></i> Technical Notes</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Performance Data</p>
+                        <a href="#semrush-metrics" class="toc-link"><i class="fas fa-database" style="color: #34C759;"></i> SEMrush Metrics</a>
+                        <a href="#traffic-sources" class="toc-link"><i class="fas fa-globe" style="color: #0A84FF;"></i> Traffic Sources</a>
+                        <a href="#backlinks" class="toc-link"><i class="fas fa-link" style="color: #FF9F0A;"></i> Backlink Profile</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Rankings & Keywords</p>
+                        <a href="#keywords-ranking-1" class="toc-link"><i class="fas fa-trophy" style="color: #FFD60A;"></i> #1 Rankings</a>
+                        <a href="#top-rankings" class="toc-link"><i class="fas fa-medal" style="color: #FF9F0A;"></i> Top Rankings (2-10)</a>
+                        <a href="#keywords-driving-traffic" class="toc-link"><i class="fas fa-mouse-pointer" style="color: #0A84FF;"></i> Keywords by Clicks</a>
+                        <a href="#problem-keywords" class="toc-link"><i class="fas fa-exclamation-triangle" style="color: #FF453A;"></i> Problem Keywords</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Leads & Analysis</p>
+                        <a href="#form-submissions" class="toc-link"><i class="fas fa-envelope" style="color: #34C759;"></i> Form Submissions</a>
+                        <a href="#wins" class="toc-link"><i class="fas fa-check-circle" style="color: #34C759;"></i> October Wins</a>
+                        <a href="#opportunities" class="toc-link"><i class="fas fa-lightbulb" style="color: #FFD60A;"></i> Key Opportunities</a>
+                    </div>
                 </div>
-            </nav>
+            </details>
+            <style>
+                .toc-dropdown summary::-webkit-details-marker { display: none; }
+                .toc-dropdown[open] .toc-chevron { transform: rotate(180deg); }
+                .toc-link { color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+                .toc-link:hover { color: #0A84FF; }
+                .toc-link i { width: 16px; text-align: center; }
+            </style>
 
             <!-- Executive Summary -->
             <div id="executive-summary" class="executive-summary">
@@ -762,7 +791,7 @@
                 </div>
             </div>
 
-            <h3>SEMRUSH METRICS (ESTIMATES & RANKINGS)</h3>
+            <h3 id="semrush-metrics">SEMRUSH METRICS (ESTIMATES & RANKINGS)</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Estimated Monthly Traffic</h4>
@@ -984,7 +1013,7 @@
                 </ul>
             </div>
 
-            <h3>TRAFFIC SOURCES BREAKDOWN (GA4)</h3>
+            <h3 id="traffic-sources">TRAFFIC SOURCES BREAKDOWN (GA4)</h3>
             <div class="chart-container">
                 <canvas id="trafficSourcesChart"></canvas>
             </div>
@@ -1045,7 +1074,7 @@
                 </tbody>
             </table></div>
 
-            <h3>BACKLINK PROFILE (SEMRUSH)</h3>
+            <h3 id="backlinks">BACKLINK PROFILE (SEMRUSH)</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Total Backlinks</h4>
@@ -1332,7 +1361,7 @@
             <!-- Keyword Rankings -->
             <h2 id="keywords"><i class="fas fa-trophy"></i> Keyword Rankings Performance</h2>
 
-            <h3>KEYWORDS RANKING #1 (SEMRUSH ORGANIC - EXCLUDING LOCAL PACK)</h3>
+            <h3 id="keywords-ranking-1">KEYWORDS RANKING #1 (SEMRUSH ORGANIC - EXCLUDING LOCAL PACK)</h3>
             <div class="table-wrapper"><table>
                 <thead>
                     <tr>
@@ -1410,7 +1439,7 @@
                 </tbody>
             </table></div>
 
-            <h3>TOP 15 RANKINGS (POSITIONS 2-10)</h3>
+            <h3 id="top-rankings">TOP 15 RANKINGS (POSITIONS 2-10)</h3>
             <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">Showing top 15 keywords ranking in positions 2-10</p>
             <div class="table-wrapper"><table>
                 <thead>
@@ -1515,7 +1544,7 @@
                 </tbody>
             </table></div>
 
-            <h3>KEYWORDS DRIVING TRAFFIC (GSC)</h3>
+            <h3 id="keywords-driving-traffic">KEYWORDS DRIVING TRAFFIC (GSC)</h3>
             <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">Top 10 keywords by clicks</p>
             <div class="table-wrapper"><table>
                 <thead>
@@ -1601,7 +1630,7 @@
                 </tbody>
             </table></div>
 
-            <h3>PROBLEM KEYWORDS (HIGH IMPRESSIONS, ZERO CLICKS)</h3>
+            <h3 id="problem-keywords">PROBLEM KEYWORDS (HIGH IMPRESSIONS, ZERO CLICKS)</h3>
             <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">Top 10 keywords with 100+ impressions but 0 clicks</p>
             <div class="table-wrapper"><table>
                 <thead>
@@ -1724,7 +1753,7 @@
                 </div>
             </div>
 
-            <h3>OCTOBER 2025 FORM SUBMISSIONS (LEGITIMATE LEADS ONLY)</h3>
+            <h3 id="form-submissions">OCTOBER 2025 FORM SUBMISSIONS (LEGITIMATE LEADS ONLY)</h3>
             <div class="table-wrapper"><table>
                 <thead>
                     <tr>
@@ -1835,7 +1864,7 @@
             </div>
 
             <!-- Wins & Opportunities -->
-            <h3>WINS IN OCTOBER</h3>
+            <h3 id="wins">WINS IN OCTOBER</h3>
             <div class="table-wrapper"><table>
                 <thead>
                     <tr>
@@ -1893,7 +1922,7 @@
                 </tbody>
             </table></div>
 
-            <h3>KEY OPPORTUNITIES</h3>
+            <h3 id="opportunities">KEY OPPORTUNITIES</h3>
             <div class="table-wrapper"><table>
                 <thead>
                     <tr>
