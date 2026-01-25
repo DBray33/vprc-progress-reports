@@ -892,8 +892,23 @@
                 </a>
             </div>
 
+            <!-- Table of Contents -->
+            <nav style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+                <h3 style="margin: 0 0 12px 0; font-size: 13px; color: rgba(235, 235, 245, 0.6);"><i class="fas fa-list" style="margin-right: 8px;"></i>TABLE OF CONTENTS</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 24px;">
+                    <a href="#executive-summary" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-file-alt" style="color: #0A84FF; width: 16px;"></i> Executive Summary</a>
+                    <a href="#performance-snapshot" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-chart-line" style="color: #34C759; width: 16px;"></i> Performance Snapshot</a>
+                    <a href="#serp-features" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-star" style="color: #FFD60A; width: 16px;"></i> SERP Features</a>
+                    <a href="#top-pages" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-file-alt" style="color: #FF9F0A; width: 16px;"></i> Top Traffic Pages</a>
+                    <a href="#competitors" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-users" style="color: #FF453A; width: 16px;"></i> Competitor Landscape</a>
+                    <a href="#month-ahead" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-bullseye" style="color: #BF5AF2; width: 16px;"></i> Month Ahead Focus</a>
+                    <a href="#technical-notes" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-cog" style="color: #64D2FF; width: 16px;"></i> Technical Notes</a>
+                    <a href="#january-fixes" style="color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s;"><i class="fas fa-tasks" style="color: #AC8E68; width: 16px;"></i> January Fixes</a>
+                </div>
+            </nav>
+
             <!-- Executive Summary -->
-            <div class="executive-summary">
+            <div id="executive-summary" class="executive-summary">
                 <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
                 <p>December showed mixed results: <strong>visibility expanded significantly</strong> (+49% keywords, +28% impressions) but <strong>conversions dropped sharply</strong> (-50% form submissions). The site now ranks for 545 keywords worth $11K in traffic value, but actual organic clicks fell 21% as average position slipped from 24.6 to 29.5.</p>
 
@@ -969,7 +984,7 @@
             </div>
 
             <!-- Performance Metrics -->
-            <h2><i class="fas fa-chart-line"></i> Performance Snapshot - December 2025</h2>
+            <h2 id="performance-snapshot"><i class="fas fa-chart-line"></i> Performance Snapshot - December 2025</h2>
 
             <h3 id="gsc-metrics">GOOGLE SEARCH CONSOLE METRICS</h3>
             <div class="metrics-grid">
@@ -1467,7 +1482,7 @@
             </div>
 
             <!-- SERP Features -->
-            <h2><i class="fas fa-star"></i> SERP Features Performance</h2>
+            <h2 id="serp-features"><i class="fas fa-star"></i> SERP Features Performance</h2>
 
             <h3>FEATURES WHERE WE APPEAR (LINKING TO DOMAIN)</h3>
             <div class="table-wrapper"><table>
@@ -1523,7 +1538,7 @@
             </table></div>
 
             <!-- Top Pages Analysis -->
-            <h2><i class="fas fa-file-alt"></i> Top Traffic Pages Analysis</h2>
+            <h2 id="top-pages"><i class="fas fa-file-alt"></i> Top Traffic Pages Analysis</h2>
 
             <h3>HIGH-VALUE PAGES BY CLICKS (GSC)</h3>
             <div class="table-wrapper"><table>
@@ -1660,7 +1675,7 @@
             </table></div>
 
             <!-- Competitor Analysis -->
-            <h2><i class="fas fa-users"></i> Competitor Landscape (SEMrush)</h2>
+            <h2 id="competitors"><i class="fas fa-users"></i> Competitor Landscape (SEMrush)</h2>
 
             <h3>ORGANIC COMPETITION ANALYSIS</h3>
             <div class="table-wrapper"><table>
@@ -2564,7 +2579,7 @@
             </table></div>
 
             <!-- Month Ahead Focus -->
-            <h2><i class="fas fa-bullseye"></i> Month Ahead Focus</h2>
+            <h2 id="month-ahead"><i class="fas fa-bullseye"></i> Month Ahead Focus</h2>
 
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
                 <!-- Priority 1 -->
@@ -2704,7 +2719,7 @@
             </table></div>
 
             <!-- Technical Notes -->
-            <h2><i class="fas fa-cog"></i> Technical Notes</h2>
+            <h2 id="technical-notes"><i class="fas fa-cog"></i> Technical Notes</h2>
             <div class="executive-summary">
                 <ul style="list-style: none; padding: 0;">
                     <li style="padding: 6px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check" style="color: #34C759; margin-right: 8px;"></i> Site is 164 days post-launch (launched July 20, 2025)</li>
