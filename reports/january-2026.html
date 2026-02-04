@@ -768,6 +768,65 @@
             font-size: 14px;
         }
 
+        /* Quick Navigation Buttons */
+        .quick-nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .quick-nav-buttons {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .quick-nav-buttons a:last-child {
+                grid-column: span 2;
+            }
+
+            .quick-nav-buttons .copy-full-report-btn {
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.8) 0%, rgba(99, 102, 241, 0.8) 100%);
+            border: 1px solid rgba(10, 132, 255, 0.6);
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(10, 132, 255, 0.4);
+        }
+
+        .back-to-top:active {
+            transform: scale(0.95);
+        }
+
         /* Task Tracker Section */
         .task-tracker {
             background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
@@ -1051,12 +1110,15 @@
                 <button class="copy-full-report-btn" onclick="copyFullReport()" style="width: 100%; margin-bottom: 0;">
                     <i class="fas fa-copy"></i> Copy Full Report
                 </button>
-                <div style="display: flex; gap: 10px;">
+                <div class="quick-nav-buttons">
                     <a href="#december-fixes" class="copy-full-report-btn" style="flex: 1; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(52, 199, 89, 0.3) 0%, rgba(34, 139, 34, 0.3) 100%); border-color: rgba(52, 199, 89, 0.4);">
                         <i class="fas fa-check-double"></i> January Fixes
                     </a>
                     <a href="#february-fixes" class="copy-full-report-btn" style="flex: 1; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
                         <i class="fas fa-tasks"></i> February Fixes
+                    </a>
+                    <a href="#deep-analysis" class="copy-full-report-btn" style="flex: 1; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(191, 90, 242, 0.3) 0%, rgba(175, 82, 222, 0.3) 100%); border-color: rgba(191, 90, 242, 0.45);">
+                        <i class="fas fa-microscope"></i> Deep Research
                     </a>
                 </div>
             </div>
@@ -3256,7 +3318,7 @@
             </table></div>
 
             <!-- Deep Research Analysis Container -->
-            <div class="deep-research-container" style="background: linear-gradient(135deg, rgba(191, 90, 242, 0.08) 0%, rgba(175, 82, 222, 0.05) 100%); border: 1px solid rgba(191, 90, 242, 0.2); border-radius: 16px; padding: 24px; margin: 32px 0;">
+            <div class="deep-research-container" style="background: linear-gradient(135deg, rgba(191, 90, 242, 0.18) 0%, rgba(175, 82, 222, 0.12) 100%); border: 2px solid rgba(191, 90, 242, 0.45); border-radius: 16px; padding: 24px; margin: 32px 0;">
 
                 <h2 id="deep-analysis" style="margin-top: 0;"><i class="fas fa-microscope"></i> Deep Research Analysis</h2>
                 <p style="color: rgba(235, 235, 245, 0.6); font-size: 13px; margin: -8px 0 20px 0; font-style: italic;"><i class="fas fa-robot" style="margin-right: 6px;"></i>AI-powered insights from ChatGPT analysis of your SEO data</p>
@@ -4008,6 +4070,11 @@
         </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <script>
         // Toggle expandable rows
         function toggleRow(row) {
@@ -4027,6 +4094,24 @@
         function toggleSection(header) {
             const section = header.closest('.collapsible-section');
             section.classList.toggle('collapsed');
+        }
+
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
 
         // Traffic Sources Chart
