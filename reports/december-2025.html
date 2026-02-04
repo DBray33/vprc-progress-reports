@@ -244,6 +244,19 @@
             transform: scale(0.98);
         }
 
+        @media (max-width: 768px) {
+            a.metric-card.clickable-card {
+                border: 0.5px solid rgba(255, 255, 255, 0.1);
+            }
+
+            a.metric-card.clickable-card:hover,
+            a.metric-card.clickable-card.active {
+                border-color: rgba(10, 132, 255, 0.4);
+                transform: none;
+                box-shadow: none;
+            }
+        }
+
         .metric-card-content {
             position: relative;
         }
@@ -3554,12 +3567,21 @@
 
         // Mobile tap support for metric cards
         document.querySelectorAll('.metric-card').forEach(card => {
-            card.addEventListener('touchstart', function() {
+            card.addEventListener('touchstart', function(e) {
+                // Prevent link navigation on mobile for clickable cards
+                if (this.tagName === 'A') {
+                    e.preventDefault();
+                }
+                // Toggle active state for hover effect
+                const wasActive = this.classList.contains('active');
                 document.querySelectorAll('.metric-card').forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
+                if (!wasActive) {
+                    this.classList.add('active');
+                }
             });
         });
 
+        // Remove active state when tapping outside metric cards
         document.addEventListener('touchstart', function(e) {
             if (!e.target.closest('.metric-card')) {
                 document.querySelectorAll('.metric-card').forEach(c => c.classList.remove('active'));
