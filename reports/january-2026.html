@@ -784,6 +784,16 @@
             margin-bottom: 16px;
         }
 
+        .task-tracker-header.collapsible-header {
+            justify-content: space-between;
+            margin-bottom: 0;
+            padding: 4px 0;
+        }
+
+        .task-tracker-header.collapsible-header:hover {
+            opacity: 0.8;
+        }
+
         .task-tracker-header h2 {
             margin: 0;
             border: none;
@@ -794,6 +804,29 @@
 
         .task-tracker-header i {
             color: #BF7FFF;
+        }
+
+        .section-toggle-icon {
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible-section:not(.collapsed) .section-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            overflow: hidden;
+            max-height: 5000px;
+            transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+            opacity: 1;
+            padding-top: 16px;
+        }
+
+        .collapsible-section.collapsed .collapsible-content {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
         }
 
         .task-tracker-subtitle {
@@ -1014,13 +1047,18 @@
         </div>
 
         <div class="content">
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <button class="copy-full-report-btn" onclick="copyFullReport()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                <button class="copy-full-report-btn" onclick="copyFullReport()" style="width: 100%; margin-bottom: 0;">
                     <i class="fas fa-copy"></i> Copy Full Report
                 </button>
-                <a href="#february-fixes" class="copy-full-report-btn" style="flex: 1; min-width: 200px; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
-                    <i class="fas fa-tasks"></i> View February Fixes
-                </a>
+                <div style="display: flex; gap: 10px;">
+                    <a href="#december-fixes" class="copy-full-report-btn" style="flex: 1; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(52, 199, 89, 0.3) 0%, rgba(34, 139, 34, 0.3) 100%); border-color: rgba(52, 199, 89, 0.4);">
+                        <i class="fas fa-check-double"></i> January Fixes
+                    </a>
+                    <a href="#february-fixes" class="copy-full-report-btn" style="flex: 1; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
+                        <i class="fas fa-tasks"></i> February Fixes
+                    </a>
+                </div>
             </div>
 
             <!-- Table of Contents -->
@@ -1143,11 +1181,139 @@
             <div class="executive-summary" style="border-left: 3px solid #34C759; background: linear-gradient(135deg, rgba(52, 199, 89, 0.08) 0%, rgba(28, 28, 30, 0.5) 100%);">
                 <h3 style="color: #34C759;"><i class="fas fa-comment-dots"></i> THE BOTTOM LINE</h3>
                 <p style="font-size: 14px; line-height: 1.7;">
-                    <strong class="color-strong-positive">The December fixes worked.</strong> Clicks <strong class="color-strong-positive">nearly doubled</strong>, leads <strong class="color-positive">rebounded</strong>, and ranking position improved almost <strong class="color-positive">4 positions</strong>. The ice dam blog drove exceptional traffic <strong class="color-strong-positive">711 views, 51 clicks</strong> after Facebook sharing. AI platforms are now actively sending converting traffic—we got our <strong class="color-milestone">first ChatGPT-referred lead</strong>.
+                    <strong class="color-strong-positive">The fixes we made in January (based on December's report) worked.</strong> Clicks <strong class="color-strong-positive">nearly doubled</strong>, leads <strong class="color-positive">rebounded</strong>, and ranking position improved almost <strong class="color-positive">4 positions</strong>. The ice dam blog drove exceptional traffic <strong class="color-strong-positive">711 views, 51 clicks</strong> after Facebook sharing. AI platforms are now actively sending converting traffic—we got our <strong class="color-milestone">first ChatGPT-referred lead</strong>.
                 </p>
                 <p style="font-size: 14px; line-height: 1.7;">
                     <strong class="color-neutral">Focus for February:</strong> Continue momentum with seasonal content, prepare Google Ads campaign for spring, and capitalize on the ice dam content success pattern.
                 </p>
+            </div>
+
+            <!-- Notable Leads -->
+            <div class="executive-summary" style="border-left: 3px solid #FFD60A; background: linear-gradient(135deg, rgba(255, 214, 10, 0.08) 0%, rgba(28, 28, 30, 0.5) 100%);">
+                <h3 style="color: #FFD60A;"><i class="fas fa-star"></i> NOTABLE LEADS</h3>
+                <div style="display: grid; gap: 12px; margin-top: 12px;">
+                    <div style="background: rgba(255, 214, 10, 0.1); border: 1px solid rgba(255, 214, 10, 0.25); border-radius: 10px; padding: 12px;">
+                        <strong style="color: #FFD60A;">Perly Castro</strong>
+                        <p style="margin: 4px 0 0 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);"><strong class="color-milestone">First form submission via chatgpt.com referral</strong> — AI traffic is converting</p>
+                    </div>
+                    <div style="background: rgba(52, 199, 89, 0.1); border: 1px solid rgba(52, 199, 89, 0.25); border-radius: 10px; padding: 12px;">
+                        <strong style="color: #34C759;">William Klucharich</strong>
+                        <p style="margin: 4px 0 0 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);">Ice dam inquiry from FB ad pointing to blog — <strong class="color-positive">content + paid working together</strong></p>
+                    </div>
+                    <div style="background: rgba(10, 132, 255, 0.1); border: 1px solid rgba(10, 132, 255, 0.25); border-radius: 10px; padding: 12px;">
+                        <strong style="color: #0A84FF;">Ryan Bittner</strong>
+                        <p style="margin: 4px 0 0 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);">Financing application for <strong class="color-neutral">~$10K project</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month Ahead Focus (Top Summary) -->
+            <h2 id="month-ahead-top"><i class="fas fa-bullseye"></i> February Focus</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+                <!-- Priority 1 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #FF453A; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 1</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Investigate Zero-Click #1 Rankings</h4>
+                        <div style="background: rgba(255, 69, 58, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-exclamation-triangle" style="color: #FF453A; margin-right: 8px;"></i>"roofers lehigh valley pa" ranking #1.2 with 0 clicks is a red flag.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Check actual SERP appearance (mobile + desktop)</li>
+                            <li>Verify Local Pack presence</li>
+                            <li>Test structured data/schema</li>
+                            <li>Review if ranking URL is correct</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Should convert 5-15 clicks/month at #1 position.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 2 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #34C759; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 2</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Capitalize on Ice Dam Success</h4>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-snowflake" style="color: #34C759; margin-right: 8px;"></i>711 views, 51 clicks - highest performing content ever.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Create follow-up content (ice dam removal, ice dam damage signs)</li>
+                            <li>Share on FB with boosted post</li>
+                            <li>Add internal links from service pages</li>
+                            <li>Consider Google Ads for ice dam keywords</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Extend seasonal traffic spike through February.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 3 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #0A84FF; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 3</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Google Ads Preparation</h4>
+                        <div style="background: rgba(10, 132, 255, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-ad" style="color: #0A84FF; margin-right: 8px;"></i>March prep for April launch with $10-15K/month budget.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Complete account setup</li>
+                            <li>Competitive keyword research</li>
+                            <li>Build campaign structure</li>
+                            <li>Create landing page variants</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Significant lead volume increase for spring season.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 4 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #BF5AF2; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 4</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Continue Location Page Expansion</h4>
+                        <div style="background: rgba(191, 90, 242, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-map-marker-alt" style="color: #BF5AF2; margin-right: 8px;"></i>19 priority locations identified, systematic buildout.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Research and create 2-3 new location pages</li>
+                            <li>Focus on areas with existing visibility</li>
+                            <li>Follow established template system</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Expand geographic coverage, capture local searches.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Divider: The Numbers -->
+            <div style="margin: 40px 0 24px 0; text-align: center;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), rgba(255,255,255,0.3));"></div>
+                    <h1 style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: rgba(235, 235, 245, 0.5); margin: 0;">The Numbers</h1>
+                    <div style="flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.2), transparent);"></div>
+                </div>
             </div>
 
             <!-- Performance Metrics -->
@@ -2149,254 +2315,484 @@
                 </tbody>
             </table></div>
 
-            <h3 id="top-performing-pages">TOP PERFORMING PAGES (POSITIONS 1-20)</h3>
-            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin: -5px 0 15px 0;">Pages ranking in the top 20 positions across all keywords (from Google Search Console)</p>
-            <div class="table-wrapper"><table>
+            <h3 id="top-performing-pages">TOP PERFORMING PAGES (POSITIONS 1-20) - Month Over Month</h3>
+            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin: -5px 0 15px 0;">Pages ranking in the top 20 positions - comparing January vs December (from Google Search Console)</p>
+            <div class="table-wrapper"><table style="min-width: 900px;">
                 <thead>
                     <tr>
                         <th>Page</th>
-                        <th>Avg Position</th>
-                        <th>Clicks</th>
+                        <th>Jan Pos</th>
+                        <th>Dec Pos</th>
+                        <th>Pos Δ</th>
+                        <th>Jan Clicks</th>
+                        <th>Dec Clicks</th>
+                        <th>Click Δ</th>
                         <th>Impressions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="background: rgba(52, 199, 89, 0.22);">
+                    <!-- Homepage www -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="http://www.valleypeakroof.com/" target="_blank">/ (homepage - www)</a></td>
                         <td>2.5</td>
+                        <td>2.0</td>
+                        <td><strong class="color-negative">-0.5</strong></td>
                         <td>48</td>
+                        <td>37</td>
+                        <td><strong class="color-strong-positive">+11</strong></td>
                         <td>7,503</td>
                     </tr>
-                    <tr style="background: rgba(55, 197, 87, 0.21);">
+                    <!-- /terms - big improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.25);">
                         <td><a href="https://valleypeakroof.com/terms" target="_blank">/terms</a></td>
                         <td>5.6</td>
+                        <td>9.7</td>
+                        <td><strong class="color-strong-positive">+4.1 ↑</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>42</td>
                     </tr>
-                    <tr style="background: rgba(58, 195, 85, 0.21);">
+                    <!-- /blog/can-roof-problem-wait-until-spring -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/blog/can-roof-problem-wait-until-spring" target="_blank">/blog/can-roof-problem-wait-until-spring</a></td>
                         <td>5.7</td>
+                        <td>6.1</td>
+                        <td><strong class="color-positive">+0.4</strong></td>
                         <td>30</td>
+                        <td>6</td>
+                        <td><strong class="color-strong-positive">+24</strong></td>
                         <td>1,698</td>
                     </tr>
-                    <tr style="background: rgba(61, 193, 83, 0.20);">
+                    <!-- /blog/roof-resolutions-2026 -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/blog/roof-resolutions-2026.html" target="_blank">/blog/roof-resolutions-2026</a></td>
                         <td>6.2</td>
+                        <td>7.3</td>
+                        <td><strong class="color-positive">+1.1</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>79</td>
                     </tr>
-                    <tr style="background: rgba(64, 191, 81, 0.20);">
+                    <!-- /our-blog - BIG improvement from 15.7 -->
+                    <tr style="background: rgba(52, 199, 89, 0.30);">
                         <td><a href="https://valleypeakroof.com/our-blog" target="_blank">/our-blog</a></td>
                         <td>6.7</td>
+                        <td>15.7</td>
+                        <td><strong class="color-strong-positive">+9.0 ↑↑</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>133</td>
                     </tr>
-                    <tr style="background: rgba(67, 189, 79, 0.19);">
+                    <!-- /our-work - slight drop -->
+                    <tr>
                         <td><a href="https://valleypeakroof.com/our-work" target="_blank">/our-work</a></td>
                         <td>8.2</td>
+                        <td>8.1</td>
+                        <td><strong class="color-negative">-0.1</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>286</td>
                     </tr>
-                    <tr style="background: rgba(70, 187, 77, 0.19);">
+                    <!-- /privacy-policy - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
                         <td><a href="https://valleypeakroof.com/privacy-policy" target="_blank">/privacy-policy</a></td>
                         <td>8.5</td>
+                        <td>7.0</td>
+                        <td><strong class="color-negative">-1.5</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>23</td>
                     </tr>
-                    <tr style="background: rgba(73, 185, 75, 0.18);">
+                    <!-- /blog/berks-county-winter-snow-loads - HUGE improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.35);">
                         <td><a href="https://valleypeakroof.com/blog/berks-county-winter-snow-loads" target="_blank">/blog/berks-county-winter-snow-loads</a></td>
                         <td>9.2</td>
+                        <td>16.1</td>
+                        <td><strong class="color-strong-positive">+6.9 ↑↑</strong></td>
                         <td>27</td>
+                        <td>2</td>
+                        <td><strong class="color-strong-positive">+25</strong></td>
                         <td>3,950</td>
                     </tr>
-                    <tr style="background: rgba(76, 183, 73, 0.18);">
+                    <!-- /service-areas/roofing-tannersville-pa -->
+                    <tr>
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-tannersville-pa.html" target="_blank">/service-areas/roofing-tannersville-pa</a></td>
                         <td>10.4</td>
+                        <td>10.4</td>
+                        <td>—</td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>85</td>
                     </tr>
-                    <tr style="background: rgba(79, 181, 71, 0.17);">
+                    <!-- /roof-replacement-installation - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
                         <td><a href="https://valleypeakroof.com/roof-replacement-installation" target="_blank">/roof-replacement-installation</a></td>
                         <td>10.9</td>
+                        <td>8.9</td>
+                        <td><strong class="color-negative">-2.0</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>936</td>
                     </tr>
-                    <tr style="background: rgba(82, 179, 69, 0.17);">
+                    <!-- /service-areas/roofing-emmaus-pa - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.20);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-emmaus-pa" target="_blank">/service-areas/roofing-emmaus-pa</a></td>
                         <td>11.4</td>
+                        <td>15.0</td>
+                        <td><strong class="color-strong-positive">+3.6 ↑</strong></td>
                         <td>1</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+1</strong></td>
                         <td>653</td>
                     </tr>
-                    <tr style="background: rgba(85, 177, 67, 0.16);">
-                        <td><a href="https://valleypeakroof.com/" target="_blank">/ (homepage - https)</a></td>
-                        <td>11.8</td>
-                        <td>1</td>
-                        <td>44</td>
-                    </tr>
-                    <tr style="background: rgba(88, 175, 65, 0.16);">
+                    <!-- /roof-cost -->
+                    <tr style="background: rgba(52, 199, 89, 0.10);">
                         <td><a href="https://www.valleypeakroof.com/roof-cost" target="_blank">/roof-cost (www)</a></td>
                         <td>12.0</td>
+                        <td>12.3</td>
+                        <td><strong class="color-positive">+0.3</strong></td>
                         <td>3</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+3</strong></td>
                         <td>206</td>
                     </tr>
-                    <tr style="background: rgba(91, 173, 63, 0.15);">
+                    <!-- /service-areas/roofing-fleetwood-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.15);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-fleetwood-pa.html" target="_blank">/service-areas/roofing-fleetwood-pa</a></td>
                         <td>12.0</td>
+                        <td>6.6</td>
+                        <td><strong class="color-negative">-5.4 ↓</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>72</td>
                     </tr>
-                    <tr style="background: rgba(94, 171, 61, 0.15);">
+                    <!-- /service-areas/roofing-alburtis-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.15);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-alburtis-pa" target="_blank">/service-areas/roofing-alburtis-pa</a></td>
                         <td>12.7</td>
+                        <td>8.6</td>
+                        <td><strong class="color-negative">-4.1 ↓</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>204</td>
                     </tr>
-                    <tr style="background: rgba(97, 169, 59, 0.14);">
+                    <!-- /our-company - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.15);">
                         <td><a href="https://valleypeakroof.com/our-company" target="_blank">/our-company</a></td>
                         <td>13.0</td>
+                        <td>7.9</td>
+                        <td><strong class="color-negative">-5.1 ↓</strong></td>
                         <td>7</td>
+                        <td>2</td>
+                        <td><strong class="color-positive">+5</strong></td>
                         <td>683</td>
                     </tr>
-                    <tr style="background: rgba(100, 167, 57, 0.14);">
+                    <!-- /service-areas/roofing-nazareth-pa - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.25);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-nazareth-pa" target="_blank">/service-areas/roofing-nazareth-pa</a></td>
                         <td>13.3</td>
+                        <td>18.7</td>
+                        <td><strong class="color-strong-positive">+5.4 ↑</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>312</td>
                     </tr>
-                    <tr style="background: rgba(103, 165, 55, 0.13);">
+                    <!-- /blog/winter-siding-installation-lehigh-valley -->
+                    <tr style="background: rgba(52, 199, 89, 0.10);">
                         <td><a href="https://valleypeakroof.com/blog/winter-siding-installation-lehigh-valley" target="_blank">/blog/winter-siding-installation-lehigh-valley</a></td>
                         <td>13.7</td>
+                        <td>14.1</td>
+                        <td><strong class="color-positive">+0.4</strong></td>
                         <td>4</td>
+                        <td>5</td>
+                        <td><strong class="color-negative">-1</strong></td>
                         <td>1,071</td>
                     </tr>
-                    <tr style="background: rgba(106, 163, 53, 0.13);">
+                    <!-- /service-areas/roofing-honesdale-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-honesdale-pa.html" target="_blank">/service-areas/roofing-honesdale-pa</a></td>
                         <td>14.0</td>
+                        <td>12.8</td>
+                        <td><strong class="color-negative">-1.2</strong></td>
                         <td>0</td>
+                        <td>1</td>
+                        <td><strong class="color-negative">-1</strong></td>
                         <td>67</td>
                     </tr>
-                    <tr style="background: rgba(109, 161, 51, 0.12);">
+                    <!-- /service-areas/roofing-macungie-pa - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-macungie-pa" target="_blank">/service-areas/roofing-macungie-pa</a></td>
                         <td>14.5</td>
+                        <td>15.7</td>
+                        <td><strong class="color-positive">+1.2</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>436</td>
                     </tr>
-                    <tr style="background: rgba(112, 159, 49, 0.12);">
+                    <!-- /blog/black-streaks-on-roof-causes - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/blog/black-streaks-on-roof-causes.html" target="_blank">/blog/black-streaks-on-roof-causes</a></td>
                         <td>14.5</td>
+                        <td>16.3</td>
+                        <td><strong class="color-positive">+1.8</strong></td>
                         <td>0</td>
+                        <td>1</td>
+                        <td><strong class="color-negative">-1</strong></td>
                         <td>949</td>
                     </tr>
-                    <tr style="background: rgba(115, 157, 47, 0.11);">
+                    <!-- /service-areas/roofing-new-tripoli-pa - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-new-tripoli-pa" target="_blank">/service-areas/roofing-new-tripoli-pa</a></td>
                         <td>14.6</td>
+                        <td>17.3</td>
+                        <td><strong class="color-positive">+2.7</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>329</td>
                     </tr>
-                    <tr style="background: rgba(118, 155, 45, 0.11);">
+                    <!-- /blog/best-month-roof-replacement - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.15);">
                         <td><a href="https://valleypeakroof.com/blog/best-month-roof-replacement" target="_blank">/blog/best-month-roof-replacement</a></td>
                         <td>14.9</td>
+                        <td>11.3</td>
+                        <td><strong class="color-negative">-3.6 ↓</strong></td>
                         <td>4</td>
+                        <td>12</td>
+                        <td><strong class="color-negative">-8</strong></td>
                         <td>1,336</td>
                     </tr>
-                    <tr style="background: rgba(121, 153, 43, 0.10);">
-                        <td><a href="https://valleypeakroof.com/blog/roof-repair-or-replace-guide" target="_blank">/blog/roof-repair-or-replace-guide</a></td>
+                    <!-- /blog/roof-repair-or-replace-guide - NEW -->
+                    <tr style="background: rgba(255, 214, 10, 0.15);">
+                        <td><a href="https://valleypeakroof.com/blog/roof-repair-or-replace-guide" target="_blank">/blog/roof-repair-or-replace-guide</a> <strong class="color-milestone">NEW</strong></td>
                         <td>14.9</td>
+                        <td>—</td>
+                        <td><strong class="color-milestone">NEW</strong></td>
                         <td>0</td>
+                        <td>—</td>
+                        <td>—</td>
                         <td>92</td>
                     </tr>
-                    <tr style="background: rgba(124, 151, 41, 0.10);">
+                    <!-- /roofing-siding-gutter-faqs - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.15);">
                         <td><a href="https://valleypeakroof.com/roofing-siding-gutter-faqs" target="_blank">/roofing-siding-gutter-faqs</a></td>
                         <td>15.0</td>
+                        <td>10.4</td>
+                        <td><strong class="color-negative">-4.6 ↓</strong></td>
                         <td>3</td>
+                        <td>1</td>
+                        <td><strong class="color-positive">+2</strong></td>
                         <td>4,003</td>
                     </tr>
-                    <tr style="background: rgba(127, 149, 39, 0.10);">
+                    <!-- /service-areas/roofing-wind-gap-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-wind-gap-pa" target="_blank">/service-areas/roofing-wind-gap-pa</a></td>
                         <td>15.5</td>
+                        <td>14.9</td>
+                        <td><strong class="color-negative">-0.6</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>359</td>
                     </tr>
-                    <tr style="background: rgba(130, 147, 37, 0.10);">
+                    <!-- /service-areas/roofing-lake-ariel-pa - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-lake-ariel-pa.html" target="_blank">/service-areas/roofing-lake-ariel-pa</a></td>
                         <td>15.6</td>
+                        <td>17.8</td>
+                        <td><strong class="color-positive">+2.2</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>49</td>
                     </tr>
-                    <tr style="background: rgba(133, 145, 35, 0.10);">
-                        <td><a href="https://valleypeakroof.com/service-areas/roofing-coopersburg-pa" target="_blank">/service-areas/roofing-coopersburg-pa</a></td>
+                    <!-- /service-areas/roofing-coopersburg-pa - NEW -->
+                    <tr style="background: rgba(255, 214, 10, 0.15);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-coopersburg-pa" target="_blank">/service-areas/roofing-coopersburg-pa</a> <strong class="color-milestone">NEW</strong></td>
                         <td>16.3</td>
+                        <td>—</td>
+                        <td><strong class="color-milestone">NEW</strong></td>
                         <td>2</td>
+                        <td>—</td>
+                        <td>—</td>
                         <td>501</td>
                     </tr>
-                    <tr style="background: rgba(136, 143, 33, 0.10);">
+                    <!-- /contact - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.15);">
                         <td><a href="https://valleypeakroof.com/contact" target="_blank">/contact</a></td>
                         <td>16.8</td>
+                        <td>19.8</td>
+                        <td><strong class="color-positive">+3.0</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>198</td>
                     </tr>
-                    <tr style="background: rgba(139, 141, 31, 0.10);">
+                    <!-- /service-areas/roofing-hellertown-pa - improvement -->
+                    <tr style="background: rgba(52, 199, 89, 0.10);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-hellertown-pa" target="_blank">/service-areas/roofing-hellertown-pa</a></td>
                         <td>17.0</td>
+                        <td>18.0</td>
+                        <td><strong class="color-positive">+1.0</strong></td>
                         <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
                         <td>309</td>
                     </tr>
-                    <tr style="background: rgba(142, 139, 29, 0.10);">
-                        <td><a href="https://valleypeakroof.com/service-areas/roofing-bangor-pa" target="_blank">/service-areas/roofing-bangor-pa</a></td>
+                    <!-- /service-areas/roofing-bangor-pa - NEW -->
+                    <tr style="background: rgba(255, 214, 10, 0.15);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-bangor-pa" target="_blank">/service-areas/roofing-bangor-pa</a> <strong class="color-milestone">NEW</strong></td>
                         <td>17.2</td>
+                        <td>—</td>
+                        <td><strong class="color-milestone">NEW</strong></td>
                         <td>2</td>
+                        <td>—</td>
+                        <td>—</td>
                         <td>202</td>
                     </tr>
-                    <tr style="background: rgba(145, 137, 27, 0.10);">
+                    <!-- /blog/does-your-home-need-roof-ventilation -->
+                    <tr style="background: rgba(52, 199, 89, 0.05);">
                         <td><a href="https://valleypeakroof.com/blog/does-your-home-need-roof-ventilation" target="_blank">/blog/does-your-home-need-roof-ventilation</a></td>
                         <td>17.7</td>
+                        <td>17.8</td>
+                        <td><strong class="color-positive">+0.1</strong></td>
                         <td>0</td>
+                        <td>1</td>
+                        <td><strong class="color-negative">-1</strong></td>
                         <td>189</td>
                     </tr>
-                    <tr style="background: rgba(148, 135, 25, 0.10);">
-                        <td><a href="https://valleypeakroof.com/service-areas/roofing-bath-pa" target="_blank">/service-areas/roofing-bath-pa</a></td>
+                    <!-- /service-areas/roofing-bath-pa - NEW -->
+                    <tr style="background: rgba(255, 214, 10, 0.15);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-bath-pa" target="_blank">/service-areas/roofing-bath-pa</a> <strong class="color-milestone">NEW</strong></td>
                         <td>18.1</td>
+                        <td>—</td>
+                        <td><strong class="color-milestone">NEW</strong></td>
                         <td>0</td>
+                        <td>—</td>
+                        <td>—</td>
                         <td>245</td>
                     </tr>
-                    <tr style="background: rgba(151, 133, 23, 0.10);">
+                    <!-- /service-areas/roofing-wyomissing-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-wyomissing-pa" target="_blank">/service-areas/roofing-wyomissing-pa</a></td>
                         <td>18.3</td>
+                        <td>16.2</td>
+                        <td><strong class="color-negative">-2.1</strong></td>
                         <td>1</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+1</strong></td>
                         <td>562</td>
                     </tr>
-                    <tr style="background: rgba(154, 131, 21, 0.10);">
+                    <!-- /service-areas/roofing-easton-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-easton-pa" target="_blank">/service-areas/roofing-easton-pa</a></td>
                         <td>19.3</td>
+                        <td>17.6</td>
+                        <td><strong class="color-negative">-1.7</strong></td>
                         <td>2</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+2</strong></td>
                         <td>989</td>
                     </tr>
-                    <tr style="background: rgba(157, 129, 19, 0.10);">
+                    <!-- /service-areas/roofing-services-in-northampton-county - drop -->
+                    <tr>
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-services-in-northampton-county" target="_blank">/service-areas/roofing-services-in-northampton-county</a></td>
                         <td>19.6</td>
+                        <td>19.4</td>
+                        <td><strong class="color-negative">-0.2</strong></td>
                         <td>3</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+3</strong></td>
                         <td>1,921</td>
                     </tr>
-                    <tr style="background: rgba(160, 127, 17, 0.10);">
-                        <td><a href="https://valleypeakroof.com/service-areas/roofing-kutztown-pa" target="_blank">/service-areas/roofing-kutztown-pa</a></td>
+                    <!-- /service-areas/roofing-kutztown-pa - NEW -->
+                    <tr style="background: rgba(255, 214, 10, 0.15);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-kutztown-pa" target="_blank">/service-areas/roofing-kutztown-pa</a> <strong class="color-milestone">NEW</strong></td>
                         <td>19.7</td>
+                        <td>—</td>
+                        <td><strong class="color-milestone">NEW</strong></td>
                         <td>1</td>
+                        <td>—</td>
+                        <td>—</td>
                         <td>431</td>
                     </tr>
-                    <tr style="background: rgba(163, 125, 15, 0.10);">
+                    <!-- /service-areas/roofing-stroudsburg-pa -->
+                    <tr>
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-stroudsburg-pa" target="_blank">/service-areas/roofing-stroudsburg-pa</a></td>
                         <td>19.9</td>
+                        <td>19.9</td>
+                        <td>—</td>
                         <td>4</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+4</strong></td>
                         <td>602</td>
                     </tr>
-                    <tr style="background: rgba(166, 123, 13, 0.10);">
+                    <!-- /service-areas/roofing-hamburg-pa - drop -->
+                    <tr style="background: rgba(255, 69, 58, 0.15);">
                         <td><a href="https://valleypeakroof.com/service-areas/roofing-hamburg-pa.html" target="_blank">/service-areas/roofing-hamburg-pa</a></td>
                         <td>19.9</td>
+                        <td>16.0</td>
+                        <td><strong class="color-negative">-3.9 ↓</strong></td>
                         <td>2</td>
+                        <td>0</td>
+                        <td><strong class="color-positive">+2</strong></td>
                         <td>65</td>
                     </tr>
                 </tbody>
             </table></div>
+
+            <!-- Summary boxes -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0;">
+                <div style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.3); border-radius: 12px; padding: 14px; text-align: center;">
+                    <div style="font-size: 11px; text-transform: uppercase; color: rgba(235, 235, 245, 0.6); margin-bottom: 4px;">Position Improved</div>
+                    <div style="font-size: 24px; font-weight: 700; color: #34C759;">17 pages</div>
+                </div>
+                <div style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.3); border-radius: 12px; padding: 14px; text-align: center;">
+                    <div style="font-size: 11px; text-transform: uppercase; color: rgba(235, 235, 245, 0.6); margin-bottom: 4px;">Position Dropped</div>
+                    <div style="font-size: 24px; font-weight: 700; color: #FF453A;">16 pages</div>
+                </div>
+                <div style="background: rgba(255, 214, 10, 0.15); border: 1px solid rgba(255, 214, 10, 0.3); border-radius: 12px; padding: 14px; text-align: center;">
+                    <div style="font-size: 11px; text-transform: uppercase; color: rgba(235, 235, 245, 0.6); margin-bottom: 4px;">New to Top 20</div>
+                    <div style="font-size: 24px; font-weight: 700; color: #FFD60A;">6 pages</div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 16px;">
+                <h4><i class="fas fa-trophy"></i> Biggest Winners</h4>
+                <ul style="list-style: none; padding: 0; margin: 8px 0;">
+                    <li style="padding: 4px 0;"><strong class="color-strong-positive">/our-blog</strong> jumped from position 15.7 → 6.7 <strong class="color-strong-positive">(+9.0)</strong></li>
+                    <li style="padding: 4px 0;"><strong class="color-strong-positive">/blog/berks-county-winter-snow-loads</strong> jumped from 16.1 → 9.2 <strong class="color-strong-positive">(+6.9)</strong> with <strong class="color-strong-positive">+25 clicks</strong></li>
+                    <li style="padding: 4px 0;"><strong class="color-positive">/service-areas/roofing-nazareth-pa</strong> improved from 18.7 → 13.3 <strong class="color-positive">(+5.4)</strong></li>
+                    <li style="padding: 4px 0;"><strong class="color-positive">/blog/can-roof-problem-wait-until-spring</strong> gained <strong class="color-strong-positive">+24 clicks</strong> (6 → 30)</li>
+                </ul>
+            </div>
+
+            <div class="alert" style="border-left-color: #FF453A; margin-top: 12px;">
+                <h3 style="color: #FF453A; margin-top: 0;"><i class="fas fa-exclamation-triangle"></i> PAGES THAT DROPPED OUT OF TOP 20</h3>
+                <ul style="list-style: none; padding: 0; margin: 8px 0; font-size: 13px;">
+                    <li style="padding: 4px 0;"><strong>/service-areas/roofing-scranton-pa</strong> — was position 6.4 in December</li>
+                    <li style="padding: 4px 0;"><strong>/service-areas/roofing-hawley-pa</strong> — was position 9.2 in December</li>
+                    <li style="padding: 4px 0;"><strong>/residential-roof-repairs</strong> — was position 13.5 in December</li>
+                    <li style="padding: 4px 0;"><strong>/design-your-roof</strong> — was position 14.1 in December (had 5 clicks)</li>
+                    <li style="padding: 4px 0;"><strong>/service-areas/roofing-orefield-pa</strong> — was position 14.3 in December</li>
+                    <li style="padding: 4px 0;"><strong>/blog/august-roof-inspection-checklist-lehigh-valley</strong> — was position 15.1 in December</li>
+                    <li style="padding: 4px 0;"><strong>/skylight-installation-and-repair</strong> — was position 19.8 in December (had 2 clicks)</li>
+                    <li style="padding: 4px 0;"><strong>/service-areas/roofing-shillington-pa</strong> — was position 19.7 in December</li>
+                    <li style="padding: 4px 0;"><strong>/blog/ice-dam-prevention-roof-leaks-pennsylvania</strong> — was position 17.7 in December (had 6 clicks)</li>
+                    <li style="padding: 4px 0;"><strong>/blog/christmas-lights-roof-safety-guide</strong> — was position 17.3 in December (seasonal)</li>
+                </ul>
+            </div>
 
             <h3 id="keywords-driving-traffic">KEYWORDS DRIVING TRAFFIC (GSC - TOP 15 BY CLICKS)</h3>
             <div class="table-wrapper"><table>
@@ -2723,61 +3119,111 @@
             <!-- Month Ahead Focus -->
             <h2 id="month-ahead"><i class="fas fa-bullseye"></i> Month Ahead Focus</h2>
 
-            <div class="executive-summary" style="border-left: 3px solid #FF453A;">
-                <h3 style="color: #FF453A;"><i class="fas fa-exclamation-circle"></i> PRIORITY 1: INVESTIGATE ZERO-CLICK #1 RANKINGS</h3>
-                <p>"roofers lehigh valley pa" ranking #1.2 with 0 clicks is a red flag</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Check actual SERP appearance (mobile + desktop)</li>
-                    <li><i class="fas fa-check"></i> Verify Local Pack presence</li>
-                    <li><i class="fas fa-check"></i> Test structured data/schema</li>
-                    <li><i class="fas fa-check"></i> Review if ranking URL is correct</li>
-                </ul>
-                <p><strong>Expected Impact:</strong> Should convert 5-15 clicks/month at #1 position</p>
-            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+                <!-- Priority 1 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #FF453A; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 1</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Investigate Zero-Click #1 Rankings</h4>
+                        <div style="background: rgba(255, 69, 58, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-exclamation-triangle" style="color: #FF453A; margin-right: 8px;"></i>"roofers lehigh valley pa" ranking #1.2 with 0 clicks is a red flag.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Check actual SERP appearance (mobile + desktop)</li>
+                            <li>Verify Local Pack presence</li>
+                            <li>Test structured data/schema</li>
+                            <li>Review if ranking URL is correct</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Should convert 5-15 clicks/month at #1 position.</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="executive-summary" style="border-left: 3px solid #34C759;">
-                <h3 style="color: #34C759;"><i class="fas fa-snowflake"></i> PRIORITY 2: CAPITALIZE ON ICE DAM SUCCESS</h3>
-                <p>711 views, 51 clicks - highest performing content ever</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Create follow-up content (ice dam removal, ice dam damage signs)</li>
-                    <li><i class="fas fa-check"></i> Share on FB with boosted post</li>
-                    <li><i class="fas fa-check"></i> Add internal links from service pages</li>
-                    <li><i class="fas fa-check"></i> Consider Google Ads for ice dam keywords</li>
-                </ul>
-                <p><strong>Expected Impact:</strong> Extend seasonal traffic spike through February</p>
-            </div>
+                <!-- Priority 2 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #34C759; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 2</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Capitalize on Ice Dam Success</h4>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-snowflake" style="color: #34C759; margin-right: 8px;"></i>711 views, 51 clicks - highest performing content ever.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Create follow-up content (ice dam removal, ice dam damage signs)</li>
+                            <li>Share on FB with boosted post</li>
+                            <li>Add internal links from service pages</li>
+                            <li>Consider Google Ads for ice dam keywords</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Extend seasonal traffic spike through February.</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="executive-summary" style="border-left: 3px solid #0A84FF;">
-                <h3 style="color: #0A84FF;"><i class="fas fa-ad"></i> PRIORITY 3: GOOGLE ADS PREPARATION</h3>
-                <p>March prep for April launch with $10-15K/month budget</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Complete account setup</li>
-                    <li><i class="fas fa-check"></i> Competitive keyword research</li>
-                    <li><i class="fas fa-check"></i> Build campaign structure</li>
-                    <li><i class="fas fa-check"></i> Create landing page variants</li>
-                </ul>
-                <p><strong>Expected Impact:</strong> Significant lead volume increase for spring season</p>
-            </div>
+                <!-- Priority 3 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #0A84FF; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 3</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Google Ads Preparation</h4>
+                        <div style="background: rgba(10, 132, 255, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-ad" style="color: #0A84FF; margin-right: 8px;"></i>March prep for April launch with $10-15K/month budget.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Complete account setup</li>
+                            <li>Competitive keyword research</li>
+                            <li>Build campaign structure</li>
+                            <li>Create landing page variants</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Significant lead volume increase for spring season.</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="executive-summary" style="border-left: 3px solid #BF5AF2;">
-                <h3 style="color: #BF5AF2;"><i class="fas fa-map-marker-alt"></i> PRIORITY 4: CONTINUE LOCATION PAGE EXPANSION</h3>
-                <p>19 priority locations identified, systematic buildout</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Research and create 2-3 new location pages</li>
-                    <li><i class="fas fa-check"></i> Focus on areas with existing visibility</li>
-                    <li><i class="fas fa-check"></i> Follow established template system</li>
-                </ul>
-                <p><strong>Expected Impact:</strong> Expand geographic coverage, capture local searches</p>
+                <!-- Priority 4 -->
+                <div style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; overflow: hidden;">
+                    <div style="background: #BF5AF2; padding: 8px 16px;">
+                        <span style="color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Priority 4</span>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h4 style="color: #fff; font-size: 16px; font-weight: 600; margin: 0 0 12px 0;">Continue Location Page Expansion</h4>
+                        <div style="background: rgba(191, 90, 242, 0.1); border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.9); margin: 0;"><i class="fas fa-map-marker-alt" style="color: #BF5AF2; margin-right: 8px;"></i>19 priority locations identified, systematic buildout.</p>
+                        </div>
+                        <p style="font-size: 12px; font-weight: 600; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 8px 0;">Implementation</p>
+                        <ul style="margin: 0 0 12px 0; padding-left: 18px; font-size: 13px; line-height: 1.8; color: rgba(235, 235, 245, 0.8);">
+                            <li>Research and create 2-3 new location pages</li>
+                            <li>Focus on areas with existing visibility</li>
+                            <li>Follow established template system</li>
+                        </ul>
+                        <div style="background: rgba(52, 199, 89, 0.1); border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-chart-line" style="color: #34C759;"></i>
+                            <span style="font-size: 13px; color: rgba(235, 235, 245, 0.9);"><strong>Expected Impact:</strong> Expand geographic coverage, capture local searches.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Success Metrics -->
-            <h2 id="success-metrics"><i class="fas fa-chart-bar"></i> Success Metrics for February 2026</h2>
+            <h2 id="success-metrics"><i class="fas fa-chart-bar"></i> February 2026 Projections</h2>
             <div class="table-wrapper"><table>
                 <thead>
                     <tr>
                         <th>KPI</th>
                         <th>January Actual</th>
-                        <th>February Target</th>
+                        <th>February Projection</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -2809,10 +3255,13 @@
                 </tbody>
             </table></div>
 
-            <!-- Deep Research Analysis -->
-            <h2 id="deep-analysis"><i class="fas fa-microscope"></i> Deep Research Analysis</h2>
+            <!-- Deep Research Analysis Container -->
+            <div class="deep-research-container" style="background: linear-gradient(135deg, rgba(191, 90, 242, 0.08) 0%, rgba(175, 82, 222, 0.05) 100%); border: 1px solid rgba(191, 90, 242, 0.2); border-radius: 16px; padding: 24px; margin: 32px 0;">
 
-            <div class="executive-summary" style="border-left: 3px solid #BF5AF2;">
+                <h2 id="deep-analysis" style="margin-top: 0;"><i class="fas fa-microscope"></i> Deep Research Analysis</h2>
+                <p style="color: rgba(235, 235, 245, 0.6); font-size: 13px; margin: -8px 0 20px 0; font-style: italic;"><i class="fas fa-robot" style="margin-right: 6px;"></i>AI-powered insights from ChatGPT analysis of your SEO data</p>
+
+                <div class="executive-summary" style="border-left: 3px solid #BF5AF2;">
                 <h3 style="color: #BF5AF2;"><i class="fas fa-brain"></i> SITE STATUS ASSESSMENT</h3>
                 <p style="font-size: 14px; line-height: 1.7;">
                     <strong>This site is not struggling—it's transitioning from visibility to dominance.</strong>
@@ -2825,15 +3274,28 @@
             <!-- Root Cause Analysis -->
             <h3 id="root-cause"><i class="fas fa-search"></i> ROOT CAUSE ANALYSIS</h3>
 
-            <div class="insight-box" style="margin-bottom: 16px;">
-                <h4><i class="fas fa-chart-line"></i> WHY CLICKS +87% WHILE IMPRESSIONS ONLY +6.3%</h4>
-                <p><strong>Primary cause: CTR recovery, not visibility expansion.</strong></p>
-                <p>The December/January fixes addressed snippet defects (titles, metas, H2 mismatches, broken URLs, social previews). Google re-tested CTR on pages that were already ranking but underperforming. Many impressions already existed—clicks were suppressed by bad snippets.</p>
-                <ul>
-                    <li><strong>Impressions</strong> = demand + ranking footprint (mostly stable)</li>
-                    <li><strong>Clicks</strong> = snippet quality + intent match (massively improved)</li>
-                </ul>
-                <p style="color: #34C759;"><strong>Conclusion:</strong> This is healthy post-launch maturation behavior. The site is converting visibility into traffic more efficiently.</p>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+                <div class="insight-box" style="margin: 0;">
+                    <h4><i class="fas fa-chart-line"></i> WHY CLICKS +87% WHILE IMPRESSIONS ONLY +6.3%</h4>
+                    <p><strong>Primary cause: CTR recovery, not visibility expansion.</strong></p>
+                    <p>The December/January fixes addressed snippet defects (titles, metas, H2 mismatches, broken URLs, social previews).</p>
+                    <ul>
+                        <li><strong>Impressions</strong> = demand + ranking footprint (mostly stable)</li>
+                        <li><strong>Clicks</strong> = snippet quality + intent match (massively improved)</li>
+                    </ul>
+                    <p style="color: #34C759;"><strong>Conclusion:</strong> Healthy post-launch maturation behavior.</p>
+                </div>
+
+                <div class="insight-box" style="margin: 0; border-left-color: #FF9F0A; background: rgba(255, 159, 10, 0.15); border-color: rgba(255, 159, 10, 0.3);">
+                    <h4 style="color: #FF9F0A;"><i class="fas fa-map-marker-alt"></i> "ROOFER ALLENTOWN PA" #7.8, 318 IMP, 0 CLICKS</h4>
+                    <p><strong>Classic local SERP squeeze:</strong></p>
+                    <ul>
+                        <li>Ads (2-4) → Local Pack (3) → PAA → THEN organic</li>
+                        <li>Position ~8 is effectively page 2 on mobile</li>
+                        <li>Allentown competitors are hyper-optimized</li>
+                    </ul>
+                    <p><strong>Root cause:</strong> Present but not competitive yet for Allentown.</p>
+                </div>
             </div>
 
             <div class="alert" style="border-left-color: #FF453A;">
@@ -2841,89 +3303,75 @@
                 <p><strong>This is not normal and not a keyword issue. It is a SERP presentation issue.</strong></p>
                 <p style="margin-top: 12px;"><strong>Likely causes (ranked by probability):</strong></p>
                 <ul style="margin-top: 8px;">
-                    <li><strong>(1) Local Pack cannibalization:</strong> Query intent = local service. Google shows 3-pack (map), Google Guaranteed/LSA, then Ads. Organic #1 is below the fold on mobile. If Valley Peak IS in the Local Pack, clicks go to Call button, Directions, or GBP—not website. GSC still counts impressions even if users never scroll to organic.</li>
-                    <li><strong>(2) Wrong ranking URL:</strong> If Google is ranking a county page or thin service-area page instead of the homepage, users won't click. Users expect brand-heavy homepage with trust, reviews, phone number immediately.</li>
-                    <li><strong>(3) Snippet trust deficit:</strong> Even at #1, users won't click if competitors show ★★★★★ review stars and "Google Guaranteed" while yours doesn't. This keyword should be clicking 10-20% CTR.</li>
+                    <li><strong>(1) Local Pack cannibalization:</strong> Query intent = local service. Google shows 3-pack (map), Google Guaranteed/LSA, then Ads. Organic #1 is below the fold on mobile.</li>
+                    <li><strong>(2) Wrong ranking URL:</strong> If Google is ranking a county page or thin service-area page instead of the homepage, users won't click.</li>
+                    <li><strong>(3) Snippet trust deficit:</strong> Even at #1, users won't click if competitors show ★★★★★ review stars and "Google Guaranteed" while yours doesn't.</li>
                 </ul>
             </div>
 
-            <div class="insight-box" style="border-left-color: #FF9F0A; background: rgba(255, 159, 10, 0.15); border-color: rgba(255, 159, 10, 0.3);">
-                <h4 style="color: #FF9F0A;"><i class="fas fa-map-marker-alt"></i> "ROOFER ALLENTOWN PA" #7.8, 318 IMPRESSIONS, ZERO CLICKS</h4>
-                <p><strong>Classic local SERP squeeze:</strong></p>
-                <ul>
-                    <li>Ads (2-4) → Local Pack (3) → People Also Ask → THEN organic</li>
-                    <li>Position ~8 is effectively page 2 visibility on mobile</li>
-                    <li>Allentown competitors are likely hyper-optimized city pages</li>
-                    <li>Your Allentown page is at 31.1 avg, meaning the keyword may actually be ranking on another URL inconsistently</li>
-                </ul>
-                <p><strong>Root cause:</strong> You are present but not competitive yet for Allentown.</p>
-            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+                <div class="insight-box" style="margin: 0;">
+                    <h4><i class="fas fa-arrow-down"></i> WHY LEHIGH COUNTY PAGE DROPPED (29.4 → 36.7)</h4>
+                    <ul>
+                        <li><strong>Keyword narrowing:</strong> "Lehigh Valley" → "Lehigh County" reduced semantic breadth</li>
+                        <li><strong>County pages are weak converters:</strong> Google favors city pages or homepages</li>
+                        <li><strong>Internal competition:</strong> Homepage + Bethlehem outperforming it</li>
+                    </ul>
+                    <p><strong>Not a failure—Google reallocating authority.</strong></p>
+                </div>
 
-            <div class="insight-box">
-                <h4><i class="fas fa-arrow-down"></i> WHY LEHIGH COUNTY PAGE DROPPED (29.4 → 36.7)</h4>
-                <p>This is counterintuitive but explainable:</p>
-                <ul>
-                    <li><strong>Keyword narrowing:</strong> Switching from "Lehigh Valley" → "Lehigh County" reduced semantic breadth. Lost overlap with broader Valley searches.</li>
-                    <li><strong>County pages are weak converters:</strong> Google increasingly favors city pages or authoritative homepages. County pages often float or decay unless very strong.</li>
-                    <li><strong>Internal competition:</strong> Homepage + Bethlehem pages are outperforming it. Google reallocates ranking equity upward.</li>
-                </ul>
-                <p><strong>This is not a failure—it's Google reallocating authority.</strong></p>
-            </div>
-
-            <div class="insight-box">
-                <h4><i class="fas fa-building"></i> WHY COMMERCIAL ROOFING PAGE DROPPED (36.1 → 39.7)</h4>
-                <p>Commercial roofing has higher authority competitors, fewer backlinks, lower internal link support, and no case studies/proof.</p>
-                <p>Fixing og:url and H2s helps indexing—<strong>not ranking</strong>.</p>
-                <p><strong>Root cause:</strong> The page lacks E-E-A-T signals required for commercial intent.</p>
+                <div class="insight-box" style="margin: 0;">
+                    <h4><i class="fas fa-building"></i> WHY COMMERCIAL ROOFING DROPPED (36.1 → 39.7)</h4>
+                    <p>Commercial roofing has higher authority competitors, fewer backlinks, lower internal link support, and no case studies/proof.</p>
+                    <p>Fixing og:url and H2s helps indexing—<strong>not ranking</strong>.</p>
+                    <p><strong>Root cause:</strong> Page lacks E-E-A-T signals required for commercial intent.</p>
+                </div>
             </div>
 
             <div class="insight-box">
                 <h4><i class="fas fa-percentage"></i> WHY ENGAGEMENT RATE DROPPED (-6.8pp) DESPITE BETTER TRAFFIC</h4>
-                <p><strong>This is entirely Paid Social pollution.</strong></p>
-                <ul>
-                    <li>Paid Social = 523 sessions at 9.8% engagement</li>
-                    <li>Organic = 61.2% engagement (excellent)</li>
-                </ul>
-                <p>GA4 averages are weighted → Paid Social drags the site down. <strong>Nothing is wrong with SEO traffic.</strong></p>
+                <p><strong>This is entirely Paid Social pollution.</strong> Paid Social = 523 sessions at 9.8% engagement. Organic = 61.2% engagement (excellent). GA4 averages are weighted → Paid Social drags the site down. <strong>Nothing is wrong with SEO traffic.</strong></p>
             </div>
 
             <!-- Success Analysis -->
             <h3 id="success-analysis"><i class="fas fa-trophy"></i> SUCCESS ANALYSIS</h3>
 
-            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
-                <h4 style="color: #34C759;"><i class="fas fa-wrench"></i> WHY DECEMBER FIXES WORKED</h4>
-                <p><strong>You fixed trust mismatches, not keywords:</strong></p>
-                <ul>
-                    <li>Titles aligned with intent</li>
-                    <li>Meta descriptions reduced fluff</li>
-                    <li>H2 mismatches corrected</li>
-                    <li>Mobile CTA visibility improved</li>
-                </ul>
-                <p>This improved CTR, scroll depth, and form interaction. Google rewarded this with better average position and more click testing.</p>
-            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+                <div class="insight-box" style="margin: 0; border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                    <h4 style="color: #34C759;"><i class="fas fa-wrench"></i> WHY DECEMBER FIXES WORKED</h4>
+                    <p><strong>You fixed trust mismatches, not keywords:</strong></p>
+                    <ul>
+                        <li>Titles aligned with intent</li>
+                        <li>Meta descriptions reduced fluff</li>
+                        <li>H2 mismatches corrected</li>
+                        <li>Mobile CTA visibility improved</li>
+                    </ul>
+                    <p>Google rewarded this with better average position and more click testing.</p>
+                </div>
 
-            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
-                <h4 style="color: #34C759;"><i class="fas fa-snowflake"></i> WHY ICE DAM BLOG EXPLODED (711 VIEWS, 51 CLICKS)</h4>
-                <p><strong>Perfect storm:</strong></p>
-                <ul>
-                    <li>Seasonal urgency</li>
-                    <li>Informational → transactional crossover</li>
-                    <li>Facebook distribution</li>
-                    <li>Zero strong competitors locally</li>
-                </ul>
-                <p>Ice dams are rare, scary, expensive, and weather-driven. That creates high emotional click-through.</p>
-            </div>
+                <div class="insight-box" style="margin: 0; border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                    <h4 style="color: #34C759;"><i class="fas fa-snowflake"></i> WHY ICE DAM BLOG EXPLODED (711 VIEWS, 51 CLICKS)</h4>
+                    <p><strong>Perfect storm:</strong></p>
+                    <ul>
+                        <li>Seasonal urgency</li>
+                        <li>Informational → transactional crossover</li>
+                        <li>Facebook distribution</li>
+                        <li>Zero strong competitors locally</li>
+                    </ul>
+                    <p>Ice dams are rare, scary, expensive, and weather-driven.</p>
+                </div>
 
-            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
-                <h4 style="color: #34C759;"><i class="fas fa-robot"></i> WHY AI VISIBILITY SURGED (+25%)</h4>
-                <p>AI systems favor clear answers, FAQ-style content, location + service clarity, and recent updates.</p>
-                <p>The December cleanup removed ambiguity, fixed broken references, and improved consistency. <strong>AI models now trust your site as ground truth.</strong></p>
-            </div>
+                <div class="insight-box" style="margin: 0; border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                    <h4 style="color: #34C759;"><i class="fas fa-robot"></i> WHY AI VISIBILITY SURGED (+25%)</h4>
+                    <p>AI systems favor clear answers, FAQ-style content, location + service clarity, and recent updates.</p>
+                    <p>The December cleanup removed ambiguity, fixed broken references, and improved consistency. <strong>AI models now trust your site as ground truth.</strong></p>
+                </div>
 
-            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
-                <h4 style="color: #34C759;"><i class="fas fa-users"></i> WHY ORGANIC ENGAGEMENT IS SO HIGH (61.2%)</h4>
-                <p>Because queries are high-intent, pages match intent, forms are visible, and content answers real problems.</p>
-                <p><strong>This is elite local SEO engagement.</strong></p>
+                <div class="insight-box" style="margin: 0; border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                    <h4 style="color: #34C759;"><i class="fas fa-users"></i> WHY ORGANIC ENGAGEMENT IS SO HIGH (61.2%)</h4>
+                    <p>Because queries are high-intent, pages match intent, forms are visible, and content answers real problems.</p>
+                    <p><strong>This is elite local SEO engagement.</strong></p>
+                </div>
             </div>
 
             <!-- Problem Investigation -->
@@ -2966,24 +3414,6 @@
                 </tbody>
             </table></div>
 
-            <!-- Competitor Insights -->
-            <h3 id="competitor-insights"><i class="fas fa-users"></i> COMPETITOR INSIGHTS: ALANKUNSMANROOFING.COM</h3>
-
-            <div class="insight-box" style="border-left-color: #0A84FF;">
-                <h4 style="color: #0A84FF;"><i class="fas fa-chart-bar"></i> WHY THEY GET 6.96 VISITORS PER KEYWORD (VS YOUR 0.60)</h4>
-                <p>They:</p>
-                <ul>
-                    <li>Rank for fewer keywords (216 vs 827)</li>
-                    <li>But those keywords are <strong>transactional</strong></li>
-                    <li>Strong city pages</li>
-                    <li>Strong GBP presence</li>
-                    <li>Likely better Local Pack dominance</li>
-                </ul>
-                <p style="margin-top: 12px;"><strong>Their strategy:</strong> "Get the click now"</p>
-                <p><strong>Your strategy:</strong> "Own the entire market long-term"</p>
-                <p style="margin-top: 8px;">Both valid—but you now need <strong>conversion layering</strong>.</p>
-            </div>
-
             <!-- Strategic Recommendations -->
             <h3 id="strategic-recommendations"><i class="fas fa-lightbulb"></i> STRATEGIC RECOMMENDATIONS</h3>
 
@@ -3025,93 +3455,119 @@
                 </div>
             </div>
 
-            <!-- December Fixes Progress (January Tasks Completed) -->
-            <div class="task-tracker" id="december-fixes" style="background: linear-gradient(135deg, rgba(52, 199, 89, 0.15) 0%, rgba(34, 139, 34, 0.15) 100%); border-color: rgba(52, 199, 89, 0.3);">
-                <div class="task-tracker-header">
-                    <i class="fas fa-check-double" style="color: #34C759;"></i>
-                    <h2 style="color: #34C759;">January 2026 Page Fixes (Complete)</h2>
-                </div>
-                <p class="task-tracker-subtitle">Based on December 2025 SEO Report analysis. All tasks completed in early January.</p>
+                <!-- Competitor Insights -->
+                <h3 id="competitor-insights"><i class="fas fa-users"></i> COMPETITOR INSIGHTS</h3>
 
-                <div class="task-summary">
-                    <strong><i class="fas fa-check-circle"></i> All Tasks Complete</strong> — Zero-click pages optimized, site-wide fixes implemented. Results: Gutter page +12 positions, overall avg position +3.9, clicks +87%.
-                </div>
-
-                <div class="priority-section">
-                    <div class="priority-title"><i class="fas fa-check-circle" style="color: #34C759;"></i> Zero-Click Pages Fixed</div>
-
-                    <div class="table-wrapper"><table>
-                        <thead>
-                            <tr>
-                                <th>Page</th>
-                                <th>Previous</th>
-                                <th>Current</th>
-                                <th>Changes Made</th>
-                                <th>Result</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Roof Replacement</strong></td>
-                                <td>1,811 imp, pos 8.9</td>
-                                <td>936 imp, pos 10.9</td>
-                                <td>Added "0% Financing Available" to title, meta 244→152 chars</td>
-                                <td style="color: #34C759;">Now receiving clicks</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Residential Repairs</strong></td>
-                                <td>2,176 imp, pos 13.5</td>
-                                <td>pos 22.5</td>
-                                <td>Added "Same-Day Emergency Service", fixed contact H2</td>
-                                <td>Position slipped, properly optimized</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Northampton County</strong></td>
-                                <td>2,291 imp, pos 19.4</td>
-                                <td>3 clicks, pos 19.6</td>
-                                <td>Added "Contractor" keyword, fixed typo</td>
-                                <td style="color: #34C759;">Position stable, getting clicks</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Lehigh County</strong></td>
-                                <td>3,621 imp, pos 29.4</td>
-                                <td>pos 36.7</td>
-                                <td>"Lehigh Valley" → "Lehigh County"</td>
-                                <td style="color: #FF9F0A;">Position dropped, needs investigation</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Gutter Maintenance</strong></td>
-                                <td>10,983 imp, pos 47.7</td>
-                                <td>5,507 imp, pos 35.7</td>
-                                <td>Added "Free Inspection & Cleaning"</td>
-                                <td style="color: #34C759;">+12 positions improvement</td>
-                            </tr>
-                            <tr>
-                                <td><strong>FAQ Page</strong></td>
-                                <td>1,696 imp, pos 12.1</td>
-                                <td>4,003 imp, 3 clicks, pos 15.0</td>
-                                <td>Added "Lehigh Valley Homeowner Questions"</td>
-                                <td>Position slipped slightly, getting clicks</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Commercial Roofing</strong></td>
-                                <td>1,949 imp, pos 36.1</td>
-                                <td>1,398 imp, pos 39.7</td>
-                                <td>Fixed og:url, twitter:url, Contact H2</td>
-                                <td style="color: #FF9F0A;">Position dropped</td>
-                            </tr>
-                        </tbody>
-                    </table></div>
-                </div>
-
-                <div class="priority-section">
-                    <div class="priority-title"><i class="fas fa-check-circle" style="color: #34C759;"></i> Site-Wide Fixes Completed</div>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> All 23 Blog Posts: Fixed share buttons, URLs, internal links, contact H2s</li>
-                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Blog Card Excerpts: Clean 120-char truncation</li>
-                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Social Media Previews: Updated og:image/twitter:image on 47 pages</li>
-                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Mobile Form Visibility: Added "Free Estimate" button below mobile navbar</li>
+                <div class="insight-box" style="border-left-color: #0A84FF;">
+                    <h4 style="color: #0A84FF;"><i class="fas fa-chart-bar"></i> ALANKUNSMANROOFING.COM: WHY THEY GET 6.96 VISITORS PER KEYWORD (VS YOUR 0.60)</h4>
+                    <p>They:</p>
+                    <ul>
+                        <li>Rank for fewer keywords (216 vs 827)</li>
+                        <li>But those keywords are <strong>transactional</strong></li>
+                        <li>Strong city pages</li>
+                        <li>Strong GBP presence</li>
+                        <li>Likely better Local Pack dominance</li>
                     </ul>
+                    <p style="margin-top: 12px;"><strong>Their strategy:</strong> "Get the click now"</p>
+                    <p><strong>Your strategy:</strong> "Own the entire market long-term"</p>
+                    <p style="margin-top: 8px;">Both valid—but you now need <strong>conversion layering</strong>.</p>
+                </div>
+
+            </div>
+            <!-- End Deep Research Analysis Container -->
+
+            <!-- December Fixes Progress (January Tasks Completed) -->
+            <div class="task-tracker collapsible-section collapsed" id="december-fixes" style="border-color: rgba(52, 199, 89, 0.3);">
+                <div class="task-tracker-header collapsible-header" onclick="toggleSection(this)" style="cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-check-double" style="color: #34C759;"></i>
+                        <h2 style="color: #34C759; margin: 0;">January 2026 Page Fixes (Complete)</h2>
+                    </div>
+                    <i class="fas fa-chevron-down section-toggle-icon" style="color: #34C759; transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="collapsible-content">
+                    <p class="task-tracker-subtitle">Based on December 2025 SEO Report analysis. All tasks completed in early January.</p>
+
+                    <div class="task-summary">
+                        <strong><i class="fas fa-check-circle"></i> All Tasks Complete</strong> — Zero-click pages optimized, site-wide fixes implemented. Results: Gutter page +12 positions, overall avg position +3.9, clicks +87%.
+                    </div>
+
+                    <div class="priority-section">
+                        <div class="priority-title"><i class="fas fa-check-circle" style="color: #34C759;"></i> Zero-Click Pages Fixed</div>
+
+                        <div class="table-wrapper"><table>
+                            <thead>
+                                <tr>
+                                    <th>Page</th>
+                                    <th>Previous</th>
+                                    <th>Current</th>
+                                    <th>Changes Made</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: rgba(52, 199, 89, 0.15);">
+                                    <td><strong>Roof Replacement</strong></td>
+                                    <td>1,811 imp, pos 8.9</td>
+                                    <td>936 imp, pos 10.9</td>
+                                    <td>Added "0% Financing Available" to title, meta 244→152 chars</td>
+                                    <td style="color: #34C759; font-weight: 600;">Now receiving clicks</td>
+                                </tr>
+                                <tr style="background: rgba(255, 214, 10, 0.12);">
+                                    <td><strong>Residential Repairs</strong></td>
+                                    <td>2,176 imp, pos 13.5</td>
+                                    <td>pos 22.5</td>
+                                    <td>Added "Same-Day Emergency Service", fixed contact H2</td>
+                                    <td style="color: #FFD60A; font-weight: 600;">Position slipped, properly optimized</td>
+                                </tr>
+                                <tr style="background: rgba(52, 199, 89, 0.15);">
+                                    <td><strong>Northampton County</strong></td>
+                                    <td>2,291 imp, pos 19.4</td>
+                                    <td>3 clicks, pos 19.6</td>
+                                    <td>Added "Contractor" keyword, fixed typo</td>
+                                    <td style="color: #34C759; font-weight: 600;">Position stable, getting clicks</td>
+                                </tr>
+                                <tr style="background: rgba(255, 214, 10, 0.12);">
+                                    <td><strong>Lehigh County</strong></td>
+                                    <td>3,621 imp, pos 29.4</td>
+                                    <td>pos 36.7</td>
+                                    <td>"Lehigh Valley" → "Lehigh County"</td>
+                                    <td style="color: #FFD60A; font-weight: 600;">Settling after changes, monitor</td>
+                                </tr>
+                                <tr style="background: rgba(48, 209, 88, 0.25);">
+                                    <td><strong>Gutter Maintenance</strong></td>
+                                    <td>10,983 imp, pos 47.7</td>
+                                    <td>5,507 imp, pos 35.7</td>
+                                    <td>Added "Free Inspection & Cleaning"</td>
+                                    <td style="color: #30D158; font-weight: 700;">+12 positions improvement</td>
+                                </tr>
+                                <tr style="background: rgba(255, 214, 10, 0.12);">
+                                    <td><strong>FAQ Page</strong></td>
+                                    <td>1,696 imp, pos 12.1</td>
+                                    <td>4,003 imp, 3 clicks, pos 15.0</td>
+                                    <td>Added "Lehigh Valley Homeowner Questions"</td>
+                                    <td style="color: #FFD60A; font-weight: 600;">Position slipped slightly, getting clicks</td>
+                                </tr>
+                                <tr style="background: rgba(255, 214, 10, 0.12);">
+                                    <td><strong>Commercial Roofing</strong></td>
+                                    <td>1,949 imp, pos 36.1</td>
+                                    <td>1,398 imp, pos 39.7</td>
+                                    <td>Fixed og:url, twitter:url, Contact H2</td>
+                                    <td style="color: #FFD60A; font-weight: 600;">Settling after changes, monitor</td>
+                                </tr>
+                            </tbody>
+                        </table></div>
+                    </div>
+
+                    <div class="priority-section">
+                        <div class="priority-title"><i class="fas fa-check-circle" style="color: #34C759;"></i> Site-Wide Fixes Completed</div>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> All 23 Blog Posts: Fixed share buttons, URLs, internal links, contact H2s</li>
+                            <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Blog Card Excerpts: Clean 120-char truncation</li>
+                            <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Social Media Previews: Updated og:image/twitter:image on 47 pages</li>
+                            <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Mobile Form Visibility: Added "Free Estimate" button below mobile navbar</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -3565,6 +4021,12 @@
         // Toggle task items
         function toggleTask(taskItem) {
             taskItem.classList.toggle('expanded');
+        }
+
+        // Toggle collapsible sections
+        function toggleSection(header) {
+            const section = header.closest('.collapsible-section');
+            section.classList.toggle('collapsed');
         }
 
         // Traffic Sources Chart
