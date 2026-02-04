@@ -990,11 +990,16 @@
         </div>
 
         <div class="content">
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                <button class="copy-full-report-btn" onclick="copyFullReport()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
-                    <i class="fas fa-copy"></i> Copy Full Report
-                </button>
-                <a href="#january-fixes" class="copy-full-report-btn" style="flex: 1; min-width: 200px; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                <div style="display: flex; gap: 10px;">
+                    <button class="copy-full-report-btn" onclick="copyFullReport()" style="flex: 1; margin-bottom: 0;">
+                        <i class="fas fa-copy"></i> Copy Full Report
+                    </button>
+                    <button class="copy-full-report-btn" onclick="copyReportSummary()" style="flex: 1; margin-bottom: 0; background: linear-gradient(135deg, rgba(52, 199, 89, 0.3) 0%, rgba(34, 139, 34, 0.3) 100%); border-color: rgba(52, 199, 89, 0.4);">
+                        <i class="fas fa-file-alt"></i> Copy Summary
+                    </button>
+                </div>
+                <a href="#january-fixes" class="copy-full-report-btn" style="margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
                     <i class="fas fa-tasks"></i> View January Fixes
                 </a>
             </div>
@@ -3592,8 +3597,45 @@
             }
         });
 
-        // Copy Full Report function
+        // Copy Full Report function - copies all page content
         function copyFullReport() {
+            const content = document.querySelector('.content');
+
+            // Build the full report text
+            let reportText = 'VALLEY PEAK ROOFING - DECEMBER 2025 SEO REPORT\n';
+            reportText += '================================================\n\n';
+
+            // Get header info
+            const headerInfo = document.querySelector('.report-meta');
+            if (headerInfo) {
+                reportText += headerInfo.innerText.replace(/\n+/g, '\n') + '\n\n';
+            }
+
+            // Get all content, excluding buttons and navigation
+            const clone = content.cloneNode(true);
+
+            // Remove elements we don't want in the copy
+            clone.querySelectorAll('button, .copy-full-report-btn, .toc-dropdown, .back-to-top, .task-expand-icon, script, style').forEach(el => el.remove());
+
+            // Get text and clean it up
+            reportText += clone.innerText
+                .replace(/\n{3,}/g, '\n\n')
+                .replace(/^\s+/gm, '')
+                .trim();
+
+            navigator.clipboard.writeText(reportText).then(() => {
+                const btn = event.target.closest('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                }, 2000);
+            });
+        }
+
+        // Copy Report Summary - curated summary for client
+        function copyReportSummary() {
             const report = `VALLEY PEAK ROOFING - DECEMBER 2025 SEO REPORT
 ================================================
 Reporting Period: December 1-31, 2025
@@ -3604,355 +3646,71 @@ EXECUTIVE SUMMARY
 -----------------
 December showed mixed results: visibility expanded significantly (+49% keywords, +28% impressions) but conversions dropped sharply (-50% form submissions). The site now ranks for 545 keywords worth $11K in traffic value, but actual organic clicks fell 21% as average position slipped from 24.6 to 29.5.
 
-Key Metrics:
-- Keyword explosion: 545 keywords (+49% from 366) - largest single-month growth
-- Traffic value surged: $11,017 (+57% from $7K) - highest valuation ever
-- Organic clicks declined: 135 clicks (-21% from 170)
-- Form submissions dropped: 7 submissions (-50% from 14)
-- Paid Social issue: 380 sessions with 2.4% engagement, 0.4s avg time
-- Commercial lead captured: Comfort Inn hotel full roof replacement
+KEY METRICS
+-----------
+• Keyword explosion: 545 keywords (+49% from 366)
+• Traffic value surged: $11,017 (+57% from $7K)
+• Organic clicks declined: 135 clicks (-21% from 170)
+• Form submissions dropped: 7 submissions (-50% from 14)
+• Commercial lead captured: Comfort Inn hotel full roof replacement
 
 THE BOTTOM LINE
 ---------------
 The visibility is there. We're ranking for more keywords than ever and showing up in more searches. The slower lead volume is expected for December.
 
-Looking into: form functionality, page experience, and zero-click pages that should be getting traffic.
-
-WHY CLICKS ARE DOWN
--------------------
-We added 179 new keywords this month, but most rank in positions 20-50+ where clicks are rare. This pulls down average position (24.6 to 29.5) and dilutes CTR. Keywords that rank well are clicking fine. As new rankings improve, clicks will follow.
-
-GOOGLE SEARCH CONSOLE METRICS
------------------------------
-Total Impressions: 70K (+28.4% from Nov)
-Total Clicks: 135 (-20.6% from Nov)
-Form Submissions: 7 (-50.0% from Nov)
-Average CTR: 0.2% (-0.1pp from Nov)
-Average Position: 29.5 (-4.9 positions from Nov)
+GOOGLE SEARCH CONSOLE
+--------------------
+Total Impressions: 70K (+28.4%)
+Total Clicks: 135 (-20.6%)
+Average CTR: 0.2% (-0.1pp)
+Average Position: 29.5 (-4.9 positions)
 
 SEMRUSH METRICS
 ---------------
-Estimated Monthly Traffic: 453 (+14.4% from Nov)
-Ranked Keywords: 545 (+48.9% from Nov)
-Traffic Value: $11K (+57.4% from Nov)
-Keywords in Position #1: 6 (-2 from Nov)
-Branded Traffic: 56 (unchanged)
-Non-Branded Traffic: 397 (+16.8% from Nov)
+Estimated Monthly Traffic: 453 (+14.4%)
+Ranked Keywords: 545 (+48.9%)
+Traffic Value: $11K (+57.4%)
+Keywords in Position #1: 6
 
-GOOGLE ANALYTICS 4 METRICS
---------------------------
-Total Users: 1,120 (+18.8% from Nov)
-New Users: 1,107 (+19.2% from Nov)
-Sessions: 1,250 (+16.4% from Nov)
-Engaged Sessions: 454 (-16.1% from Nov)
-Engagement Rate: 36.3% (-14.1pp from Nov)
-Organic Search Sessions: 188 (-13.4% from Nov)
-Organic Search Engagement Rate: 57.4% (-6.2pp from Nov)
-
-TRAFFIC SOURCES BREAKDOWN
--------------------------
-Direct: 394 sessions, 33.8% engagement, 19.9s avg time
-Paid Social: 380 sessions, 2.4% engagement, 0.4s avg time (problem!)
-Referral: 221 sessions, 81.0% engagement, 3m 21s avg time (best!)
-Organic Search: 188 sessions, 57.4% engagement, 45.0s avg time
-Organic Social: 55 sessions, 38.2% engagement, 13.2s avg time
-
-BACKLINK PROFILE
-----------------
-Total Backlinks: 420 (+6.6% from Nov)
-Referring Domains: 173 (+6.8% from Nov)
-Authority Score: 10 (unchanged)
-
-AI SEARCH VISIBILITY
---------------------
-AI Visibility Score: 24 (unchanged)
-Total Mentions: 12 (unchanged)
-Cited Pages: 22 (unchanged)
-ChatGPT: 3 mentions, 11 cited pages
-AI Overview: 1 mention, 3 cited pages
-AI Mode: 5 mentions, 7 cited pages
-Gemini: 3 mentions, 5 cited pages
-Note: 10 sessions from chatgpt.com visible in GA4 referral data
-
-SERP FEATURES PERFORMANCE
--------------------------
-Features where we appear (linking to domain):
-- Image: 27 keywords
-- Local Pack: 22 keywords
-- People Also Ask: 11 keywords
-- Sitelinks: 8 keywords
-- AI Overview: 3 keywords
-- Image Pack: 1 keyword
-- Featured Snippet: 0 (opportunity)
-- Video: 0 (not currently appearing)
-
-HIGH-VALUE PAGES BY CLICKS (GSC)
---------------------------------
-Homepage (combined): 64 clicks, 25,911 impressions, 0.25% CTR, ~15 position
-Best Month Roof Replacement (blog): 12 clicks, 1,703 impressions, 0.70% CTR, 11.3 position
-Roof Financing Options: 8 clicks, 1,042 impressions, 0.77% CTR, 35.4 position
-Ice Dam Prevention (blog): 6 clicks, 490 impressions, 1.22% CTR, 17.7 position
-Can Roof Problem Wait Until Spring (blog): 6 clicks, 351 impressions, 1.71% CTR, 6.1 position
-Design Your Roof: 5 clicks, 3,195 impressions, 0.16% CTR, 14.1 position
-Budget Roof Cost: 5 clicks, 2,198 impressions, 0.23% CTR, 38.1 position
-Winter Siding Installation (blog): 5 clicks, 478 impressions, 1.05% CTR, 14.1 position
-
-TOP PAGES BY VIEWS (GA4)
-------------------------
-Homepage: 624 views
-Winter Siding Installation (blog): 457 views - strong seasonal content!
-Roofing Blog & Tips: 52 views
-Budget Roof Cost: 51 views
-Roof Financing Options: 41 views
-Siding Installation: 35 views
-Contact: 32 views
-Our Work: 28 views
-About: 27 views
-Service Areas: 26 views
-
-ORGANIC COMPETITION ANALYSIS (SEMRUSH)
---------------------------------------
-Valley Peak Roofing: 545 keywords, 453 traffic, $11,017 value
-whitesroofingsidingllc.com: 40% competition, 27 common keywords, 121 total, 34 traffic, $604 value
-alankunsmanroofing.com: 35% competition, 25 common keywords, 138 total, 1,463 traffic, $8,526 value
-homeshieldpros.com: 34% competition, 17 common keywords, 191 total, 185 traffic, $5,019 value
-scartelliremodeling.com: 20% competition, 9 common keywords, 127 total, 34 traffic, $176 value
-ziggysroofing.us: 14% competition, 14 common keywords, 60 total, 5 traffic, $90 value
-
-Key Insight: alankunsmanroofing.com gets 10.6 visitors per keyword vs Valley Peak's 0.83 - study their efficiency.
-
-FORM SUBMISSIONS (7 LEADS)
---------------------------
-Dec 30 - Chris Bessiere: Skylight leak, 4492 Bellflower Way (Repair)
-Dec 30 - Ziera: 1486 Holland Ave, Bethlehem 18017 (Roof Replacement)
-Dec 30 - Marat Olfir: 1008 Lotus Ter, Lake Ariel - shingle + metal quotes (Roof Replacement)
-Dec 22 - Neel Patel: Comfort Inn, 532 PA-940 White Haven (Commercial) *HIGH VALUE*
-Dec 21 - Ken Laudenslager: Hail damage from recent storm (Inspection)
-Dec 12 - George Herrera: Roof and gutter estimate (Roof Replacement)
-Dec 3 - Pete Collier: Siding panel came off, Salisbury Twp (Siding Repair)
-
-LEAD TYPE BREAKDOWN
--------------------
-Roof Replacement: 4 (57.1%)
-Repair (Roof/Skylight/Siding): 2 (28.6%)
-Inspection: 1 (14.3%)
-Commercial: 1 (14.3%)
-
-KEYWORDS RANKING #1 (ORGANIC)
------------------------------
-valley peak roofing (70 vol, 56 traffic)
-roofing bethlehem (140 vol, 9 traffic)
-james hardie siding installer bethlehem pa (50 vol, 6 traffic)
-roof repair bethlehem pa (90 vol, 5 traffic)
-roofing contractors bethlehem pa (70 vol, 4 traffic)
-roofing company bethlehem (70 vol, 1 traffic)
-
-LOCAL PACK #1 RANKINGS (TOP 10)
--------------------------------
-roofers bethlehem pa: 210 vol, 27 traffic
-roofing bethlehem pa: 90 vol, 22 traffic
-roof repair bethlehem pa: 90 vol, 22 traffic
-peak and valley roofing: 170 vol, 13 traffic
-bethlehem roofing: 70 vol, 17 traffic
-commercial roofing bethlehem: 70 vol, 17 traffic
-roofers in bethlehem pa: 70 vol, 17 traffic
-roofing company bethlehem: 70 vol, 17 traffic
-roof repair bethlehem: 70 vol, 17 traffic
-roofing contractors bethlehem pa: 70 vol, 17 traffic
-
-TOP RANKINGS (POSITIONS 2-10)
------------------------------
-cheapest way to replace roof: pos 5, 30 vol, /blog/replacing-your-roof-on-a-budget
-roofing faq: pos 6, 1,300 vol, /roofing-siding-gutter-faqs
-roof hail damage repair: pos 6, 1,300 vol, /blog/hail-damage-roof-repair-steps
-roofing companies in pennsylvania: pos 7, 210 vol, Homepage
-best time of year to replace a roof: pos 9, 40 vol, /blog/best-month-roof-replacement
-roofers bath: pos 10, 70 vol, /service-areas/roofing-bath-pa
-
-TOP PERFORMING PAGES (POSITIONS 1-20) - GSC
--------------------------------------------
-valleypeakroof.com (www): pos 2.0
-/blog/can-roof-problem-wait-until-spring: pos 6.1
-/service-areas/roofing-scranton-pa: pos 6.4
-/service-areas/roofing-fleetwood-pa: pos 6.6
-/privacy-policy: pos 7.0
-valleypeakroof.com: pos 7.2
-/blog/roof-resolutions-2026: pos 7.3
-/our-company: pos 7.9
-/our-work: pos 8.1
-/service-areas/roofing-alburtis-pa: pos 8.6
-/roof-replacement-installation: pos 8.9
-/service-areas/roofing-hawley-pa: pos 9.2
-/terms: pos 9.7
-/roofing-siding-gutter-faqs: pos 10.4
-/service-areas/roofing-tannersville-pa: pos 10.4
-/blog/best-month-roof-replacement: pos 11.3
-/roof-cost (www): pos 12.3
-/service-areas/roofing-honesdale-pa: pos 12.8
-/residential-roof-repairs: pos 13.5
-/design-your-roof: pos 14.1
-/blog/winter-siding-installation-lehigh-valley: pos 14.1
-/service-areas/roofing-orefield-pa: pos 14.3
-/service-areas/roofing-wind-gap-pa: pos 14.9
-/service-areas/roofing-emmaus-pa: pos 15.0
-/blog/august-roof-inspection-checklist-lehigh-valley: pos 15.1
-/service-areas/roofing-macungie-pa: pos 15.7
-/our-blog: pos 15.7
-/service-areas/roofing-hamburg-pa: pos 16.0
-/blog/berks-county-winter-snow-loads: pos 16.1
-/service-areas/roofing-wyomissing-pa: pos 16.2
-/blog/black-streaks-on-roof-causes: pos 16.3
-/blog/christmas-lights-roof-safety-guide: pos 17.3
-/service-areas/roofing-new-tripoli-pa: pos 17.3
-/service-areas/roofing-easton-pa: pos 17.6
-/blog/ice-dam-prevention-roof-leaks-pennsylvania: pos 17.7
-/blog/does-your-home-need-roof-ventilation: pos 17.8
-/service-areas/roofing-lake-ariel-pa: pos 17.8
-/service-areas/roofing-hellertown-pa: pos 18.0
-/service-areas/roofing-nazareth-pa: pos 18.7
-/service-areas/roofing-services-in-northampton-county: pos 19.4
-/service-areas/roofing-shillington-pa: pos 19.7
-/skylight-installation-and-repair: pos 19.8
-/contact: pos 19.8
-/service-areas/roofing-stroudsburg-pa: pos 19.9
-
-KEYWORDS DRIVING TRAFFIC (GSC - TOP 10 BY CLICKS)
--------------------------------------------------
-valley peak roofing: 20 clicks, 81 impressions, pos 1.15, 24.7% CTR
-roofing companies near me: 5 clicks, 534 impressions, pos 7.14, 0.9% CTR
-valley peak roofing co.: 2 clicks, 21 impressions, pos 1.38, 9.5% CTR
-roofing contractors: 1 click, 1,800 impressions, pos 44.6, 0.06% CTR
-roofers bethlehem pa: 1 click, 181 impressions, pos 10.0, 0.6% CTR
-roofing company in pennsylvania: 1 click, 110 impressions, pos 19.2, 0.9% CTR
-owens corning visualizer: 1 click, 93 impressions, pos 5.6, 1.1% CTR
-roofing companies bethlehem pa: 1 click, 83 impressions, pos 1.2, 1.2% CTR
-roofing company near me: 1 click, 79 impressions, pos 3.6, 1.3% CTR
-roofer near me: 1 click, 64 impressions, pos 9.4, 1.6% CTR
-
-PROBLEM KEYWORDS (HIGH IMPRESSIONS, ZERO CLICKS)
-------------------------------------------------
-gutter repair: 2,637 impressions, pos 67.6 - position too low
-gutter repair near me: 2,417 impressions, pos 45.0 - position too low
-roofing faq: 1,696 impressions, pos 12.1 - good position, weak title/snippet
-roof repair: 519 impressions, pos 8.6 - good position, high competition
-roofing near me: 433 impressions, pos 5.7 - GREAT position, investigate!
-hail damage roof repair: 409 impressions, pos 13.8 - mid-position, seasonal
-roof replacement: 399 impressions, pos 10.7 - competitive term
-gutter installation near me: 396 impressions, pos 69.6 - position too low
-
-PROBLEM PAGES (HIGH IMPRESSIONS, ZERO CLICKS)
----------------------------------------------
-Gutter Maintenance: 10,983 impressions, position 47.7 - position way too low
-Lehigh County Services: 3,621 impressions, position 29.4 - poor position
-Northampton County Services: 2,291 impressions, position 19.4 - decent position, weak snippet
-Residential Roof Repairs: 2,176 impressions, position 13.5 - good position, needs better meta
-Hail Damage blog: 2,041 impressions, position 33.1 - mid position
-Commercial Roofing: 1,949 impressions, position 36.1 - mid position
-Roof Replacement Installation: 1,811 impressions, position 8.9 - CRITICAL FIX NEEDED
-
-WINS IN DECEMBER
-----------------
-- Keyword Growth +49%: 545 keywords (largest single-month gain)
-- Traffic Value +57%: $11,017 (highest ever)
-- Impression Growth +28%: 70K impressions
-- Backlink Growth +7%: 420 backlinks, 173 domains
-- Commercial Lead: Comfort Inn full roof replacement
-- Poconos Traction: Lake Ariel lead from location page
-- Blog Performance: Winter/seasonal content driving clicks
-
-KEY OPPORTUNITIES
+GOOGLE ANALYTICS 4
 -----------------
-1. Roof Replacement page: Position 8.9, 1,811 impressions, 0 clicks - rewrite title/meta urgently (could add 20+ clicks/month)
-2. Gutter page: Position 47.7, 10,983 impressions - major content overhaul + internal links (long-term traffic opportunity)
-3. "roofing near me": Position 5.7, 433 impressions, 0 clicks - test structured data, review SERP appearance (quick win)
-4. Residential Repairs page: Position 13.5, 2,176 impressions, 0 clicks - meta + schema markup (10-15 additional clicks)
-5. Paid Social: 380 sessions, 2.4% engagement - pause or drastically revamp
+Total Users: 1,120 (+18.8%)
+Sessions: 1,250 (+16.4%)
+Engagement Rate: 36.3% (-14.1pp)
+Organic Search Sessions: 188 (-13.4%)
 
-PRIORITIES FOR JANUARY
-----------------------
-1. FIX ZERO-CLICK PAGES: Roof Replacement page (pos 8.9, 0 clicks from 1,811 impressions)
-2. INVESTIGATE CONVERSION DROP: Form submissions down 50%
-3. KILL OR FIX PAID SOCIAL: 380 sessions with 2.4% engagement
-4. IMPROVE GUTTER KEYWORDS: 13,000+ impressions at positions 45-70
+FORM SUBMISSIONS (7 Leads)
+--------------------------
+• 4 Roof Replacements (57.1%)
+• 2 Repairs (28.6%)
+• 1 Inspection (14.3%)
+• 1 Commercial (Comfort Inn)
 
-SUCCESS METRICS FOR JANUARY 2026
---------------------------------
-Form submissions: 7 → 12+ target
-Organic clicks: 135 → 160+ target
-Average position: 29.5 → <27 target
-Roof Replacement page CTR: 0% → 1%+ target
-Paid Social engagement: 2.4% → 20%+ (or paused)
+DECEMBER WINS
+------------
+✓ Keywords +49% (545 vs 366)
+✓ Traffic Value +57% ($11K)
+✓ Impressions +28% (70K)
+✓ Commercial Lead (Comfort Inn)
+✓ Backlinks +7% (420)
 
-TECHNICAL NOTES
----------------
-- Site is 164 days post-launch (launched July 20, 2025)
-- December data reflects full month (Dec 1-31, 2025)
-- SEMrush keyword/traffic data is January 2026 snapshot
-- AI Visibility metrics unchanged from November (Score: 24, Mentions: 12, Cited Pages: 22)
-- 10 sessions from chatgpt.com visible in GA4 referral data - AI traffic is real and growing
-
-JANUARY 2026 PAGE FIXES (ALL COMPLETE)
---------------------------------------
-Based on December 2025 SEO Report analysis. All tasks completed.
-
-Priority 1: Zero-Click Pages Fixed
-1. Roof Replacement Installation (1,811 impressions, pos 8.9)
-   - Title: Added "0% Financing Available"
-   - Meta: 244→152 chars, added BBB A+, lifetime warranty, 113 reviews
-
-2. Residential Roof Repairs (2,176 impressions, pos 13.5)
-   - Title: Added "Same-Day Emergency Service"
-   - Meta: 194→148 chars, added insurance claims help
-   - Fixed: Contact H2 said "Replacement" instead of "Repair"
-
-3. Northampton County Services (2,291 impressions, pos 19.4)
-   - Title: Added "Contractor" keyword
-   - Meta: 206→160 chars, added ice dam experts, historic restoration
-   - Fixed: "hurrican" typo, wrong contact H2
-
-4. Lehigh County Services (3,621 impressions, pos 29.4)
-   - Title: "Lehigh Valley" → "Lehigh County" (keyword match)
-   - Meta: 128→150 chars, added community names, trust signals
-
-5. Gutter Maintenance (10,983 impressions, pos 47.7)
-   - Title: Added "Free Inspection & Cleaning"
-   - Meta: 195→159 chars, added seamless aluminum, same-day
-   - Fixed: og:url/twitter:url, Contact H2, Financing H2
-
-6. Homepage (166 impressions, pos 5.7)
-   - Meta: 183→147 chars
-   - Updated: Schema dates to 2026, review counts to 113
-   - Fixed: Contact H2 to generic "Roofing Estimate"
-
-9. FAQ Page (1,696 impressions, pos 12.1)
-   - Title: Added "Lehigh Valley Homeowner Questions"
-   - Meta: 166→139 chars, added "44 questions answered"
-   - Fixed: Broken financing.html link
-
-10. Commercial Roofing (1,949 impressions, pos 36.1)
-    - Fixed: og:url, twitter:url, Contact H2
-
-Site-Wide Fixes
-11. All 23 Blog Posts: Fixed share buttons, URLs, internal links, contact H2s
-12. Blog Card Excerpts: Clean 120-char truncation
-13. Social Media Previews: Updated og:image/twitter:image on 47 pages
-
-Priority 2: Conversion Investigation
-7. Form Functionality: Tested, all working correctly
-8. Mobile Form Visibility: Added "Free Estimate" button below mobile navbar
-
-Next Check: February 2026 SEO report (2-4 weeks for changes to reflect in GSC)
+JANUARY PRIORITIES
+-----------------
+1. Fix zero-click pages
+2. Investigate conversion drop
+3. Fix/pause Paid Social
+4. Improve gutter keywords
 
 ---
 Prepared by Keystone Web Solutions`;
 
             navigator.clipboard.writeText(report).then(() => {
-                const btn = document.querySelector('.copy-full-report-btn');
+                const btn = event.target.closest('.copy-full-report-btn');
                 btn.classList.add('copied');
-                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
                 setTimeout(() => {
                     btn.classList.remove('copied');
-                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                    btn.innerHTML = '<i class="fas fa-file-alt"></i> Copy Summary';
                 }, 2000);
             });
         }

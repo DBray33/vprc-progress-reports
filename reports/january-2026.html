@@ -1124,9 +1124,14 @@
 
         <div class="content">
             <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-                <button class="copy-full-report-btn" onclick="copyFullReport()" style="width: 100%; margin-bottom: 0;">
-                    <i class="fas fa-copy"></i> Copy Full Report
-                </button>
+                <div style="display: flex; gap: 10px;">
+                    <button class="copy-full-report-btn" onclick="copyFullReport()" style="flex: 1; margin-bottom: 0;">
+                        <i class="fas fa-copy"></i> Copy Full Report
+                    </button>
+                    <button class="copy-full-report-btn" onclick="copyReportSummary()" style="flex: 1; margin-bottom: 0; background: linear-gradient(135deg, rgba(52, 199, 89, 0.3) 0%, rgba(34, 139, 34, 0.3) 100%); border-color: rgba(52, 199, 89, 0.4);">
+                        <i class="fas fa-file-alt"></i> Copy Summary
+                    </button>
+                </div>
                 <div class="quick-nav-buttons">
                     <a href="#december-fixes" class="copy-full-report-btn" style="flex: 1; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(52, 199, 89, 0.3) 0%, rgba(34, 139, 34, 0.3) 100%); border-color: rgba(52, 199, 89, 0.4);">
                         <i class="fas fa-check-double"></i> January Fixes
@@ -4211,6 +4216,50 @@
 
         // Copy full report
         function copyFullReport() {
+            // Get all text content from the page
+            const content = document.querySelector('.content');
+            const header = document.querySelector('.header');
+
+            // Build the full report text
+            let reportText = 'VALLEY PEAK ROOFING - JANUARY 2026 SEO REPORT\n';
+            reportText += '=============================================\n\n';
+
+            // Get header info
+            const headerInfo = document.querySelector('.report-meta');
+            if (headerInfo) {
+                reportText += headerInfo.innerText.replace(/\n+/g, '\n') + '\n\n';
+            }
+
+            // Get all content, excluding buttons and navigation
+            const clone = content.cloneNode(true);
+
+            // Remove elements we don't want in the copy
+            clone.querySelectorAll('button, .copy-full-report-btn, .quick-nav-buttons, .toc-dropdown, .back-to-top, .task-expand-icon, script, style').forEach(el => el.remove());
+
+            // Expand collapsed sections for copying
+            clone.querySelectorAll('.collapsible-content').forEach(el => {
+                el.style.maxHeight = 'none';
+                el.style.opacity = '1';
+            });
+
+            // Get text and clean it up
+            reportText += clone.innerText
+                .replace(/\n{3,}/g, '\n\n')  // Max 2 newlines
+                .replace(/^\s+/gm, '')        // Remove leading whitespace
+                .trim();
+
+            navigator.clipboard.writeText(reportText).then(() => {
+                const btn = event.target.closest('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                }, 2000);
+            });
+        }
+
+        function copyReportSummary() {
             const report = `VALLEY PEAK ROOFING - JANUARY 2026 SEO REPORT
 =============================================
 
@@ -4289,12 +4338,12 @@ FEBRUARY PRIORITIES
 Prepared by Keystone Web Solutions`;
 
             navigator.clipboard.writeText(report).then(() => {
-                const btn = document.querySelector('.copy-full-report-btn');
+                const btn = event.target.closest('.copy-full-report-btn');
                 btn.classList.add('copied');
-                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
                 setTimeout(() => {
                     btn.classList.remove('copied');
-                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                    btn.innerHTML = '<i class="fas fa-file-alt"></i> Copy Summary';
                 }, 2000);
             });
         }
