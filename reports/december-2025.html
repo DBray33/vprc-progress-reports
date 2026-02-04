@@ -317,6 +317,54 @@
             font-size: 10px;
         }
 
+        /* ============================================
+           COLOR CODING SYSTEM FOR METRICS
+           ============================================
+           Strong Positive (>50%): Bright green with glow
+           Positive: Green
+           Negative: Red
+           Milestone/First: Gold
+           Warning: Orange
+           Neutral: Blue/Gray
+        */
+
+        /* Strong positive - big gains over 50% */
+        .color-strong-positive {
+            color: #30D158 !important;
+            font-weight: 700;
+            text-shadow: 0 0 12px rgba(48, 209, 88, 0.4);
+        }
+
+        /* Standard positive gains */
+        .color-positive {
+            color: #34C759 !important;
+            font-weight: 600;
+        }
+
+        /* Negative/decrease */
+        .color-negative {
+            color: #FF453A !important;
+            font-weight: 600;
+        }
+
+        /* Milestone/First-time achievement */
+        .color-milestone {
+            color: #FFD60A !important;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+        }
+
+        /* Warning/Caution */
+        .color-warning {
+            color: #FF9F0A !important;
+            font-weight: 600;
+        }
+
+        /* Neutral/Info */
+        .color-neutral {
+            color: #0A84FF !important;
+        }
+
         .metric-card small {
             display: block;
             font-size: 10px;
@@ -948,7 +996,7 @@
             <!-- Executive Summary -->
             <div id="executive-summary" class="executive-summary">
                 <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
-                <p>December showed mixed results: <strong>visibility expanded significantly</strong> (+49% keywords, +28% impressions) but <strong>conversions dropped sharply</strong> (-50% form submissions). The site now ranks for 545 keywords worth $11K in traffic value, but actual organic clicks fell 21% as average position slipped from 24.6 to 29.5.</p>
+                <p>December showed mixed results: <strong>visibility expanded significantly</strong> (<strong class="color-positive">+49% keywords</strong>, <strong class="color-positive">+28% impressions</strong>) but <strong>conversions dropped sharply</strong> (<strong class="color-negative">-50% form submissions</strong>). The site now ranks for <strong>545 keywords</strong> worth <strong class="color-strong-positive">$11K in traffic value</strong>, but actual organic clicks fell <strong class="color-negative">-21%</strong> as average position slipped from 24.6 to <strong class="color-negative">29.5</strong>.</p>
 
                 <div class="table-wrapper" style="margin-top: 16px;">
                     <table>
@@ -960,46 +1008,46 @@
                         </thead>
                         <tbody>
                             <tr class="expandable-row" onclick="toggleRow(this)">
-                                <td><strong>Keyword explosion <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                                <td>545 keywords (+49% from 366) - largest single-month keyword growth to date</td>
+                                <td><strong class="color-positive"><i class="fas fa-arrow-up" style="margin-right: 6px;"></i>Keyword explosion <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>545 keywords</strong> <strong class="color-positive">+49% from 366</strong> - largest single-month keyword growth to date</td>
                             </tr>
                             <tr class="expanded-content">
-                                <td colspan="2"><strong>What this means:</strong> Valley Peak now ranks for 545 different search phrases - that's 179 more than November. Each keyword is a potential doorway for customers to find you. However, many of these new keywords are in lower positions (20-50+), which is why clicks haven't increased proportionally. The foundation is being built for future traffic growth as these rankings improve.</td>
+                                <td colspan="2"><strong>What this means:</strong> Valley Peak now ranks for <strong class="color-positive">545</strong> different search phrases - that's <strong class="color-positive">179 more</strong> than November. Each keyword is a potential doorway for customers to find you. However, many of these new keywords are in lower positions (20-50+), which is why clicks haven't increased proportionally. The foundation is being built for future traffic growth as these rankings improve.</td>
                             </tr>
                             <tr class="expandable-row" onclick="toggleRow(this)">
-                                <td><strong>Traffic value surged <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                                <td>$11,017 traffic value (+57% from $7K) - SEMrush's highest valuation yet</td>
+                                <td><strong class="color-strong-positive"><i class="fas fa-arrow-up" style="margin-right: 6px;"></i>Traffic value surged <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong class="color-strong-positive">$11,017 traffic value</strong> <strong class="color-strong-positive">+57% from $7K</strong> - SEMrush's highest valuation yet</td>
                             </tr>
                             <tr class="expanded-content">
-                                <td colspan="2"><strong>What this means:</strong> If you had to buy this same visibility through Google Ads, it would cost $11,017 per month. This is the "free" value your SEO is delivering. The 57% increase shows that even though clicks dropped, you're ranking for more valuable keywords overall.</td>
+                                <td colspan="2"><strong>What this means:</strong> If you had to buy this same visibility through Google Ads, it would cost <strong class="color-strong-positive">$11,017 per month</strong>. This is the "free" value your SEO is delivering. The <strong class="color-strong-positive">57% increase</strong> shows that even though clicks dropped, you're ranking for more valuable keywords overall.</td>
                             </tr>
                             <tr class="expandable-row" onclick="toggleRow(this)">
-                                <td><strong>Organic clicks declined <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                                <td>135 clicks (-21% from 170) - concerning decline despite impression growth</td>
+                                <td><strong class="color-negative"><i class="fas fa-arrow-down" style="margin-right: 6px;"></i>Organic clicks declined <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>135 clicks</strong> <strong class="color-negative">-21% from 170</strong> - concerning decline despite impression growth</td>
                             </tr>
                             <tr class="expanded-content">
-                                <td colspan="2"><strong>What this means:</strong> Fewer people clicked through to the website from Google search results. The site appeared in 70,000 searches (+28%) but got 35 fewer clicks than November. Average position slipped from 24.6 to 29.5 - when you rank lower, fewer people see and click your listing.</td>
+                                <td colspan="2"><strong>What this means:</strong> Fewer people clicked through to the website from Google search results. The site appeared in 70,000 searches (<strong class="color-positive">+28%</strong>) but got <strong class="color-negative">35 fewer clicks</strong> than November. Average position slipped from 24.6 to <strong class="color-negative">29.5</strong> - when you rank lower, fewer people see and click your listing.</td>
                             </tr>
                             <tr class="expandable-row" onclick="toggleRow(this)">
-                                <td><strong>Form submissions dropped <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                                <td>7 submissions (-50% from 14) - critical issue requiring investigation</td>
+                                <td><strong class="color-negative"><i class="fas fa-arrow-down" style="margin-right: 6px;"></i>Form submissions dropped <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>7 submissions</strong> <strong class="color-negative">-50% from 14</strong> - critical issue requiring investigation</td>
                             </tr>
                             <tr class="expanded-content">
-                                <td colspan="2"><strong>What this means:</strong> Only 7 people filled out contact forms in December, down from 14 in November. Some of this is seasonal (December holidays slow roofing decisions), but this drop needs investigation. Form functionality should be tested, and landing page experience reviewed.</td>
+                                <td colspan="2"><strong>What this means:</strong> Only <strong class="color-negative">7 people</strong> filled out contact forms in December, down from 14 in November. Some of this is seasonal (December holidays slow roofing decisions), but this drop needs investigation. Form functionality should be tested, and landing page experience reviewed.</td>
                             </tr>
                             <tr class="expandable-row" onclick="toggleRow(this)">
-                                <td><strong>Paid Social traffic note <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                                <td>380 sessions with 2.4% engagement, 0.4 seconds average time on site</td>
+                                <td><strong class="color-warning"><i class="fas fa-exclamation-triangle" style="margin-right: 6px;"></i>Paid Social traffic note <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>380 sessions</strong> with <strong class="color-warning">2.4% engagement</strong>, <strong class="color-negative">0.4 seconds</strong> average time on site</td>
                             </tr>
                             <tr class="expanded-content">
-                                <td colspan="2"><strong>What this means:</strong> The paid social traffic is showing very low engagement. 380 visitors came through but most left within a second. Worth reviewing the campaign targeting to make sure the right audience is seeing the ads.</td>
+                                <td colspan="2"><strong>What this means:</strong> The paid social traffic is showing <strong class="color-warning">very low engagement</strong>. 380 visitors came through but most left within a second. Worth reviewing the campaign targeting to make sure the right audience is seeing the ads.</td>
                             </tr>
                             <tr class="expandable-row" onclick="toggleRow(this)">
-                                <td><strong>Commercial lead captured <i class="fas fa-chevron-down expand-icon"></i></strong></td>
-                                <td>Comfort Inn hotel with attached restaurant needs full roof replacement</td>
+                                <td><strong class="color-milestone"><i class="fas fa-star" style="margin-right: 6px;"></i>Commercial lead captured <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong class="color-milestone">Comfort Inn hotel</strong> with attached restaurant needs full roof replacement</td>
                             </tr>
                             <tr class="expanded-content">
-                                <td colspan="2"><strong>What this means:</strong> Despite lower overall volume, the leads include a high-value commercial opportunity for a full roof replacement on a hotel property.</td>
+                                <td colspan="2"><strong>What this means:</strong> Despite lower overall volume, the leads include a <strong class="color-milestone">high-value commercial opportunity</strong> for a full roof replacement on a hotel property.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1009,16 +1057,16 @@
             <div class="executive-summary" style="border-left: 3px solid #0A84FF;">
                 <h3 style="color: #0A84FF;"><i class="fas fa-comment-dots"></i> THE BOTTOM LINE</h3>
                 <p style="font-size: 14px; line-height: 1.7;">
-                    <strong>The visibility is there. We're ranking for more keywords than ever and showing up in more searches.</strong> The slower lead volume is expected for December.
+                    <strong class="color-positive">The visibility is there.</strong> We're ranking for <strong class="color-positive">more keywords than ever</strong> and showing up in more searches. The slower lead volume is expected for December.
                 </p>
                 <p style="font-size: 14px; line-height: 1.7;">
-                    I'm going to look into form functionality, page experience, and the zero-click pages that should be getting traffic but aren't.
+                    <strong class="color-neutral">Focus for January:</strong> Look into form functionality, page experience, and the zero-click pages that should be getting traffic but aren't.
                 </p>
             </div>
 
             <div class="alert" style="border-left-color: #FF9F0A;">
                 <h3 style="color: #FF9F0A;"><i class="fas fa-info-circle"></i> WHY CLICKS ARE DOWN</h3>
-                <p>We added 179 new keywords this month, but most of them are ranking in positions 20-50+ where clicks are rare. This pulls down the average position (24.6 to 29.5) and dilutes the CTR. The keywords that rank well are clicking fine. As the new rankings improve over time, clicks will follow.</p>
+                <p>We added <strong class="color-positive">179 new keywords</strong> this month, but most of them are ranking in positions <strong class="color-warning">20-50+</strong> where clicks are rare. This pulls down the average position (<strong class="color-negative">24.6 to 29.5</strong>) and dilutes the CTR. The keywords that rank well are clicking fine. As the new rankings improve over time, clicks will follow.</p>
             </div>
 
             <!-- Performance Metrics -->

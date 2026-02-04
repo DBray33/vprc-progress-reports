@@ -1,0 +1,3714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Valley Peak Roofing - January 2026 SEO Report</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            font-size: 15px;
+            line-height: 1.47;
+            letter-spacing: -0.022em;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* iOS-style Header */
+        .header {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 16px 16px 0 16px;
+        }
+
+        .back-button {
+            color: #0A84FF;
+            text-decoration: none;
+            font-size: 17px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .back-button i {
+            font-size: 18px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .header p {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(235, 235, 245, 0.6);
+            letter-spacing: -0.08px;
+        }
+
+        .date-info {
+            background: rgba(58, 58, 60, 0.4);
+            border: 0.5px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .date-info strong {
+            color: rgba(235, 235, 245, 0.8);
+            font-weight: 600;
+        }
+
+        /* Content */
+        .content {
+            padding: 16px;
+            padding-bottom: max(env(safe-area-inset-bottom), 16px);
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 28px 0 16px 0;
+            letter-spacing: -0.3px;
+            padding-left: 8px;
+            border-left: 3px solid #0A84FF;
+        }
+
+        h2 i {
+            margin-right: 8px;
+            color: #0A84FF;
+            font-size: 18px;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            margin: 20px 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 i {
+            margin-right: 6px;
+            font-size: 14px;
+        }
+
+        /* Executive Summary & Alerts */
+        .executive-summary,
+        .alert {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .alert {
+            border-left: 3px solid #FF9F0A;
+        }
+
+        .alert h3 {
+            color: #FF9F0A;
+            margin-top: 0;
+        }
+
+        .executive-summary h3 {
+            margin-top: 0;
+            color: #0A84FF;
+        }
+
+        .executive-summary p,
+        .alert p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            margin: 8px 0;
+        }
+
+        .executive-summary ul,
+        .alert ul {
+            margin: 12px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .executive-summary li,
+        .alert li {
+            padding: 8px 0;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            display: flex;
+            gap: 10px;
+        }
+
+        .executive-summary li i {
+            color: #34C759;
+            margin-top: 2px;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .metric-card {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 14px;
+            position: relative;
+            overflow: visible;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 150px;
+        }
+
+        .metric-card:hover,
+        .metric-card.active {
+            border-color: rgba(10, 132, 255, 0.4);
+            background: rgba(28, 28, 30, 0.7);
+        }
+
+        a.metric-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        a.metric-card.clickable-card {
+            border: 1px solid rgba(10, 132, 255, 0.3);
+        }
+
+        a.metric-card.clickable-card:hover {
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
+        }
+
+        a.metric-card.clickable-card:active {
+            transform: scale(0.98);
+        }
+
+        .metric-card-content {
+            position: relative;
+        }
+
+        .metric-card-front,
+        .metric-card-back {
+            transition: opacity 0.3s ease;
+        }
+
+        .metric-card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            pointer-events: none;
+            font-size: 10px;
+            line-height: 1.4;
+            color: rgba(235, 235, 245, 0.8);
+            padding-top: 20px;
+        }
+
+        .metric-card:hover .metric-card-front,
+        .metric-card.active .metric-card-front {
+            opacity: 0;
+        }
+
+        .metric-card:hover .metric-card-back,
+        .metric-card.active .metric-card-back {
+            opacity: 1;
+        }
+
+        .metric-card h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .metric-change {
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .metric-change.positive {
+            color: #34C759;
+        }
+
+        .metric-change.negative {
+            color: #FF453A;
+        }
+
+        .metric-change.neutral {
+            color: rgba(235, 235, 245, 0.6);
+        }
+
+        .metric-change i {
+            font-size: 10px;
+        }
+
+        /* ============================================
+           COLOR CODING SYSTEM FOR METRICS
+           ============================================
+           Strong Positive (>50%): Bright green with glow
+           Positive: Green
+           Negative: Red
+           Milestone/First: Gold
+           Warning: Orange
+           Neutral: Blue/Gray
+        */
+
+        /* Strong positive - big gains over 50% */
+        .color-strong-positive {
+            color: #30D158 !important;
+            font-weight: 700;
+            text-shadow: 0 0 12px rgba(48, 209, 88, 0.4);
+        }
+
+        /* Standard positive gains */
+        .color-positive {
+            color: #34C759 !important;
+            font-weight: 600;
+        }
+
+        /* Negative/decrease */
+        .color-negative {
+            color: #FF453A !important;
+            font-weight: 600;
+        }
+
+        /* Milestone/First-time achievement */
+        .color-milestone {
+            color: #FFD60A !important;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+        }
+
+        /* Warning/Caution */
+        .color-warning {
+            color: #FF9F0A !important;
+            font-weight: 600;
+        }
+
+        /* Neutral/Info */
+        .color-neutral {
+            color: #0A84FF !important;
+        }
+
+        /* Pill-style highlight backgrounds */
+        .highlight-strong-positive {
+            background: rgba(48, 209, 88, 0.2);
+            border: 1px solid rgba(48, 209, 88, 0.4);
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .highlight-positive {
+            background: rgba(52, 199, 89, 0.15);
+            border: 1px solid rgba(52, 199, 89, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .highlight-negative {
+            background: rgba(255, 69, 58, 0.15);
+            border: 1px solid rgba(255, 69, 58, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .highlight-milestone {
+            background: rgba(255, 214, 10, 0.15);
+            border: 1px solid rgba(255, 214, 10, 0.35);
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .highlight-warning {
+            background: rgba(255, 159, 10, 0.15);
+            border: 1px solid rgba(255, 159, 10, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .highlight-neutral {
+            background: rgba(10, 132, 255, 0.12);
+            border: 1px solid rgba(10, 132, 255, 0.3);
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* Combined highlight + color classes for full effect */
+        .metric-pill-positive {
+            background: rgba(52, 199, 89, 0.15);
+            border: 1px solid rgba(52, 199, 89, 0.3);
+            color: #34C759;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .metric-pill-strong-positive {
+            background: rgba(48, 209, 88, 0.2);
+            border: 1px solid rgba(48, 209, 88, 0.4);
+            color: #30D158;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(48, 209, 88, 0.3);
+            display: inline-block;
+        }
+
+        .metric-pill-milestone {
+            background: rgba(255, 214, 10, 0.15);
+            border: 1px solid rgba(255, 214, 10, 0.4);
+            color: #FFD60A;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(255, 214, 10, 0.3);
+            display: inline-block;
+        }
+
+        .metric-pill-negative {
+            background: rgba(255, 69, 58, 0.15);
+            border: 1px solid rgba(255, 69, 58, 0.3);
+            color: #FF453A;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .metric-card small {
+            display: block;
+            font-size: 10px;
+            color: rgba(235, 235, 245, 0.5);
+            margin-top: 6px;
+            line-height: 1.3;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 16px 0;
+            border-radius: 12px;
+        }
+
+        .table-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: rgba(58, 58, 60, 0.4);
+            border-radius: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.6);
+            border-radius: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb:hover {
+            background: rgba(99, 102, 241, 0.8);
+        }
+
+        .table-wrapper {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(99, 102, 241, 0.6) rgba(58, 58, 60, 0.4);
+        }
+
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 13px;
+        }
+
+        thead {
+            background: rgba(58, 58, 60, 0.5);
+        }
+
+        th {
+            color: rgba(235, 235, 245, 0.8);
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+            color: rgba(235, 235, 245, 0.8);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td a {
+            color: rgba(235, 235, 245, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        td a:hover {
+            color: #0A84FF;
+        }
+
+        tbody tr {
+            background: transparent;
+        }
+
+        /* Insight Box */
+        .insight-box {
+            background: rgba(10, 132, 255, 0.15);
+            border: 0.5px solid rgba(10, 132, 255, 0.3);
+            border-left: 3px solid #0A84FF;
+            border-radius: 12px;
+            padding: 14px;
+            margin: 16px 0;
+        }
+
+        .insight-box h4 {
+            color: #0A84FF;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .insight-box h4 i {
+            margin-right: 6px;
+        }
+
+        .insight-box p,
+        .insight-box ul {
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+        }
+
+        .insight-box ul {
+            margin: 10px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .insight-box li {
+            padding: 6px 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .insight-box li strong {
+            color: #ffffff;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: rgba(28, 28, 30, 0.5);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        canvas {
+            max-height: 300px;
+        }
+
+        /* Expandable Rows */
+        .expandable-row {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .expandable-row:hover {
+            background: rgba(58, 58, 60, 0.3);
+        }
+
+        .expandable-row:active {
+            background: rgba(58, 58, 60, 0.5);
+        }
+
+        .expand-icon {
+            font-size: 10px;
+            margin-left: 8px;
+            transition: transform 0.2s;
+            color: #0A84FF;
+        }
+
+        .expandable-row.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .expanded-content {
+            display: none;
+            background: rgba(10, 132, 255, 0.05);
+            border-left: 2px solid #0A84FF;
+        }
+
+        .expanded-content td {
+            padding: 16px 12px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(235, 235, 245, 0.8);
+            font-style: italic;
+        }
+
+        .expanded-content.show {
+            display: table-row;
+        }
+
+        /* Desktop */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 980px;
+                margin: 0 auto;
+            }
+
+            .header {
+                padding: 24px 32px;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            .content {
+                padding: 32px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(58, 58, 60, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: rgba(235, 235, 245, 0.8);
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 12px;
+        }
+
+        .copy-btn:hover {
+            background: rgba(88, 88, 90, 0.7);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-btn.copied {
+            background: rgba(52, 199, 89, 0.3);
+            border-color: rgba(52, 199, 89, 0.5);
+            color: #34C759;
+        }
+
+        .copy-btn i {
+            font-size: 11px;
+        }
+
+        .copy-full-report-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+            border: 1px solid rgba(10, 132, 255, 0.4);
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .copy-full-report-btn:hover {
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+            border-color: rgba(10, 132, 255, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .copy-full-report-btn:active {
+            transform: scale(0.98);
+        }
+
+        .copy-full-report-btn.copied {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%);
+            border-color: rgba(52, 199, 89, 0.6);
+        }
+
+        .copy-full-report-btn i {
+            font-size: 14px;
+        }
+
+        /* Task Tracker Section */
+        .task-tracker {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 16px;
+            padding: 20px 16px;
+            margin-top: 32px;
+        }
+
+        .task-tracker-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .task-tracker-header h2 {
+            margin: 0;
+            border: none;
+            padding: 0;
+            font-size: 18px;
+            color: #BF7FFF;
+        }
+
+        .task-tracker-header i {
+            color: #BF7FFF;
+        }
+
+        .task-tracker-subtitle {
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.6);
+            margin-bottom: 20px;
+        }
+
+        /* Task Tracker Styles */
+        .task-item {
+            background: rgba(28, 28, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .task-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .task-header:hover {
+            background: rgba(58, 58, 60, 0.4);
+        }
+
+        .task-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .task-number {
+            background: rgba(138, 43, 226, 0.3);
+            color: #BF7FFF;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .task-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .task-meta {
+            font-size: 11px;
+            color: rgba(235, 235, 245, 0.5);
+            margin-top: 2px;
+        }
+
+        .task-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .task-status i {
+            font-size: 14px;
+        }
+
+        .task-expand-icon {
+            color: rgba(235, 235, 245, 0.4);
+            font-size: 12px;
+            transition: transform 0.2s;
+            margin-left: 12px;
+        }
+
+        .task-item.expanded .task-expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .task-content {
+            display: none;
+            padding: 0 16px 16px 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .task-item.expanded .task-content {
+            display: block;
+        }
+
+        .task-section {
+            margin-top: 14px;
+        }
+
+        .task-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .task-problem {
+            background: rgba(255, 69, 58, 0.1);
+            border-left: 3px solid #FF453A;
+            padding: 10px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.8);
+            line-height: 1.5;
+        }
+
+        .task-root-cause {
+            background: rgba(255, 159, 10, 0.1);
+            border-left: 3px solid #FF9F0A;
+            padding: 10px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: rgba(235, 235, 245, 0.8);
+            line-height: 1.5;
+        }
+
+        .task-changes-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            background: rgba(28, 28, 30, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .task-changes-table th {
+            background: rgba(58, 58, 60, 0.5);
+            padding: 10px;
+            text-align: left;
+            font-size: 10px;
+            color: rgba(235, 235, 245, 0.6);
+        }
+
+        .task-changes-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(235, 235, 245, 0.8);
+            vertical-align: top;
+        }
+
+        .task-changes-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .task-changes-table .before {
+            color: rgba(255, 69, 58, 0.8);
+            text-decoration: line-through;
+        }
+
+        .task-changes-table .after {
+            color: #34C759;
+        }
+
+        .priority-section {
+            margin-bottom: 20px;
+        }
+
+        .priority-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(235, 235, 245, 0.7);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .priority-title i {
+            color: #BF7FFF;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .header {
+                background: #667eea;
+                color: white;
+                position: relative;
+            }
+
+            .metric-card,
+            .insight-box,
+            table {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-chevron-left"></i> Reports
+            </a>
+            <h1>January 2026 Report</h1>
+            <p>Valley Peak Roofing - Monthly SEO & Traffic Analysis</p>
+            <div class="date-info">
+                <strong>Reporting Period:</strong> January 1-31, 2026<br>
+                <strong>Report Created:</strong> February 3, 2026<br>
+                <strong>Days Post-Launch:</strong> 195 days (launched July 20, 2025)
+            </div>
+        </div>
+
+        <div class="content">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <button class="copy-full-report-btn" onclick="copyFullReport()" style="flex: 1; min-width: 200px; margin-bottom: 0;">
+                    <i class="fas fa-copy"></i> Copy Full Report
+                </button>
+                <a href="#february-fixes" class="copy-full-report-btn" style="flex: 1; min-width: 200px; margin-bottom: 0; text-decoration: none; background: linear-gradient(135deg, rgba(138, 43, 226, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%); border-color: rgba(138, 43, 226, 0.4);">
+                    <i class="fas fa-tasks"></i> View February Fixes
+                </a>
+            </div>
+
+            <!-- Table of Contents -->
+            <details class="toc-dropdown" style="background: rgba(28, 28, 30, 0.5); backdrop-filter: blur(20px); border: 0.5px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 20px;">
+                <summary style="padding: 14px 16px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none; font-size: 14px; font-weight: 600; color: #fff;">
+                    <span><i class="fas fa-list" style="margin-right: 10px; color: #0A84FF;"></i>Table of Contents</span>
+                    <i class="fas fa-chevron-down toc-chevron" style="color: rgba(235, 235, 245, 0.6); transition: transform 0.3s;"></i>
+                </summary>
+                <div style="padding: 0 16px 16px 16px;">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px;">
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">Main Sections</p>
+                        <a href="#executive-summary" class="toc-link"><i class="fas fa-file-alt" style="color: #0A84FF;"></i> Executive Summary</a>
+                        <a href="#performance-snapshot" class="toc-link"><i class="fas fa-chart-line" style="color: #34C759;"></i> Performance Snapshot</a>
+                        <a href="#serp-features" class="toc-link"><i class="fas fa-star" style="color: #FFD60A;"></i> SERP Features</a>
+                        <a href="#top-pages" class="toc-link"><i class="fas fa-file-alt" style="color: #FF9F0A;"></i> Top Traffic Pages</a>
+                        <a href="#competitors" class="toc-link"><i class="fas fa-users" style="color: #FF453A;"></i> Competitor Landscape</a>
+                        <a href="#month-ahead" class="toc-link"><i class="fas fa-bullseye" style="color: #BF5AF2;"></i> Month Ahead Focus</a>
+                        <a href="#technical-notes" class="toc-link"><i class="fas fa-cog" style="color: #64D2FF;"></i> Technical Notes</a>
+                        <a href="#december-fixes" class="toc-link"><i class="fas fa-check-double" style="color: #34C759;"></i> January Fixes (Done)</a>
+                        <a href="#february-fixes" class="toc-link"><i class="fas fa-tasks" style="color: #AC8E68;"></i> February Fixes</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Performance Data</p>
+                        <a href="#semrush-metrics" class="toc-link"><i class="fas fa-database" style="color: #34C759;"></i> SEMrush Metrics</a>
+                        <a href="#traffic-sources" class="toc-link"><i class="fas fa-globe" style="color: #0A84FF;"></i> Traffic Sources</a>
+                        <a href="#backlinks" class="toc-link"><i class="fas fa-link" style="color: #FF9F0A;"></i> Backlink Profile</a>
+                        <a href="#ai-visibility" class="toc-link"><i class="fas fa-robot" style="color: #BF5AF2;"></i> AI Search Visibility</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Rankings & Keywords</p>
+                        <a href="#keywords-ranking-1" class="toc-link"><i class="fas fa-trophy" style="color: #FFD60A;"></i> #1 Rankings</a>
+                        <a href="#top-rankings" class="toc-link"><i class="fas fa-medal" style="color: #FF9F0A;"></i> Top Rankings (2-10)</a>
+                        <a href="#top-performing-pages" class="toc-link"><i class="fas fa-sort-amount-up" style="color: #34C759;"></i> Top Performing Pages</a>
+                        <a href="#keywords-driving-traffic" class="toc-link"><i class="fas fa-mouse-pointer" style="color: #0A84FF;"></i> Keywords by Clicks</a>
+                        <a href="#problem-keywords" class="toc-link"><i class="fas fa-exclamation-triangle" style="color: #FF453A;"></i> Problem Keywords</a>
+                        <a href="#problem-pages" class="toc-link"><i class="fas fa-file-excel" style="color: #FF453A;"></i> Problem Pages</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Leads & Analysis</p>
+                        <a href="#form-submissions" class="toc-link"><i class="fas fa-envelope" style="color: #34C759;"></i> Form Submissions</a>
+                        <a href="#wins" class="toc-link"><i class="fas fa-check-circle" style="color: #34C759;"></i> January Wins</a>
+                        <a href="#opportunities" class="toc-link"><i class="fas fa-lightbulb" style="color: #FFD60A;"></i> Key Opportunities</a>
+                        <a href="#success-metrics" class="toc-link"><i class="fas fa-bullseye" style="color: #BF5AF2;"></i> Success Metrics</a>
+
+                        <p style="grid-column: span 2; font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.4); text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);">Deep Research</p>
+                        <a href="#root-cause" class="toc-link"><i class="fas fa-search" style="color: #FF453A;"></i> Root Cause Analysis</a>
+                        <a href="#success-analysis" class="toc-link"><i class="fas fa-trophy" style="color: #34C759;"></i> Success Analysis</a>
+                        <a href="#problem-investigation" class="toc-link"><i class="fas fa-exclamation-circle" style="color: #FF9F0A;"></i> Problem Investigation</a>
+                        <a href="#competitor-insights" class="toc-link"><i class="fas fa-users" style="color: #0A84FF;"></i> Competitor Insights</a>
+                        <a href="#strategic-recommendations" class="toc-link"><i class="fas fa-lightbulb" style="color: #BF5AF2;"></i> Strategic Recommendations</a>
+                    </div>
+                </div>
+            </details>
+            <style>
+                .toc-dropdown summary::-webkit-details-marker { display: none; }
+                .toc-dropdown[open] .toc-chevron { transform: rotate(180deg); }
+                .toc-link { color: rgba(235, 235, 245, 0.8); text-decoration: none; font-size: 13px; padding: 6px 0; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+                .toc-link:hover { color: #0A84FF; }
+                .toc-link i { width: 16px; text-align: center; }
+            </style>
+
+            <!-- Executive Summary -->
+            <div id="executive-summary" class="executive-summary">
+                <h3><i class="fas fa-file-alt"></i> EXECUTIVE SUMMARY</h3>
+                <p>January showed strong recovery across key metrics. <strong>Organic clicks nearly doubled</strong> <strong class="color-strong-positive">+87%</strong>, form submissions rebounded <strong class="color-strong-positive">+71%</strong>, and the site now ranks for <strong class="color-neutral">827 keywords</strong>—a <strong class="color-strong-positive">+52%</strong> increase. The zero-click page fixes from the December report appear to be working, with average position improving from 29.5 to <strong class="color-positive">25.6</strong>. AI visibility also surged <strong class="color-positive">+25% score</strong>, <strong class="color-strong-positive">+55% cited pages</strong>, with the <strong class="color-milestone">first ChatGPT-referred form submission</strong> recorded.</p>
+
+                <div class="table-wrapper" style="margin-top: 16px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Key Metric</th>
+                                <th>Performance Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong class="color-strong-positive"><i class="fas fa-arrow-up" style="margin-right: 6px;"></i>Organic clicks recovered <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>252 clicks</strong> <strong class="color-strong-positive">+87% from 135</strong></td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> The December fixes are working. Clicks nearly doubled as the meta description and title tag improvements made search results more compelling. This is the highest click count since October.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong class="color-strong-positive"><i class="fas fa-arrow-up" style="margin-right: 6px;"></i>Form submissions rebounded <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>12 leads</strong> <strong class="color-strong-positive">+71% from 7</strong></td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Lead volume recovered from December's holiday slowdown. 12 quality leads including 8 roof replacements, 2 inspections, and the <strong class="color-milestone">first ChatGPT-referred conversion</strong>.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong class="color-strong-positive"><i class="fas fa-arrow-up" style="margin-right: 6px;"></i>Keyword growth continues <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>827 keywords</strong> <strong class="color-strong-positive">+52% from 545</strong></td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Valley Peak now ranks for <strong class="color-positive">827</strong> different search phrases - that's <strong class="color-strong-positive">282 more</strong> than December. The site's visibility continues to expand rapidly.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong class="color-positive"><i class="fas fa-arrow-up" style="margin-right: 6px;"></i>Position improved <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>25.6 avg</strong> <strong class="color-positive">+3.9 positions from 29.5</strong></td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Average ranking improved almost <strong class="color-positive">4 positions</strong>. This shows the December optimizations are pushing pages higher in search results.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong class="color-strong-positive"><i class="fas fa-robot" style="margin-right: 6px;"></i>AI visibility expanding <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong>Score 30</strong> <strong class="color-positive">+25%</strong>, <strong>34 cited pages</strong> <strong class="color-strong-positive">+55%</strong></td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> AI platforms like ChatGPT and Gemini are citing Valley Peak pages <strong class="color-strong-positive">more frequently</strong>. This is becoming a real traffic and lead channel.</td>
+                            </tr>
+                            <tr class="expandable-row" onclick="toggleRow(this)">
+                                <td><strong class="color-milestone"><i class="fas fa-star" style="margin-right: 6px;"></i>ChatGPT conversion <i class="fas fa-chevron-down expand-icon"></i></strong></td>
+                                <td><strong class="color-milestone">First form submission via chatgpt.com referral</strong></td>
+                            </tr>
+                            <tr class="expanded-content">
+                                <td colspan="2"><strong>What this means:</strong> Perly Castro submitted a gutter repair request after being referred by ChatGPT. <strong class="color-milestone">This proves AI-driven discovery is converting to actual business.</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="executive-summary" style="border-left: 3px solid #34C759; background: linear-gradient(135deg, rgba(52, 199, 89, 0.08) 0%, rgba(28, 28, 30, 0.5) 100%);">
+                <h3 style="color: #34C759;"><i class="fas fa-comment-dots"></i> THE BOTTOM LINE</h3>
+                <p style="font-size: 14px; line-height: 1.7;">
+                    <strong class="color-strong-positive">The December fixes worked.</strong> Clicks <strong class="color-strong-positive">nearly doubled</strong>, leads <strong class="color-positive">rebounded</strong>, and ranking position improved almost <strong class="color-positive">4 positions</strong>. The ice dam blog drove exceptional traffic <strong class="color-strong-positive">711 views, 51 clicks</strong> after Facebook sharing. AI platforms are now actively sending converting traffic—we got our <strong class="color-milestone">first ChatGPT-referred lead</strong>.
+                </p>
+                <p style="font-size: 14px; line-height: 1.7;">
+                    <strong class="color-neutral">Focus for February:</strong> Continue momentum with seasonal content, prepare Google Ads campaign for spring, and capitalize on the ice dam content success pattern.
+                </p>
+            </div>
+
+            <!-- Performance Metrics -->
+            <h2 id="performance-snapshot"><i class="fas fa-chart-line"></i> Performance Snapshot - January 2026</h2>
+
+            <h3 id="gsc-metrics">GOOGLE SEARCH CONSOLE METRICS</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Impressions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">74.4K</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +6.3% from Dec (70K)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            How many times your website appeared in Google search results. Continued growth shows expanding visibility.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Clicks</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">252</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +86.7% from Dec (135)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Nearly doubled! The December meta/title fixes are converting impressions to clicks much better.
+                        </div>
+                    </div>
+                </div>
+                <a href="#form-submissions" class="metric-card clickable-card">
+                    <h4>Form Submissions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">12</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +71.4% from Dec (7)
+                            </div>
+                            <small>Source: Netlify Forms (spam excluded)</small>
+                        </div>
+                        <div class="metric-card-back">
+                            Strong rebound from December's holiday slowdown. Includes first ChatGPT-referred lead.
+                        </div>
+                    </div>
+                </a>
+                <div class="metric-card">
+                    <h4>Average CTR</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">0.3%</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +0.1pp from Dec (0.2%)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Click-through rate improved as title/meta optimizations make search results more compelling.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Average Position</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">25.6</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +3.9 positions from Dec (29.5)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Significant improvement! Average ranking is almost 4 positions higher than December.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="semrush-metrics">SEMRUSH METRICS (FEBRUARY 2026 SNAPSHOT)</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Estimated Monthly Traffic</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">493</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +8.8% from Jan (453)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            SEMrush's prediction of monthly organic visitors based on current keyword rankings.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Ranked Keywords</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">827</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +51.7% from Dec (545)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Massive keyword growth - 282 new ranking opportunities added this month.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Traffic Value</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">$11.5K</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +4.4% from Dec ($11K)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            What this organic traffic would cost if purchased through Google Ads.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Keywords in Position #1</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">9</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +50% from Dec (6)
+                            </div>
+                            <small>(organic only)</small>
+                        </div>
+                        <div class="metric-card-back">
+                            3 new #1 rankings achieved - Bethlehem roofing dominance expanding.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Branded Traffic (est.)</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">72</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +28.6% from Dec (56)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            People searching for "Valley Peak Roofing" directly - brand awareness growing.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Non-Branded Traffic (est.)</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">421</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +6.0% from Dec (397)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            New customers discovering you through service searches, not brand name.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="ga4-metrics">GOOGLE ANALYTICS 4 METRICS</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Users</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">1,213</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +8.3% from Dec (1,120)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Unique individuals who visited your website this month.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Sessions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">1,415</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +13.2% from Dec (1,250)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Total visits to your website. One user can have multiple sessions.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Engagement Rate</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">29.5%</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -6.8pp from Dec (36.3%)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Dropped due to Paid Social traffic quality (9.8% engagement rate, 2.2s avg time).
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Organic Search Sessions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">317</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +68.6% from Dec (188)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Organic search sessions surged 69% - this is the highest quality traffic source.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-lightbulb"></i> KEY GA4 INSIGHT</h4>
+                <p>Organic search sessions surged 69% with improved engagement (61.2%), while overall engagement dropped due to Paid Social traffic quality issues (9.8% engagement rate, 2.2s avg time).</p>
+            </div>
+
+            <h3 id="traffic-sources">TRAFFIC SOURCES BREAKDOWN (GA4)</h3>
+            <div id="traffic-data">
+            <div class="chart-container">
+                <canvas id="trafficSourcesChart"></canvas>
+            </div>
+
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Sessions</th>
+                        <th>Engaged Sessions</th>
+                        <th>Engagement Rate</th>
+                        <th>Avg Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>Paid Social</strong></td>
+                        <td>523</td>
+                        <td>51</td>
+                        <td style="color: #FF9F0A;">9.8%</td>
+                        <td style="color: #FF9F0A;">2.2s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Direct</strong></td>
+                        <td>429</td>
+                        <td>126</td>
+                        <td>29.4%</td>
+                        <td>31.2s</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td><strong>Organic Search</strong></td>
+                        <td>317</td>
+                        <td>194</td>
+                        <td style="color: #34C759;">61.2%</td>
+                        <td style="color: #34C759;">60.6s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic Social</strong></td>
+                        <td>81</td>
+                        <td>20</td>
+                        <td>24.7%</td>
+                        <td>18.4s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Referral</strong></td>
+                        <td>54</td>
+                        <td>27</td>
+                        <td>50.0%</td>
+                        <td>43.5s</td>
+                    </tr>
+                </tbody>
+            </table></div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'traffic-data')"><i class="fas fa-copy"></i> Copy Data</button>
+
+            <div class="alert" style="border-left-color: #FF9F0A;">
+                <h3 style="color: #FF9F0A;"><i class="fas fa-exclamation-triangle"></i> PAID SOCIAL NOTE</h3>
+                <p>Paid Social improved slightly (9.8% vs 2.4% in Dec) but still underperforming. 523 sessions generating minimal engagement. Organic Search remains the highest-quality traffic source by far.</p>
+            </div>
+
+            <h3 id="backlinks">BACKLINK PROFILE (SEMRUSH)</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Backlinks</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">404</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -3.8% from Dec (420)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Slight decrease - may be SEMrush data fluctuation or lost low-quality links.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Referring Domains</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">139</div>
+                            <div class="metric-change negative">
+                                <i class="fas fa-arrow-down"></i> -19.7% from Dec (173)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Decrease may be due to SEMrush data fluctuation. Monitor next month.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Authority Score</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">10</div>
+                            <div class="metric-change neutral">
+                                <i class="fas fa-equals"></i> Same as Dec (10)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Authority Score holding steady at 10.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 id="ai-visibility">AI SEARCH VISIBILITY</h3>
+            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">How often Valley Peak appears when people use AI assistants to find roofing services.</p>
+            <div class="metrics-grid" style="margin-bottom: 16px;">
+                <div class="metric-card">
+                    <h4>AI Visibility Score</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">30</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +25% from Dec (24)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Significant increase in AI platform visibility.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Mentions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">17</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +41.7% from Dec (12)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            AI assistants mentioning Valley Peak more frequently.
+                        </div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Cited Pages</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">34</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +54.5% from Dec (22)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            More pages being cited as sources by AI platforms.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Mentions</th>
+                        <th>Cited Pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ChatGPT</strong></td>
+                        <td>7</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Overview</strong></td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Mode</strong></td>
+                        <td>3</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gemini</strong></td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-robot"></i> AI TRAFFIC IS CONVERTING</h4>
+                <p>9 sessions from chatgpt.com in GA4 referral data, including <strong>1 form submission</strong> (Perly Castro, gutter repair via chatgpt.com). AI traffic is real business.</p>
+            </div>
+
+            <!-- SERP Features -->
+            <h2 id="serp-features"><i class="fas fa-star"></i> SERP Features Performance</h2>
+
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>SERP Feature</th>
+                        <th>Jan 2026</th>
+                        <th>Dec 2025</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Image</strong></td>
+                        <td>33</td>
+                        <td>27</td>
+                        <td style="color: #34C759;">+6</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td><strong>People Also Ask</strong></td>
+                        <td>28</td>
+                        <td>11</td>
+                        <td style="color: #34C759;">+17</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Local Pack</strong></td>
+                        <td>25</td>
+                        <td>22</td>
+                        <td style="color: #34C759;">+3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sitelinks</strong></td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td style="color: #34C759;">+1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Overview</strong></td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td style="color: #34C759;">+2</td>
+                    </tr>
+                    <tr style="color: rgba(235, 235, 245, 0.5);">
+                        <td>Featured Snippet</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Top Traffic Pages Analysis -->
+            <h2 id="top-pages"><i class="fas fa-file-alt"></i> Top Traffic Pages Analysis</h2>
+
+            <h3>HIGH-VALUE PAGES BY CLICKS (GSC)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Clicks</th>
+                        <th>Impressions</th>
+                        <th>CTR</th>
+                        <th>Avg Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Homepage (combined)</strong></td>
+                        <td>49</td>
+                        <td>7,547</td>
+                        <td>0.65%</td>
+                        <td>~7</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>Can Roof Problem Wait Until Spring (blog)</td>
+                        <td>30</td>
+                        <td>1,698</td>
+                        <td style="color: #34C759;">1.77%</td>
+                        <td style="color: #34C759;">5.7</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>Berks County Winter Snow Loads (blog)</td>
+                        <td>27</td>
+                        <td>3,950</td>
+                        <td>0.68%</td>
+                        <td>9.2</td>
+                    </tr>
+                    <tr>
+                        <td>Our Company</td>
+                        <td>7</td>
+                        <td>683</td>
+                        <td>1.02%</td>
+                        <td>13.0</td>
+                    </tr>
+                    <tr>
+                        <td>Winter Siding Installation (blog)</td>
+                        <td>4</td>
+                        <td>1,071</td>
+                        <td>0.37%</td>
+                        <td>13.7</td>
+                    </tr>
+                    <tr>
+                        <td>Best Month Roof Replacement (blog)</td>
+                        <td>4</td>
+                        <td>1,336</td>
+                        <td>0.30%</td>
+                        <td>14.9</td>
+                    </tr>
+                    <tr>
+                        <td>Stroudsburg PA (location)</td>
+                        <td>4</td>
+                        <td>602</td>
+                        <td>0.66%</td>
+                        <td>19.9</td>
+                    </tr>
+                    <tr>
+                        <td>Roof Cost Calculator</td>
+                        <td>3</td>
+                        <td>206</td>
+                        <td>1.46%</td>
+                        <td>12.0</td>
+                    </tr>
+                    <tr>
+                        <td>FAQ Page</td>
+                        <td>3</td>
+                        <td>4,003</td>
+                        <td>0.07%</td>
+                        <td>15.0</td>
+                    </tr>
+                    <tr>
+                        <td>Northampton County Services</td>
+                        <td>3</td>
+                        <td>1,921</td>
+                        <td>0.16%</td>
+                        <td>19.6</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3>TOP PAGES BY VIEWS (GA4)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Views</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>Ice Dams 101 (blog)</td>
+                        <td style="color: #34C759;">711</td>
+                        <td style="color: #34C759;">Top performer - FB sharing success!</td>
+                    </tr>
+                    <tr>
+                        <td>Homepage</td>
+                        <td>547</td>
+                        <td>Primary landing page</td>
+                    </tr>
+                    <tr>
+                        <td>Roofing Blog & Tips</td>
+                        <td>160</td>
+                        <td>Blog index</td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td>74</td>
+                        <td>Conversion page</td>
+                    </tr>
+                    <tr>
+                        <td>Budget Roof Cost</td>
+                        <td>55</td>
+                        <td>Cost calculator</td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Snowfall blog</td>
+                        <td>48</td>
+                        <td>Seasonal content performing</td>
+                    </tr>
+                    <tr>
+                        <td>Drone Inspections</td>
+                        <td>45</td>
+                        <td>Service page</td>
+                    </tr>
+                    <tr>
+                        <td>Can Roof Problem Wait Until Spring</td>
+                        <td>44</td>
+                        <td>Seasonal content</td>
+                    </tr>
+                    <tr>
+                        <td>Ice Dam Prevention Tips</td>
+                        <td>44</td>
+                        <td>Seasonal content</td>
+                    </tr>
+                    <tr>
+                        <td>About</td>
+                        <td>43</td>
+                        <td>Trust building</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Competitor Analysis -->
+            <h2 id="competitors"><i class="fas fa-users"></i> Competitor Landscape (SEMrush)</h2>
+
+            <h3>ORGANIC COMPETITION ANALYSIS</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Competitor</th>
+                        <th>Relevance</th>
+                        <th>Common KWs</th>
+                        <th>Total KWs</th>
+                        <th>Traffic</th>
+                        <th>Traffic Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(10, 132, 255, 0.1);">
+                        <td><strong>Valley Peak Roofing</strong></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><strong>827</strong></td>
+                        <td><strong>493</strong></td>
+                        <td><strong>$11,503</strong></td>
+                    </tr>
+                    <tr>
+                        <td>alankunsmanroofing.com</td>
+                        <td>0.40</td>
+                        <td>44</td>
+                        <td>216</td>
+                        <td>1,503</td>
+                        <td>$10,566</td>
+                    </tr>
+                    <tr>
+                        <td>whitesroofingsidingllc.com</td>
+                        <td>0.36</td>
+                        <td>36</td>
+                        <td>131</td>
+                        <td>31</td>
+                        <td>$465</td>
+                    </tr>
+                    <tr>
+                        <td>homeshieldpros.com</td>
+                        <td>0.33</td>
+                        <td>22</td>
+                        <td>242</td>
+                        <td>202</td>
+                        <td>$5,453</td>
+                    </tr>
+                    <tr>
+                        <td>scartelliremodeling.com</td>
+                        <td>0.22</td>
+                        <td>14</td>
+                        <td>142</td>
+                        <td>10</td>
+                        <td>$28</td>
+                    </tr>
+                    <tr>
+                        <td>ziggysroofing.us</td>
+                        <td>0.10</td>
+                        <td>22</td>
+                        <td>78</td>
+                        <td>4</td>
+                        <td>$90</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-lightbulb"></i> KEY COMPETITIVE INSIGHTS</h4>
+                <ul>
+                    <li><strong>Valley Peak leads in keywords:</strong> At 827 keywords, the site has 3.8x more rankings than the nearest competitor homeshieldpros.com (242).</li>
+                    <li><strong>alankunsmanroofing.com punches above its weight:</strong> Only 216 keywords but 1,503 estimated traffic - that's 6.96 visitors per keyword. Valley Peak gets 0.60 visitors per keyword.</li>
+                    <li><strong>Study alankunsmanroofing.com:</strong> What pages drive their traffic? What keywords are they winning? Their efficiency suggests they've nailed commercial intent keywords.</li>
+                </ul>
+            </div>
+
+            <!-- Form Submissions & Conversions -->
+            <h2 id="form-submissions"><i class="fas fa-paper-plane"></i> Form Submissions & Conversions</h2>
+
+            <div id="leads-data">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Form Submissions</h4>
+                    <div class="metric-card-content">
+                        <div class="metric-card-front">
+                            <div class="metric-value">12</div>
+                            <div class="metric-change positive">
+                                <i class="fas fa-arrow-up"></i> +71.4% from Dec (7)
+                            </div>
+                        </div>
+                        <div class="metric-card-back">
+                            Strong rebound from December's holiday slowdown.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>JANUARY 2026 FORM SUBMISSIONS (12 LEGITIMATE LEADS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th>Type</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jan 5</td>
+                        <td>GM@VIEWINNS.COM</td>
+                        <td>Commercial inquiry</td>
+                        <td>Commercial</td>
+                        <td>Contact form</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 6</td>
+                        <td>Talha Celik</td>
+                        <td>Missing shingles, 4451 Beech Dr</td>
+                        <td>Roof Repair</td>
+                        <td>Repairs page</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 10</td>
+                        <td>Harold Weiss</td>
+                        <td>Roof inspection + new gutters</td>
+                        <td>Inspection</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 15</td>
+                        <td>Justin Weaver</td>
+                        <td>Bethlehem - roof replacement</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 19</td>
+                        <td>Kevin Gutierrez</td>
+                        <td>Full replacement, wants inspection ASAP</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 20</td>
+                        <td>Ronald Soden</td>
+                        <td>840 sq ft, ventilation issues, Bethlehem</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 20</td>
+                        <td>Rob Hughes</td>
+                        <td>40-year-old roof, storm damage, Easton</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 21</td>
+                        <td>Kelly Jenkins</td>
+                        <td>Walnutport - full replacement + plywood</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 23</td>
+                        <td>Rosa Velasquez</td>
+                        <td>239 Clearfield St, Freemansburg</td>
+                        <td>Roof Replacement</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 28</td>
+                        <td>Ryan Bittner</td>
+                        <td>Financing app - $9,995 project</td>
+                        <td>Roof Replacement</td>
+                        <td>Financing page</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>Jan 28</td>
+                        <td>Perly Castro</td>
+                        <td>Broken downspout, Bethlehem</td>
+                        <td>Gutter Repair</td>
+                        <td style="color: #34C759;"><strong>via ChatGPT</strong></td>
+                    </tr>
+                    <tr style="background: rgba(10, 132, 255, 0.1);">
+                        <td>Jan 29</td>
+                        <td>William Klucharich</td>
+                        <td>Ice dam evaluation</td>
+                        <td>Inspection</td>
+                        <td style="color: #0A84FF;"><strong>via FB ad</strong></td>
+                    </tr>
+                </tbody>
+            </table></div>
+            </div>
+            <button class="copy-btn" onclick="copyToClipboard(this, 'leads-data')"><i class="fas fa-copy"></i> Copy Data</button>
+
+            <h3>LEAD TYPE BREAKDOWN</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Lead Type</th>
+                        <th>Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Roof Replacement</strong></td>
+                        <td>8</td>
+                        <td>66.7%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inspection</strong></td>
+                        <td>2</td>
+                        <td>16.7%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Repair (Roof/Gutter)</strong></td>
+                        <td>2</td>
+                        <td>16.7%</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-robot"></i> NOTABLE LEADS</h4>
+                <ul>
+                    <li><strong>Perly Castro:</strong> First form submission via chatgpt.com referral - AI traffic is converting</li>
+                    <li><strong>William Klucharich:</strong> Ice dam inquiry from FB ad pointing to blog - content + paid working together</li>
+                    <li><strong>Ryan Bittner:</strong> Financing application for ~$10K project</li>
+                </ul>
+            </div>
+
+            <!-- Keyword Rankings -->
+            <h2 id="keywords"><i class="fas fa-trophy"></i> Keyword Rankings Performance</h2>
+
+            <h3 id="keywords-ranking-1">#1 ORGANIC RANKINGS (9 KEYWORDS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Search Volume</th>
+                        <th>Est. Traffic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>valley peak roofing</strong></td>
+                        <td>90</td>
+                        <td>72</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roofing bethlehem</strong></td>
+                        <td>140</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td><strong>james hardie siding installer bethlehem pa</strong></td>
+                        <td>50</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roof repair bethlehem pa</strong></td>
+                        <td>90</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roofing contractors bethlehem pa</strong></td>
+                        <td>70</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roofing companies bethlehem pa</strong></td>
+                        <td>70</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roofer bethlehem pa</strong></td>
+                        <td>50</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roofing company bethlehem</strong></td>
+                        <td>70</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>roofing contractor bethlehem pa</strong></td>
+                        <td>40</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3 id="top-rankings">TOP RANKINGS (POSITIONS 2-10)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Position</th>
+                        <th>Volume</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>how far is coopersburg pa from me</td>
+                        <td>1 (PAA)</td>
+                        <td>70</td>
+                        <td>/service-areas/roofing-coopersburg-pa</td>
+                    </tr>
+                    <tr>
+                        <td>roofers bethlehem pa</td>
+                        <td>3</td>
+                        <td>210</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>roofing lehigh valley</td>
+                        <td>3</td>
+                        <td>50</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>bethlehem roofing</td>
+                        <td>4</td>
+                        <td>70</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>owens corning shingle visualizer</td>
+                        <td>4</td>
+                        <td>50</td>
+                        <td>/design-your-roof</td>
+                    </tr>
+                    <tr>
+                        <td>owens corning visualizer</td>
+                        <td>5</td>
+                        <td>170</td>
+                        <td>/design-your-roof</td>
+                    </tr>
+                    <tr>
+                        <td>gutter installation lehigh valley</td>
+                        <td>5</td>
+                        <td>50</td>
+                        <td>/gutter-maintenance-installation</td>
+                    </tr>
+                    <tr>
+                        <td>roof streaking</td>
+                        <td>5</td>
+                        <td>210</td>
+                        <td>/blog/black-streaks-on-roof-causes</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair lehigh valley</td>
+                        <td>5</td>
+                        <td>70</td>
+                        <td>Homepage</td>
+                    </tr>
+                    <tr>
+                        <td>cheapest way to replace roof</td>
+                        <td>5</td>
+                        <td>30</td>
+                        <td>/blog/replacing-your-roof-on-a-budget</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3 id="top-performing-pages">TOP PERFORMING PAGES (POSITIONS 1-20)</h3>
+            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin: -5px 0 15px 0;">Pages ranking in the top 20 positions across all keywords (from Google Search Console)</p>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Avg Position</th>
+                        <th>Clicks</th>
+                        <th>Impressions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(52, 199, 89, 0.22);">
+                        <td><a href="http://www.valleypeakroof.com/" target="_blank">/ (homepage - www)</a></td>
+                        <td>2.5</td>
+                        <td>48</td>
+                        <td>7,503</td>
+                    </tr>
+                    <tr style="background: rgba(55, 197, 87, 0.21);">
+                        <td><a href="https://valleypeakroof.com/terms" target="_blank">/terms</a></td>
+                        <td>5.6</td>
+                        <td>0</td>
+                        <td>42</td>
+                    </tr>
+                    <tr style="background: rgba(58, 195, 85, 0.21);">
+                        <td><a href="https://valleypeakroof.com/blog/can-roof-problem-wait-until-spring" target="_blank">/blog/can-roof-problem-wait-until-spring</a></td>
+                        <td>5.7</td>
+                        <td>30</td>
+                        <td>1,698</td>
+                    </tr>
+                    <tr style="background: rgba(61, 193, 83, 0.20);">
+                        <td><a href="https://valleypeakroof.com/blog/roof-resolutions-2026.html" target="_blank">/blog/roof-resolutions-2026</a></td>
+                        <td>6.2</td>
+                        <td>0</td>
+                        <td>79</td>
+                    </tr>
+                    <tr style="background: rgba(64, 191, 81, 0.20);">
+                        <td><a href="https://valleypeakroof.com/our-blog" target="_blank">/our-blog</a></td>
+                        <td>6.7</td>
+                        <td>0</td>
+                        <td>133</td>
+                    </tr>
+                    <tr style="background: rgba(67, 189, 79, 0.19);">
+                        <td><a href="https://valleypeakroof.com/our-work" target="_blank">/our-work</a></td>
+                        <td>8.2</td>
+                        <td>0</td>
+                        <td>286</td>
+                    </tr>
+                    <tr style="background: rgba(70, 187, 77, 0.19);">
+                        <td><a href="https://valleypeakroof.com/privacy-policy" target="_blank">/privacy-policy</a></td>
+                        <td>8.5</td>
+                        <td>0</td>
+                        <td>23</td>
+                    </tr>
+                    <tr style="background: rgba(73, 185, 75, 0.18);">
+                        <td><a href="https://valleypeakroof.com/blog/berks-county-winter-snow-loads" target="_blank">/blog/berks-county-winter-snow-loads</a></td>
+                        <td>9.2</td>
+                        <td>27</td>
+                        <td>3,950</td>
+                    </tr>
+                    <tr style="background: rgba(76, 183, 73, 0.18);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-tannersville-pa.html" target="_blank">/service-areas/roofing-tannersville-pa</a></td>
+                        <td>10.4</td>
+                        <td>0</td>
+                        <td>85</td>
+                    </tr>
+                    <tr style="background: rgba(79, 181, 71, 0.17);">
+                        <td><a href="https://valleypeakroof.com/roof-replacement-installation" target="_blank">/roof-replacement-installation</a></td>
+                        <td>10.9</td>
+                        <td>0</td>
+                        <td>936</td>
+                    </tr>
+                    <tr style="background: rgba(82, 179, 69, 0.17);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-emmaus-pa" target="_blank">/service-areas/roofing-emmaus-pa</a></td>
+                        <td>11.4</td>
+                        <td>1</td>
+                        <td>653</td>
+                    </tr>
+                    <tr style="background: rgba(85, 177, 67, 0.16);">
+                        <td><a href="https://valleypeakroof.com/" target="_blank">/ (homepage - https)</a></td>
+                        <td>11.8</td>
+                        <td>1</td>
+                        <td>44</td>
+                    </tr>
+                    <tr style="background: rgba(88, 175, 65, 0.16);">
+                        <td><a href="https://www.valleypeakroof.com/roof-cost" target="_blank">/roof-cost (www)</a></td>
+                        <td>12.0</td>
+                        <td>3</td>
+                        <td>206</td>
+                    </tr>
+                    <tr style="background: rgba(91, 173, 63, 0.15);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-fleetwood-pa.html" target="_blank">/service-areas/roofing-fleetwood-pa</a></td>
+                        <td>12.0</td>
+                        <td>0</td>
+                        <td>72</td>
+                    </tr>
+                    <tr style="background: rgba(94, 171, 61, 0.15);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-alburtis-pa" target="_blank">/service-areas/roofing-alburtis-pa</a></td>
+                        <td>12.7</td>
+                        <td>0</td>
+                        <td>204</td>
+                    </tr>
+                    <tr style="background: rgba(97, 169, 59, 0.14);">
+                        <td><a href="https://valleypeakroof.com/our-company" target="_blank">/our-company</a></td>
+                        <td>13.0</td>
+                        <td>7</td>
+                        <td>683</td>
+                    </tr>
+                    <tr style="background: rgba(100, 167, 57, 0.14);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-nazareth-pa" target="_blank">/service-areas/roofing-nazareth-pa</a></td>
+                        <td>13.3</td>
+                        <td>0</td>
+                        <td>312</td>
+                    </tr>
+                    <tr style="background: rgba(103, 165, 55, 0.13);">
+                        <td><a href="https://valleypeakroof.com/blog/winter-siding-installation-lehigh-valley" target="_blank">/blog/winter-siding-installation-lehigh-valley</a></td>
+                        <td>13.7</td>
+                        <td>4</td>
+                        <td>1,071</td>
+                    </tr>
+                    <tr style="background: rgba(106, 163, 53, 0.13);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-honesdale-pa.html" target="_blank">/service-areas/roofing-honesdale-pa</a></td>
+                        <td>14.0</td>
+                        <td>0</td>
+                        <td>67</td>
+                    </tr>
+                    <tr style="background: rgba(109, 161, 51, 0.12);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-macungie-pa" target="_blank">/service-areas/roofing-macungie-pa</a></td>
+                        <td>14.5</td>
+                        <td>0</td>
+                        <td>436</td>
+                    </tr>
+                    <tr style="background: rgba(112, 159, 49, 0.12);">
+                        <td><a href="https://valleypeakroof.com/blog/black-streaks-on-roof-causes.html" target="_blank">/blog/black-streaks-on-roof-causes</a></td>
+                        <td>14.5</td>
+                        <td>0</td>
+                        <td>949</td>
+                    </tr>
+                    <tr style="background: rgba(115, 157, 47, 0.11);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-new-tripoli-pa" target="_blank">/service-areas/roofing-new-tripoli-pa</a></td>
+                        <td>14.6</td>
+                        <td>0</td>
+                        <td>329</td>
+                    </tr>
+                    <tr style="background: rgba(118, 155, 45, 0.11);">
+                        <td><a href="https://valleypeakroof.com/blog/best-month-roof-replacement" target="_blank">/blog/best-month-roof-replacement</a></td>
+                        <td>14.9</td>
+                        <td>4</td>
+                        <td>1,336</td>
+                    </tr>
+                    <tr style="background: rgba(121, 153, 43, 0.10);">
+                        <td><a href="https://valleypeakroof.com/blog/roof-repair-or-replace-guide" target="_blank">/blog/roof-repair-or-replace-guide</a></td>
+                        <td>14.9</td>
+                        <td>0</td>
+                        <td>92</td>
+                    </tr>
+                    <tr style="background: rgba(124, 151, 41, 0.10);">
+                        <td><a href="https://valleypeakroof.com/roofing-siding-gutter-faqs" target="_blank">/roofing-siding-gutter-faqs</a></td>
+                        <td>15.0</td>
+                        <td>3</td>
+                        <td>4,003</td>
+                    </tr>
+                    <tr style="background: rgba(127, 149, 39, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-wind-gap-pa" target="_blank">/service-areas/roofing-wind-gap-pa</a></td>
+                        <td>15.5</td>
+                        <td>0</td>
+                        <td>359</td>
+                    </tr>
+                    <tr style="background: rgba(130, 147, 37, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-lake-ariel-pa.html" target="_blank">/service-areas/roofing-lake-ariel-pa</a></td>
+                        <td>15.6</td>
+                        <td>0</td>
+                        <td>49</td>
+                    </tr>
+                    <tr style="background: rgba(133, 145, 35, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-coopersburg-pa" target="_blank">/service-areas/roofing-coopersburg-pa</a></td>
+                        <td>16.3</td>
+                        <td>2</td>
+                        <td>501</td>
+                    </tr>
+                    <tr style="background: rgba(136, 143, 33, 0.10);">
+                        <td><a href="https://valleypeakroof.com/contact" target="_blank">/contact</a></td>
+                        <td>16.8</td>
+                        <td>0</td>
+                        <td>198</td>
+                    </tr>
+                    <tr style="background: rgba(139, 141, 31, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-hellertown-pa" target="_blank">/service-areas/roofing-hellertown-pa</a></td>
+                        <td>17.0</td>
+                        <td>0</td>
+                        <td>309</td>
+                    </tr>
+                    <tr style="background: rgba(142, 139, 29, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-bangor-pa" target="_blank">/service-areas/roofing-bangor-pa</a></td>
+                        <td>17.2</td>
+                        <td>2</td>
+                        <td>202</td>
+                    </tr>
+                    <tr style="background: rgba(145, 137, 27, 0.10);">
+                        <td><a href="https://valleypeakroof.com/blog/does-your-home-need-roof-ventilation" target="_blank">/blog/does-your-home-need-roof-ventilation</a></td>
+                        <td>17.7</td>
+                        <td>0</td>
+                        <td>189</td>
+                    </tr>
+                    <tr style="background: rgba(148, 135, 25, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-bath-pa" target="_blank">/service-areas/roofing-bath-pa</a></td>
+                        <td>18.1</td>
+                        <td>0</td>
+                        <td>245</td>
+                    </tr>
+                    <tr style="background: rgba(151, 133, 23, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-wyomissing-pa" target="_blank">/service-areas/roofing-wyomissing-pa</a></td>
+                        <td>18.3</td>
+                        <td>1</td>
+                        <td>562</td>
+                    </tr>
+                    <tr style="background: rgba(154, 131, 21, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-easton-pa" target="_blank">/service-areas/roofing-easton-pa</a></td>
+                        <td>19.3</td>
+                        <td>2</td>
+                        <td>989</td>
+                    </tr>
+                    <tr style="background: rgba(157, 129, 19, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-services-in-northampton-county" target="_blank">/service-areas/roofing-services-in-northampton-county</a></td>
+                        <td>19.6</td>
+                        <td>3</td>
+                        <td>1,921</td>
+                    </tr>
+                    <tr style="background: rgba(160, 127, 17, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-kutztown-pa" target="_blank">/service-areas/roofing-kutztown-pa</a></td>
+                        <td>19.7</td>
+                        <td>1</td>
+                        <td>431</td>
+                    </tr>
+                    <tr style="background: rgba(163, 125, 15, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-stroudsburg-pa" target="_blank">/service-areas/roofing-stroudsburg-pa</a></td>
+                        <td>19.9</td>
+                        <td>4</td>
+                        <td>602</td>
+                    </tr>
+                    <tr style="background: rgba(166, 123, 13, 0.10);">
+                        <td><a href="https://valleypeakroof.com/service-areas/roofing-hamburg-pa.html" target="_blank">/service-areas/roofing-hamburg-pa</a></td>
+                        <td>19.9</td>
+                        <td>2</td>
+                        <td>65</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3 id="keywords-driving-traffic">KEYWORDS DRIVING TRAFFIC (GSC - TOP 15 BY CLICKS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Clicks</th>
+                        <th>Impressions</th>
+                        <th>Position</th>
+                        <th>CTR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>valley peak roofing</strong></td>
+                        <td>29</td>
+                        <td>102</td>
+                        <td>2.7</td>
+                        <td style="color: #34C759;">28.4%</td>
+                    </tr>
+                    <tr>
+                        <td>ice dam removal near me</td>
+                        <td>2</td>
+                        <td>63</td>
+                        <td>4.0</td>
+                        <td>3.2%</td>
+                    </tr>
+                    <tr>
+                        <td>roofer near me</td>
+                        <td>2</td>
+                        <td>76</td>
+                        <td>13.3</td>
+                        <td>2.6%</td>
+                    </tr>
+                    <tr>
+                        <td>valley peak roofing co.</td>
+                        <td>2</td>
+                        <td>28</td>
+                        <td>1.5</td>
+                        <td>7.1%</td>
+                    </tr>
+                    <tr style="background: rgba(52, 199, 89, 0.1);">
+                        <td>ice dam help near me</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td style="color: #34C759;">1.0</td>
+                        <td style="color: #34C759;">100%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing companies near me</td>
+                        <td>1</td>
+                        <td>453</td>
+                        <td>6.9</td>
+                        <td>0.2%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing near me</td>
+                        <td>1</td>
+                        <td>394</td>
+                        <td>6.6</td>
+                        <td>0.3%</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair</td>
+                        <td>1</td>
+                        <td>362</td>
+                        <td>7.4</td>
+                        <td>0.3%</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair near me</td>
+                        <td>1</td>
+                        <td>262</td>
+                        <td>9.0</td>
+                        <td>0.4%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing companies in pennsylvania</td>
+                        <td>1</td>
+                        <td>220</td>
+                        <td>12.4</td>
+                        <td>0.5%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing bethlehem pa</td>
+                        <td>1</td>
+                        <td>204</td>
+                        <td>26.6</td>
+                        <td>0.5%</td>
+                    </tr>
+                    <tr>
+                        <td>roofing contractors near me</td>
+                        <td>1</td>
+                        <td>191</td>
+                        <td>35.1</td>
+                        <td>0.5%</td>
+                    </tr>
+                    <tr>
+                        <td>valley roofing</td>
+                        <td>1</td>
+                        <td>188</td>
+                        <td>30.7</td>
+                        <td>0.5%</td>
+                    </tr>
+                    <tr>
+                        <td>roof repair bethlehem pa</td>
+                        <td>1</td>
+                        <td>111</td>
+                        <td>3.3</td>
+                        <td>0.9%</td>
+                    </tr>
+                    <tr>
+                        <td>roofers near me</td>
+                        <td>1</td>
+                        <td>58</td>
+                        <td>5.6</td>
+                        <td>1.7%</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3 id="problem-keywords">PROBLEM KEYWORDS (HIGH IMPRESSIONS, ZERO CLICKS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Impressions</th>
+                        <th>Position</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>roofers lehigh valley pa</strong></td>
+                        <td>312</td>
+                        <td style="color: #34C759;">1.2</td>
+                        <td style="color: #FF453A;">#1 POSITION - investigate!</td>
+                    </tr>
+                    <tr style="background: rgba(255, 159, 10, 0.1);">
+                        <td><strong>roofer allentown pa</strong></td>
+                        <td>318</td>
+                        <td>7.8</td>
+                        <td style="color: #FF9F0A;">GOOD POSITION - investigate!</td>
+                    </tr>
+                    <tr>
+                        <td>roofing faq</td>
+                        <td>2,845</td>
+                        <td>14.2</td>
+                        <td>Good position, weak snippet</td>
+                    </tr>
+                    <tr>
+                        <td>roofing contractors</td>
+                        <td>1,545</td>
+                        <td>51.4</td>
+                        <td>Position too low</td>
+                    </tr>
+                    <tr>
+                        <td>preventing ice dams on the roof</td>
+                        <td>449</td>
+                        <td>92.7</td>
+                        <td>Position way too low</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3 id="problem-pages">PROBLEM PAGES (HIGH IMPRESSIONS, LOW/ZERO CLICKS)</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Impressions</th>
+                        <th>Clicks</th>
+                        <th>Position</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>/gutter-maintenance-installation</td>
+                        <td>5,507</td>
+                        <td>0</td>
+                        <td>35.7</td>
+                        <td>Position improved but still too low</td>
+                    </tr>
+                    <tr>
+                        <td>/roofing-siding-gutter-faqs</td>
+                        <td>4,003</td>
+                        <td>3</td>
+                        <td>15.0</td>
+                        <td>Decent position, low CTR</td>
+                    </tr>
+                    <tr>
+                        <td>/service-areas/roofing-allentown-pa</td>
+                        <td>2,396</td>
+                        <td>3</td>
+                        <td>31.1</td>
+                        <td>Position too low</td>
+                    </tr>
+                    <tr>
+                        <td>/service-areas/roofing-services-in-lehigh-county</td>
+                        <td>2,158</td>
+                        <td>1</td>
+                        <td>36.7</td>
+                        <td>Position dropped from 29.4</td>
+                    </tr>
+                    <tr>
+                        <td>/budget-roof-cost</td>
+                        <td>2,000</td>
+                        <td>3</td>
+                        <td>45.1</td>
+                        <td>Position too low</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <h3 id="wins">WINS IN JANUARY</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Achievement</th>
+                        <th>Details</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Clicks +87%</strong></td>
+                        <td>252 vs 135</td>
+                        <td style="color: #34C759;">December fixes working</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Form submissions +71%</strong></td>
+                        <td>12 vs 7</td>
+                        <td style="color: #34C759;">Conversion recovery</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Keywords +52%</strong></td>
+                        <td>827 vs 545</td>
+                        <td style="color: #34C759;">Continued visibility growth</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Position +3.9</strong></td>
+                        <td>25.6 vs 29.5</td>
+                        <td style="color: #34C759;">Rankings improving</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#1 Rankings +50%</strong></td>
+                        <td>9 vs 6</td>
+                        <td style="color: #34C759;">Bethlehem dominance expanding</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Visibility +25%</strong></td>
+                        <td>Score 30 vs 24</td>
+                        <td style="color: #34C759;">AI platforms citing more</td>
+                    </tr>
+                    <tr>
+                        <td><strong>First AI conversion</strong></td>
+                        <td>ChatGPT-referred lead</td>
+                        <td style="color: #34C759;">AI traffic is real business</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ice dam content success</strong></td>
+                        <td>711 views, 51 clicks</td>
+                        <td style="color: #34C759;">Seasonal strategy validated</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic sessions +69%</strong></td>
+                        <td>317 vs 188</td>
+                        <td style="color: #34C759;">Quality traffic surge</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic engagement +3.8pp</strong></td>
+                        <td>61.2% vs 57.4%</td>
+                        <td style="color: #34C759;">Better quality visitors</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Key Opportunities -->
+            <h3 id="opportunities">KEY OPPORTUNITIES</h3>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Opportunity</th>
+                        <th>Current State</th>
+                        <th>Action Needed</th>
+                        <th>Potential Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: rgba(255, 69, 58, 0.1);">
+                        <td><strong>"roofers lehigh valley pa"</strong></td>
+                        <td>#1.2 position, 312 impressions, 0 clicks</td>
+                        <td>Investigate SERP appearance, test schema</td>
+                        <td style="color: #34C759;">Quick win - should be clicking</td>
+                    </tr>
+                    <tr style="background: rgba(255, 159, 10, 0.1);">
+                        <td><strong>"roofer allentown pa"</strong></td>
+                        <td>#7.8 position, 318 impressions, 0 clicks</td>
+                        <td>Review title/meta, Local Pack presence</td>
+                        <td>5-10 clicks/month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gutter page</strong></td>
+                        <td>5,507 impressions, pos 35.7, 0 clicks</td>
+                        <td>Major content overhaul, build internal links</td>
+                        <td>Long-term traffic opportunity</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lehigh County page</strong></td>
+                        <td>Position dropped 29.4→36.7</td>
+                        <td>Investigate, may need content refresh</td>
+                        <td>Recover lost visibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paid Social</strong></td>
+                        <td>523 sessions, 9.8% engagement</td>
+                        <td>Improve targeting or pause</td>
+                        <td>Budget reallocation</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Month Ahead Focus -->
+            <h2 id="month-ahead"><i class="fas fa-bullseye"></i> Month Ahead Focus</h2>
+
+            <div class="executive-summary" style="border-left: 3px solid #FF453A;">
+                <h3 style="color: #FF453A;"><i class="fas fa-exclamation-circle"></i> PRIORITY 1: INVESTIGATE ZERO-CLICK #1 RANKINGS</h3>
+                <p>"roofers lehigh valley pa" ranking #1.2 with 0 clicks is a red flag</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Check actual SERP appearance (mobile + desktop)</li>
+                    <li><i class="fas fa-check"></i> Verify Local Pack presence</li>
+                    <li><i class="fas fa-check"></i> Test structured data/schema</li>
+                    <li><i class="fas fa-check"></i> Review if ranking URL is correct</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> Should convert 5-15 clicks/month at #1 position</p>
+            </div>
+
+            <div class="executive-summary" style="border-left: 3px solid #34C759;">
+                <h3 style="color: #34C759;"><i class="fas fa-snowflake"></i> PRIORITY 2: CAPITALIZE ON ICE DAM SUCCESS</h3>
+                <p>711 views, 51 clicks - highest performing content ever</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Create follow-up content (ice dam removal, ice dam damage signs)</li>
+                    <li><i class="fas fa-check"></i> Share on FB with boosted post</li>
+                    <li><i class="fas fa-check"></i> Add internal links from service pages</li>
+                    <li><i class="fas fa-check"></i> Consider Google Ads for ice dam keywords</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> Extend seasonal traffic spike through February</p>
+            </div>
+
+            <div class="executive-summary" style="border-left: 3px solid #0A84FF;">
+                <h3 style="color: #0A84FF;"><i class="fas fa-ad"></i> PRIORITY 3: GOOGLE ADS PREPARATION</h3>
+                <p>March prep for April launch with $10-15K/month budget</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Complete account setup</li>
+                    <li><i class="fas fa-check"></i> Competitive keyword research</li>
+                    <li><i class="fas fa-check"></i> Build campaign structure</li>
+                    <li><i class="fas fa-check"></i> Create landing page variants</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> Significant lead volume increase for spring season</p>
+            </div>
+
+            <div class="executive-summary" style="border-left: 3px solid #BF5AF2;">
+                <h3 style="color: #BF5AF2;"><i class="fas fa-map-marker-alt"></i> PRIORITY 4: CONTINUE LOCATION PAGE EXPANSION</h3>
+                <p>19 priority locations identified, systematic buildout</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Research and create 2-3 new location pages</li>
+                    <li><i class="fas fa-check"></i> Focus on areas with existing visibility</li>
+                    <li><i class="fas fa-check"></i> Follow established template system</li>
+                </ul>
+                <p><strong>Expected Impact:</strong> Expand geographic coverage, capture local searches</p>
+            </div>
+
+            <!-- Success Metrics -->
+            <h2 id="success-metrics"><i class="fas fa-chart-bar"></i> Success Metrics for February 2026</h2>
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>KPI</th>
+                        <th>January Actual</th>
+                        <th>February Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Form submissions</strong></td>
+                        <td>12</td>
+                        <td>12+ (maintain)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic clicks (GSC)</strong></td>
+                        <td>252</td>
+                        <td>280+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Average position</strong></td>
+                        <td>25.6</td>
+                        <td>&lt;24</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organic sessions (GA4)</strong></td>
+                        <td>317</td>
+                        <td>350+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ice dam blog clicks</strong></td>
+                        <td>51</td>
+                        <td>40+ (seasonal decline expected)</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Deep Research Analysis -->
+            <h2 id="deep-analysis"><i class="fas fa-microscope"></i> Deep Research Analysis</h2>
+
+            <div class="executive-summary" style="border-left: 3px solid #BF5AF2;">
+                <h3 style="color: #BF5AF2;"><i class="fas fa-brain"></i> SITE STATUS ASSESSMENT</h3>
+                <p style="font-size: 14px; line-height: 1.7;">
+                    <strong>This site is not struggling—it's transitioning from visibility to dominance.</strong>
+                </p>
+                <p style="font-size: 14px; line-height: 1.7;">
+                    February work is about: forcing clicks where Google already trusts you, turning AI + seasonal authority into permanent revenue, and tightening conversion paths.
+                </p>
+            </div>
+
+            <!-- Root Cause Analysis -->
+            <h3 id="root-cause"><i class="fas fa-search"></i> ROOT CAUSE ANALYSIS</h3>
+
+            <div class="insight-box" style="margin-bottom: 16px;">
+                <h4><i class="fas fa-chart-line"></i> WHY CLICKS +87% WHILE IMPRESSIONS ONLY +6.3%</h4>
+                <p><strong>Primary cause: CTR recovery, not visibility expansion.</strong></p>
+                <p>The December/January fixes addressed snippet defects (titles, metas, H2 mismatches, broken URLs, social previews). Google re-tested CTR on pages that were already ranking but underperforming. Many impressions already existed—clicks were suppressed by bad snippets.</p>
+                <ul>
+                    <li><strong>Impressions</strong> = demand + ranking footprint (mostly stable)</li>
+                    <li><strong>Clicks</strong> = snippet quality + intent match (massively improved)</li>
+                </ul>
+                <p style="color: #34C759;"><strong>Conclusion:</strong> This is healthy post-launch maturation behavior. The site is converting visibility into traffic more efficiently.</p>
+            </div>
+
+            <div class="alert" style="border-left-color: #FF453A;">
+                <h3 style="color: #FF453A;"><i class="fas fa-exclamation-triangle"></i> CRITICAL: "ROOFERS LEHIGH VALLEY PA" #1.2 WITH ZERO CLICKS</h3>
+                <p><strong>This is not normal and not a keyword issue. It is a SERP presentation issue.</strong></p>
+                <p style="margin-top: 12px;"><strong>Likely causes (ranked by probability):</strong></p>
+                <ul style="margin-top: 8px;">
+                    <li><strong>(1) Local Pack cannibalization:</strong> Query intent = local service. Google shows 3-pack (map), Google Guaranteed/LSA, then Ads. Organic #1 is below the fold on mobile. If Valley Peak IS in the Local Pack, clicks go to Call button, Directions, or GBP—not website. GSC still counts impressions even if users never scroll to organic.</li>
+                    <li><strong>(2) Wrong ranking URL:</strong> If Google is ranking a county page or thin service-area page instead of the homepage, users won't click. Users expect brand-heavy homepage with trust, reviews, phone number immediately.</li>
+                    <li><strong>(3) Snippet trust deficit:</strong> Even at #1, users won't click if competitors show ★★★★★ review stars and "Google Guaranteed" while yours doesn't. This keyword should be clicking 10-20% CTR.</li>
+                </ul>
+            </div>
+
+            <div class="insight-box" style="border-left-color: #FF9F0A; background: rgba(255, 159, 10, 0.15); border-color: rgba(255, 159, 10, 0.3);">
+                <h4 style="color: #FF9F0A;"><i class="fas fa-map-marker-alt"></i> "ROOFER ALLENTOWN PA" #7.8, 318 IMPRESSIONS, ZERO CLICKS</h4>
+                <p><strong>Classic local SERP squeeze:</strong></p>
+                <ul>
+                    <li>Ads (2-4) → Local Pack (3) → People Also Ask → THEN organic</li>
+                    <li>Position ~8 is effectively page 2 visibility on mobile</li>
+                    <li>Allentown competitors are likely hyper-optimized city pages</li>
+                    <li>Your Allentown page is at 31.1 avg, meaning the keyword may actually be ranking on another URL inconsistently</li>
+                </ul>
+                <p><strong>Root cause:</strong> You are present but not competitive yet for Allentown.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-arrow-down"></i> WHY LEHIGH COUNTY PAGE DROPPED (29.4 → 36.7)</h4>
+                <p>This is counterintuitive but explainable:</p>
+                <ul>
+                    <li><strong>Keyword narrowing:</strong> Switching from "Lehigh Valley" → "Lehigh County" reduced semantic breadth. Lost overlap with broader Valley searches.</li>
+                    <li><strong>County pages are weak converters:</strong> Google increasingly favors city pages or authoritative homepages. County pages often float or decay unless very strong.</li>
+                    <li><strong>Internal competition:</strong> Homepage + Bethlehem pages are outperforming it. Google reallocates ranking equity upward.</li>
+                </ul>
+                <p><strong>This is not a failure—it's Google reallocating authority.</strong></p>
+            </div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-building"></i> WHY COMMERCIAL ROOFING PAGE DROPPED (36.1 → 39.7)</h4>
+                <p>Commercial roofing has higher authority competitors, fewer backlinks, lower internal link support, and no case studies/proof.</p>
+                <p>Fixing og:url and H2s helps indexing—<strong>not ranking</strong>.</p>
+                <p><strong>Root cause:</strong> The page lacks E-E-A-T signals required for commercial intent.</p>
+            </div>
+
+            <div class="insight-box">
+                <h4><i class="fas fa-percentage"></i> WHY ENGAGEMENT RATE DROPPED (-6.8pp) DESPITE BETTER TRAFFIC</h4>
+                <p><strong>This is entirely Paid Social pollution.</strong></p>
+                <ul>
+                    <li>Paid Social = 523 sessions at 9.8% engagement</li>
+                    <li>Organic = 61.2% engagement (excellent)</li>
+                </ul>
+                <p>GA4 averages are weighted → Paid Social drags the site down. <strong>Nothing is wrong with SEO traffic.</strong></p>
+            </div>
+
+            <!-- Success Analysis -->
+            <h3 id="success-analysis"><i class="fas fa-trophy"></i> SUCCESS ANALYSIS</h3>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-wrench"></i> WHY DECEMBER FIXES WORKED</h4>
+                <p><strong>You fixed trust mismatches, not keywords:</strong></p>
+                <ul>
+                    <li>Titles aligned with intent</li>
+                    <li>Meta descriptions reduced fluff</li>
+                    <li>H2 mismatches corrected</li>
+                    <li>Mobile CTA visibility improved</li>
+                </ul>
+                <p>This improved CTR, scroll depth, and form interaction. Google rewarded this with better average position and more click testing.</p>
+            </div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-snowflake"></i> WHY ICE DAM BLOG EXPLODED (711 VIEWS, 51 CLICKS)</h4>
+                <p><strong>Perfect storm:</strong></p>
+                <ul>
+                    <li>Seasonal urgency</li>
+                    <li>Informational → transactional crossover</li>
+                    <li>Facebook distribution</li>
+                    <li>Zero strong competitors locally</li>
+                </ul>
+                <p>Ice dams are rare, scary, expensive, and weather-driven. That creates high emotional click-through.</p>
+            </div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-robot"></i> WHY AI VISIBILITY SURGED (+25%)</h4>
+                <p>AI systems favor clear answers, FAQ-style content, location + service clarity, and recent updates.</p>
+                <p>The December cleanup removed ambiguity, fixed broken references, and improved consistency. <strong>AI models now trust your site as ground truth.</strong></p>
+            </div>
+
+            <div class="insight-box" style="border-left-color: #34C759; background: rgba(52, 199, 89, 0.15); border-color: rgba(52, 199, 89, 0.3);">
+                <h4 style="color: #34C759;"><i class="fas fa-users"></i> WHY ORGANIC ENGAGEMENT IS SO HIGH (61.2%)</h4>
+                <p>Because queries are high-intent, pages match intent, forms are visible, and content answers real problems.</p>
+                <p><strong>This is elite local SEO engagement.</strong></p>
+            </div>
+
+            <!-- Problem Investigation -->
+            <h3 id="problem-investigation"><i class="fas fa-exclamation-circle"></i> PROBLEM INVESTIGATION</h3>
+
+            <div class="table-wrapper"><table>
+                <thead>
+                    <tr>
+                        <th>Problem</th>
+                        <th>Current State</th>
+                        <th>Root Cause</th>
+                        <th>Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Gutter page</strong></td>
+                        <td>5,507 impressions, 0 clicks, pos 35.7</td>
+                        <td>Early-stage ranking behavior. Position 35.7 = visibility without viability. Query intent varies (cleaning vs repair vs install). Page tries to do everything—Google doesn't know who it's for yet.</td>
+                        <td style="color: #FF9F0A;">Needs overhaul</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FAQ page</strong></td>
+                        <td>4,003 impressions, 3 clicks, pos 15.0</td>
+                        <td>FAQ pages rank but rarely get clicked. SERP often answers questions directly (PAA). Users don't want a "FAQ hub".</td>
+                        <td style="color: #34C759;">Working as expected—value is AI + internal linking support</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paid Social</strong></td>
+                        <td>523 sessions, 9.8% engagement</td>
+                        <td>Hurts engagement metrics, doesn't align with intent. Only worked when tied to ice dam urgency.</td>
+                        <td style="color: #FF453A;">Not worth continuing in current form</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backlinks drop</strong></td>
+                        <td>173 → 139 referring domains</td>
+                        <td>Authority score stable. Likely lost low-quality, auto-indexed, non-impactful domains.</td>
+                        <td style="color: #34C759;">Not concerning—focus on local + trade links</td>
+                    </tr>
+                </tbody>
+            </table></div>
+
+            <!-- Competitor Insights -->
+            <h3 id="competitor-insights"><i class="fas fa-users"></i> COMPETITOR INSIGHTS: ALANKUNSMANROOFING.COM</h3>
+
+            <div class="insight-box" style="border-left-color: #0A84FF;">
+                <h4 style="color: #0A84FF;"><i class="fas fa-chart-bar"></i> WHY THEY GET 6.96 VISITORS PER KEYWORD (VS YOUR 0.60)</h4>
+                <p>They:</p>
+                <ul>
+                    <li>Rank for fewer keywords (216 vs 827)</li>
+                    <li>But those keywords are <strong>transactional</strong></li>
+                    <li>Strong city pages</li>
+                    <li>Strong GBP presence</li>
+                    <li>Likely better Local Pack dominance</li>
+                </ul>
+                <p style="margin-top: 12px;"><strong>Their strategy:</strong> "Get the click now"</p>
+                <p><strong>Your strategy:</strong> "Own the entire market long-term"</p>
+                <p style="margin-top: 8px;">Both valid—but you now need <strong>conversion layering</strong>.</p>
+            </div>
+
+            <!-- Strategic Recommendations -->
+            <h3 id="strategic-recommendations"><i class="fas fa-lightbulb"></i> STRATEGIC RECOMMENDATIONS</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+                <div class="insight-box" style="margin: 0;">
+                    <h4 style="color: #34C759;"><i class="fas fa-ad"></i> GOOGLE ADS</h4>
+                    <p><strong>Yes, proceed—but:</strong></p>
+                    <ul>
+                        <li>Start with brand + emergency keywords</li>
+                        <li>Use service-specific landing pages</li>
+                        <li>Avoid sending ads to generic blogs</li>
+                    </ul>
+                </div>
+                <div class="insight-box" style="margin: 0;">
+                    <h4 style="color: #0A84FF;"><i class="fas fa-calendar"></i> SEASONAL CONTENT (FEB-MARCH)</h4>
+                    <ul>
+                        <li>"Ice dam damage to gutters"</li>
+                        <li>"Roof leaks after snow melt"</li>
+                        <li>"Spring roof inspection checklist"</li>
+                    </ul>
+                </div>
+                <div class="insight-box" style="margin: 0;">
+                    <h4 style="color: #BF5AF2;"><i class="fas fa-robot"></i> AI VISIBILITY</h4>
+                    <ul>
+                        <li>Add short answer sections ("Quick Answer")</li>
+                        <li>Keep FAQs updated</li>
+                        <li>Add author/service entity clarity</li>
+                    </ul>
+                </div>
+                <div class="insight-box" style="margin: 0;">
+                    <h4 style="color: #FF9F0A;"><i class="fas fa-ban"></i> PAID SOCIAL</h4>
+                    <p><strong>Pause broad traffic campaigns.</strong></p>
+                    <p>Only run:</p>
+                    <ul>
+                        <li>Emergency content</li>
+                        <li>Retargeting</li>
+                        <li>Seasonal spikes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- December Fixes Progress (January Tasks Completed) -->
+            <div class="task-tracker" id="december-fixes" style="background: linear-gradient(135deg, rgba(52, 199, 89, 0.15) 0%, rgba(34, 139, 34, 0.15) 100%); border-color: rgba(52, 199, 89, 0.3);">
+                <div class="task-tracker-header">
+                    <i class="fas fa-check-double" style="color: #34C759;"></i>
+                    <h2 style="color: #34C759;">January 2026 Page Fixes (Complete)</h2>
+                </div>
+                <p class="task-tracker-subtitle">Based on December 2025 SEO Report analysis. All tasks completed in early January.</p>
+
+                <div class="task-summary">
+                    <strong><i class="fas fa-check-circle"></i> All Tasks Complete</strong> — Zero-click pages optimized, site-wide fixes implemented. Results: Gutter page +12 positions, overall avg position +3.9, clicks +87%.
+                </div>
+
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-check-circle" style="color: #34C759;"></i> Zero-Click Pages Fixed</div>
+
+                    <div class="table-wrapper"><table>
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Previous</th>
+                                <th>Current</th>
+                                <th>Changes Made</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Roof Replacement</strong></td>
+                                <td>1,811 imp, pos 8.9</td>
+                                <td>936 imp, pos 10.9</td>
+                                <td>Added "0% Financing Available" to title, meta 244→152 chars</td>
+                                <td style="color: #34C759;">Now receiving clicks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Residential Repairs</strong></td>
+                                <td>2,176 imp, pos 13.5</td>
+                                <td>pos 22.5</td>
+                                <td>Added "Same-Day Emergency Service", fixed contact H2</td>
+                                <td>Position slipped, properly optimized</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Northampton County</strong></td>
+                                <td>2,291 imp, pos 19.4</td>
+                                <td>3 clicks, pos 19.6</td>
+                                <td>Added "Contractor" keyword, fixed typo</td>
+                                <td style="color: #34C759;">Position stable, getting clicks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lehigh County</strong></td>
+                                <td>3,621 imp, pos 29.4</td>
+                                <td>pos 36.7</td>
+                                <td>"Lehigh Valley" → "Lehigh County"</td>
+                                <td style="color: #FF9F0A;">Position dropped, needs investigation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gutter Maintenance</strong></td>
+                                <td>10,983 imp, pos 47.7</td>
+                                <td>5,507 imp, pos 35.7</td>
+                                <td>Added "Free Inspection & Cleaning"</td>
+                                <td style="color: #34C759;">+12 positions improvement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>FAQ Page</strong></td>
+                                <td>1,696 imp, pos 12.1</td>
+                                <td>4,003 imp, 3 clicks, pos 15.0</td>
+                                <td>Added "Lehigh Valley Homeowner Questions"</td>
+                                <td>Position slipped slightly, getting clicks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Commercial Roofing</strong></td>
+                                <td>1,949 imp, pos 36.1</td>
+                                <td>1,398 imp, pos 39.7</td>
+                                <td>Fixed og:url, twitter:url, Contact H2</td>
+                                <td style="color: #FF9F0A;">Position dropped</td>
+                            </tr>
+                        </tbody>
+                    </table></div>
+                </div>
+
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-check-circle" style="color: #34C759;"></i> Site-Wide Fixes Completed</div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> All 23 Blog Posts: Fixed share buttons, URLs, internal links, contact H2s</li>
+                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Blog Card Excerpts: Clean 120-char truncation</li>
+                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Social Media Previews: Updated og:image/twitter:image on 47 pages</li>
+                        <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-check-circle" style="color: #34C759;"></i> Mobile Form Visibility: Added "Free Estimate" button below mobile navbar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- February Fixes Section -->
+            <div class="task-tracker" id="february-fixes">
+                <div class="task-tracker-header">
+                    <i class="fas fa-tasks"></i>
+                    <h2>February 2026 Page Fixes</h2>
+                </div>
+                <p class="task-tracker-subtitle">Based on Deep Research Analysis. Click any task to see details.</p>
+
+                <!-- Priority 1: Homepage Zero-Click Fix -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-exclamation-circle" style="color: #FF453A;"></i> Priority 1: Fix Zero-Click #1 Ranking (Homepage)</div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">1</div>
+                                <div>
+                                    <div class="task-title">Homepage Title & Meta for "roofers lehigh valley pa"</div>
+                                    <div class="task-meta">Position #1.2 • 312 impressions • 0 clicks</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Ranking #1.2 for "roofers lehigh valley pa" with 312 impressions but ZERO clicks. This should be clicking 10-20% CTR at #1 position.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Likely Local Pack cannibalization (organic #1 below fold on mobile), possible wrong ranking URL, or snippet trust deficit (no review stars while competitors show ★★★★★).</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Required</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Current</th>
+                                        <th>New</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="before">[Current title]</td>
+                                        <td class="after">Roofers in Lehigh Valley PA | 113★ Reviews | Valley Peak Roofing</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="before">[Current meta]</td>
+                                        <td class="after">Trusted Lehigh Valley roofers with 113+ 5★ reviews. Roof repair, replacement & gutters. Free inspections. Call today.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Schema</strong></td>
+                                        <td class="before">Basic LocalBusiness</td>
+                                        <td class="after">Add AggregateRating (113 reviews), Service types (Roofing, Gutter Repair)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Investigation Steps</div>
+                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
+                                    <li>Check actual SERP appearance (mobile + desktop)</li>
+                                    <li>Verify Local Pack presence for this query</li>
+                                    <li>Confirm ranking URL is homepage (not county page)</li>
+                                    <li>Test structured data with Rich Results Test</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">2</div>
+                                <div>
+                                    <div class="task-title">"roofer allentown pa" - Allentown Page Optimization</div>
+                                    <div class="task-meta">Position #7.8 • 318 impressions • 0 clicks</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Position 7.8 for valuable keyword but zero clicks. Allentown page itself is at position 31.1—keyword may be ranking inconsistently on wrong URL.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Classic local SERP squeeze: Ads (2-4) → Local Pack (3) → PAA → organic. Position ~8 is effectively page 2 on mobile. Allentown competitors likely have hyper-optimized city pages.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Required</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Title</strong></td>
+                                        <td class="after">Optimize for "Roofer Allentown PA" with trust signals</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Meta</strong></td>
+                                        <td class="after">Add review count, emergency service, free inspection</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Content</strong></td>
+                                        <td class="after">Expand Allentown-specific content, add neighborhood mentions</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal Links</strong></td>
+                                        <td class="after">Add links from homepage and Lehigh County page</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 2: Gutter Page Overhaul -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-tools" style="color: #FF9F0A;"></i> Priority 2: Gutter Page Overhaul</div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">3</div>
+                                <div>
+                                    <div class="task-title">Gutter Maintenance & Installation Page</div>
+                                    <div class="task-meta">5,507 impressions • Position 35.7 • 0 clicks</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Massive impressions (5,507) but zero clicks. Position 35.7 = visibility without viability. Query intent varies (cleaning vs repair vs install)—page tries to do everything.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Early-stage ranking behavior. Google doesn't know who the page is for yet. Need to split intent and add depth.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Required</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Content Structure</strong></td>
+                                        <td class="after">Split into separate H2 sections: Gutter Repair, Gutter Installation, Downspouts, Ice Damage to Gutters</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pricing</strong></td>
+                                        <td class="after">Add pricing ranges for each service type</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FAQs</strong></td>
+                                        <td class="after">Add 3-5 FAQs with FAQ schema</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Photos</strong></td>
+                                        <td class="after">Add before/after photos, "When to call a pro" section</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal Links</strong></td>
+                                        <td class="after">Add links FROM ice dam blogs, roof repair pages TO this page</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 3: Commercial Roofing Recovery -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-building" style="color: #0A84FF;"></i> Priority 3: Commercial Roofing Recovery</div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">4</div>
+                                <div>
+                                    <div class="task-title">Commercial Roofing Page E-E-A-T Signals</div>
+                                    <div class="task-meta">Dropped 36.1 → 39.7 • 1,398 impressions • 0 clicks</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Position dropped despite fixes. Commercial roofing has higher authority competitors. Page lacks E-E-A-T signals required for commercial intent.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Fixing og:url and H2s helps indexing—not ranking. Need substantive content additions to compete.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Required</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Element</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Case Studies</strong></td>
+                                        <td class="after">Add case study section (Comfort Inn lead from Dec could be featured once complete)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Roof Types</strong></td>
+                                        <td class="after">Add section on commercial roof types (flat, TPO, EPDM, metal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maintenance</strong></td>
+                                        <td class="after">Add maintenance contracts/plans section</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Warranty</strong></td>
+                                        <td class="after">Add commercial warranty language</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal Links</strong></td>
+                                        <td class="after">Add link from homepage footer</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">5</div>
+                                <div>
+                                    <div class="task-title">Lehigh County Page Recovery</div>
+                                    <div class="task-meta">Dropped 29.4 → 36.7 • 2,158 impressions</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Problem</div>
+                                <div class="task-problem">Position dropped from 29.4 to 36.7 despite title/meta optimization in January.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Root Cause</div>
+                                <div class="task-root-cause">Keyword narrowing from "Lehigh Valley" → "Lehigh County" reduced semantic breadth. Lost overlap with broader Valley searches. Google reallocating authority to homepage + city pages.</div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Assessment</div>
+                                <div style="background: rgba(52, 199, 89, 0.1); border-left: 3px solid #34C759; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);">
+                                    <strong>This may not need fixing.</strong> County pages are weak converters—Google increasingly favors city pages or authoritative homepages. Monitor for another month. If decline continues, consider redirecting to homepage or strengthening city page links instead.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 4: Schema & Internal Linking -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-code" style="color: #BF5AF2;"></i> Priority 4: Schema & Internal Linking</div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">6</div>
+                                <div>
+                                    <div class="task-title">Schema Enhancements Sitewide</div>
+                                    <div class="task-meta">LocalBusiness, FAQ, Breadcrumb, HowTo</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Required</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Page/Element</th>
+                                        <th>Schema Type</th>
+                                        <th>Details</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Homepage</strong></td>
+                                        <td>LocalBusiness + AggregateRating</td>
+                                        <td class="after">Name, address, phone, service area, 113 reviews</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FAQ Page</strong></td>
+                                        <td>FAQ Schema</td>
+                                        <td class="after">Add FAQ schema (only on this page)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ice Dam Content</strong></td>
+                                        <td>HowTo Schema</td>
+                                        <td class="after">Add HowTo schema for prevention steps</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>All Pages</strong></td>
+                                        <td>Breadcrumb Schema</td>
+                                        <td class="after">Implement breadcrumb schema sitewide</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">7</div>
+                                <div>
+                                    <div class="task-title">Internal Linking Improvements</div>
+                                    <div class="task-meta">Cross-link blogs, services, and city pages</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Changes Required</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Link From</th>
+                                        <th>Link To</th>
+                                        <th>Purpose</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Ice dam blog posts</td>
+                                        <td class="after">Gutter page, Roof repair page</td>
+                                        <td>Convert informational to service intent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Homepage</td>
+                                        <td class="after">Gutter page (in services section)</td>
+                                        <td>Pass authority to struggling page</td>
+                                    </tr>
+                                    <tr>
+                                        <td>City pages</td>
+                                        <td class="after">Relevant service pages</td>
+                                        <td>Contextual relevance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blog posts</td>
+                                        <td class="after">Service CTAs mid-content</td>
+                                        <td>Improve conversion paths</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Homepage footer</td>
+                                        <td class="after">Commercial Roofing page</td>
+                                        <td>Boost commercial page authority</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority 5: Seasonal Content -->
+                <div class="priority-section">
+                    <div class="priority-title"><i class="fas fa-snowflake" style="color: #64D2FF;"></i> Priority 5: Seasonal Content (Feb-March)</div>
+
+                    <div class="task-item" onclick="toggleTask(this)">
+                        <div class="task-header">
+                            <div class="task-header-left">
+                                <div class="task-number">8</div>
+                                <div>
+                                    <div class="task-title">Create Ice Dam Follow-Up Content</div>
+                                    <div class="task-meta">Capitalize on 711-view ice dam success</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Pending</div>
+                                <i class="fas fa-chevron-down task-expand-icon"></i>
+                            </div>
+                        </div>
+                        <div class="task-content">
+                            <div class="task-section">
+                                <div class="task-section-title">Content Ideas</div>
+                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px; line-height: 1.8;">
+                                    <li><strong>"Ice Dam Damage to Gutters: Signs & Solutions"</strong> - Cross-link to gutter page</li>
+                                    <li><strong>"Roof Leaks After Snow Melt: What Lehigh Valley Homeowners Need to Know"</strong></li>
+                                    <li><strong>"Spring Roof Inspection Checklist for Pennsylvania Homes"</strong> - Transition seasonal content</li>
+                                </ul>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title">Distribution</div>
+                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
+                                    <li>Share on Facebook with boosted post (like ice dam success)</li>
+                                    <li>Consider Google Ads for ice dam keywords while seasonal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Notes -->
+            <h2 id="technical-notes"><i class="fas fa-cog"></i> Technical Notes</h2>
+            <ul style="list-style: none; padding: 0; margin: 16px 0;">
+                <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-info-circle" style="color: #0A84FF;"></i> Site is 195 days post-launch (launched July 20, 2025)</li>
+                <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-info-circle" style="color: #0A84FF;"></i> January data reflects full month (Jan 1-31, 2026)</li>
+                <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-info-circle" style="color: #0A84FF;"></i> SEMrush keyword/traffic data is February 2026 snapshot</li>
+                <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-info-circle" style="color: #0A84FF;"></i> AI Visibility metrics show significant growth (Score: 30, Mentions: 17, Cited Pages: 34)</li>
+                <li style="padding: 8px 0; display: flex; gap: 10px; color: rgba(235, 235, 245, 0.8);"><i class="fas fa-info-circle" style="color: #0A84FF;"></i> 9 sessions from chatgpt.com visible in GA4 referral data including 1 conversion</li>
+            </ul>
+
+            <footer style="text-align: center; padding: 24px 16px; font-size: 11px; color: rgba(235, 235, 245, 0.3); border-top: 0.5px solid rgba(255, 255, 255, 0.1); margin-top: 32px;">
+                <p>Prepared by Keystone Web Solutions</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Toggle expandable rows
+        function toggleRow(row) {
+            row.classList.toggle('expanded');
+            const content = row.nextElementSibling;
+            if (content && content.classList.contains('expanded-content')) {
+                content.classList.toggle('show');
+            }
+        }
+
+        // Toggle task items
+        function toggleTask(taskItem) {
+            taskItem.classList.toggle('expanded');
+        }
+
+        // Traffic Sources Chart
+        const ctx = document.getElementById('trafficSourcesChart');
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Paid Social', 'Direct', 'Organic Search', 'Organic Social', 'Referral'],
+                    datasets: [{
+                        data: [523, 429, 317, 81, 54],
+                        backgroundColor: [
+                            'rgba(255, 69, 58, 0.8)',
+                            'rgba(99, 102, 241, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(255, 159, 10, 0.8)',
+                            'rgba(10, 132, 255, 0.8)'
+                        ],
+                        borderColor: 'rgba(0, 0, 0, 0.3)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: 'rgba(235, 235, 245, 0.8)',
+                                padding: 16,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Copy to clipboard function
+        function copyToClipboard(btn, elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Data';
+                }, 2000);
+            });
+        }
+
+        // Copy full report
+        function copyFullReport() {
+            const report = `VALLEY PEAK ROOFING - JANUARY 2026 SEO REPORT
+=============================================
+
+Reporting Period: January 1-31, 2026
+Report Created: February 3, 2026
+Days Post-Launch: 195 days (launched July 20, 2025)
+
+EXECUTIVE SUMMARY
+-----------------
+January showed strong recovery across key metrics. Organic clicks nearly doubled (+87%), form submissions rebounded (+71%), and the site now ranks for 827 keywords—a 52% increase. The zero-click page fixes from the December report appear to be working, with average position improving from 29.5 to 25.6. AI visibility also surged (+25% score, +55% cited pages), with the first ChatGPT-referred form submission recorded.
+
+KEY METRICS
+-----------
+• Organic clicks recovered: 252 clicks (+87% from 135)
+• Form submissions rebounded: 12 leads (+71% from 7)
+• Keyword growth continues: 827 keywords (+52% from 545)
+• Position improved: 25.6 avg (+3.9 positions from 29.5)
+• AI visibility expanding: Score 30 (+25%), 34 cited pages (+55%)
+• ChatGPT conversion: First form submission via chatgpt.com referral
+
+THE BOTTOM LINE
+---------------
+The December fixes worked. Clicks nearly doubled, leads rebounded, and ranking position improved almost 4 positions. The ice dam blog drove exceptional traffic (711 views, 51 clicks) after Facebook sharing. AI platforms are now actively sending converting traffic—we got our first ChatGPT-referred lead.
+
+Focus for February: Continue momentum with seasonal content, prepare Google Ads campaign for spring, and capitalize on the ice dam content success pattern.
+
+GOOGLE SEARCH CONSOLE
+--------------------
+Total Impressions: 74.4K (+6.3%)
+Total Clicks: 252 (+86.7%)
+Average CTR: 0.3% (+0.1pp)
+Average Position: 25.6 (+3.9 positions)
+
+SEMRUSH METRICS (February 2026 Snapshot)
+----------------------------------------
+Estimated Monthly Traffic: 493 (+8.8%)
+Ranked Keywords: 827 (+51.7%)
+Traffic Value: $11,503 (+4.4%)
+Keywords in Position #1: 9 (+50%)
+
+GOOGLE ANALYTICS 4
+-----------------
+Total Users: 1,213 (+8.3%)
+Sessions: 1,415 (+13.2%)
+Engagement Rate: 29.5% (-6.8pp)
+Organic Search Sessions: 317 (+68.6%)
+
+FORM SUBMISSIONS (12 Leads)
+---------------------------
+• 8 Roof Replacements (66.7%)
+• 2 Inspections (16.7%)
+• 2 Repairs (16.7%)
+
+Notable: First ChatGPT-referred conversion (Perly Castro - gutter repair)
+
+JANUARY WINS
+------------
+✓ Clicks +87% (252 vs 135)
+✓ Form submissions +71% (12 vs 7)
+✓ Keywords +52% (827 vs 545)
+✓ Position +3.9 (25.6 vs 29.5)
+✓ #1 Rankings +50% (9 vs 6)
+✓ AI Visibility +25% (Score 30 vs 24)
+✓ First AI conversion
+✓ Ice dam content success (711 views, 51 clicks)
+✓ Organic sessions +69% (317 vs 188)
+
+FEBRUARY PRIORITIES
+------------------
+1. Investigate zero-click #1 rankings
+2. Capitalize on ice dam success
+3. Google Ads preparation
+4. Continue location page expansion
+
+---
+Prepared by Keystone Web Solutions`;
+
+            navigator.clipboard.writeText(report).then(() => {
+                const btn = document.querySelector('.copy-full-report-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Full Report';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
