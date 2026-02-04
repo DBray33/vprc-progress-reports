@@ -3662,11 +3662,11 @@
                     <h2>February 2026 Page Fixes</h2>
                 </div>
                 <p class="task-tracker-subtitle">February 2026 SEO Implementation — CTR + Schema Scope Fixes. Click any task to see details.</p>
-                <div style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.4); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-check-circle" style="color: #34C759; font-size: 18px;"></i>
+                <div style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.4); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-check-circle" style="color: #FF9F0A; font-size: 18px;"></i>
                     <div>
-                        <strong style="color: #34C759;">Implementation Complete — February 4, 2026</strong>
-                        <div style="font-size: 12px; color: rgba(235, 235, 245, 0.7); margin-top: 2px;">6 files modified: Homepage, Allentown, Gutter, FAQ Hub, Commercial Roofing, Lehigh County</div>
+                        <strong style="color: #FF9F0A;">Code Complete — Manual Verification Pending</strong>
+                        <div style="font-size: 12px; color: rgba(235, 235, 245, 0.7); margin-top: 2px;">All code tasks done (commit 027812f, Feb 4). Manual verification + photos still pending for Tasks 1, 2, 4.</div>
                     </div>
                 </div>
 
@@ -3684,7 +3684,7 @@
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Code Done / Manual Pending</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -3698,7 +3698,7 @@
                                 <div class="task-root-cause">Likely Local Pack cannibalization (organic #1 below fold on mobile), possible wrong ranking URL, or snippet trust deficit (no review stars while competitors show ★★★★★).</div>
                             </div>
                             <div class="task-section">
-                                <div class="task-section-title">Changes Implemented</div>
+                                <div class="task-section-title" style="color: #34C759;">✓ Completed (Code)</div>
                                 <table class="task-changes-table">
                                     <tr>
                                         <th>Element</th>
@@ -3718,7 +3718,7 @@
                                     <tr>
                                         <td><strong>Schema</strong></td>
                                         <td class="before">Basic LocalBusiness</td>
-                                        <td class="after">Added "Lehigh Valley" as PRIMARY areaServed, split gutter services into "Gutter Installation" + "Gutter Repair & Downspout Repair", enhanced descriptions</td>
+                                        <td class="after">Added "Lehigh Valley" as PRIMARY areaServed, AggregateRating (116), sameAs links, split gutter services</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Internal Links</strong></td>
@@ -3726,6 +3726,15 @@
                                         <td class="after">Added internal-link reinforcement to gutter page (primary services area)</td>
                                     </tr>
                                 </table>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title" style="color: #FF9F0A;">⏳ Pending (Manual Verification)</div>
+                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
+                                    <li>Capture mobile + desktop SERP screenshots in target service area</li>
+                                    <li>Note whether LSA ("Google Guaranteed") shows and whether Valley Peak is present</li>
+                                    <li>Note whether Local Pack shows and whether Valley Peak is present</li>
+                                    <li>Identify ranking URL for this query inside GSC (page + query pairing)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -3740,7 +3749,7 @@
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Code Done / Manual Pending</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -3754,7 +3763,7 @@
                                 <div class="task-root-cause">Classic local SERP squeeze: Ads (2-4) → Local Pack (3) → PAA → organic. Position ~8 is effectively page 2 on mobile. Allentown competitors likely have hyper-optimized city pages.</div>
                             </div>
                             <div class="task-section">
-                                <div class="task-section-title">Changes Implemented</div>
+                                <div class="task-section-title" style="color: #34C759;">✓ Completed (Code)</div>
                                 <table class="task-changes-table">
                                     <tr>
                                         <th>Element</th>
@@ -3774,14 +3783,25 @@
                                     <tr>
                                         <td><strong>Content</strong></td>
                                         <td class="before">—</td>
-                                        <td class="after">Added Allentown-specific intro + neighborhoods/nearby areas + CTA block</td>
+                                        <td class="after">Added Allentown-specific intro + neighborhoods (Center City, West End) + CTA block</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Schema</strong></td>
                                         <td class="before">FAQPage schema present + priceValidUntil: 2025-12-31</td>
-                                        <td class="after">REMOVED FAQPage schema (schema scope cleanup), updated priceValidUntil to 2026-12-31</td>
+                                        <td class="after">REMOVED FAQPage schema, updated priceValidUntil to 2026-12-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal Links</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">Links added FROM homepage + Lehigh County page</td>
                                     </tr>
                                 </table>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title" style="color: #FF9F0A;">⏳ Pending (Manual Verification)</div>
+                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
+                                    <li>Confirm ranking URL for "roofer allentown pa" in GSC; if not the Allentown page, may need additional internal link adjustments</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -3846,7 +3866,7 @@
 
                 <!-- Priority 2: Gutter Page Overhaul -->
                 <div class="priority-section">
-                    <div class="priority-title"><i class="fas fa-tools" style="color: #34C759;"></i> Priority 2: Gutter Page Overhaul</div>
+                    <div class="priority-title"><i class="fas fa-tools" style="color: #FF9F0A;"></i> Priority 2: Gutter Page Overhaul</div>
 
                     <div class="task-item" onclick="toggleTask(this)">
                         <div class="task-header">
@@ -3872,7 +3892,7 @@
                                 <div class="task-root-cause">Early-stage ranking behavior. Google doesn't know who the page is for yet. Need to split intent and add depth.</div>
                             </div>
                             <div class="task-section">
-                                <div class="task-section-title">Changes Implemented</div>
+                                <div class="task-section-title" style="color: #34C759;">✓ Completed (Code)</div>
                                 <table class="task-changes-table">
                                     <tr>
                                         <th>Element</th>
@@ -3890,21 +3910,40 @@
                                         <td class="after">Seamless gutter installation, repairs & downspouts in the Lehigh Valley. 116 5★ reviews. Free inspection, fast scheduling. Get a quote.</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Content</strong></td>
-                                        <td class="before">Basic service page</td>
-                                        <td class="after">Restructured: "Gutter Installation in Lehigh Valley" leading, + repair/downspout/ice-damage sections + pricing + "When to call a pro"</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>FAQs</strong></td>
-                                        <td class="before">—</td>
-                                        <td class="after">Added on-page FAQs (3 questions in &lt;details&gt; elements)</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Schema</strong></td>
+                                        <td><strong>FAQs + Schema</strong></td>
                                         <td class="before">No FAQPage schema</td>
-                                        <td class="after">FAQPage schema added (page now has on-page FAQs)</td>
+                                        <td class="after">Added on-page FAQs + FAQPage schema</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal Links</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">Links TO this page from ice dam blogs, homepage</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>H2 Sections Added</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">
+                                            1. "Gutter Installation in Lehigh Valley" (early)<br>
+                                            2. "Gutter Repair & Downspout Repair"<br>
+                                            3. "Ice Damage to Gutters"<br>
+                                            4. "When to Call a Pro"
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pricing</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">Added pricing ranges + disclaimer in Installation and Repair sections</td>
                                     </tr>
                                 </table>
+                                <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); margin-top: 8px;">
+                                    <i class="fas fa-file-code" style="margin-right: 4px;"></i> Evidence: gutter-maintenance-installation.html (commit 027812f)
+                                </div>
+                            </div>
+                            <div class="task-section">
+                                <div class="task-section-title" style="color: #0A84FF;">📷 Pending (Assets/Manual)</div>
+                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
+                                    <li>Before/after photos for gutter work</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -3912,7 +3951,7 @@
 
                 <!-- Priority 3: Commercial Roofing Recovery -->
                 <div class="priority-section">
-                    <div class="priority-title"><i class="fas fa-building" style="color: #34C759;"></i> Priority 3: Commercial Roofing + Lehigh County</div>
+                    <div class="priority-title"><i class="fas fa-building" style="color: #FF9F0A;"></i> Priority 3: Commercial Roofing + Lehigh County</div>
 
                     <div class="task-item" onclick="toggleTask(this)">
                         <div class="task-header">
@@ -3938,7 +3977,7 @@
                                 <div class="task-root-cause">Fixing og:url and H2s helps indexing—not ranking. Need substantive content additions to compete.</div>
                             </div>
                             <div class="task-section">
-                                <div class="task-section-title">Changes Implemented</div>
+                                <div class="task-section-title" style="color: #34C759;">✓ Completed (Code)</div>
                                 <table class="task-changes-table">
                                     <tr>
                                         <th>Element</th>
@@ -3948,24 +3987,42 @@
                                     <tr>
                                         <td><strong>Industries We Serve</strong></td>
                                         <td class="before">—</td>
-                                        <td class="after">Added section with 6 industry cards: Hotels & Hospitality, Office Buildings, Multi-Family Housing, Warehouses, Light Industrial, Retail & Storefronts</td>
+                                        <td class="after">Added section with 6 industry cards</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Recent Projects</strong></td>
+                                        <td><strong>Common Scenarios</strong></td>
                                         <td class="before">—</td>
-                                        <td class="after">Added "Recent Commercial Projects" with GENERIC placeholders (roof replacement, warehouse, office, retail - "project details coming soon")</td>
+                                        <td class="after">Added "Common Commercial Roofing Scenarios" (Warehouse TPO, Office EPDM, Retail SBS)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Roof Types Table</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">Added "Commercial Roof Types at a Glance" (EPDM, TPO, SBS, Liquid Coatings — verified on-page)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Warranty Section</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">Added "Commercial Roofing Warranty Coverage" (generic manufacturer + workmanship language)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Maintenance Plans</strong></td>
                                         <td class="before">—</td>
-                                        <td class="after">Added "Preventative Maintenance Plans" section with 4 service cards</td>
+                                        <td class="after">Added "Preventative Maintenance Plans" section</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Schema</strong></td>
-                                        <td class="before">FAQPage schema present (inappropriate)</td>
-                                        <td class="after">REMOVED FAQPage schema (schema scope cleanup)</td>
+                                        <td class="before">FAQPage schema present</td>
+                                        <td class="after">REMOVED FAQPage schema</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Internal Links</strong></td>
+                                        <td class="before">—</td>
+                                        <td class="after">Links FROM homepage (nav + footer)</td>
                                     </tr>
                                 </table>
+                                <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); margin-top: 8px;">
+                                    <i class="fas fa-file-code" style="margin-right: 4px;"></i> Evidence: commercial-roofing.html (commit 027812f)
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -4019,15 +4076,15 @@
 
                 <!-- Priority 4: Schema Scope Cleanup -->
                 <div class="priority-section">
-                    <div class="priority-title"><i class="fas fa-code" style="color: #34C759;"></i> Priority 4: Schema Scope Cleanup</div>
+                    <div class="priority-title"><i class="fas fa-code" style="color: #FF9F0A;"></i> Priority 4: Schema Scope Cleanup</div>
 
                     <div class="task-item" onclick="toggleTask(this)">
                         <div class="task-header">
                             <div class="task-header-left">
                                 <div class="task-number">7</div>
                                 <div>
-                                    <div class="task-title">FAQPage Schema Scope Cleanup</div>
-                                    <div class="task-meta">Removed inappropriate schema from 3 pages</div>
+                                    <div class="task-title">Schema Enhancements Sitewide</div>
+                                    <div class="task-meta">FAQPage cleanup + HowTo schema complete</div>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
@@ -4037,44 +4094,47 @@
                         </div>
                         <div class="task-content">
                             <div class="task-section">
-                                <div class="task-section-title">FAQPage Schema - Final Allowlist</div>
+                                <div class="task-section-title" style="color: #34C759;">✓ Completed (Code)</div>
                                 <table class="task-changes-table">
                                     <tr>
-                                        <th>Page</th>
-                                        <th>Previous</th>
-                                        <th>New</th>
+                                        <th>Schema Type</th>
+                                        <th>Status</th>
                                     </tr>
                                     <tr>
-                                        <td><strong>/roofing-siding-gutter-faqs.html</strong></td>
-                                        <td class="before">FAQPage schema present</td>
-                                        <td class="after" style="color: #34C759;">✓ KEPT (primary FAQ page)</td>
+                                        <td><strong>Homepage LocalBusiness + AggregateRating</strong></td>
+                                        <td style="color: #34C759;">✓ Done (116 reviews, areaServed)</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>/gutter-maintenance-installation.html</strong></td>
-                                        <td class="before">No FAQPage schema</td>
-                                        <td class="after" style="color: #34C759;">✓ ADDED (has on-page FAQs)</td>
+                                        <td><strong>FAQ Page FAQPage schema</strong></td>
+                                        <td style="color: #34C759;">✓ Done (kept on primary FAQ)</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>/commercial-roofing.html</strong></td>
-                                        <td class="before">FAQPage schema present</td>
-                                        <td class="after" style="color: #FF453A;">✗ REMOVED</td>
+                                        <td><strong>Gutter Page FAQPage schema</strong></td>
+                                        <td style="color: #34C759;">✓ Done (added - has on-page FAQs)</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>/service-areas/roofing-allentown-pa.html</strong></td>
-                                        <td class="before">FAQPage in @graph array</td>
-                                        <td class="after" style="color: #FF453A;">✗ REMOVED</td>
+                                        <td><strong>Breadcrumb schema sitewide</strong></td>
+                                        <td style="color: #34C759;">✓ Done (34 files)</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>/service-areas/roofing-services-in-lehigh-county.html</strong></td>
-                                        <td class="before">FAQPage schema present</td>
-                                        <td class="after" style="color: #FF453A;">✗ REMOVED</td>
+                                        <td><strong>FAQPage removed from Commercial</strong></td>
+                                        <td style="color: #34C759;">✓ Done</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FAQPage removed from Allentown</strong></td>
+                                        <td style="color: #34C759;">✓ Done</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FAQPage removed from Lehigh County</strong></td>
+                                        <td style="color: #34C759;">✓ Done</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>HowTo schema (ice dam prevention)</strong></td>
+                                        <td style="color: #34C759;">✓ Done (4 steps: Roof Rake, Calcium Chloride, Cold Air, Document)</td>
                                     </tr>
                                 </table>
-                            </div>
-                            <div class="task-section">
-                                <div class="task-section-title">Other Schema Preserved</div>
-                                <div style="background: rgba(52, 199, 89, 0.1); border-left: 3px solid #34C759; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8);">
-                                    RoofingContractor, Service, Breadcrumb, and other schema types were preserved on all pages. Only FAQPage schema was cleaned up.
+                                <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); margin-top: 8px;">
+                                    <i class="fas fa-file-code" style="margin-right: 4px;"></i> Evidence: blog/ice-dam-prevention-roof-leaks-pennsylvania.html (commit 027812f)
                                 </div>
                             </div>
                         </div>
@@ -4086,7 +4146,7 @@
                                 <div class="task-number">8</div>
                                 <div>
                                     <div class="task-title">Internal Linking Improvements</div>
-                                    <div class="task-meta">Homepage → Gutter page + FAQ internal links</div>
+                                    <div class="task-meta">All links + blog CTAs complete</div>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
@@ -4096,7 +4156,7 @@
                         </div>
                         <div class="task-content">
                             <div class="task-section">
-                                <div class="task-section-title">Changes Implemented</div>
+                                <div class="task-section-title" style="color: #34C759;">✓ Completed (Code)</div>
                                 <table class="task-changes-table">
                                     <tr>
                                         <th>Link From</th>
@@ -4104,37 +4164,68 @@
                                         <th>Status</th>
                                     </tr>
                                     <tr>
-                                        <td>Homepage (primary services area)</td>
-                                        <td class="after">Gutter page</td>
-                                        <td style="color: #34C759;">✓ Added</td>
+                                        <td>Ice dam blog posts</td>
+                                        <td class="after">Gutter page, Roof repair</td>
+                                        <td style="color: #34C759;">✓ Done (8+ links)</td>
                                     </tr>
                                     <tr>
-                                        <td>FAQ page (contextual links in answers)</td>
-                                        <td class="after">Key service pages</td>
-                                        <td style="color: #34C759;">✓ Added</td>
+                                        <td>Homepage (services section)</td>
+                                        <td class="after">Gutter page</td>
+                                        <td style="color: #34C759;">✓ Done</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Homepage (Service Areas)</td>
+                                        <td class="after">Allentown page</td>
+                                        <td style="color: #34C759;">✓ Done</td>
                                     </tr>
                                     <tr>
                                         <td>Lehigh County page</td>
-                                        <td class="after">City pages (Allentown, etc.)</td>
-                                        <td style="color: #34C759;">✓ Added via "Cities We Serve" block</td>
+                                        <td class="after">City pages</td>
+                                        <td style="color: #34C759;">✓ Done (Cities We Serve)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Homepage footer</td>
+                                        <td class="after">Commercial Roofing</td>
+                                        <td style="color: #34C759;">✓ Done</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FAQ answers</td>
+                                        <td class="after">Service pages</td>
+                                        <td style="color: #34C759;">✓ Done</td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="task-section">
-                                <div class="task-section-title">Future Opportunities</div>
-                                <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
-                                    <li>Ice dam blog posts → Gutter page, Roof repair page</li>
-                                    <li>Blog posts → Service CTAs mid-content</li>
-                                    <li>Homepage footer → Commercial Roofing page</li>
-                                </ul>
+                                <div class="task-section-title" style="color: #34C759;">✓ Blog Mid-Content CTAs Added</div>
+                                <table class="task-changes-table">
+                                    <tr>
+                                        <th>Blog Post</th>
+                                        <th>CTA Destination</th>
+                                    </tr>
+                                    <tr>
+                                        <td>ice-dam-prevention-roof-leaks-pennsylvania.html</td>
+                                        <td class="after">tel + /contact.html</td>
+                                    </tr>
+                                    <tr>
+                                        <td>berks-county-winter-snow-loads.html</td>
+                                        <td class="after">tel + /contact.html</td>
+                                    </tr>
+                                    <tr>
+                                        <td>can-roof-problem-wait-until-spring.html</td>
+                                        <td class="after">tel + /contact.html</td>
+                                    </tr>
+                                </table>
+                                <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); margin-top: 8px;">
+                                    <i class="fas fa-file-code" style="margin-right: 4px;"></i> Evidence: 3 blog files updated (commit 027812f)
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Priority 5: Seasonal Content (Future) -->
+                <!-- Priority 5: Seasonal Content -->
                 <div class="priority-section">
-                    <div class="priority-title"><i class="fas fa-snowflake" style="color: #FF9F0A;"></i> Priority 5: Seasonal Content (Future Tasks)</div>
+                    <div class="priority-title"><i class="fas fa-snowflake" style="color: #FF453A;"></i> Priority 5: Seasonal Content (Feb–March)</div>
 
                     <div class="task-item" onclick="toggleTask(this)">
                         <div class="task-header">
@@ -4146,21 +4237,22 @@
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-clock"></i> Future</div>
+                                <div class="task-status" style="color: #FF453A;"><i class="fas fa-times-circle"></i> Not Started</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
                         <div class="task-content">
                             <div class="task-section">
-                                <div class="task-section-title">Content Ideas</div>
+                                <div class="task-section-title" style="color: #FF453A;">⛔ Deferred (Task OFF for Feb Implementation)</div>
+                                <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">New blog post creation was set to OFF for this implementation cycle. Items below remain available for future execution.</p>
                                 <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px; line-height: 1.8;">
-                                    <li><strong>"Ice Dam Damage to Gutters: Signs & Solutions"</strong> - Cross-link to gutter page</li>
+                                    <li><strong>"Ice Dam Damage to Gutters: Signs & Solutions"</strong> — Cross-link to gutter page</li>
                                     <li><strong>"Roof Leaks After Snow Melt: What Lehigh Valley Homeowners Need to Know"</strong></li>
-                                    <li><strong>"Spring Roof Inspection Checklist for Pennsylvania Homes"</strong> - Transition seasonal content</li>
+                                    <li><strong>"Spring Roof Inspection Checklist for Pennsylvania Homes"</strong> — Transition seasonal content</li>
                                 </ul>
                             </div>
                             <div class="task-section">
-                                <div class="task-section-title">Distribution</div>
+                                <div class="task-section-title" style="color: #0A84FF;">📢 Pending (Manual) — Distribution</div>
                                 <ul style="font-size: 13px; color: rgba(235, 235, 245, 0.8); padding-left: 20px;">
                                     <li>Share on Facebook with boosted post (like ice dam success)</li>
                                     <li>Consider Google Ads for ice dam keywords while seasonal</li>
