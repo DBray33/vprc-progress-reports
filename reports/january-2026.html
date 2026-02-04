@@ -25,6 +25,9 @@
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         body {
@@ -36,6 +39,9 @@
             line-height: 1.47;
             letter-spacing: -0.022em;
             overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         .container {
@@ -663,10 +669,12 @@
 
         .expanded-content td {
             padding: 16px 12px;
-            font-size: 13px;
+            font-size: 13px !important;
             line-height: 1.5;
             color: rgba(235, 235, 245, 0.8);
             font-style: italic;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         .expanded-content.show {
@@ -809,16 +817,26 @@
 
         /* Mobile font size fixes */
         @media (max-width: 768px) {
+            * {
+                -webkit-text-size-adjust: 100% !important;
+                -moz-text-size-adjust: 100% !important;
+                text-size-adjust: 100% !important;
+            }
+
             body {
-                font-size: 14px;
+                font-size: 14px !important;
             }
 
             h2 {
-                font-size: 17px;
+                font-size: 17px !important;
             }
 
             h3 {
-                font-size: 13px;
+                font-size: 13px !important;
+            }
+
+            p, li, span, td, th, div {
+                max-font-size: 14px;
             }
 
             .executive-summary p,
@@ -828,56 +846,61 @@
                 font-size: 13px !important;
             }
 
-            .expanded-content td {
+            .expanded-content td,
+            tr.expanded-content td,
+            .expanded-content td strong,
+            .expanded-content td .color-milestone,
+            .expanded-content td .color-positive,
+            .expanded-content td .color-strong-positive {
                 font-size: 13px !important;
-                line-height: 1.5;
+                line-height: 1.5 !important;
             }
 
             table {
-                font-size: 12px;
+                font-size: 12px !important;
             }
 
             th {
-                font-size: 10px;
+                font-size: 10px !important;
             }
 
             td {
-                font-size: 12px;
+                font-size: 12px !important;
             }
 
             .insight-box p,
             .insight-box li,
             .insight-box h4 {
-                font-size: 12px;
+                font-size: 12px !important;
             }
 
             .task-item .task-title {
-                font-size: 14px;
+                font-size: 14px !important;
             }
 
             .task-item .task-meta {
-                font-size: 11px;
+                font-size: 11px !important;
             }
 
             .task-content {
-                font-size: 12px;
+                font-size: 12px !important;
             }
 
             .task-section-title {
-                font-size: 11px;
+                font-size: 11px !important;
             }
 
             .task-problem,
             .task-root-cause {
-                font-size: 12px;
+                font-size: 12px !important;
             }
 
             .task-changes-table {
-                font-size: 11px;
+                font-size: 11px !important;
             }
 
             .task-changes-table th {
-                font-size: 9px;
+                font-size: 9px !important;
             }
         }
 
