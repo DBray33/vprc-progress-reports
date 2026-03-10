@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valley Peak Roofing - Progress Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Valley Peak Roofing - SEO Reports</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -12,451 +14,757 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    <style>/* iOS Dark Theme — extracted from VPRC progress reports */
+/* Glassmorphism design system for Keystone Web Solutions */
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
-            background: #000000;
-            color: #ffffff;
-            min-height: 100vh;
-            font-size: 17px;
-            line-height: 1.47;
-            letter-spacing: -0.022em;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0;
-        }
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
-        /* iOS-style Header */
-        .header {
-            background: rgba(28, 28, 30, 0.72);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
-            padding: max(env(safe-area-inset-top), 20px) 20px 20px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -0.022em;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
-        .header h1 {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.4px;
-            margin-bottom: 4px;
-            color: #ffffff;
-        }
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+}
 
-        .header p {
-            font-size: 13px;
-            font-weight: 400;
-            color: rgba(235, 235, 245, 0.6);
-            letter-spacing: -0.08px;
-        }
+/* ============================================
+   iOS-style Header
+   ============================================ */
+.header {
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px 16px 0 16px;
+}
 
-        .header .subtitle {
-            font-size: 11px;
-            color: rgba(235, 235, 245, 0.3);
-            margin-top: 2px;
-        }
+.back-button {
+    color: #0A84FF;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
 
-        /* iOS-style Content */
-        .content {
-            padding: 20px 16px;
-            padding-bottom: max(env(safe-area-inset-bottom), 20px);
-        }
+.back-button i { font-size: 18px; }
 
-        .intro {
-            margin-bottom: 32px;
-        }
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
 
-        .intro h2 {
-            font-size: 17px;
-            font-weight: 600;
-            color: rgba(235, 235, 245, 0.6);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+.header p {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(235, 235, 245, 0.6);
+    letter-spacing: -0.08px;
+}
 
-        .intro p {
-            font-size: 13px;
-            color: rgba(235, 235, 245, 0.6);
-            line-height: 1.4;
-        }
+.date-info {
+    background: rgba(58, 58, 60, 0.4);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+}
 
-        /* iOS-style Stats Cards */
-        .stats-banner {
-            background: rgba(28, 28, 30, 0.5);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border: 0.5px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 24px;
-        }
+.date-info strong {
+    color: rgba(235, 235, 245, 0.8);
+    font-weight: 600;
+}
 
-        .stats-banner h3 {
-            font-size: 13px;
-            font-weight: 600;
-            color: rgba(235, 235, 245, 0.6);
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+/* ============================================
+   Content Area
+   ============================================ */
+.content {
+    padding: 16px;
+    padding-bottom: max(env(safe-area-inset-bottom), 16px);
+}
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
+/* ============================================
+   Section Headers
+   ============================================ */
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 28px 0 16px 0;
+    letter-spacing: -0.3px;
+    padding-left: 8px;
+    border-left: 3px solid #0A84FF;
+}
 
-        .stat-item {
-            background: rgba(58, 58, 60, 0.4);
-            border: 0.5px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 16px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
+h2 i {
+    margin-right: 8px;
+    color: #0A84FF;
+    font-size: 18px;
+}
 
-        a.stat-item {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-            cursor: pointer;
-        }
+h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(235, 235, 245, 0.6);
+    margin: 20px 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-        a.stat-item:hover {
-            background: rgba(88, 88, 90, 0.5);
-            border-color: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-        }
+h3 i {
+    margin-right: 6px;
+    font-size: 14px;
+}
 
-        a.stat-item:active {
-            transform: scale(0.98);
-        }
+/* ============================================
+   Executive Summary & Alerts
+   ============================================ */
+.executive-summary,
+.alert {
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px 0;
+}
 
-        .stat-value {
-            font-size: 28px;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            margin-bottom: 2px;
-        }
+.alert { border-left: 3px solid #FF9F0A; }
+.alert h3 { color: #FF9F0A; margin-top: 0; }
+.executive-summary h3 { margin-top: 0; color: #0A84FF; }
 
-        .stat-label {
-            font-size: 11px;
-            color: rgba(235, 235, 245, 0.6);
-            font-weight: 500;
-            letter-spacing: -0.06px;
-        }
+.executive-summary p,
+.alert p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(235, 235, 245, 0.8);
+    margin: 8px 0;
+}
 
-        .stat-change {
-            font-size: 12px;
-            font-weight: 600;
-            margin-top: 4px;
-        }
+.executive-summary ul,
+.alert ul {
+    margin: 12px 0;
+    padding-left: 0;
+    list-style: none;
+}
 
-        .stat-change.positive {
-            color: #34C759;
-        }
+.executive-summary li,
+.alert li {
+    padding: 8px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(235, 235, 245, 0.8);
+    display: flex;
+    gap: 10px;
+}
 
-        .stat-change.negative {
-            color: #FF453A;
-        }
+.executive-summary li i {
+    color: #34C759;
+    margin-top: 2px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
 
-        .copy-full-report-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
-            border: 1px solid rgba(10, 132, 255, 0.4);
-            border-radius: 12px;
-            padding: 14px 20px;
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-bottom: 20px;
-        }
+/* ============================================
+   Metrics Grid
+   ============================================ */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+}
 
-        .copy-full-report-btn:hover {
-            background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
-            border-color: rgba(10, 132, 255, 0.6);
-            transform: translateY(-1px);
-        }
+.metric-card {
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 14px;
+    position: relative;
+    overflow: visible;
+    cursor: default;
+    transition: all 0.3s ease;
+    height: 150px;
+}
 
-        .copy-full-report-btn:active {
-            transform: scale(0.98);
-        }
+a.metric-card.clickable-card { cursor: pointer; }
 
-        .copy-full-report-btn.copied {
-            background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%);
-            border-color: rgba(52, 199, 89, 0.6);
-        }
+.metric-card:hover,
+.metric-card.active {
+    border-color: rgba(10, 132, 255, 0.4);
+    background: rgba(28, 28, 30, 0.7);
+}
 
-        .copy-full-report-btn i {
-            font-size: 14px;
-        }
+a.metric-card { text-decoration: none; color: inherit; display: block; }
+a.metric-card.clickable-card { border: 1px solid rgba(10, 132, 255, 0.3); }
 
-        .stat-note {
-            font-size: 10px;
-            color: rgba(235, 235, 245, 0.4);
-            margin-top: 2px;
-            font-style: italic;
-        }
+a.metric-card.clickable-card:hover {
+    border-color: rgba(10, 132, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
+}
 
-        /* Chart Container */
-        .chart-container {
-            background: rgba(28, 28, 30, 0.5);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border: 0.5px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 24px;
-        }
+a.metric-card.clickable-card:active { transform: scale(0.98); }
 
-        .chart-container h3 {
-            font-size: 13px;
-            font-weight: 600;
-            color: rgba(235, 235, 245, 0.6);
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+.metric-card-content { position: relative; }
 
-        .chart-wrapper {
-            position: relative;
-            height: 200px;
-            width: 100%;
-        }
+.metric-card-front,
+.metric-card-back { transition: opacity 0.3s ease; }
 
-        @media (min-width: 768px) {
-            .chart-wrapper {
-                height: 250px;
-            }
-        }
+.metric-card-back {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 10px;
+    line-height: 1.4;
+    color: rgba(235, 235, 245, 0.8);
+    padding-top: 20px;
+}
 
-        /* Section Title */
-        .section-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: rgba(235, 235, 245, 0.6);
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+.metric-card:hover .metric-card-front,
+.metric-card.active .metric-card-front { opacity: 0; }
 
-        /* iOS-style Report Cards */
-        .reports-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-top: 16px;
-        }
+.metric-card:hover .metric-card-back,
+.metric-card.active .metric-card-back { opacity: 1; }
 
-        .report-card {
-            background: rgba(28, 28, 30, 0.5);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border: 0.5px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 16px;
-            transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            position: relative;
-            overflow: hidden;
-        }
+.metric-card h4 {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(235, 235, 245, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
 
-        .report-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
+.metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
 
-        .report-card:active {
-            transform: scale(0.98);
-            background: rgba(58, 58, 60, 0.5);
-        }
+.metric-change {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
-        .report-card:active::before {
-            opacity: 1;
-        }
+.metric-change.positive { color: #34C759; }
+.metric-change.negative { color: #FF453A; }
+.metric-change.neutral { color: rgba(235, 235, 245, 0.6); }
+.metric-change i { font-size: 10px; }
 
-        .report-card.disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-        }
+.metric-card small {
+    display: block;
+    font-size: 10px;
+    color: rgba(235, 235, 245, 0.5);
+    margin-top: 6px;
+    line-height: 1.3;
+}
 
-        .report-card.disabled:active {
-            transform: none;
-        }
+/* ============================================
+   Color Coding System
+   ============================================ */
+.color-strong-positive { color: #30D158 !important; font-weight: 700; text-shadow: 0 0 12px rgba(48, 209, 88, 0.4); }
+.color-positive { color: #34C759 !important; font-weight: 600; }
+.color-negative { color: #FF453A !important; font-weight: 600; }
+.color-milestone { color: #FFD60A !important; font-weight: 700; text-shadow: 0 0 10px rgba(255, 214, 10, 0.3); }
+.color-warning { color: #FF9F0A !important; font-weight: 600; }
+.color-neutral { color: #0A84FF !important; }
 
-        .report-month {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            letter-spacing: -0.3px;
-        }
+/* Pill-style highlight backgrounds */
+.highlight-strong-positive { background: rgba(48, 209, 88, 0.2); border: 1px solid rgba(48, 209, 88, 0.4); padding: 2px 8px; border-radius: 6px; display: inline-block; }
+.highlight-positive { background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
+.highlight-negative { background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
+.highlight-milestone { background: rgba(255, 214, 10, 0.15); border: 1px solid rgba(255, 214, 10, 0.35); padding: 2px 8px; border-radius: 6px; display: inline-block; }
+.highlight-warning { background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
+.highlight-neutral { background: rgba(10, 132, 255, 0.12); border: 1px solid rgba(10, 132, 255, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
 
-        .report-month i {
-            font-size: 18px;
-            opacity: 0.8;
-        }
+/* Combined metric pills */
+.metric-pill-positive { background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.3); color: #34C759; padding: 2px 8px; border-radius: 6px; font-weight: 600; display: inline-block; }
+.metric-pill-strong-positive { background: rgba(48, 209, 88, 0.2); border: 1px solid rgba(48, 209, 88, 0.4); color: #30D158; padding: 3px 10px; border-radius: 6px; font-weight: 700; text-shadow: 0 0 8px rgba(48, 209, 88, 0.3); display: inline-block; }
+.metric-pill-milestone { background: rgba(255, 214, 10, 0.15); border: 1px solid rgba(255, 214, 10, 0.4); color: #FFD60A; padding: 3px 10px; border-radius: 6px; font-weight: 700; text-shadow: 0 0 8px rgba(255, 214, 10, 0.3); display: inline-block; }
+.metric-pill-negative { background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.3); color: #FF453A; padding: 2px 8px; border-radius: 6px; font-weight: 600; display: inline-block; }
 
-        .report-date {
-            font-size: 13px;
-            color: rgba(235, 235, 245, 0.6);
-            margin-bottom: 12px;
-            font-weight: 400;
-        }
+/* ============================================
+   Tables
+   ============================================ */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 16px 0;
+    border-radius: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 102, 241, 0.6) rgba(58, 58, 60, 0.4);
+}
 
-        .report-highlights {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-        }
+.table-wrapper::-webkit-scrollbar { height: 8px; }
+.table-wrapper::-webkit-scrollbar-track { background: rgba(58, 58, 60, 0.4); border-radius: 10px; }
+.table-wrapper::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.6); border-radius: 10px; }
+.table-wrapper::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.8); }
 
-        .report-highlights h4 {
-            font-size: 11px;
-            font-weight: 600;
-            color: rgba(235, 235, 245, 0.6);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 13px;
+}
 
-        .report-highlights ul {
-            list-style: none;
-            padding: 0;
-        }
+thead { background: rgba(58, 58, 60, 0.5); }
 
-        .report-highlights li {
-            padding: 4px 0;
-            font-size: 13px;
-            color: rgba(235, 235, 245, 0.8);
-            display: flex;
-            align-items: start;
-            gap: 8px;
-            line-height: 1.4;
-        }
+th {
+    color: rgba(235, 235, 245, 0.8);
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+}
 
-        .report-highlights li i {
-            color: #34C759;
-            margin-top: 2px;
-            font-size: 12px;
-            flex-shrink: 0;
-        }
+td {
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+    color: rgba(235, 235, 245, 0.8);
+}
 
-        .view-report {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-            color: #0A84FF;
-            font-weight: 600;
-            font-size: 13px;
-            letter-spacing: -0.08px;
-        }
+tr:last-child td { border-bottom: none; }
+td strong { color: #ffffff; font-weight: 600; }
+td a { color: rgba(235, 235, 245, 0.8); text-decoration: none; transition: color 0.2s ease; }
+td a:hover { color: #0A84FF; }
+tbody tr { background: transparent; }
 
-        .view-report i {
-            font-size: 12px;
-            transition: transform 0.2s;
-        }
+/* ============================================
+   Insight Box
+   ============================================ */
+.insight-box {
+    background: rgba(10, 132, 255, 0.15);
+    border: 0.5px solid rgba(10, 132, 255, 0.3);
+    border-left: 3px solid #0A84FF;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 16px 0;
+}
 
-        .report-card:active .view-report i {
-            transform: translateX(2px);
-        }
+.insight-box h4 { color: #0A84FF; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.insight-box h4 i { margin-right: 6px; }
+.insight-box p, .insight-box ul { font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); }
+.insight-box ul { margin: 10px 0; padding-left: 0; list-style: none; }
+.insight-box li { padding: 6px 0; }
+.insight-box li strong { color: #ffffff; }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 24px 16px;
-            padding-bottom: max(env(safe-area-inset-bottom), 24px);
-            font-size: 11px;
-            color: rgba(235, 235, 245, 0.3);
-            border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-            margin-top: 32px;
-        }
+/* ============================================
+   Chart Container
+   ============================================ */
+.chart-container {
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+}
 
-        footer p {
-            margin: 4px 0;
-        }
+.chart-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-        /* Desktop adjustments */
-        @media (min-width: 768px) {
-            body {
-                font-size: 19px;
-            }
+canvas { max-height: 300px; }
 
-            .container {
-                max-width: 980px;
-                margin: 0 auto;
-            }
+/* ============================================
+   Expandable Rows
+   ============================================ */
+.expandable-row { cursor: pointer; transition: background-color 0.2s; }
+.expandable-row:hover { background: rgba(58, 58, 60, 0.3); }
+.expandable-row:active { background: rgba(58, 58, 60, 0.5); }
+.expand-icon { font-size: 10px; margin-left: 8px; transition: transform 0.2s; color: #0A84FF; }
+.expandable-row.expanded .expand-icon { transform: rotate(180deg); }
 
-            .header {
-                padding: 32px 40px;
-                position: relative;
-            }
+.expanded-content { display: none; background: rgba(10, 132, 255, 0.05); border-left: 2px solid #0A84FF; }
+.expanded-content td { padding: 16px 12px; font-size: 13px !important; line-height: 1.5; color: rgba(235, 235, 245, 0.8); font-style: italic; }
+.expanded-content.show { display: table-row; }
 
-            .header h1 {
-                font-size: 32px;
-            }
+/* ============================================
+   Copy Buttons
+   ============================================ */
+.copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(58, 58, 60, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: rgba(235, 235, 245, 0.8);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 12px;
+}
 
-            .header p {
-                font-size: 17px;
-            }
+.copy-btn:hover { background: rgba(88, 88, 90, 0.7); border-color: rgba(255, 255, 255, 0.25); }
+.copy-btn:active { transform: scale(0.98); }
+.copy-btn.copied { background: rgba(52, 199, 89, 0.3); border-color: rgba(52, 199, 89, 0.5); color: #34C759; }
+.copy-btn i { font-size: 11px; }
 
-            .content {
-                padding: 40px;
-            }
+.copy-full-report-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
+    border: 1px solid rgba(10, 132, 255, 0.4);
+    border-radius: 12px;
+    padding: 14px 20px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 20px;
+}
 
-            .stats-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 16px;
-            }
+.copy-full-report-btn:hover {
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
+    border-color: rgba(10, 132, 255, 0.6);
+    transform: translateY(-1px);
+}
 
-            .reports-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-        }
+.copy-full-report-btn:active { transform: scale(0.98); }
+.copy-full-report-btn.copied { background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%); border-color: rgba(52, 199, 89, 0.6); }
+.copy-full-report-btn i { font-size: 14px; }
 
-        @media (min-width: 1024px) {
-            .reports-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    </style>
+/* ============================================
+   Quick Navigation
+   ============================================ */
+.quick-nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* ============================================
+   Table of Contents
+   ============================================ */
+.toc-dropdown summary::-webkit-details-marker { display: none; }
+.toc-dropdown[open] .toc-chevron { transform: rotate(180deg); }
+.toc-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    color: rgba(235, 235, 245, 0.8);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.toc-link:hover { background: rgba(58, 58, 60, 0.5); }
+.toc-link i { font-size: 12px; width: 16px; text-align: center; }
+
+/* ============================================
+   Priority Cards (Next Month Focus)
+   ============================================ */
+.priority-card {
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.priority-card.red { border-left: 3px solid #FF453A; }
+.priority-card.orange { border-left: 3px solid #FF9F0A; }
+.priority-card.blue { border-left: 3px solid #0A84FF; }
+.priority-card.green { border-left: 3px solid #34C759; }
+.priority-card.purple { border-left: 3px solid #BF5AF2; }
+
+.priority-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.priority-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(235, 235, 245, 0.8);
+}
+
+/* ============================================
+   Back to Top Button
+   ============================================ */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(10, 132, 255, 0.8) 0%, rgba(99, 102, 241, 0.8) 100%);
+    border: 1px solid rgba(10, 132, 255, 0.6);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(10, 132, 255, 0.4); }
+.back-to-top:active { transform: scale(0.95); }
+
+/* ============================================
+   Task Tracker Section
+   ============================================ */
+.task-tracker {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 16px;
+    padding: 20px 16px;
+    margin-top: 32px;
+}
+
+.task-tracker-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.task-tracker-header h2 { margin: 0; border: none; padding: 0; font-size: 18px; color: #BF7FFF; }
+.task-tracker-header i { color: #BF7FFF; }
+
+.task-item { background: rgba(28, 28, 30, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+.task-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; cursor: pointer; transition: background 0.2s; }
+.task-header:hover { background: rgba(58, 58, 60, 0.4); }
+.task-header-left { display: flex; align-items: center; gap: 12px; }
+.task-number { background: rgba(138, 43, 226, 0.3); color: #BF7FFF; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+.task-title { font-size: 14px; font-weight: 600; color: #ffffff; }
+.task-meta { font-size: 11px; color: rgba(235, 235, 245, 0.5); margin-top: 2px; }
+.task-status { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
+.task-status i { font-size: 14px; }
+.task-expand-icon { color: rgba(235, 235, 245, 0.4); font-size: 12px; transition: transform 0.2s; margin-left: 12px; }
+.task-item.expanded .task-expand-icon { transform: rotate(180deg); }
+.task-content { display: none; padding: 0 16px 16px 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.task-item.expanded .task-content { display: block; }
+.task-section { margin-top: 14px; }
+.task-section-title { font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.5); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.task-problem { background: rgba(255, 69, 58, 0.1); border-left: 3px solid #FF453A; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8); line-height: 1.5; }
+.task-root-cause { background: rgba(255, 159, 10, 0.1); border-left: 3px solid #FF9F0A; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8); line-height: 1.5; }
+
+.task-changes-table { width: 100%; border-collapse: collapse; font-size: 12px; background: rgba(28, 28, 30, 0.5); border-radius: 8px; overflow: hidden; }
+.task-changes-table th { background: rgba(58, 58, 60, 0.5); padding: 10px; text-align: left; font-size: 10px; color: rgba(235, 235, 245, 0.6); }
+.task-changes-table td { padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: rgba(235, 235, 245, 0.8); vertical-align: top; }
+.task-changes-table tr:last-child td { border-bottom: none; }
+.task-changes-table .before { color: rgba(255, 69, 58, 0.8); text-decoration: line-through; }
+.task-changes-table .after { color: #34C759; }
+
+.priority-section { margin-bottom: 20px; }
+.priority-title { font-size: 13px; font-weight: 600; color: rgba(235, 235, 245, 0.7); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+
+/* Collapsible sections */
+.section-toggle-icon { font-size: 14px; transition: transform 0.3s ease; }
+.collapsible-section:not(.collapsed) .section-toggle-icon { transform: rotate(180deg); }
+.collapsible-content { overflow: hidden; max-height: 5000px; transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease; opacity: 1; padding-top: 16px; }
+.collapsible-section.collapsed .collapsible-content { max-height: 0; opacity: 0; padding-top: 0; }
+
+/* On-Page Audit expandable rows */
+.onpage-row .onpage-detail { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.onpage-row.onpage-open .onpage-detail { max-height: 2000px; }
+.onpage-row.onpage-open .fa-chevron-down { transform: rotate(180deg); }
+
+/* ============================================
+   Footer
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 11px;
+    color: rgba(235, 235, 245, 0.3);
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    margin-top: 32px;
+}
+
+/* ============================================
+   Desktop Breakpoints
+   ============================================ */
+@media (min-width: 768px) {
+    .container { max-width: 980px; margin: 0 auto; }
+    .header { padding: 24px 32px; }
+    .header h1 { font-size: 34px; }
+    .content { padding: 32px; }
+    .metrics-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    table { font-size: 14px; }
+    th { font-size: 12px; }
+
+    a.metric-card.clickable-card { border: 0.5px solid rgba(255, 255, 255, 0.1); }
+    a.metric-card.clickable-card:hover,
+    a.metric-card.clickable-card.active { border-color: rgba(10, 132, 255, 0.4); transform: none; box-shadow: none; }
+}
+
+@media (min-width: 1024px) {
+    .metrics-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ============================================
+   Mobile Font Size Fixes
+   ============================================ */
+@media (max-width: 600px) {
+    .quick-nav-buttons { grid-template-columns: 1fr 1fr; }
+    .quick-nav-buttons a:last-child { grid-column: span 2; }
+    .quick-nav-buttons .copy-full-report-btn { padding: 12px 10px; font-size: 13px; }
+}
+
+@media (max-width: 768px) {
+    * { -webkit-text-size-adjust: 100% !important; -moz-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+    body { font-size: 14px !important; }
+    h2 { font-size: 17px !important; }
+    h3 { font-size: 13px !important; }
+    .executive-summary p, .executive-summary li, .alert p, .alert li { font-size: 13px !important; }
+    .expanded-content td, tr.expanded-content td { font-size: 13px !important; line-height: 1.5 !important; }
+    table { font-size: 12px !important; }
+    th { font-size: 10px !important; }
+    td { font-size: 12px !important; }
+    .insight-box p, .insight-box li, .insight-box h4 { font-size: 12px !important; }
+    .task-item .task-title { font-size: 14px !important; }
+    .task-item .task-meta { font-size: 11px !important; }
+    .task-content { font-size: 12px !important; }
+    .task-section-title { font-size: 11px !important; }
+    .task-problem, .task-root-cause { font-size: 12px !important; }
+    .task-changes-table { font-size: 11px !important; }
+    .task-changes-table th { font-size: 9px !important; }
+    .deep-research-container > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    .deep-research-container { padding: 16px !important; }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    body { background: white; color: black; }
+    .header { background: #667eea; color: white; position: relative; }
+    .metric-card, .insight-box, table { break-inside: avoid; page-break-inside: avoid; }
+}
+
+.stats-banner {
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px 16px;
+    margin: 20px 0;
+}
+.stats-banner h3 { margin-top: 0; color: #0A84FF; }
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+@media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+.stat-item {
+    text-decoration: none;
+    display: block;
+    background: rgba(58, 58, 60, 0.3);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.stat-item:hover { border-color: rgba(10, 132, 255, 0.4); transform: translateY(-2px); }
+.stat-value { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.stat-label { font-size: 11px; color: rgba(235, 235, 245, 0.6); text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-change { font-size: 13px; font-weight: 600; margin-top: 4px; }
+.stat-change.positive { color: #34C759; }
+.stat-change.negative { color: #FF453A; }
+.stat-note { font-size: 10px; color: rgba(235, 235, 245, 0.4); font-style: italic; margin-top: 2px; }
+.intro h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: rgba(235, 235, 245, 0.6); border: none; padding: 0; margin: 20px 0 8px 0; }
+.intro p { font-size: 13px; color: rgba(235, 235, 245, 0.5); }
+.chart-wrapper { height: 300px; position: relative; }
+.section-title { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: rgba(235, 235, 245, 0.6); border: none; padding: 0; margin: 28px 0 16px 0; }
+.reports-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 768px) { .reports-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .reports-grid { grid-template-columns: repeat(3, 1fr); } }
+.report-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(28, 28, 30, 0.5);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.2s;
+}
+.report-card:hover { border-color: rgba(10, 132, 255, 0.4); transform: translateY(-2px); }
+.report-month { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.report-month i { color: #0A84FF; margin-right: 8px; }
+.report-date { font-size: 12px; color: rgba(235, 235, 245, 0.5); margin-bottom: 16px; }
+.report-date i { margin-right: 6px; }
+.report-highlights h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: rgba(235, 235, 245, 0.4); margin-bottom: 8px; }
+.report-highlights ul { list-style: none; padding: 0; }
+.report-highlights li { font-size: 13px; padding: 4px 0; color: rgba(235, 235, 245, 0.8); display: flex; align-items: center; gap: 8px; }
+.report-highlights li i { color: #34C759; font-size: 12px; }
+.view-report { font-size: 13px; color: #0A84FF; font-weight: 500; margin-top: 16px; display: flex; align-items: center; gap: 6px; }
+.view-report i { font-size: 11px; }
+</style>
 </head>
 <body>
     <div class="container">
@@ -477,28 +785,28 @@
             </div>
 
             <div class="stats-banner">
-                <h3>LATEST PERFORMANCE (JANUARY 2026)</h3>
+                <h3>LATEST PERFORMANCE (FEBRUARY 2026)</h3>
                 <div class="stats-grid">
-                    <a href="reports/january-2026.html#ga4-metrics" class="stat-item">
-                        <div class="stat-value">1,213</div>
+                    <a href="reports/february-2026.html" class="stat-item">
+                        <div class="stat-value">1,720</div>
                         <div class="stat-label">Total Users</div>
-                        <div class="stat-change positive">+8.3%</div>
+                        <div class="stat-change positive">+41.2%</div>
                     </a>
-                    <a href="reports/january-2026.html#gsc-metrics" class="stat-item">
-                        <div class="stat-value">252</div>
+                    <a href="reports/february-2026.html" class="stat-item">
+                        <div class="stat-value">365</div>
                         <div class="stat-label">Organic Clicks</div>
-                        <div class="stat-change positive">+86.7%</div>
+                        <div class="stat-change positive">+44.8%</div>
                     </a>
-                    <a href="reports/january-2026.html#form-submissions" class="stat-item">
-                        <div class="stat-value">12</div>
+                    <a href="reports/february-2026.html#form-submissions" class="stat-item">
+                        <div class="stat-value">19</div>
                         <div class="stat-label">Form Submissions</div>
-                        <div class="stat-change positive">+71.4%</div>
-                        <div class="stat-note">Strong recovery</div>
+                        <div class="stat-change positive">+72.7%</div>
+                        <div class="stat-note">Strong growth</div>
                     </a>
-                    <a href="reports/january-2026.html#keywords" class="stat-item">
-                        <div class="stat-value">827</div>
+                    <a href="reports/february-2026.html#keywords" class="stat-item">
+                        <div class="stat-value">406</div>
                         <div class="stat-label">Ranked Keywords</div>
-                        <div class="stat-change positive">+51.7%</div>
+                        <div class="stat-change neutral">Baseline</div>
                     </a>
                 </div>
             </div>
@@ -511,9 +819,28 @@
             </div>
 
             <h2 class="section-title">MONTHLY REPORTS</h2>
-
             <div class="reports-grid">
-                <!-- January 2026 Report -->
+                <a href="reports/february-2026.html" class="report-card">
+                    <div class="report-month">
+                        <i class="fas fa-file-alt"></i>
+                        February 2026
+                    </div>
+                    <div class="report-date">
+                        <i class="far fa-calendar"></i> Reporting Period: Feb 1-28, 2026
+                    </div>
+                    <div class="report-highlights">
+                        <h4>KEY HIGHLIGHTS</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>365 organic clicks</strong> (+44.8% - significant growth)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>406 keywords</strong></li>
+                            <li><i class="fas fa-check-circle"></i> <strong>19 form submissions</strong> (+72.7% - significant growth)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
+                        </ul>
+                    </div>
+                    <div class="view-report">
+                        View Full Report <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
                 <a href="reports/january-2026.html" class="report-card">
                     <div class="report-month">
                         <i class="fas fa-file-alt"></i>
@@ -525,18 +852,16 @@
                     <div class="report-highlights">
                         <h4>KEY HIGHLIGHTS</h4>
                         <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>252 clicks</strong> (+87% - strong recovery)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>827 keywords</strong> (+52%)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>12 form submissions</strong> (+71%)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>First ChatGPT lead</strong> - AI converting</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>252 organic clicks</strong> (+86.7% - strong recovery)</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>11 form submissions</strong> - new leads</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
+                            <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>29.6% engagement</strong> (-6.8pp)</li>
                         </ul>
                     </div>
                     <div class="view-report">
                         View Full Report <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
-
-                <!-- December 2025 Report -->
                 <a href="reports/december-2025.html" class="report-card">
                     <div class="report-month">
                         <i class="fas fa-file-alt"></i>
@@ -548,18 +873,15 @@
                     <div class="report-highlights">
                         <h4>KEY HIGHLIGHTS</h4>
                         <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>545 keywords</strong> (+49% - largest gain ever)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>$11K traffic value</strong> (+57%)</li>
-                            <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>7 form submissions</strong> (-50%)</li>
-                            <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>Paid Social issue</strong> - 2.4% engagement</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>135 organic clicks</strong></li>
+                            <li><i class="fas fa-check-circle"></i> <strong>36.3% engagement rate</strong></li>
+                            <li><i class="fas fa-check-circle"></i> <strong>1,129 users</strong></li>
                         </ul>
                     </div>
                     <div class="view-report">
                         View Full Report <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
-
-                <!-- November 2025 Report -->
                 <a href="reports/november-2025.html" class="report-card">
                     <div class="report-month">
                         <i class="fas fa-file-alt"></i>
@@ -571,18 +893,12 @@
                     <div class="report-highlights">
                         <h4>KEY HIGHLIGHTS</h4>
                         <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>170 organic clicks</strong> (+25% growth)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>366 keywords</strong> (+19.6%)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>50.4% engagement</strong> (nearly doubled)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>ChatGPT leads</strong> - 21.4% from AI referrals</li>
                         </ul>
                     </div>
                     <div class="view-report">
                         View Full Report <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
-
-                <!-- October 2025 Report -->
                 <a href="reports/october-2025.html" class="report-card">
                     <div class="report-month">
                         <i class="fas fa-file-alt"></i>
@@ -594,10 +910,6 @@
                     <div class="report-highlights">
                         <h4>KEY HIGHLIGHTS</h4>
                         <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>871 users</strong> (+116.7% growth)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>17 form submissions</strong> (+41.7%)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>136 organic clicks</strong> (+33.3%)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>New #1 ranking</strong> for financing term</li>
                         </ul>
                     </div>
                     <div class="view-report">
@@ -606,163 +918,85 @@
                 </a>
             </div>
         </div>
-
-        <footer>
-            <p>Prepared by Keystone Web Solutions</p>
-            <p>Professional SEO & Digital Marketing Services</p>
-        </footer>
     </div>
 
+    <footer>
+        <p>Prepared by Keystone Web Solutions</p>
+        <p>Professional SEO & Digital Marketing Services</p>
+    </footer>
+
     <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
         });
+    });
 
-        // Copy Full Dashboard function
-        function copyFullReport() {
-            const report = `VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY
-=============================================
-
-LATEST PERFORMANCE (JANUARY 2026)
-----------------------------------
-Total Users: 1,213 (+8.3%)
-Organic Clicks: 252 (+86.7%)
-Form Submissions: 12 (+71.4%) - Strong recovery
-Ranked Keywords: 827 (+51.7%)
-
-AVAILABLE MONTHLY REPORTS
--------------------------
-
-JANUARY 2026 (Jan 1-31, 2026)
-Key Highlights:
-- 252 clicks (+87% - strong recovery)
-- 827 keywords (+52%)
-- 12 form submissions (+71%)
-- First ChatGPT lead - AI converting
-
-DECEMBER 2025 (Dec 1-31, 2025)
-Key Highlights:
-- 545 keywords (+49% - largest gain ever)
-- $11K traffic value (+57%)
-- 7 form submissions (-50%)
-- Paid Social issue - 2.4% engagement
-
-NOVEMBER 2025 (Nov 1-30, 2025)
-Key Highlights:
-- 170 organic clicks (+25% growth)
-- 366 keywords (+19.6%)
-- 50.4% engagement (nearly doubled)
-- ChatGPT leads - 21.4% from AI referrals
-
-OCTOBER 2025 (Oct 1-31, 2025)
-Key Highlights:
-- 871 users (+116.7% growth)
-- 17 form submissions (+41.7%)
-- 136 organic clicks (+33.3%)
-- New #1 ranking for financing term
-
----
-Prepared by Keystone Web Solutions
-Professional SEO & Digital Marketing Services`;
-
-            navigator.clipboard.writeText(report).then(() => {
-                const btn = document.querySelector('.copy-full-report-btn');
-                btn.classList.add('copied');
-                btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
-                setTimeout(() => {
-                    btn.classList.remove('copied');
-                    btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary';
-                }, 2000);
-            });
-        }
-
-        // Update stats banner with latest data dynamically if needed
-        // This can be extended in the future to pull from an API or data file
-
-        // Organic Clicks Chart
-        const ctx = document.getElementById('clicksChart');
-        if (ctx) {
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Oct 2025', 'Nov 2025', 'Dec 2025', 'Jan 2026'],
-                    datasets: [{
-                        label: 'Organic Clicks',
-                        data: [136, 170, 135, 252],
-                        backgroundColor: [
-                            'rgba(10, 132, 255, 0.6)',
-                            'rgba(10, 132, 255, 0.6)',
-                            'rgba(255, 69, 58, 0.6)',
-                            'rgba(52, 199, 89, 0.8)'
-                        ],
-                        borderColor: [
-                            'rgba(10, 132, 255, 1)',
-                            'rgba(10, 132, 255, 1)',
-                            'rgba(255, 69, 58, 1)',
-                            'rgba(52, 199, 89, 1)'
-                        ],
-                        borderWidth: 2,
-                        borderRadius: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(28, 28, 30, 0.9)',
-                            titleColor: '#ffffff',
-                            bodyColor: 'rgba(235, 235, 245, 0.8)',
-                            borderColor: 'rgba(255, 255, 255, 0.1)',
-                            borderWidth: 1,
-                            cornerRadius: 8,
-                            padding: 12,
-                            callbacks: {
-                                label: function(context) {
-                                    return context.parsed.y + ' clicks';
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 300,
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.05)',
-                                drawBorder: false
-                            },
-                            ticks: {
-                                color: 'rgba(235, 235, 245, 0.6)',
-                                font: {
-                                    size: 11
-                                }
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            ticks: {
-                                color: 'rgba(235, 235, 245, 0.6)',
-                                font: {
-                                    size: 11
-                                }
-                            }
+    // Chart
+    var ctx = document.getElementById('clicksChart');
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026"],
+                datasets: [{
+                    label: 'Organic Clicks',
+                    data: [0,0,135,252,365],
+                    backgroundColor: ["rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(52, 199, 89, 0.8)"],
+                    borderColor: ["rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(52, 199, 89, 1)"],
+                    borderWidth: 2,
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(28, 28, 30, 0.9)',
+                        titleColor: '#ffffff',
+                        bodyColor: 'rgba(235, 235, 245, 0.8)',
+                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderWidth: 1,
+                        cornerRadius: 8,
+                        padding: 12,
+                        callbacks: {
+                            label: function(context) { return context.parsed.y + ' clicks'; }
                         }
                     }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 550,
+                        grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
+                        ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } }
+                    }
                 }
-            });
-        }
+            }
+        });
+    }
+
+    // Copy summary
+    function copyFullReport() {
+        var report = "VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY\n=============================================\n\nLATEST PERFORMANCE (FEBRUARY 2026)\n";
+        navigator.clipboard.writeText(report).then(function() {
+            var btn = document.querySelector('.copy-full-report-btn');
+            btn.classList.add('copied');
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary';
+            }, 2000);
+        });
+    }
     </script>
 </body>
 </html>
