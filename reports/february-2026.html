@@ -4712,7 +4712,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF453A;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -4763,7 +4763,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF453A;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #8E8E93;"><i class="fas fa-minus-circle"></i> Skipped</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -4820,7 +4820,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF453A;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -4876,7 +4876,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -4933,7 +4933,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-spinner"></i> In Progress</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -4989,7 +4989,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #FF9F0A;"><i class="fas fa-hand-paper"></i> Needs Manual Effort</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -5050,7 +5050,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #0A84FF;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
@@ -5096,8 +5096,8 @@ footer {
                             <div class="task-header-left">
                                 <div class="task-number">8</div>
                                 <div>
-                                    <div class="task-title">Improve text-to-HTML ratio on 6 service pages</div>
-                                    <div class="task-meta">Technical improvement • Multiple pages flagged for low content-to-code ratio</div>
+                                    <div class="task-title">Improve text-to-HTML ratio on 10 key pages</div>
+                                    <div class="task-meta">Technical improvement • 10 pages under 10% text-to-HTML ratio (excludes /thank-you and /our-blog)</div>
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
@@ -5108,29 +5108,62 @@ footer {
                         <div class="task-content">
                             <div class="task-section">
                                 <div class="task-section-title">Problem</div>
-                                <div class="task-problem">Six key service pages have low text-to-HTML ratios under 10%, indicating heavy code relative to visible content.</div>
+                                <div class="task-problem">10 pages have text-to-HTML ratios under 10%, meaning the HTML is bloated with code/markup relative to actual visible content. The worst offenders:<br><br>
+                                <table style="width: 100%; font-size: 12px; border-collapse: collapse; margin-top: 4px;">
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF453A; font-weight: 600;">/our-work</td><td style="padding: 3px 6px;">3.8%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">756 words, 134KB HTML (image gallery markup)</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF453A; font-weight: 600;">/design-your-roof</td><td style="padding: 3px 6px;">7.8%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">857 words, 71KB HTML (visualizer widget)</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/contact</td><td style="padding: 3px 6px;">8.2%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">760 words, 60KB HTML</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/budget-roof-cost</td><td style="padding: 3px 6px;">8.4%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">368 words, 29KB HTML</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/residential-roof-repairs</td><td style="padding: 3px 6px;">9.3%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">1,114 words, 80KB HTML</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/siding-installation</td><td style="padding: 3px 6px;">9.3%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">1,273 words, 91KB HTML</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/roof-financing-options</td><td style="padding: 3px 6px;">9.3%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">1,111 words, 77KB HTML (missing title tag)</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/instant-roof-quote</td><td style="padding: 3px 6px;">9.4%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">386 words, 30KB HTML</td></tr>
+                                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);"><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/ (homepage)</td><td style="padding: 3px 6px;">9.9%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">2,240 words, 149KB HTML</td></tr>
+                                    <tr><td style="padding: 3px 6px; color: #FF9F0A; font-weight: 600;">/blog/black-streaks-on-roof-causes</td><td style="padding: 3px 6px;">9.9%</td><td style="padding: 3px 6px; color: rgba(235,235,245,0.5);">993 words, 63KB HTML</td></tr>
+                                </table></div>
                             </div>
             
                             <div class="task-section">
                                 <div class="task-section-title">Root Cause</div>
-                                <div class="task-root-cause">Pages likely have excessive markup, JavaScript, or CSS bloat compared to actual text content that provides value to users and search engines.</div>
+                                <div class="task-root-cause">Wix generates heavy markup (inline styles, widget containers, framework JS). Pages like /our-work (3.8%) are mostly image gallery code with minimal text. Tool/widget pages (/design-your-roof, /budget-roof-cost, /instant-roof-quote) are inherently code-heavy. Service pages (/residential-roof-repairs, /siding-installation, /roof-financing-options) have room for more written content.</div>
                             </div>
             
                             <div class="task-section">
                                 <div class="task-section-title" style="color: #0A84FF;">Recommended Changes</div>
                                 <table class="task-changes-table">
-                                    <tr><th>Element</th><th>Current</th><th>Recommended</th></tr>
+                                    <tr><th>Page</th><th>Current Issue</th><th>Recommended Fix</th></tr>
                                     <tr>
-                                        <td><strong>Content Addition</strong></td>
-                                        <td class="before">Minimal text content on service pages</td>
-                                        <td class="after">Add 300-500 words of service-specific content to each flagged page: process details, benefits, local considerations</td>
+                                        <td><strong>/residential-roof-repairs</strong></td>
+                                        <td class="before">9.3% ratio, 1,114 words</td>
+                                        <td class="after">Add 400+ words: repair process breakdown, common repair types in Lehigh Valley, when to repair vs replace, warranty info</td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Code Optimization</strong></td>
-                                        <td class="before">Heavy markup relative to content</td>
-                                        <td class="after">Minify CSS/JS, remove unused code, optimize image delivery to improve text-to-HTML ratio</td>
+                                        <td><strong>/siding-installation</strong></td>
+                                        <td class="before">9.3% ratio, 1,273 words</td>
+                                        <td class="after">Add 400+ words: siding material comparisons, installation timeline, maintenance tips, local weather considerations</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>/roof-financing-options</strong></td>
+                                        <td class="before">9.3% ratio, 1,111 words, missing title tag</td>
+                                        <td class="after">Add title tag. Add 300+ words: how financing works step-by-step, payment example, FAQ about credit requirements</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>/contact</strong></td>
+                                        <td class="before">8.2% ratio, 760 words</td>
+                                        <td class="after">Add service area description, business hours, what to expect after contacting, brief trust signals</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>/our-work</strong></td>
+                                        <td class="before">3.8% ratio (worst), 756 words in 134KB HTML</td>
+                                        <td class="after">Add project descriptions under each gallery image: scope of work, materials used, location, before/after context</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>/ (homepage)</strong></td>
+                                        <td class="before">9.9% ratio, 149KB HTML</td>
+                                        <td class="after">Wix framework is the main cause. Focus on reducing unused widgets/sections rather than adding more text</td>
                                     </tr>
                                 </table>
+                                <p style="font-size: 12px; color: rgba(235,235,245,0.5); margin: 8px 0 0 0;"><em>Note: /design-your-roof, /budget-roof-cost, and /instant-roof-quote are tool/widget pages where low ratios are expected and less impactful for SEO.</em></p>
                             </div>
             
                             <div class="task-section">
@@ -5153,7 +5186,7 @@ footer {
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center;">
-                                <div class="task-status" style="color: #0A84FF;"><i class="fas fa-circle"></i> Not Started</div>
+                                <div class="task-status" style="color: #34C759;"><i class="fas fa-check-circle"></i> Complete</div>
                                 <i class="fas fa-chevron-down task-expand-icon"></i>
                             </div>
                         </div>
