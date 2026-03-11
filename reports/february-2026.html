@@ -6,12 +6,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Valley Peak Roofing - February 2026 SEO Report</title>
-    <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/background-vid/Favicon/favicon.ico?v&#x3D;2">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://storage.googleapis.com/background-vid/Favicon/keystone-favicon-16x16.png?v&#x3D;2">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://storage.googleapis.com/background-vid/Favicon/keystone-favicon-32x32.png?v&#x3D;2">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://storage.googleapis.com/background-vid/Favicon/keystone-apple-touch-icon.png?v&#x3D;2">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://storage.googleapis.com/background-vid/Favicon/keystone-android-chrome-192x192.png?v&#x3D;2">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://storage.googleapis.com/background-vid/Favicon/keystone-android-chrome-512x512.png?v&#x3D;2">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>/* iOS Dark Theme — extracted from VPRC progress reports */
@@ -5331,58 +5328,103 @@ footer {
 </div>
 
 <h3>CATEGORY SCORES</h3>
-<div class="table-wrapper"><table>
-    <thead>
-        <tr>
-            <th>Category</th>
-            <th>Score</th>
-            <th>Status</th>
-            <th>Key Detail</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Content Uniqueness</strong></td>
-            <td style="color: #34C759;"><strong>100/100</strong></td>
-            <td>
-                <span style="color: #34C759;"><i class="fas fa-check-circle"></i> Pass</span>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><strong>Metadata</strong></td>
-            <td style="color: #34C759;"><strong>100/100</strong></td>
-            <td>
-                <span style="color: #34C759;"><i class="fas fa-check-circle"></i> Pass</span>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><strong>Content Depth</strong></td>
-            <td style="color: #FF453A;"><strong>39/100</strong></td>
-            <td>
-                <span style="color: #FF453A;"><i class="fas fa-times-circle"></i> Fail</span>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><strong>Technical SEO</strong></td>
-            <td style="color: #FF9F0A;"><strong>65/100</strong></td>
-            <td>
-                <span style="color: #34C759;"><i class="fas fa-check-circle"></i> Pass</span>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><strong>Doorway Safety</strong></td>
-            <td style="color: #FF9F0A;"><strong>80/100</strong></td>
-            <td>
-                <span style="color: #34C759;"><i class="fas fa-check-circle"></i> Pass</span>
-            </td>
-            <td></td>
-        </tr>
-    </tbody>
-</table></div>
+<div class="table-wrapper">
+<div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-bottom: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06);">
+    <div onclick="this.parentElement.classList.toggle('loc-cat-open')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; cursor: pointer; user-select: none;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <strong style="font-size: 14px; color: rgba(235, 235, 245, 0.9);">Content Uniqueness</strong>
+            <span style="font-size: 11px; color: rgba(235, 235, 245, 0.4); font-weight: 500;">40%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="color: #34C759; font-size: 12px;"><i class="fas fa-check-circle"></i> Pass</span>
+            <span style="color: #34C759; font-weight: 700; font-size: 15px; min-width: 55px; text-align: right;">100/100</span>
+            <i class="fas fa-chevron-down" style="color: rgba(235, 235, 245, 0.3); font-size: 11px; transition: transform 0.2s;"></i>
+        </div>
+    </div>
+    <div class="loc-cat-detail" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+        <div style="padding: 0 16px 14px 16px; font-size: 13px; line-height: 1.6; color: rgba(235, 235, 245, 0.65); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <p style="margin: 10px 0 0 0;">Measures how different each location page's body content is from the others. Uses four algorithms (Jaccard similarity, cosine similarity, SimHash distance, and unique content ratio) averaged together. Low scores mean your pages share too much identical text, which Google may treat as thin/duplicate content.</p>
+        </div>
+    </div>
+</div>
+<div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-bottom: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06);">
+    <div onclick="this.parentElement.classList.toggle('loc-cat-open')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; cursor: pointer; user-select: none;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <strong style="font-size: 14px; color: rgba(235, 235, 245, 0.9);">Metadata</strong>
+            <span style="font-size: 11px; color: rgba(235, 235, 245, 0.4); font-weight: 500;">20%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="color: #34C759; font-size: 12px;"><i class="fas fa-check-circle"></i> Pass</span>
+            <span style="color: #34C759; font-weight: 700; font-size: 15px; min-width: 55px; text-align: right;">100/100</span>
+            <i class="fas fa-chevron-down" style="color: rgba(235, 235, 245, 0.3); font-size: 11px; transition: transform 0.2s;"></i>
+        </div>
+    </div>
+    <div class="loc-cat-detail" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+        <div style="padding: 0 16px 14px 16px; font-size: 13px; line-height: 1.6; color: rgba(235, 235, 245, 0.65); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <p style="margin: 10px 0 0 0;">Checks that every location page has a unique title tag, meta description, H1 heading, and canonical URL. Critical issues (duplicate titles, missing H1s) cost 20 points each. Warnings (similar meta descriptions, generic headings) cost 8 points each.</p>
+        </div>
+    </div>
+</div>
+<div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-bottom: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06);">
+    <div onclick="this.parentElement.classList.toggle('loc-cat-open')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; cursor: pointer; user-select: none;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <strong style="font-size: 14px; color: rgba(235, 235, 245, 0.9);">Content Depth</strong>
+            <span style="font-size: 11px; color: rgba(235, 235, 245, 0.4); font-weight: 500;">15%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="color: #FF453A; font-size: 12px;"><i class="fas fa-times-circle"></i> Fail</span>
+            <span style="color: #FF453A; font-weight: 700; font-size: 15px; min-width: 55px; text-align: right;">39/100</span>
+            <i class="fas fa-chevron-down" style="color: rgba(235, 235, 245, 0.3); font-size: 11px; transition: transform 0.2s;"></i>
+        </div>
+    </div>
+    <div class="loc-cat-detail" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+        <div style="padding: 0 16px 14px 16px; font-size: 13px; line-height: 1.6; color: rgba(235, 235, 245, 0.65); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <p style="margin: 10px 0 0 0;">Evaluates word count and readability across your location pages. Factors in Flesch Reading Ease, Flesch-Kincaid Grade Level, and Gunning Fog Index. Pages under 300 words lose 40 points. Note: readability scores penalize above a 12th-grade level, but for specialized industries (roofing, legal, medical) a higher reading level is normal and expected.</p>
+        </div>
+    </div>
+</div>
+<div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-bottom: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06);">
+    <div onclick="this.parentElement.classList.toggle('loc-cat-open')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; cursor: pointer; user-select: none;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <strong style="font-size: 14px; color: rgba(235, 235, 245, 0.9);">Technical SEO</strong>
+            <span style="font-size: 11px; color: rgba(235, 235, 245, 0.4); font-weight: 500;">15%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="color: #34C759; font-size: 12px;"><i class="fas fa-check-circle"></i> Pass</span>
+            <span style="color: #FF9F0A; font-weight: 700; font-size: 15px; min-width: 55px; text-align: right;">65/100</span>
+            <i class="fas fa-chevron-down" style="color: rgba(235, 235, 245, 0.3); font-size: 11px; transition: transform 0.2s;"></i>
+        </div>
+    </div>
+    <div class="loc-cat-detail" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+        <div style="padding: 0 16px 14px 16px; font-size: 13px; line-height: 1.6; color: rgba(235, 235, 245, 0.65); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <p style="margin: 10px 0 0 0;">Audits LocalBusiness schema markup (presence and completeness), image optimization (unique images per page, alt text coverage), and internal linking (pages with fewer than 5 internal body links get flagged). Schema completeness under 50% costs 20 points.</p>
+        </div>
+    </div>
+</div>
+<div style="background: rgba(255, 255, 255, 0.03); border-radius: 12px; margin-bottom: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06);">
+    <div onclick="this.parentElement.classList.toggle('loc-cat-open')" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; cursor: pointer; user-select: none;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <strong style="font-size: 14px; color: rgba(235, 235, 245, 0.9);">Doorway Safety</strong>
+            <span style="font-size: 11px; color: rgba(235, 235, 245, 0.4); font-weight: 500;">10%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="color: #34C759; font-size: 12px;"><i class="fas fa-check-circle"></i> Pass</span>
+            <span style="color: #FF9F0A; font-weight: 700; font-size: 15px; min-width: 55px; text-align: right;">80/100</span>
+            <i class="fas fa-chevron-down" style="color: rgba(235, 235, 245, 0.3); font-size: 11px; transition: transform 0.2s;"></i>
+        </div>
+    </div>
+    <div class="loc-cat-detail" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+        <div style="padding: 0 16px 14px 16px; font-size: 13px; line-height: 1.6; color: rgba(235, 235, 245, 0.65); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+            <p style="margin: 10px 0 0 0;">Detects signals that Google uses to identify "doorway pages" (near-identical pages targeting different locations just to rank). Checks for boilerplate ratios, city-name-only swaps, thin content patterns, and excessive structural similarity between pages.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+.loc-cat-open .loc-cat-detail { max-height: 200px !important; }
+.loc-cat-open .fa-chevron-down { transform: rotate(180deg); }
+</style>
 
 
             <!-- 18. Technical Notes -->
