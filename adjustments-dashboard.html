@@ -29,6 +29,24 @@ h1 { font-size: 26px; font-weight: 700; margin: 0 0 4px; }
 a { color: #5AAFFF; }
 details summary::-webkit-details-marker { display: none; }
 .empty { text-align: center; padding: 40px; color: rgba(235, 235, 245, 0.45); font-size: 13px; }
+/* Mobile-first responsive adjustments — cards stack, padding shrinks, filters wrap. */
+@media (max-width: 700px) {
+  body { padding: 16px 12px 60px; font-size: 14px; }
+  h1 { font-size: 20px; line-height: 1.25; }
+  .cards { grid-template-columns: 1fr; gap: 10px; }
+  .task-card { padding: 14px !important; word-break: break-word; }
+  .aggregates { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .agg-card { padding: 10px 12px; }
+  .agg-card .num { font-size: 20px; }
+  .filter-bar { gap: 6px; }
+  .filter-bar input { min-width: 0; flex: 1 1 100%; }
+  .filter-bar select { flex: 1 1 calc(50% - 6px); min-width: 0; }
+  .filter-bar label { width: 100%; margin-right: 0; margin-bottom: -4px; }
+  .filter-bar .clear { flex: 1 1 100%; }
+  .task-card .lead-meta, .task-card .lead-message, .task-card .lead-submission-header { word-break: break-word; }
+  /* Sparkline cells should wrap below text on narrow screens */
+  .task-card div[style*="display: flex"][style*="gap: 12px"] { flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
