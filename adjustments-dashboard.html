@@ -26,6 +26,9 @@ h1 { font-size: 26px; font-weight: 700; margin: 0 0 4px; }
 .filter-bar .clear { background: rgba(255, 69, 58, 0.18); color: #FF6B5C; border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 12px; font-weight: 600; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; }
 .task-card.hidden { display: none; }
+.task-card-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.task-card-pills { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.task-card-source { color: rgba(235, 235, 245, 0.55); font-size: 11px; white-space: nowrap; }
 a { color: #5AAFFF; }
 details summary::-webkit-details-marker { display: none; }
 .empty { text-align: center; padding: 40px; color: rgba(235, 235, 245, 0.45); font-size: 13px; }
@@ -46,6 +49,9 @@ details summary::-webkit-details-marker { display: none; }
   .task-card .lead-meta, .task-card .lead-message, .task-card .lead-submission-header { word-break: break-word; }
   /* Sparkline cells should wrap below text on narrow screens */
   .task-card div[style*="display: flex"][style*="gap: 12px"] { flex-direction: column; align-items: flex-start; }
+  /* Header source line drops below the pills on narrow screens so it doesn't get squeezed */
+  .task-card-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .task-card-source { white-space: normal; }
 }
 </style>
 </head>
@@ -119,11 +125,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="new-content,gutter,march-2026"
        data-search="new gutter repair page with emergency services content gutter repair emergency"
        style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P2</span>
-      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P2</span>
+        <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">New gutter repair page with emergency services content</h3>
@@ -172,11 +180,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="page-enhancement,gutter,march-2026"
        data-search="main gutter page — added repair section and faqs main gutter page"
        style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P2</span>
-      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P2</span>
+        <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Main gutter page — added repair section and FAQs</h3>
@@ -225,11 +235,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="page-redesign,service-area,march-2026"
        data-search="reading pa page — historic home specialist title and meta reading service area"
        style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P3</span>
-      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P3</span>
+        <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Reading PA page — historic home specialist title and meta</h3>
@@ -278,11 +290,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="internal-links,technical,march-2026"
        data-search="internal linking strategy — added contextual location-service links internal links per page"
        style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
-      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P4</span>
+        <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Internal linking strategy — added contextual location-service links</h3>
@@ -315,11 +329,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="ctr,title-tags,2026-05"
        data-search="rewrite title tags + meta descriptions on the 9 top-20 pages getting zero clicks black streaks blog (.html) instant roof quote roof inspection after snowstorm can roof problem wait until spring roof inspection home buying black streaks blog hoa contractor roof damage birdsboro service area commercial roof repair emergency signs"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-title-tag-audit" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-title-tag-audit" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Rewrite title tags + meta descriptions on the 9 top-20 pages getting zero clicks</h3>
@@ -352,11 +368,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="ctr,title-tags,blog,2026-05"
        data-search="black streaks blog post — improve ctr from position 10.5 black streaks blog (.html) black streaks on roof"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-black-streaks" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-black-streaks" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Black streaks blog post — improve CTR from position 10.5</h3>
@@ -389,11 +407,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,internal-links,financing,2026-05"
        data-search="push the financing page to page one with content + internal-link work roof financing options"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-financing-push" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-financing-push" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Push the financing page to page one with content + internal-link work</h3>
@@ -426,11 +446,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,service-area,gbp,template-rollout,2026-05"
        data-search="audit birdsboro/hamburg winning formula + roll out to 5+ additional service area pages birdsboro (template source) hamburg (template source) easton (target) allentown (target) coopersburg (target) macungie (target) whitehall (target)"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-replicate-birdsboro" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-replicate-birdsboro" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Audit Birdsboro/Hamburg winning formula + roll out to 5+ additional service area pages</h3>
@@ -463,11 +485,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,service-area,2026-05"
        data-search="easton location page — add 800 words of neighborhood-specific content easton service area"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-easton-page" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-easton-page" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Easton location page — add 800 words of neighborhood-specific content</h3>
@@ -500,11 +524,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="keyword-focus,ctr,gbp,content,internal-links,2026-05"
        data-search="focus list: 12 high-potential keywords to push this month roofers lehigh valley pa slate roof repair easton roofing companies near me roofing near me roof repair roof repair near me owens corning visualizer epdm roofers near me roofing installation services roofing company bethlehem roof replacement bethlehem pa roofers in allentown pa"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-keyword-focus-list" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-keyword-focus-list" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Focus list: 12 high-potential keywords to push this month</h3>
@@ -537,11 +563,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,gutter,new-page,2026-05"
        data-search="create dedicated gutter services landing page + full content overhaul new gutter landing page gutter repair gutter repair near me gutter installation near me gutter replacement rain gutter repair"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P2</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-gutter-overhaul" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P2</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-gutter-overhaul" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Create dedicated gutter services landing page + full content overhaul</h3>
@@ -574,11 +602,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="schema,technical,2026-05"
        data-search="fix schema validation errors across 8 key pages homepage gutter page residential repairs easton service area commercial roofing roof replacement lehigh valley financing options"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P3</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-schema-validation" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P3</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-schema-validation" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Fix schema validation errors across 8 key pages</h3>
@@ -611,11 +641,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,technical,2026-05"
        data-search="fix thin content and low text-to-html ratio on 6 pages budget roof cost"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P3</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-thin-content" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P3</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-thin-content" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Fix thin content and low text-to-HTML ratio on 6 pages</h3>
@@ -648,11 +680,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,seasonal,2026-05"
        data-search="spring storm roof inspection checklist for eastern pa spring storm checklist (new)"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P5</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-storm-content" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P5</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-storm-content" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Spring storm roof inspection checklist for Eastern PA</h3>
@@ -685,11 +719,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="content,snippets,2026-05"
        data-search="restructure roof repairs vs replacement page for featured snippets roof repair vs replacement guide"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P5</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-snippet-restructure" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P5</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-snippet-restructure" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Restructure roof repairs vs replacement page for featured snippets</h3>
@@ -722,11 +758,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="internal-links,topical-authority,2026-05"
        data-search="create topic cluster linking strategy for roofing services hub: homepage hub: roof replacement hub: roof repair hub: siding hub: gutters hub: commercial"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P5</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-topic-clusters" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P5</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-topic-clusters" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Create topic cluster linking strategy for roofing services</h3>
@@ -759,11 +797,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="page-redesign,service-area,march-2026"
        data-search="northampton county page — neighborhoods, project photos, weather context northampton county"
        style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Northampton County page — neighborhoods, project photos, weather context</h3>
@@ -812,11 +852,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="new-content,seasonal,march-2026"
        data-search="spring roof inspection blog — new seasonal content with pa checklist spring roof inspection"
        style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Spring Roof Inspection Blog — new seasonal content with PA checklist</h3>
@@ -865,11 +907,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="page-redesign,blog,march-2026"
        data-search="roof repairs vs replacement blog — 2026 pricing, decision matrix, pa context repair vs replacement"
        style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Roof Repairs vs Replacement Blog — 2026 pricing, decision matrix, PA context</h3>
@@ -918,11 +962,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="page-redesign,commercial,march-2026"
        data-search="commercial roofing — service details, roi, case studies commercial roofing"
        style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
-      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P1</span>
+        <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Commercial Roofing — service details, ROI, case studies</h3>
@@ -971,11 +1017,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="schema,technical,march-2026"
        data-search="schema validation — fixed localbusiness and service schemas across 10+ pages schema validation errors"
        style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
-      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
-      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P4</span>
+        <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+        <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      </div>
+      <div class="task-card-source">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Schema validation — fixed LocalBusiness and Service schemas across 10+ pages</h3>
@@ -1008,11 +1056,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="citations,ai-visibility,directories,2026-05"
        data-search="build directory presence on yelp, angi, bbb, homeadvisor, houzz yelp profile angi listing bbb accreditation (already have) homeadvisor pro page houzz professional profile"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(191, 90, 242, 0.20); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(191, 90, 242, 0.35);"><i class="fas fa-user-cog"></i> MANUAL / DECISIONS</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-directory-citations" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P4</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(191, 90, 242, 0.20); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(191, 90, 242, 0.35);"><i class="fas fa-user-cog"></i> MANUAL / DECISIONS</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-directory-citations" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Build directory presence on Yelp, Angi, BBB, HomeAdvisor, Houzz</h3>
@@ -1045,11 +1095,13 @@ details summary::-webkit-details-marker { display: none; }
        data-tags="backlinks,authority,ongoing,2026-05"
        data-search="backlink building program — target 10–20 new backlinks per month referring domains (moz) domain authority (moz)"
        style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
-      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
-      <span style="background: rgba(191, 90, 242, 0.20); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(191, 90, 242, 0.35);"><i class="fas fa-user-cog"></i> MANUAL / DECISIONS</span>
-      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-backlink-program" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    <div class="task-card-header">
+      <div class="task-card-pills">
+        <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px;">P4</span>
+        <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+        <span style="background: rgba(191, 90, 242, 0.20); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; border: 1px solid rgba(191, 90, 242, 0.35);"><i class="fas fa-user-cog"></i> MANUAL / DECISIONS</span>
+      </div>
+      <div class="task-card-source">Created 2026-05 · <a href="reports/april-2026.html#task-backlink-program" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></div>
     </div>
     <div>
       <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Backlink building program — target 10–20 new backlinks per month</h3>
