@@ -1,153 +1,176 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <title>Valley Peak Roofing - SEO Reports</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>/* iOS Dark Theme — extracted from VPRC progress reports */
+    <style>
+      /* iOS Dark Theme — extracted from VPRC progress reports */
 /* Glassmorphism design system for Keystone Web Solutions */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
-    background: #000000;
-    color: #ffffff;
-    min-height: 100vh;
-    font-size: 15px;
-    line-height: 1.47;
-    letter-spacing: -0.022em;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", sans-serif;
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    overflow-x: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* ============================================
    iOS-style Header
    ============================================ */
 .header {
-    background: rgba(28, 28, 30, 0.5);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 16px;
-    margin: 16px 16px 0 16px;
+  background: rgba(28, 28, 30, 0.5);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px 16px 0 16px;
 }
 
 .back-button {
-    color: #0A84FF;
-    text-decoration: none;
-    font-size: 17px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 12px;
-    font-weight: 400;
+  color: #0a84ff;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-weight: 400;
 }
 
-.back-button i { font-size: 18px; }
+.back-button i {
+  font-size: 18px;
+}
 
 .header h1 {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 4px;
-    color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+  color: #ffffff;
 }
 
 .header p {
-    font-size: 13px;
-    font-weight: 400;
-    color: rgba(235, 235, 245, 0.6);
-    letter-spacing: -0.08px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(235, 235, 245, 0.6);
+  letter-spacing: -0.08px;
 }
 
 .date-info {
-    background: rgba(58, 58, 60, 0.4);
-    border: 0.5px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 12px;
-    margin-top: 12px;
-    font-size: 12px;
-    line-height: 1.6;
+  background: rgba(58, 58, 60, 0.4);
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .date-info strong {
-    color: rgba(235, 235, 245, 0.8);
-    font-weight: 600;
+  color: rgba(235, 235, 245, 0.8);
+  font-weight: 600;
 }
 
 /* ============================================
    Content Area
    ============================================ */
 .content {
-    padding: 16px;
-    padding-bottom: max(env(safe-area-inset-bottom), 16px);
+  padding: 16px;
+  padding-bottom: max(env(safe-area-inset-bottom), 16px);
 }
 
 /* ============================================
    Section Headers
    ============================================ */
 h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 28px 0 16px 0;
-    letter-spacing: -0.3px;
-    padding-left: 8px;
-    border-left: 3px solid #0A84FF;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 28px 0 16px 0;
+  letter-spacing: -0.3px;
+  padding-left: 8px;
+  border-left: 3px solid #0a84ff;
 }
 
 h2 i {
-    margin-right: 8px;
-    color: #0A84FF;
-    font-size: 18px;
+  margin-right: 8px;
+  color: #0a84ff;
+  font-size: 18px;
 }
 
 h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(235, 235, 245, 0.6);
-    margin: 20px 0 12px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(235, 235, 245, 0.6);
+  margin: 20px 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 h3 i {
-    margin-right: 6px;
-    font-size: 14px;
+  margin-right: 6px;
+  font-size: 14px;
 }
 
 /* ============================================
@@ -155,554 +178,1096 @@ h3 i {
    ============================================ */
 .executive-summary,
 .alert {
-    background: rgba(28, 28, 30, 0.5);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 16px;
-    margin: 16px 0;
+  background: rgba(28, 28, 30, 0.5);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px 0;
 }
 
-.alert { border-left: 3px solid #FF9F0A; }
-.alert h3 { color: #FF9F0A; margin-top: 0; }
-.executive-summary h3 { margin-top: 0; color: #0A84FF; }
+.alert {
+  border-left: 3px solid #ff9f0a;
+}
+.alert h3 {
+  color: #ff9f0a;
+  margin-top: 0;
+}
+.executive-summary h3 {
+  margin-top: 0;
+  color: #0a84ff;
+}
 
 .executive-summary p,
 .alert p {
-    font-size: 13px;
-    line-height: 1.5;
-    color: rgba(235, 235, 245, 0.8);
-    margin: 8px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(235, 235, 245, 0.8);
+  margin: 8px 0;
 }
 
 .executive-summary ul,
 .alert ul {
-    margin: 12px 0;
-    padding-left: 0;
-    list-style: none;
+  margin: 12px 0;
+  padding-left: 0;
+  list-style: none;
 }
 
 .executive-summary li,
 .alert li {
-    padding: 8px 0;
-    font-size: 13px;
-    line-height: 1.5;
-    color: rgba(235, 235, 245, 0.8);
-    display: flex;
-    gap: 10px;
+  padding: 8px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(235, 235, 245, 0.8);
+}
+
+/* Executive summary list items use a flex layout for the green checkmark
+   icon + text pattern (icon left, prose right). */
+.executive-summary li {
+  display: flex;
+  gap: 10px;
 }
 
 .executive-summary li i {
-    color: #34C759;
-    margin-top: 2px;
-    font-size: 14px;
-    flex-shrink: 0;
+  color: #34c759;
+  margin-top: 2px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Alert list items are inline prose with bold emphasis. Do NOT use flex
+   here — flex would treat every <strong> tag as its own column and the
+   layout would columnize like a spreadsheet. Inline-flow only. */
+.alert li {
+  display: list-item;
+  list-style: none;
+  position: relative;
+  padding-left: 26px;
+}
+
+.alert li::before {
+  content: "\f071"; /* Font Awesome exclamation-triangle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ff9f0a;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 12px;
 }
 
 /* ============================================
    Metrics Grid
    ============================================ */
 .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin: 16px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0;
 }
 
 .metric-card {
-    background: rgba(28, 28, 30, 0.5);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 14px;
-    position: relative;
-    overflow: visible;
-    cursor: default;
-    transition: all 0.3s ease;
-    height: 150px;
+  background: rgba(28, 28, 30, 0.5);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px;
+  position: relative;
+  overflow: visible;
+  cursor: default;
+  transition: all 0.3s ease;
+  height: 150px;
 }
 
-a.metric-card.clickable-card { cursor: pointer; }
+a.metric-card.clickable-card {
+  cursor: pointer;
+}
 
 .metric-card:hover,
 .metric-card.active {
-    border-color: rgba(10, 132, 255, 0.4);
-    background: rgba(28, 28, 30, 0.7);
+  border-color: rgba(10, 132, 255, 0.4);
+  background: rgba(28, 28, 30, 0.7);
 }
 
-a.metric-card { text-decoration: none; color: inherit; display: block; }
-a.metric-card.clickable-card { border: 1px solid rgba(10, 132, 255, 0.3); }
+a.metric-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+a.metric-card.clickable-card {
+  border: 1px solid rgba(10, 132, 255, 0.3);
+}
 
 a.metric-card.clickable-card:hover {
-    border-color: rgba(10, 132, 255, 0.6);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
+  border-color: rgba(10, 132, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.2);
 }
 
-a.metric-card.clickable-card:active { transform: scale(0.98); }
+a.metric-card.clickable-card:active {
+  transform: scale(0.98);
+}
 
-.metric-card-content { position: relative; }
+.metric-card-content {
+  position: relative;
+}
 
 .metric-card-front,
-.metric-card-back { transition: opacity 0.3s ease; }
+.metric-card-back {
+  transition: opacity 0.3s ease;
+}
 
 .metric-card-back {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    opacity: 0;
-    pointer-events: none;
-    font-size: 10px;
-    line-height: 1.4;
-    color: rgba(235, 235, 245, 0.8);
-    padding-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 10px;
+  line-height: 1.4;
+  color: rgba(235, 235, 245, 0.8);
+  padding-top: 20px;
 }
 
 .metric-card:hover .metric-card-front,
-.metric-card.active .metric-card-front { opacity: 0; }
+.metric-card.active .metric-card-front {
+  opacity: 0;
+}
 
 .metric-card:hover .metric-card-back,
-.metric-card.active .metric-card-back { opacity: 1; }
+.metric-card.active .metric-card-back {
+  opacity: 1;
+}
 
 .metric-card h4 {
-    font-size: 11px;
-    font-weight: 600;
-    color: rgba(235, 235, 245, 0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(235, 235, 245, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
 }
 
 .metric-value {
-    font-size: 28px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-    margin-bottom: 4px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
 }
 
 .metric-change {
-    font-size: 12px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.metric-change.positive { color: #34C759; }
-.metric-change.negative { color: #FF453A; }
-.metric-change.neutral { color: rgba(235, 235, 245, 0.6); }
-.metric-change i { font-size: 10px; }
+.metric-change.positive {
+  color: #34c759;
+}
+.metric-change.negative {
+  color: #ff453a;
+}
+.metric-change.neutral {
+  color: rgba(235, 235, 245, 0.6);
+}
+.metric-change i {
+  font-size: 10px;
+}
 
 .metric-card small {
-    display: block;
-    font-size: 10px;
-    color: rgba(235, 235, 245, 0.5);
-    margin-top: 6px;
-    line-height: 1.3;
+  display: block;
+  font-size: 10px;
+  color: rgba(235, 235, 245, 0.5);
+  margin-top: 6px;
+  line-height: 1.3;
 }
 
 /* ============================================
    Color Coding System
    ============================================ */
-.color-strong-positive { color: #30D158 !important; font-weight: 700; text-shadow: 0 0 12px rgba(48, 209, 88, 0.4); }
-.color-positive { color: #34C759 !important; font-weight: 600; }
-.color-negative { color: #FF453A !important; font-weight: 600; }
-.color-milestone { color: #FFD60A !important; font-weight: 700; text-shadow: 0 0 10px rgba(255, 214, 10, 0.3); }
-.color-warning { color: #FF9F0A !important; font-weight: 600; }
-.color-neutral { color: #0A84FF !important; }
+.color-strong-positive {
+  color: #30d158 !important;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(48, 209, 88, 0.4);
+}
+.color-positive {
+  color: #34c759 !important;
+  font-weight: 600;
+}
+.color-negative {
+  color: #ff453a !important;
+  font-weight: 600;
+}
+.color-milestone {
+  color: #ffd60a !important;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 214, 10, 0.3);
+}
+.color-warning {
+  color: #ff9f0a !important;
+  font-weight: 600;
+}
+.color-neutral {
+  color: #0a84ff !important;
+}
 
 /* Pill-style highlight backgrounds */
-.highlight-strong-positive { background: rgba(48, 209, 88, 0.2); border: 1px solid rgba(48, 209, 88, 0.4); padding: 2px 8px; border-radius: 6px; display: inline-block; }
-.highlight-positive { background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
-.highlight-negative { background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
-.highlight-milestone { background: rgba(255, 214, 10, 0.15); border: 1px solid rgba(255, 214, 10, 0.35); padding: 2px 8px; border-radius: 6px; display: inline-block; }
-.highlight-warning { background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
-.highlight-neutral { background: rgba(10, 132, 255, 0.12); border: 1px solid rgba(10, 132, 255, 0.3); padding: 2px 8px; border-radius: 6px; display: inline-block; }
+.highlight-strong-positive {
+  background: rgba(48, 209, 88, 0.2);
+  border: 1px solid rgba(48, 209, 88, 0.4);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.highlight-positive {
+  background: rgba(52, 199, 89, 0.15);
+  border: 1px solid rgba(52, 199, 89, 0.3);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.highlight-negative {
+  background: rgba(255, 69, 58, 0.15);
+  border: 1px solid rgba(255, 69, 58, 0.3);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.highlight-milestone {
+  background: rgba(255, 214, 10, 0.15);
+  border: 1px solid rgba(255, 214, 10, 0.35);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.highlight-warning {
+  background: rgba(255, 159, 10, 0.15);
+  border: 1px solid rgba(255, 159, 10, 0.3);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+.highlight-neutral {
+  background: rgba(10, 132, 255, 0.12);
+  border: 1px solid rgba(10, 132, 255, 0.3);
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
 
 /* Combined metric pills */
-.metric-pill-positive { background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.3); color: #34C759; padding: 2px 8px; border-radius: 6px; font-weight: 600; display: inline-block; }
-.metric-pill-strong-positive { background: rgba(48, 209, 88, 0.2); border: 1px solid rgba(48, 209, 88, 0.4); color: #30D158; padding: 3px 10px; border-radius: 6px; font-weight: 700; text-shadow: 0 0 8px rgba(48, 209, 88, 0.3); display: inline-block; }
-.metric-pill-milestone { background: rgba(255, 214, 10, 0.15); border: 1px solid rgba(255, 214, 10, 0.4); color: #FFD60A; padding: 3px 10px; border-radius: 6px; font-weight: 700; text-shadow: 0 0 8px rgba(255, 214, 10, 0.3); display: inline-block; }
-.metric-pill-negative { background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.3); color: #FF453A; padding: 2px 8px; border-radius: 6px; font-weight: 600; display: inline-block; }
+.metric-pill-positive {
+  background: rgba(52, 199, 89, 0.15);
+  border: 1px solid rgba(52, 199, 89, 0.3);
+  color: #34c759;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+.metric-pill-strong-positive {
+  background: rgba(48, 209, 88, 0.2);
+  border: 1px solid rgba(48, 209, 88, 0.4);
+  color: #30d158;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(48, 209, 88, 0.3);
+  display: inline-block;
+}
+.metric-pill-milestone {
+  background: rgba(255, 214, 10, 0.15);
+  border: 1px solid rgba(255, 214, 10, 0.4);
+  color: #ffd60a;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 214, 10, 0.3);
+  display: inline-block;
+}
+.metric-pill-negative {
+  background: rgba(255, 69, 58, 0.15);
+  border: 1px solid rgba(255, 69, 58, 0.3);
+  color: #ff453a;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
 
 /* ============================================
    Tables
    ============================================ */
 .table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 16px 0;
-    border-radius: 12px;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(99, 102, 241, 0.6) rgba(58, 58, 60, 0.4);
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+  border-radius: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.6) rgba(58, 58, 60, 0.4);
 }
 
-.table-wrapper::-webkit-scrollbar { height: 8px; }
-.table-wrapper::-webkit-scrollbar-track { background: rgba(58, 58, 60, 0.4); border-radius: 10px; }
-.table-wrapper::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.6); border-radius: 10px; }
-.table-wrapper::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.8); }
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.table-wrapper::-webkit-scrollbar-track {
+  background: rgba(58, 58, 60, 0.4);
+  border-radius: 10px;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.6);
+  border-radius: 10px;
+}
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
 
 table {
-    width: 100%;
-    min-width: 600px;
-    border-collapse: collapse;
-    background: rgba(28, 28, 30, 0.5);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    font-size: 13px;
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: rgba(28, 28, 30, 0.5);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 13px;
 }
 
-thead { background: rgba(58, 58, 60, 0.5); }
+thead {
+  background: rgba(58, 58, 60, 0.5);
+}
 
 th {
-    color: rgba(235, 235, 245, 0.8);
-    padding: 12px 10px;
-    text-align: left;
-    font-weight: 600;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  color: rgba(235, 235, 245, 0.8);
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
 td {
-    padding: 10px;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
-    color: rgba(235, 235, 245, 0.8);
+  padding: 10px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+  color: rgba(235, 235, 245, 0.8);
 }
 
-tr:last-child td { border-bottom: none; }
-td strong { color: #ffffff; font-weight: 600; }
-td a { color: rgba(235, 235, 245, 0.8); text-decoration: none; transition: color 0.2s ease; }
-td a:hover { color: #0A84FF; }
-tbody tr { background: transparent; }
+tr:last-child td {
+  border-bottom: none;
+}
+td strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+td a {
+  color: rgba(235, 235, 245, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+td a:hover {
+  color: #0a84ff;
+}
+tbody tr {
+  background: transparent;
+}
 
 /* ============================================
    Insight Box
    ============================================ */
 .insight-box {
-    background: rgba(10, 132, 255, 0.15);
-    border: 0.5px solid rgba(10, 132, 255, 0.3);
-    border-left: 3px solid #0A84FF;
-    border-radius: 12px;
-    padding: 14px;
-    margin: 16px 0;
+  background: rgba(10, 132, 255, 0.15);
+  border: 0.5px solid rgba(10, 132, 255, 0.3);
+  border-left: 3px solid #0a84ff;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 16px 0;
 }
 
-.insight-box h4 { color: #0A84FF; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
-.insight-box h4 i { margin-right: 6px; }
-.insight-box p, .insight-box ul { font-size: 13px; line-height: 1.5; color: rgba(235, 235, 245, 0.8); }
-.insight-box ul { margin: 10px 0; padding-left: 0; list-style: none; }
-.insight-box li { padding: 6px 0; }
-.insight-box li strong { color: #ffffff; }
+.insight-box h4 {
+  color: #0a84ff;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.insight-box h4 i {
+  margin-right: 6px;
+}
+.insight-box p,
+.insight-box ul {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(235, 235, 245, 0.8);
+}
+.insight-box ul {
+  margin: 10px 0;
+  padding-left: 0;
+  list-style: none;
+}
+.insight-box li {
+  padding: 6px 0;
+}
+.insight-box li strong {
+  color: #ffffff;
+}
 
 /* ============================================
    Chart Container
    ============================================ */
 .chart-container {
-    background: rgba(28, 28, 30, 0.5);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 16px;
-    margin: 16px 0;
+  background: rgba(28, 28, 30, 0.5);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
 }
 
 .chart-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-canvas { max-height: 300px; }
+canvas {
+  max-height: 300px;
+}
 
 /* ============================================
    Expandable Rows
    ============================================ */
-.expandable-row { cursor: pointer; transition: background-color 0.2s; }
-.expandable-row:hover { background: rgba(58, 58, 60, 0.3); }
-.expandable-row:active { background: rgba(58, 58, 60, 0.5); }
-.expand-icon { font-size: 10px; margin-left: 8px; transition: transform 0.2s; color: #0A84FF; }
-.expandable-row.expanded .expand-icon { transform: rotate(180deg); }
+.expandable-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.expandable-row:hover {
+  background: rgba(58, 58, 60, 0.3);
+}
+.expandable-row:active {
+  background: rgba(58, 58, 60, 0.5);
+}
+.expand-icon {
+  font-size: 10px;
+  margin-left: 8px;
+  transition: transform 0.2s;
+  color: #0a84ff;
+}
+.expandable-row.expanded .expand-icon {
+  transform: rotate(180deg);
+}
 
-.expanded-content { display: none; background: rgba(10, 132, 255, 0.05); border-left: 2px solid #0A84FF; }
-.expanded-content td { padding: 16px 12px; font-size: 13px !important; line-height: 1.5; color: rgba(235, 235, 245, 0.8); font-style: italic; }
-.expanded-content.show { display: table-row; }
+.expanded-content {
+  display: none;
+  background: rgba(10, 132, 255, 0.05);
+  border-left: 2px solid #0a84ff;
+}
+.expanded-content td {
+  padding: 16px 12px;
+  font-size: 13px !important;
+  line-height: 1.5;
+  color: rgba(235, 235, 245, 0.8);
+  font-style: italic;
+}
+.expanded-content.show {
+  display: table-row;
+}
 
 /* ============================================
    Copy Buttons
    ============================================ */
 .copy-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(58, 58, 60, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    padding: 8px 12px;
-    color: rgba(235, 235, 245, 0.8);
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(58, 58, 60, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: rgba(235, 235, 245, 0.8);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 12px;
 }
 
-.copy-btn:hover { background: rgba(88, 88, 90, 0.7); border-color: rgba(255, 255, 255, 0.25); }
-.copy-btn:active { transform: scale(0.98); }
-.copy-btn.copied { background: rgba(52, 199, 89, 0.3); border-color: rgba(52, 199, 89, 0.5); color: #34C759; }
-.copy-btn i { font-size: 11px; }
+.copy-btn:hover {
+  background: rgba(88, 88, 90, 0.7);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.copy-btn:active {
+  transform: scale(0.98);
+}
+.copy-btn.copied {
+  background: rgba(52, 199, 89, 0.3);
+  border-color: rgba(52, 199, 89, 0.5);
+  color: #34c759;
+}
+.copy-btn i {
+  font-size: 11px;
+}
 
 .copy-full-report-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(99, 102, 241, 0.3) 100%);
-    border: 1px solid rgba(10, 132, 255, 0.4);
-    border-radius: 12px;
-    padding: 14px 20px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 132, 255, 0.3) 0%,
+    rgba(99, 102, 241, 0.3) 100%
+  );
+  border: 1px solid rgba(10, 132, 255, 0.4);
+  border-radius: 12px;
+  padding: 14px 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 20px;
 }
 
 .copy-full-report-btn:hover {
-    background: linear-gradient(135deg, rgba(10, 132, 255, 0.5) 0%, rgba(99, 102, 241, 0.5) 100%);
-    border-color: rgba(10, 132, 255, 0.6);
-    transform: translateY(-1px);
+  background: linear-gradient(
+    135deg,
+    rgba(10, 132, 255, 0.5) 0%,
+    rgba(99, 102, 241, 0.5) 100%
+  );
+  border-color: rgba(10, 132, 255, 0.6);
+  transform: translateY(-1px);
 }
 
-.copy-full-report-btn:active { transform: scale(0.98); }
-.copy-full-report-btn.copied { background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.3) 100%); border-color: rgba(52, 199, 89, 0.6); }
-.copy-full-report-btn i { font-size: 14px; }
+.copy-full-report-btn:active {
+  transform: scale(0.98);
+}
+.copy-full-report-btn.copied {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 199, 89, 0.4) 0%,
+    rgba(52, 199, 89, 0.3) 100%
+  );
+  border-color: rgba(52, 199, 89, 0.6);
+}
+.copy-full-report-btn i {
+  font-size: 14px;
+}
 
 /* ============================================
    Quick Navigation
    ============================================ */
 .quick-nav-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 /* ============================================
    Table of Contents
    ============================================ */
-.toc-dropdown summary::-webkit-details-marker { display: none; }
-.toc-dropdown[open] .toc-chevron { transform: rotate(180deg); }
-.toc-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 10px;
-    font-size: 13px;
-    color: rgba(235, 235, 245, 0.8);
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.2s;
+.toc-dropdown summary::-webkit-details-marker {
+  display: none;
 }
-.toc-link:hover { background: rgba(58, 58, 60, 0.5); }
-.toc-link i { font-size: 12px; width: 16px; text-align: center; }
+.toc-dropdown[open] .toc-chevron {
+  transform: rotate(180deg);
+}
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: rgba(235, 235, 245, 0.8);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.toc-link:hover {
+  background: rgba(58, 58, 60, 0.5);
+}
+.toc-link i {
+  font-size: 12px;
+  width: 16px;
+  text-align: center;
+}
 
 /* ============================================
    Priority Cards (Next Month Focus)
    ============================================ */
 .priority-card {
-    background: rgba(28, 28, 30, 0.5);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 16px;
-    margin: 12px 0;
+  background: rgba(28, 28, 30, 0.5);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
 }
 
-.priority-card.red { border-left: 3px solid #FF453A; }
-.priority-card.orange { border-left: 3px solid #FF9F0A; }
-.priority-card.blue { border-left: 3px solid #0A84FF; }
-.priority-card.green { border-left: 3px solid #34C759; }
-.priority-card.purple { border-left: 3px solid #BF5AF2; }
+.priority-card.red {
+  border-left: 3px solid #ff453a;
+}
+.priority-card.orange {
+  border-left: 3px solid #ff9f0a;
+}
+.priority-card.blue {
+  border-left: 3px solid #0a84ff;
+}
+.priority-card.green {
+  border-left: 3px solid #34c759;
+}
+.priority-card.purple {
+  border-left: 3px solid #bf5af2;
+}
 
 .priority-card h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
 .priority-card p {
-    font-size: 13px;
-    line-height: 1.5;
-    color: rgba(235, 235, 245, 0.8);
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(235, 235, 245, 0.8);
 }
 
 /* ============================================
    Back to Top Button
    ============================================ */
 .back-to-top {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(10, 132, 255, 0.8) 0%, rgba(99, 102, 241, 0.8) 100%);
-    border: 1px solid rgba(10, 132, 255, 0.6);
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 132, 255, 0.8) 0%,
+    rgba(99, 102, 241, 0.8) 100%
+  );
+  border: 1px solid rgba(10, 132, 255, 0.6);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.back-to-top.visible { opacity: 1; visibility: visible; }
-.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(10, 132, 255, 0.4); }
-.back-to-top:active { transform: scale(0.95); }
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(10, 132, 255, 0.4);
+}
+.back-to-top:active {
+  transform: scale(0.95);
+}
 
 /* ============================================
    Task Tracker Section
    ============================================ */
 .task-tracker {
-    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
-    border: 1px solid rgba(138, 43, 226, 0.3);
-    border-radius: 16px;
-    padding: 20px 16px;
-    margin-top: 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(138, 43, 226, 0.15) 0%,
+    rgba(99, 102, 241, 0.15) 100%
+  );
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 16px;
+  padding: 20px 16px;
+  margin-top: 32px;
 }
 
-.task-tracker-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-.task-tracker-header h2 { margin: 0; border: none; padding: 0; font-size: 18px; color: #BF7FFF; }
-.task-tracker-header i { color: #BF7FFF; }
+.task-tracker-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.task-tracker-header h2 {
+  margin: 0;
+  border: none;
+  padding: 0;
+  font-size: 18px;
+  color: #bf7fff;
+}
+.task-tracker-header i {
+  color: #bf7fff;
+}
 
-.task-item { background: rgba(28, 28, 30, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
-.task-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; cursor: pointer; transition: background 0.2s; }
-.task-header:hover { background: rgba(58, 58, 60, 0.4); }
-.task-header-left { display: flex; align-items: center; gap: 12px; }
-.task-number { background: rgba(138, 43, 226, 0.3); color: #BF7FFF; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
-.task-title { font-size: 14px; font-weight: 600; color: #ffffff; }
-.task-meta { font-size: 11px; color: rgba(235, 235, 245, 0.5); margin-top: 2px; }
-.task-status { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
-.task-status i { font-size: 14px; }
-.task-expand-icon { color: rgba(235, 235, 245, 0.4); font-size: 12px; transition: transform 0.2s; margin-left: 12px; }
-.task-item.expanded .task-expand-icon { transform: rotate(180deg); }
-.task-content { display: none; padding: 0 16px 16px 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-.task-item.expanded .task-content { display: block; }
-.task-section { margin-top: 14px; }
-.task-section-title { font-size: 11px; font-weight: 600; color: rgba(235, 235, 245, 0.5); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-.task-problem { background: rgba(255, 69, 58, 0.1); border-left: 3px solid #FF453A; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8); line-height: 1.5; }
-.task-root-cause { background: rgba(255, 159, 10, 0.1); border-left: 3px solid #FF9F0A; padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 13px; color: rgba(235, 235, 245, 0.8); line-height: 1.5; }
+.task-item {
+  background: rgba(28, 28, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.task-header:hover {
+  background: rgba(58, 58, 60, 0.4);
+}
+.task-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.task-number {
+  background: rgba(138, 43, 226, 0.3);
+  color: #bf7fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.task-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.task-meta {
+  font-size: 11px;
+  color: rgba(235, 235, 245, 0.5);
+  margin-top: 2px;
+}
+.task-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.task-status i {
+  font-size: 14px;
+}
+.task-expand-icon {
+  color: rgba(235, 235, 245, 0.4);
+  font-size: 12px;
+  transition: transform 0.2s;
+  margin-left: 12px;
+}
+.task-item.expanded .task-expand-icon {
+  transform: rotate(180deg);
+}
+.task-content {
+  display: none;
+  padding: 0 16px 16px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.task-item.expanded .task-content {
+  display: block;
+}
+.task-section {
+  margin-top: 14px;
+}
+.task-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(235, 235, 245, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.task-problem {
+  background: rgba(255, 69, 58, 0.1);
+  border-left: 3px solid #ff453a;
+  padding: 10px 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: rgba(235, 235, 245, 0.8);
+  line-height: 1.5;
+}
+.task-root-cause {
+  background: rgba(255, 159, 10, 0.1);
+  border-left: 3px solid #ff9f0a;
+  padding: 10px 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: rgba(235, 235, 245, 0.8);
+  line-height: 1.5;
+}
 
-.task-changes-table { width: 100%; border-collapse: collapse; font-size: 12px; background: rgba(28, 28, 30, 0.5); border-radius: 8px; overflow: hidden; }
-.task-changes-table th { background: rgba(58, 58, 60, 0.5); padding: 10px; text-align: left; font-size: 10px; color: rgba(235, 235, 245, 0.6); }
-.task-changes-table td { padding: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: rgba(235, 235, 245, 0.8); vertical-align: top; }
-.task-changes-table tr:last-child td { border-bottom: none; }
-.task-changes-table .before { color: rgba(255, 69, 58, 0.8); text-decoration: line-through; }
-.task-changes-table .after { color: #34C759; }
+.task-changes-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  background: rgba(28, 28, 30, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.task-changes-table th {
+  background: rgba(58, 58, 60, 0.5);
+  padding: 10px;
+  text-align: left;
+  font-size: 10px;
+  color: rgba(235, 235, 245, 0.6);
+}
+.task-changes-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(235, 235, 245, 0.8);
+  vertical-align: top;
+}
+.task-changes-table tr:last-child td {
+  border-bottom: none;
+}
+.task-changes-table .before {
+  color: rgba(255, 69, 58, 0.8);
+  text-decoration: line-through;
+}
+.task-changes-table .after {
+  color: #34c759;
+}
 
-.priority-section { margin-bottom: 20px; }
-.priority-title { font-size: 13px; font-weight: 600; color: rgba(235, 235, 245, 0.7); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.priority-section {
+  margin-bottom: 20px;
+}
+.priority-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(235, 235, 245, 0.7);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 /* Collapsible sections */
-.section-toggle-icon { font-size: 14px; transition: transform 0.3s ease; }
-.collapsible-section:not(.collapsed) .section-toggle-icon { transform: rotate(180deg); }
-.collapsible-content { overflow: hidden; max-height: 5000px; transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease; opacity: 1; padding-top: 16px; }
-.collapsible-section.collapsed .collapsible-content { max-height: 0; opacity: 0; padding-top: 0; }
+.section-toggle-icon {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+.collapsible-section:not(.collapsed) .section-toggle-icon {
+  transform: rotate(180deg);
+}
+.collapsible-content {
+  overflow: hidden;
+  max-height: 5000px;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease;
+  opacity: 1;
+  padding-top: 16px;
+}
+.collapsible-section.collapsed .collapsible-content {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+}
 
 /* On-Page Audit expandable rows */
-.onpage-row .onpage-detail { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-.onpage-row.onpage-open .onpage-detail { max-height: 2000px; }
-.onpage-row.onpage-open .fa-chevron-down { transform: rotate(180deg); }
+.onpage-row .onpage-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.onpage-row.onpage-open .onpage-detail {
+  max-height: 2000px;
+}
+.onpage-row.onpage-open .fa-chevron-down {
+  transform: rotate(180deg);
+}
 
 /* ============================================
    Footer
    ============================================ */
 footer {
-    text-align: center;
-    padding: 24px 16px;
-    font-size: 11px;
-    color: rgba(235, 235, 245, 0.3);
-    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-    margin-top: 32px;
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 11px;
+  color: rgba(235, 235, 245, 0.3);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  margin-top: 32px;
 }
 
 /* ============================================
    Desktop Breakpoints
    ============================================ */
 @media (min-width: 768px) {
-    .container { max-width: 980px; margin: 0 auto; }
-    .header { padding: 24px 32px; }
-    .header h1 { font-size: 34px; }
-    .content { padding: 32px; }
-    .metrics-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    table { font-size: 14px; }
-    th { font-size: 12px; }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .header {
+    padding: 24px 32px;
+  }
+  .header h1 {
+    font-size: 34px;
+  }
+  .content {
+    padding: 32px;
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  table {
+    font-size: 14px;
+  }
+  th {
+    font-size: 12px;
+  }
 
-    a.metric-card.clickable-card { border: 0.5px solid rgba(255, 255, 255, 0.1); }
-    a.metric-card.clickable-card:hover,
-    a.metric-card.clickable-card.active { border-color: rgba(10, 132, 255, 0.4); transform: none; box-shadow: none; }
+  a.metric-card.clickable-card {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+  a.metric-card.clickable-card:hover,
+  a.metric-card.clickable-card.active {
+    border-color: rgba(10, 132, 255, 0.4);
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 @media (min-width: 1024px) {
-    .metrics-grid { grid-template-columns: repeat(4, 1fr); }
+  .metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ============================================
    Mobile Font Size Fixes
    ============================================ */
 @media (max-width: 600px) {
-    .quick-nav-buttons { grid-template-columns: 1fr 1fr; }
-    .quick-nav-buttons a:last-child { grid-column: span 2; }
-    .quick-nav-buttons .copy-full-report-btn { padding: 12px 10px; font-size: 13px; }
+  /* Stack every quick-nav button full-width on mobile so each gets its own
+     row and is easy to tap. The previous rule (2-column with last child
+     spanning) caused half-width buttons when a row had only 1 or 2 items. */
+  .quick-nav-buttons {
+    grid-template-columns: 1fr;
+  }
+  .quick-nav-buttons a:last-child {
+    grid-column: auto;
+  }
+  .quick-nav-buttons .copy-full-report-btn {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 768px) {
-    * { -webkit-text-size-adjust: 100% !important; -moz-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
-    body { font-size: 14px !important; }
-    h2 { font-size: 17px !important; }
-    h3 { font-size: 13px !important; }
-    .executive-summary p, .executive-summary li, .alert p, .alert li { font-size: 13px !important; }
-    .expanded-content td, tr.expanded-content td { font-size: 13px !important; line-height: 1.5 !important; }
-    table { font-size: 12px !important; }
-    th { font-size: 10px !important; }
-    td { font-size: 12px !important; }
-    .insight-box p, .insight-box li, .insight-box h4 { font-size: 12px !important; }
-    .task-item .task-title { font-size: 14px !important; }
-    .task-item .task-meta { font-size: 11px !important; }
-    .task-content { font-size: 12px !important; }
-    .task-section-title { font-size: 11px !important; }
-    .task-problem, .task-root-cause { font-size: 12px !important; }
-    .task-changes-table { font-size: 11px !important; }
-    .task-changes-table th { font-size: 9px !important; }
-    .deep-research-container > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-    .deep-research-container { padding: 16px !important; }
+  * {
+    -webkit-text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
+  body {
+    font-size: 14px !important;
+  }
+  h2 {
+    font-size: 17px !important;
+  }
+  h3 {
+    font-size: 13px !important;
+  }
+  .executive-summary p,
+  .executive-summary li,
+  .alert p,
+  .alert li {
+    font-size: 13px !important;
+  }
+  .expanded-content td,
+  tr.expanded-content td {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+  table {
+    font-size: 12px !important;
+  }
+  th {
+    font-size: 10px !important;
+  }
+  td {
+    font-size: 12px !important;
+  }
+  .insight-box p,
+  .insight-box li,
+  .insight-box h4 {
+    font-size: 12px !important;
+  }
+  .task-item .task-title {
+    font-size: 14px !important;
+  }
+  .task-item .task-meta {
+    font-size: 11px !important;
+  }
+  .task-content {
+    font-size: 12px !important;
+  }
+  .task-section-title {
+    font-size: 11px !important;
+  }
+  .task-problem,
+  .task-root-cause {
+    font-size: 12px !important;
+  }
+  .task-changes-table {
+    font-size: 11px !important;
+  }
+  .task-changes-table th {
+    font-size: 9px !important;
+  }
+  .deep-research-container > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+  .deep-research-container {
+    padding: 16px !important;
+  }
 }
 
 /* ============================================
    Print Styles
    ============================================ */
 @media print {
-    body { background: white; color: black; }
-    .header { background: #667eea; color: white; position: relative; }
-    .metric-card, .insight-box, table { break-inside: avoid; page-break-inside: avoid; }
+  body {
+    background: white;
+    color: black;
+  }
+  .header {
+    background: #667eea;
+    color: white;
+    position: relative;
+  }
+  .metric-card,
+  .insight-box,
+  table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
 
 .stats-banner {
@@ -754,6 +1319,45 @@ footer {
     transition: all 0.2s;
 }
 .report-card:hover { border-color: rgba(10, 132, 255, 0.4); transform: translateY(-2px); }
+
+/* Latest report card — pulsing green glow + corner badge to draw the eye. */
+.report-card-latest {
+    position: relative;
+    border: 1px solid rgba(52, 199, 89, 0.55);
+    background: linear-gradient(135deg, rgba(52, 199, 89, 0.12) 0%, rgba(28, 28, 30, 0.55) 100%);
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.5);
+    animation: latest-pulse 2.4s ease-in-out infinite;
+}
+.report-card-latest:hover {
+    border-color: rgba(52, 199, 89, 0.8);
+    box-shadow: 0 0 0 6px rgba(52, 199, 89, 0.18), 0 8px 24px rgba(52, 199, 89, 0.25);
+    transform: translateY(-3px);
+    animation: none;
+}
+.report-card-latest .view-report {
+    color: #34C759;
+}
+.report-card-latest-badge {
+    position: absolute;
+    top: -8px;
+    right: 14px;
+    background: linear-gradient(135deg, #34C759 0%, #228B22 100%);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(52, 199, 89, 0.4);
+}
+@keyframes latest-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.55); }
+    50%  { box-shadow: 0 0 0 10px rgba(52, 199, 89, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 199, 89, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .report-card-latest { animation: none; }
+}
 .report-month { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 8px; }
 .report-month i { color: #0A84FF; margin-right: 8px; }
 .report-date { font-size: 12px; color: rgba(235, 235, 245, 0.5); margin-bottom: 16px; }
@@ -764,239 +1368,314 @@ footer {
 .report-highlights li i { color: #34C759; font-size: 12px; }
 .view-report { font-size: 13px; color: #0A84FF; font-weight: 500; margin-top: 16px; display: flex; align-items: center; gap: 6px; }
 .view-report i { font-size: 11px; }
-</style>
-</head>
-<body>
+
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>Valley Peak Roofing</h1>
-            <p>Monthly SEO & Traffic Analysis Reports</p>
-            <p class="subtitle">Track your digital growth and performance metrics</p>
+      <div class="header">
+        <h1>Valley Peak Roofing</h1>
+        <p>Monthly SEO & Traffic Analysis Reports</p>
+        <p class="subtitle">Track your digital growth and performance metrics</p>
+      </div>
+
+      <div class="content">
+        <button class="copy-full-report-btn" onclick="copyFullReport()">
+          <i class="fas fa-copy"></i>
+          Copy Dashboard Summary
+        </button>
+
+        <div class="intro">
+          <h2>PERFORMANCE REPORTS</h2>
+          <p>Comprehensive SEO and traffic analysis dashboard tracking website
+            performance, rankings, and lead generation success.</p>
         </div>
 
-        <div class="content">
-            <button class="copy-full-report-btn" onclick="copyFullReport()">
-                <i class="fas fa-copy"></i> Copy Dashboard Summary
-            </button>
-
-            <div class="intro">
-                <h2>PERFORMANCE REPORTS</h2>
-                <p>Comprehensive SEO and traffic analysis dashboard tracking website performance, rankings, and lead generation success.</p>
-            </div>
-
-            <div class="stats-banner">
-                <h3>LATEST PERFORMANCE (FEBRUARY 2026)</h3>
-                <div class="stats-grid">
-                    <a href="reports/february-2026.html" class="stat-item">
-                        <div class="stat-value">1,720</div>
-                        <div class="stat-label">Total Users</div>
-                        <div class="stat-change positive">+41.2%</div>
-                    </a>
-                    <a href="reports/february-2026.html" class="stat-item">
-                        <div class="stat-value">365</div>
-                        <div class="stat-label">Organic Clicks</div>
-                        <div class="stat-change positive">+44.8%</div>
-                    </a>
-                    <a href="reports/february-2026.html#form-submissions" class="stat-item">
-                        <div class="stat-value">19</div>
-                        <div class="stat-label">Form Submissions</div>
-                        <div class="stat-change positive">+72.7%</div>
-                        <div class="stat-note">Strong growth</div>
-                    </a>
-                    <a href="reports/february-2026.html#keywords" class="stat-item">
-                        <div class="stat-value">406</div>
-                        <div class="stat-label">Ranked Keywords</div>
-                        <div class="stat-change neutral">Baseline</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="chart-container">
-                <h3><i class="fas fa-chart-bar" style="margin-right: 8px; color: #0A84FF;"></i>ORGANIC CLICKS BY MONTH</h3>
-                <div class="chart-wrapper">
-                    <canvas id="clicksChart"></canvas>
-                </div>
-            </div>
-
-            <h2 class="section-title">MONTHLY REPORTS</h2>
-            <div class="reports-grid">
-                <a href="reports/february-2026.html" class="report-card">
-                    <div class="report-month">
-                        <i class="fas fa-file-alt"></i>
-                        February 2026
-                    </div>
-                    <div class="report-date">
-                        <i class="far fa-calendar"></i> Reporting Period: Feb 1-28, 2026
-                    </div>
-                    <div class="report-highlights">
-                        <h4>KEY HIGHLIGHTS</h4>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>365 organic clicks</strong> (+44.8% - significant growth)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>406 keywords</strong></li>
-                            <li><i class="fas fa-check-circle"></i> <strong>19 form submissions</strong> (+72.7% - significant growth)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
-                        </ul>
-                    </div>
-                    <div class="view-report">
-                        View Full Report <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                <a href="reports/january-2026.html" class="report-card">
-                    <div class="report-month">
-                        <i class="fas fa-file-alt"></i>
-                        January 2026
-                    </div>
-                    <div class="report-date">
-                        <i class="far fa-calendar"></i> Reporting Period: Jan 1-31, 2026
-                    </div>
-                    <div class="report-highlights">
-                        <h4>KEY HIGHLIGHTS</h4>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>252 organic clicks</strong> (+86.7% - strong recovery)</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>11 form submissions</strong> - new leads</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
-                            <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>29.6% engagement</strong> (-6.8pp)</li>
-                        </ul>
-                    </div>
-                    <div class="view-report">
-                        View Full Report <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                <a href="reports/december-2025.html" class="report-card">
-                    <div class="report-month">
-                        <i class="fas fa-file-alt"></i>
-                        December 2025
-                    </div>
-                    <div class="report-date">
-                        <i class="far fa-calendar"></i> Reporting Period: Dec 1-31, 2025
-                    </div>
-                    <div class="report-highlights">
-                        <h4>KEY HIGHLIGHTS</h4>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> <strong>135 organic clicks</strong></li>
-                            <li><i class="fas fa-check-circle"></i> <strong>36.3% engagement rate</strong></li>
-                            <li><i class="fas fa-check-circle"></i> <strong>1,129 users</strong></li>
-                        </ul>
-                    </div>
-                    <div class="view-report">
-                        View Full Report <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                <a href="reports/november-2025.html" class="report-card">
-                    <div class="report-month">
-                        <i class="fas fa-file-alt"></i>
-                        November 2025
-                    </div>
-                    <div class="report-date">
-                        <i class="far fa-calendar"></i> Reporting Period: Nov 1-30, 2025
-                    </div>
-                    <div class="report-highlights">
-                        <h4>KEY HIGHLIGHTS</h4>
-                        <ul>
-                        </ul>
-                    </div>
-                    <div class="view-report">
-                        View Full Report <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                <a href="reports/october-2025.html" class="report-card">
-                    <div class="report-month">
-                        <i class="fas fa-file-alt"></i>
-                        October 2025
-                    </div>
-                    <div class="report-date">
-                        <i class="far fa-calendar"></i> Reporting Period: Oct 1-31, 2025
-                    </div>
-                    <div class="report-highlights">
-                        <h4>KEY HIGHLIGHTS</h4>
-                        <ul>
-                        </ul>
-                    </div>
-                    <div class="view-report">
-                        View Full Report <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-            </div>
+        <div class="stats-banner">
+          <h3>LATEST PERFORMANCE (APRIL 2026)</h3>
+          <div class="stats-grid">
+            <a href="reports/april-2026.html" class="stat-item">
+              <div class="stat-value">651</div>
+              <div class="stat-label">Total Users</div>
+              <div
+                class="stat-change negative"
+              >-1.5% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 661 in Mar</span></div>
+            </a>
+            <a href="reports/april-2026.html" class="stat-item">
+              <div class="stat-value">166</div>
+              <div class="stat-label">Organic Clicks</div>
+              <div
+                class="stat-change negative"
+              >-30% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 237 in Mar</span></div>
+            </a>
+            <a
+              href="reports/april-2026.html#form-submissions"
+              class="stat-item"
+            >
+              <div class="stat-value">17</div>
+              <div class="stat-label">Form Submissions</div>
+              <div
+                class="stat-change negative"
+              >-37% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 27 in Mar</span></div>
+              
+            </a>
+            <a
+              href="reports/april-2026.html#keywords"
+              class="stat-item"
+            >
+              <div class="stat-value">347</div>
+              <div class="stat-label">Ranked Keywords</div>
+              <div
+                class="stat-change negative"
+              >-6.5% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 371 in Mar</span></div>
+            </a>
+          </div>
         </div>
+
+        <div class="chart-container">
+          <h3><i
+              class="fas fa-chart-bar"
+              style="margin-right: 8px; color: #0A84FF;"
+            ></i>ORGANIC CLICKS &amp; IMPRESSIONS BY MONTH</h3>
+          <div style="display: flex; gap: 16px; align-items: center; margin: -4px 0 12px 0; font-size: 12px; color: rgba(235, 235, 245, 0.6);">
+            <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: inline-block; width: 12px; height: 12px; background: rgba(10, 132, 255, 0.6); border-radius: 2px;"></span>Clicks (left axis)</span>
+            <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: inline-block; width: 14px; height: 2px; background: #FFD60A;"></span>Impressions (right axis)</span>
+          </div>
+          <!-- 5-column layout: outer vertical "Clicks" / "Impressions" labels |
+               tick-number axes (fixed) | scrollable chart body in the middle.
+               Vertical labels are pushed outward so they read clearly OUTSIDE
+               the tick numbers, separating axis name from axis values. -->
+          <div class="chart-wrapper" style="display: flex; height: 320px; padding: 0; overflow: visible; align-items: stretch;">
+            <div style="width: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 0 2px 22px 2px;">
+              <span style="writing-mode: vertical-rl; transform: rotate(180deg); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(10, 132, 255, 0.95); white-space: nowrap;">Clicks</span>
+            </div>
+            <div style="width: 50px; flex-shrink: 0; position: relative;">
+              <canvas id="leftAxisChart"></canvas>
+            </div>
+            <div id="chartScroll" style="flex: 1; min-width: 0; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;">
+              <div style="height: 100%; width: 960px; min-width: 100%; position: relative;">
+                <canvas id="clicksChart"></canvas>
+              </div>
+            </div>
+            <div style="width: 56px; flex-shrink: 0; position: relative;">
+              <canvas id="rightAxisChart"></canvas>
+            </div>
+            <div style="width: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; padding: 0 2px 22px 2px;">
+              <span style="writing-mode: vertical-rl; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255, 214, 10, 0.95); white-space: nowrap;">Impressions</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="adjustments-dashboard.html" style="display: flex; align-items: center; gap: 16px; background: linear-gradient(135deg, rgba(255, 214, 10, 0.18) 0%, rgba(255, 159, 10, 0.10) 100%); border: 1px solid rgba(255, 214, 10, 0.40); border-radius: 14px; padding: 18px 22px; text-decoration: none; margin: 24px 0 28px 0;">
+            <i class="fas fa-tasks" style="color: #FFD60A; font-size: 28px; flex-shrink: 0;"></i>
+            <div style="flex: 1;">
+                <div style="color: #FFD60A; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px;">Adjustments Dashboard</div>
+                <div style="color: rgba(235, 235, 245, 0.85); font-size: 13px; line-height: 1.5;">Cross-month view of every SEO task: status, priority, target metric trends, and what's working. Updated each report cycle.</div>
+            </div>
+            <span style="color: #FFD60A; font-size: 13px; font-weight: 600; white-space: nowrap;">Open dashboard →</span>
+        </a>
+
+        <h2 class="section-title">MONTHLY REPORTS</h2>
+        <div class="reports-grid">
+            <a href="reports/april-2026.html" class="report-card report-card-latest">
+              <span class="report-card-latest-badge">LATEST</span>
+              <div class="report-month">
+                <i class="fas fa-file-alt" style="color: #34C759;"></i>
+                April 2026
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Apr 1-30, 2026
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                    <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>166 organic clicks</strong> (-30% - notable decline)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>347 keywords</strong> (-6.5%)</li>
+                    <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>17 form submissions</strong> (-37% - notable decline)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>46.6% engagement</strong> (+4.2pp)</li>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/march-2026.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
+                March 2026
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Mar 1-31, 2026
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                    <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>237 organic clicks</strong> (-35.1% - notable decline)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>371 keywords</strong> (-12.7%)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>27 form submissions</strong> (+42.1% - significant growth)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>42.5% engagement</strong> (+16.0pp - nearly doubled)</li>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/february-2026.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
+                February 2026
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Feb 1-28, 2026
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>365 organic clicks</strong> (+44.8% - significant growth)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>425 keywords</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>19 form submissions</strong> (+72.7% - significant growth)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/january-2026.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
+                January 2026
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Jan 1-31, 2026
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>252 organic clicks</strong> (+86.7% - strong recovery)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>11 form submissions</strong> - new leads</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
+                    <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>29.6% engagement</strong> (-6.8pp)</li>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/december-2025.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
+                December 2025
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Dec 1-31, 2025
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>135 organic clicks</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>36.3% engagement rate</strong></li>
+                    <li><i class="fas fa-check-circle"></i> <strong>1,129 users</strong></li>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/november-2025.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
+                November 2025
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Nov 1-30, 2025
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/october-2025.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
+                October 2025
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                Oct 1-31, 2025
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <p>Prepared by Keystone Web Solutions</p>
-        <p>Professional SEO & Digital Marketing Services</p>
+      <p>Prepared by Keystone Web Solutions</p>
+      <p>Professional SEO & Digital Marketing Services</p>
     </footer>
 
     <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    // Chart
-    var ctx = document.getElementById('clicksChart');
-    if (ctx) {
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ["Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026"],
-                datasets: [{
-                    label: 'Organic Clicks',
-                    data: [0,0,135,252,365],
-                    backgroundColor: ["rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(52, 199, 89, 0.8)"],
-                    borderColor: ["rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(52, 199, 89, 1)"],
-                    borderWidth: 2,
-                    borderRadius: 8
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: 'rgba(28, 28, 30, 0.9)',
-                        titleColor: '#ffffff',
-                        bodyColor: 'rgba(235, 235, 245, 0.8)',
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
-                        borderWidth: 1,
-                        cornerRadius: 8,
-                        padding: 12,
-                        callbacks: {
-                            label: function(context) { return context.parsed.y + ' clicks'; }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 550,
-                        grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
-                        ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } }
-                    },
-                    x: {
-                        grid: { display: false },
-                        ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } }
-                    }
-                }
-            }
-        });
-    }
-
-    // Copy summary
-    function copyFullReport() {
-        var report = "VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY\n=============================================\n\nLATEST PERFORMANCE (FEBRUARY 2026)\n";
-        navigator.clipboard.writeText(report).then(function() {
-            var btn = document.querySelector('.copy-full-report-btn');
-            btn.classList.add('copied');
-            btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!';
-            setTimeout(function() {
-                btn.classList.remove('copied');
-                btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary';
-            }, 2000);
-        });
-    }
+      // NOTE: every statement must stay on a single line. Prettier (and the
+      // .hbs HTML formatter) treat this script block as HTML text and will
+      // break string literals across lines if any line gets too long, which
+      // produces unparseable JS and silently kills the chart and the copy
+      // button. This block is also listed in .prettierignore for safety.
+      // prettier-ignore
+      (function () {
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) { anchor.addEventListener('click', function (e) { var href = anchor.getAttribute('href'); if (href && href.length > 1) { e.preventDefault(); var t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); } }); });
+      var ctx = document.getElementById('clicksChart');
+      var clicksMax = 550; var impressionsMax = 109000;
+      // Per-month annotations shown as a footnote in the tooltip. Add entries
+      // here as Google or another data source changes methodology over time.
+      var monthNotes = { 'Sep 2025': 'GSC sampling changed by Google.' };
+      if (ctx && window.Chart) { new Chart(ctx, { type: 'bar', data: { labels: ["May 2025","Jun 2025","Jul 2025","Aug 2025","Sep 2025","Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026"], datasets: [{ type: 'bar', label: 'Organic Clicks', data: [152,92,123,91,102,136,170,135,252,365,237,166], backgroundColor: ["rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(52, 199, 89, 0.8)"], borderColor: ["rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(52, 199, 89, 1)"], borderWidth: 2, borderRadius: 8, yAxisID: 'yClicks', order: 2 }, { type: 'line', label: 'Impressions', data: [81175,73170,69214,90316,54640,37696,54490,70028,74413,78820,83032,87797], borderColor: 'rgba(255, 214, 10, 0.95)', backgroundColor: 'rgba(255, 214, 10, 0.12)', borderWidth: 2, pointBackgroundColor: 'rgba(255, 214, 10, 1)', pointBorderColor: 'rgba(255, 214, 10, 1)', pointRadius: 4, pointHoverRadius: 6, tension: 0.25, fill: false, yAxisID: 'yImpressions', order: 1 }] }, options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false }, plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(28, 28, 30, 0.95)', titleColor: '#ffffff', bodyColor: 'rgba(235, 235, 245, 0.9)', footerColor: 'rgba(255, 214, 10, 0.95)', footerFont: { size: 11, weight: '400', style: 'italic' }, footerMarginTop: 8, borderColor: 'rgba(255, 255, 255, 0.1)', borderWidth: 1, cornerRadius: 8, padding: 12, callbacks: { label: function (c) { var n = (c.parsed.y || 0).toLocaleString(); return c.dataset.label + ': ' + n; }, footer: function (items) { var label = items && items[0] && items[0].label; var note = monthNotes[label]; return note ? ['', '⚠ ' + note] : ''; } } } }, scales: { yClicks: { display: false, type: 'linear', position: 'left', beginAtZero: true, max: clicksMax }, yImpressions: { display: false, type: 'linear', position: 'right', beginAtZero: true, max: impressionsMax }, x: { grid: { display: false }, ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } } } } } }); }
+      var leftCtx = document.getElementById('leftAxisChart');
+      if (leftCtx && window.Chart) { new Chart(leftCtx, { type: 'bar', data: { labels: [''], datasets: [{ data: [0], backgroundColor: 'rgba(0,0,0,0)', borderColor: 'rgba(0,0,0,0)' }] }, options: { responsive: true, maintainAspectRatio: false, animation: false, events: [], plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { y: { beginAtZero: true, max: clicksMax, position: 'left', grid: { display: false }, ticks: { color: 'rgba(10, 132, 255, 0.85)', font: { size: 11 } } }, x: { display: true, grid: { display: false }, ticks: { display: false }, border: { display: false } } } } }); }
+      var rightCtx = document.getElementById('rightAxisChart');
+      if (rightCtx && window.Chart) { new Chart(rightCtx, { type: 'bar', data: { labels: [''], datasets: [{ data: [0], backgroundColor: 'rgba(0,0,0,0)', borderColor: 'rgba(0,0,0,0)' }] }, options: { responsive: true, maintainAspectRatio: false, animation: false, events: [], plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { y: { beginAtZero: true, max: impressionsMax, position: 'right', grid: { display: false }, ticks: { color: 'rgba(255, 214, 10, 0.85)', font: { size: 11 }, callback: function (v) { return v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v; } } }, x: { display: true, grid: { display: false }, ticks: { display: false }, border: { display: false } } } } }); }
+      // Scroll the chart container all the way right so the most recent month is visible by default. Uses requestAnimationFrame so the scroll happens after Chart.js has laid out the canvas.
+      var scroller = document.getElementById('chartScroll');
+      if (scroller) { requestAnimationFrame(function () { scroller.scrollLeft = scroller.scrollWidth; }); }
+      window.copyFullReport = function () { var report = "VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY\n=============================================\n\nLATEST PERFORMANCE (APRIL 2026)\n"; navigator.clipboard.writeText(report).then(function () { var btn = document.querySelector('.copy-full-report-btn'); if (!btn) return; btn.classList.add('copied'); btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!'; setTimeout(function () { btn.classList.remove('copied'); btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary'; }, 2000); }); };
+      })();
     </script>
-</body>
+  </body>
 </html>

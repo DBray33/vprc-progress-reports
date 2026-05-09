@@ -1,0 +1,3 @@
+# Executive Summary (raw HTML returned by Claude)
+
+<p>You pulled in <strong>27 leads</strong> this month — solid. Traffic value hit <strong style="color: #34C759;">$35,675</strong>, up <strong style="color: #34C759;">+80%</strong>, and estimated organic traffic jumped <strong style="color: #34C759;">+65%</strong>. The catch: clicks dropped <strong style="color: #FF453A;">-35%</strong>, meaning Google's showing the site more but fewer people are clicking through. April is prime storm season — get some inspection and storm damage content published now while homeowners are actively searching.</p>

@@ -1,0 +1,3 @@
+# Executive Summary (raw HTML returned by Claude)
+
+<p>Good news on leads — <strong style="color: #BF5AF2;">17 legitimate leads</strong> came in this month with zero spam. Clicks dropped to <strong style="color: #FF453A;">166 (down 30%)</strong>, which is the main thing to fix. On the AI side, <strong style="color: #FFD60A;">37% of 612 customer-style queries</strong> across ChatGPT, Gemini, and Perplexity mentioned Valley Peak — that's solid. Next month, push spring storm content to pull more clicks from the impressions we're already getting.</p>

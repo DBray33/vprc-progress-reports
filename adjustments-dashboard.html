@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Adjustments Dashboard — Valley Peak Roofing Co.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 32px 60px; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; background: #1c1c1e; color: rgba(235, 235, 245, 0.92); }
+h1 { font-size: 26px; font-weight: 700; margin: 0 0 4px; }
+.sub { font-size: 13px; color: rgba(235, 235, 245, 0.55); margin-bottom: 20px; }
+.aggregates { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 24px; }
+.agg-card { background: rgba(28, 28, 30, 0.7); border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 12px; padding: 14px 16px; }
+.agg-card .num { font-size: 26px; font-weight: 700; color: #fff; }
+.agg-card .lbl { font-size: 10px; color: rgba(235, 235, 245, 0.55); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+.agg-card.complete .num { color: #34C759; }
+.agg-card.in_progress .num { color: #FF9F0A; }
+.agg-card.not_started .num { color: #FF453A; }
+.agg-card.positive .num { color: #34C759; }
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; align-items: center; }
+.filter-bar label { font-size: 11px; color: rgba(235, 235, 245, 0.55); text-transform: uppercase; letter-spacing: 0.4px; margin-right: 4px; }
+.filter-bar select, .filter-bar input { background: rgba(28, 28, 30, 0.7); color: #fff; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 8px; padding: 6px 10px; font-size: 12px; font-family: inherit; }
+.filter-bar input { min-width: 240px; }
+.filter-bar .clear { background: rgba(255, 69, 58, 0.18); color: #FF6B5C; border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 12px; font-weight: 600; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; }
+.task-card.hidden { display: none; }
+a { color: #5AAFFF; }
+details summary::-webkit-details-marker { display: none; }
+.empty { text-align: center; padding: 40px; color: rgba(235, 235, 245, 0.45); font-size: 13px; }
+</style>
+</head>
+<body>
+<a href="index.html" style="display: inline-flex; align-items: center; gap: 6px; color: rgba(235, 235, 245, 0.65); text-decoration: none; font-size: 13px; padding: 6px 12px; border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 8px; margin-bottom: 16px; transition: background 0.15s ease, color 0.15s ease;" onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='#fff';" onmouseout="this.style.background='transparent';this.style.color='rgba(235, 235, 245, 0.65)';">
+    <i class="fas fa-arrow-left" style="font-size: 11px;"></i> Back to Reports Homepage
+</a>
+<h1><i class="fas fa-tasks" style="color: #FFD60A;"></i> Adjustments Dashboard — Valley Peak Roofing Co.</h1>
+<div class="sub">Cross-month view of every SEO task. Generated 5/9/2026, 11:41:13 AM.</div>
+
+<div class="aggregates">
+  <div class="agg-card"><div class="num">23</div><div class="lbl">Total Tasks</div></div>
+  <div class="agg-card not_started"><div class="num">14</div><div class="lbl">Not Started</div></div>
+  <div class="agg-card in_progress"><div class="num">4</div><div class="lbl">In Progress</div></div>
+  <div class="agg-card complete"><div class="num">5</div><div class="lbl">Complete</div></div>
+  <div class="agg-card positive"><div class="num">4</div><div class="lbl">Showing Positive MoM Trend</div></div>
+  <div class="agg-card"><div class="num">22%</div><div class="lbl">Completion Rate</div></div>
+  <div class="agg-card"><div class="num">39%</div><div class="lbl">Active or Done</div></div>
+</div>
+
+<div class="aggregates" style="margin-top: -8px;">
+  <div class="agg-card" style="border-color: rgba(10, 132, 255, 0.35); background: linear-gradient(135deg, rgba(10, 132, 255, 0.20) 0%, rgba(28, 28, 30, 0.7) 100%);">
+    <div class="num" style="color: #5AAFFF;"><i class="fas fa-code" style="font-size: 18px; margin-right: 4px;"></i>21</div>
+    <div class="lbl" style="color: #5AAFFF; opacity: 0.85;">Code Tweaks & On-Page Content Changes</div>
+  </div>
+  <div class="agg-card" style="border-color: rgba(191, 90, 242, 0.35); background: linear-gradient(135deg, rgba(191, 90, 242, 0.20) 0%, rgba(28, 28, 30, 0.7) 100%);">
+    <div class="num" style="color: #BF5AF2;"><i class="fas fa-user-cog" style="font-size: 18px; margin-right: 4px;"></i>2</div>
+    <div class="lbl" style="color: #BF5AF2; opacity: 0.85;">Needs Developer Intervention / Decisions</div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <label>Status:</label>
+  <select id="filter-status">
+    <option value="">All</option>
+    <option value="not_started">Not Started</option>
+    <option value="in_progress">In Progress</option>
+    <option value="complete">Complete</option>
+  </select>
+  <label>Priority:</label>
+  <select id="filter-priority">
+    <option value="">All</option>
+    <option value="1">P1</option>
+    <option value="2">P2</option>
+    <option value="3">P3</option>
+    <option value="4">P4</option>
+    <option value="5">P5</option>
+  </select>
+  <label>Created:</label>
+  <select id="filter-month">
+    <option value="">All</option>
+    <option value="2026-03">2026-03</option><option value="2026-05">2026-05</option>
+  </select>
+  <label>Category:</label>
+  <select id="filter-category">
+    <option value="">All</option>
+    <option value="code-content">Code & Content</option>
+    <option value="manual-decisions">Manual / Decisions</option>
+  </select>
+  <input id="filter-search" type="search" placeholder="Search title, target page or keyword…">
+  <button class="clear" onclick="document.querySelectorAll('.filter-bar select').forEach(s=>s.value='');document.getElementById('filter-search').value='';applyFilters();">Clear</button>
+</div>
+
+<div class="cards" id="cards">
+
+  <div class="task-card"
+       data-status="in_progress"
+       data-priority="2"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="new-content,gutter,march-2026"
+       data-search="new gutter repair page with emergency services content gutter repair emergency"
+       style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P2</span>
+      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">New gutter repair page with emergency services content</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Gutter Services Optimization</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Good impressions, position needs improvement (43.6).</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Good impressions, position needs improvement</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,27.0 100.0,3.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="3.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">2</strong> clicks <span style="color: #34C759;">(+2)</span><br>
+          <strong style="color: #fff;">26,635</strong> impressions <span style="color: #34C759;">(+26635)</span><br>
+          <strong style="color: #fff;">Pos 43.6</strong> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Gutter repair emergency</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · In Progress <span style="color: rgba(235, 235, 245, 0.55);">— Good impressions, position needs improvement</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="in_progress"
+       data-priority="2"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="page-enhancement,gutter,march-2026"
+       data-search="main gutter page — added repair section and faqs main gutter page"
+       style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P2</span>
+      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Main gutter page — added repair section and FAQs</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Gutter Services Optimization</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> More impressions but fewer clicks — needs further iteration (covered by May&#39;s gutter overhaul task).</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> More impressions but fewer clicks</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,11.0 50.0,3.0 100.0,27.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="27.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">2</strong> clicks <span style="color: #FF453A;">(-3)</span><br>
+          <strong style="color: #fff;">26,635</strong> impressions <span style="color: #34C759;">(+7136)</span><br>
+          <strong style="color: #fff;">Pos 43.6</strong> <span style="color: #FF453A;">▼ 0.6 pos</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Main gutter page</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · In Progress <span style="color: rgba(235, 235, 245, 0.55);">— More impressions but fewer clicks</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="in_progress"
+       data-priority="3"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="page-redesign,service-area,march-2026"
+       data-search="reading pa page — historic home specialist title and meta reading service area"
+       style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P3</span>
+      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Reading PA page — historic home specialist title and meta</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Local Page Optimization</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Position declined slightly, still no clicks. Needs deeper content work.</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Position declined, still no clicks</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,3.0 50.0,27.0 100.0,27.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="27.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">0</strong> clicks <span style="color: rgba(235, 235, 245, 0.5);">(0)</span><br>
+          <strong style="color: #fff;">1,008</strong> impressions <span style="color: #FF453A;">(-277)</span><br>
+          <strong style="color: #fff;">Pos 18.7</strong> <span style="color: #FF453A;">▼ 1.9 pos</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Reading service area</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · In Progress <span style="color: rgba(235, 235, 245, 0.55);">— Position declined, still no clicks</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="in_progress"
+       data-priority="4"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="internal-links,technical,march-2026"
+       data-search="internal linking strategy — added contextual location-service links internal links per page"
+       style="background: rgba(255, 159, 10, 0.15); border: 1px solid rgba(255, 159, 10, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
+      <span style="background: rgba(255, 159, 10, 0.15); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 159, 10, 0.30);"><i class="fas fa-spinner"></i> IN PROGRESS</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Internal linking strategy — added contextual location-service links</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Technical Infrastructure</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Topical authority signal that compounds over time. Continued in May&#39;s topic-clusters task.</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Data pending — internal-link work shows up over multiple months</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">metric:</span> Internal links per page <span style="color: rgba(235, 235, 245, 0.5);">(target: average 8+)</span></li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · In Progress <span style="color: rgba(235, 235, 245, 0.55);">— Data pending — internal-link work shows up over multiple months</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="1"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="ctr,title-tags,2026-05"
+       data-search="rewrite title tags + meta descriptions on the 9 top-20 pages getting zero clicks black streaks blog (.html) instant roof quote roof inspection after snowstorm can roof problem wait until spring roof inspection home buying black streaks blog hoa contractor roof damage birdsboro service area commercial roof repair emergency signs"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-title-tag-audit" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Rewrite title tags + meta descriptions on the 9 top-20 pages getting zero clicks</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Recover Click Volume</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Even a 0.5pp CTR improvement on the 5,500 dormant impressions = ~25–30 additional clicks per month per page; across all 9 pages that&#39;s a meaningful chunk of the -30% click drop, with no new rankings required.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Black streaks blog (.html)</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Instant roof quote</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Roof inspection after snowstorm</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Can roof problem wait until spring</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Roof inspection home buying</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Black streaks blog</li><li style="color: rgba(235, 235, 245, 0.5);">+ 3 more</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="1"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="ctr,title-tags,blog,2026-05"
+       data-search="black streaks blog post — improve ctr from position 10.5 black streaks blog (.html) black streaks on roof"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-black-streaks" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Black streaks blog post — improve CTR from position 10.5</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Recover Click Volume</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Specific high-impact instance of the broader striking-distance audit. Page is already at #10.5 — even modest CTR gains here unlock immediate clicks.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Black Streaks blog (.html)</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "black streaks on roof"</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="1"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,internal-links,financing,2026-05"
+       data-search="push the financing page to page one with content + internal-link work roof financing options"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-financing-push" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Push the financing page to page one with content + internal-link work</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Recover Click Volume</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Position 13.8 → top 10 on a page with 2,298 monthly impressions could unlock 50–150 additional clicks per month from a high-intent audience.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Roof financing options</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="1"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,service-area,gbp,template-rollout,2026-05"
+       data-search="audit birdsboro/hamburg winning formula + roll out to 5+ additional service area pages birdsboro (template source) hamburg (template source) easton (target) allentown (target) coopersburg (target) macungie (target) whitehall (target)"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-replicate-birdsboro" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Audit Birdsboro/Hamburg winning formula + roll out to 5+ additional service area pages</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Recover Click Volume</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Birdsboro proved the template works (96 → 7). Rolling it across 5+ additional cities multiplies that win — each new city is potentially another double-digit-position lift on its own commercial keywords.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Birdsboro (template source)</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hamburg (template source)</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Easton (target)</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Allentown (target)</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Coopersburg (target)</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Macungie (target)</li><li style="color: rgba(235, 235, 245, 0.5);">+ 1 more</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="1"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,service-area,2026-05"
+       data-search="easton location page — add 800 words of neighborhood-specific content easton service area"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-easton-page" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Easton location page — add 800 words of neighborhood-specific content</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Recover Click Volume</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Replicates the Birdsboro success template (96.5 → 7.3) for another high-priority service area.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Easton service area</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="1"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="keyword-focus,ctr,gbp,content,internal-links,2026-05"
+       data-search="focus list: 12 high-potential keywords to push this month roofers lehigh valley pa slate roof repair easton roofing companies near me roofing near me roof repair roof repair near me owens corning visualizer epdm roofers near me roofing installation services roofing company bethlehem roof replacement bethlehem pa roofers in allentown pa"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-keyword-focus-list" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Focus list: 12 high-potential keywords to push this month</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Recover Click Volume</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> 12 specific keywords picked for highest leverage — each has a concrete action (page rewrite, GBP post, portfolio feature, internal linking, dedicated landing page). Should produce measurable click gains within 30–45 days.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "roofers lehigh valley pa"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "slate roof repair easton"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "roofing companies near me"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "roofing near me"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "roof repair"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "roof repair near me"</li><li style="color: rgba(235, 235, 245, 0.5);">+ 6 more</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="2"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,gutter,new-page,2026-05"
+       data-search="create dedicated gutter services landing page + full content overhaul new gutter landing page gutter repair gutter repair near me gutter installation near me gutter replacement rain gutter repair"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 159, 10, 0.25); color: #FF9F0A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P2</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-gutter-overhaul" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Create dedicated gutter services landing page + full content overhaul</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Gutter Cluster Recovery</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> 1–3% CTR on 12K+ impressions = 120–360 additional monthly clicks. Turns dormant impressions into a new lead source.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> New gutter landing page</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "gutter repair"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "gutter repair near me"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "gutter installation near me"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "gutter replacement"</li><li><span style="color: rgba(235, 235, 245, 0.45);">keyword:</span> "rain gutter repair"</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="3"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="schema,technical,2026-05"
+       data-search="fix schema validation errors across 8 key pages homepage gutter page residential repairs easton service area commercial roofing roof replacement lehigh valley financing options"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P3</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-schema-validation" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Fix schema validation errors across 8 key pages</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Technical Foundation</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Foundational fix that supports both CTR improvements (rich snippets) and AI visibility (cleaner data signals for AI agents).</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Homepage</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Gutter page</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Residential repairs</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Easton service area</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Commercial roofing</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Roof replacement Lehigh Valley</li><li style="color: rgba(235, 235, 245, 0.5);">+ 1 more</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="3"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,technical,2026-05"
+       data-search="fix thin content and low text-to-html ratio on 6 pages budget roof cost"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 214, 10, 0.25); color: #FFD60A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P3</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-thin-content" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Fix thin content and low text-to-HTML ratio on 6 pages</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Technical Foundation</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Thin pages can&#39;t rank for the queries they target. Expanding gives the existing forms/calculators the editorial context they need.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Budget roof cost</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="5"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,seasonal,2026-05"
+       data-search="spring storm roof inspection checklist for eastern pa spring storm checklist (new)"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P5</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-storm-content" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Spring storm roof inspection checklist for Eastern PA</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Seasonal Content &amp; Featured Snippets</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Captures leads from homeowners in the immediate post-storm buying window — the highest-intent moment in the roofing year.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Spring storm checklist (new)</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="5"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="content,snippets,2026-05"
+       data-search="restructure roof repairs vs replacement page for featured snippets roof repair vs replacement guide"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P5</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-snippet-restructure" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Restructure roof repairs vs replacement page for featured snippets</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Seasonal Content &amp; Featured Snippets</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Featured snippet wins drive a step-change in click volume from existing rankings.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Roof repair vs replacement guide</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="5"
+       data-month="2026-05"
+       data-category="code-content"
+       data-tags="internal-links,topical-authority,2026-05"
+       data-search="create topic cluster linking strategy for roofing services hub: homepage hub: roof replacement hub: roof repair hub: siding hub: gutters hub: commercial"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(10, 132, 255, 0.25); color: #0A84FF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P5</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-topic-clusters" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Create topic cluster linking strategy for roofing services</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Seasonal Content &amp; Featured Snippets</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Topic clusters compound over time — the strongest sites in any niche use this pattern. Builds long-term topical authority.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hub: Homepage</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hub: Roof Replacement</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hub: Roof Repair</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hub: Siding</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hub: Gutters</li><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Hub: Commercial</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="complete"
+       data-priority="1"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="page-redesign,service-area,march-2026"
+       data-search="northampton county page — neighborhoods, project photos, weather context northampton county"
+       style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Northampton County page — neighborhoods, project photos, weather context</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Zero-Click Pages Activated</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Major breakthrough — now generating clicks (16 in April after 0 in March).</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Major breakthrough — now generating clicks</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,3.0 50.0,27.0 100.0,27.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="27.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">0</strong> clicks <span style="color: rgba(235, 235, 245, 0.5);">(0)</span><br>
+          <strong style="color: #fff;">1,081</strong> impressions <span style="color: #FF453A;">(-232)</span><br>
+          <strong style="color: #fff;">Pos 25.6</strong> <span style="color: #FF453A;">▼ 4.5 pos</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Northampton County</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created from March SEO report analysis</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · Complete <span style="color: rgba(235, 235, 245, 0.55);">— Major breakthrough — now generating clicks</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="complete"
+       data-priority="1"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="new-content,seasonal,march-2026"
+       data-search="spring roof inspection blog — new seasonal content with pa checklist spring roof inspection"
+       style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Spring Roof Inspection Blog — new seasonal content with PA checklist</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Zero-Click Pages Activated</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Excellent performance from launch.</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Excellent performance from launch</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,27.0 100.0,3.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="3.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">49</strong> clicks <span style="color: #34C759;">(+49)</span><br>
+          <strong style="color: #fff;">8,697</strong> impressions <span style="color: #34C759;">(+8697)</span><br>
+          <strong style="color: #fff;">Pos 2.7</strong> 
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Spring Roof Inspection</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · Complete <span style="color: rgba(235, 235, 245, 0.55);">— Excellent performance from launch</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="complete"
+       data-priority="1"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="page-redesign,blog,march-2026"
+       data-search="roof repairs vs replacement blog — 2026 pricing, decision matrix, pa context repair vs replacement"
+       style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Roof Repairs vs Replacement Blog — 2026 pricing, decision matrix, PA context</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Zero-Click Pages Activated</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Massive position jump to page 1 (40.6 → 2.7).</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Massive position jump to page 1</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,3.0 50.0,27.0 100.0,27.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="27.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">0</strong> clicks <span style="color: rgba(235, 235, 245, 0.5);">(0)</span><br>
+          <strong style="color: #fff;">3</strong> impressions <span style="color: #34C759;">(+1)</span><br>
+          <strong style="color: #fff;">Pos 5.7</strong> <span style="color: #34C759;">▲ 3.3 pos</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Repair vs Replacement</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · Complete <span style="color: rgba(235, 235, 245, 0.55);">— Massive position jump to page 1</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="complete"
+       data-priority="1"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="page-redesign,commercial,march-2026"
+       data-search="commercial roofing — service details, roi, case studies commercial roofing"
+       style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(255, 69, 58, 0.25); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P1</span>
+      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Commercial Roofing — service details, ROI, case studies</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Zero-Click Pages Activated</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Strong position improvement (38.1 → 12.2), clicks starting.</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Strong position improvement, clicks starting</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      
+    <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div style="flex-shrink: 0;">
+        <div style="font-size: 9px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px;">Clicks</div>
+        <svg width="100" height="30" viewBox="0 0 100 30">
+    <polyline points="0.0,27.0 50.0,27.0 100.0,3.0" fill="none" stroke="#34C759" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100.0" cy="3.0" r="2.5" fill="#34C759"/>
+  </svg>
+      </div>
+      <div style="flex: 1; min-width: 140px;">
+        <div style="font-size: 11px; color: rgba(235, 235, 245, 0.7); line-height: 1.5;">
+          <strong style="color: #fff;">2</strong> clicks <span style="color: #34C759;">(+2)</span><br>
+          <strong style="color: #fff;">1,421</strong> impressions <span style="color: #34C759;">(+355)</span><br>
+          <strong style="color: #fff;">Pos 30.4</strong> <span style="color: #34C759;">▲ 7.7 pos</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">page:</span> Commercial Roofing</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · Complete <span style="color: rgba(235, 235, 245, 0.55);">— Strong position improvement, clicks starting</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="complete"
+       data-priority="4"
+       data-month="2026-03"
+       data-category="code-content"
+       data-tags="schema,technical,march-2026"
+       data-search="schema validation — fixed localbusiness and service schemas across 10+ pages schema validation errors"
+       style="background: rgba(52, 199, 89, 0.15); border: 1px solid rgba(52, 199, 89, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
+      <span style="background: rgba(52, 199, 89, 0.15); color: #34C759; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(52, 199, 89, 0.30);"><i class="fas fa-check-circle"></i> COMPLETE</span>
+      <span style="background: rgba(10, 132, 255, 0.20); color: #5AAFFF; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(10, 132, 255, 0.35);"><i class="fas fa-code"></i> CODE & CONTENT</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-03 · <a href="reports/march-2026.html" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">March 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Schema validation — fixed LocalBusiness and Service schemas across 10+ pages</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">Technical Infrastructure</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Foundational technical work; metric impact tracked indirectly via rich-snippet appearances.</div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(52, 199, 89, 0.08); border: 1px solid rgba(52, 199, 89, 0.2); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: #34C759;">Result:</strong> Data pending — schema fixes don&#39;t show direct metric impact in GSC short-term</div>
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">metric:</span> Schema validation errors <span style="color: rgba(235, 235, 245, 0.5);">(target: 0)</span></li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-03</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Task created</span></li><li><strong style="color: rgba(235, 235, 245, 0.85);">2026-04</strong> · Complete <span style="color: rgba(235, 235, 245, 0.55);">— Data pending — schema fixes don&#39;t show direct metric impact short-term</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="4"
+       data-month="2026-05"
+       data-category="manual-decisions"
+       data-tags="citations,ai-visibility,directories,2026-05"
+       data-search="build directory presence on yelp, angi, bbb, homeadvisor, houzz yelp profile angi listing bbb accreditation (already have) homeadvisor pro page houzz professional profile"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(191, 90, 242, 0.20); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(191, 90, 242, 0.35);"><i class="fas fa-user-cog"></i> MANUAL / DECISIONS</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-directory-citations" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Build directory presence on Yelp, Angi, BBB, HomeAdvisor, Houzz</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">AI Visibility &amp; Authority Building</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> Closing the ChatGPT gap from 23% toward 35%+ captures the largest AI platform globally as a discovery channel.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">external:</span> Yelp profile</li><li><span style="color: rgba(235, 235, 245, 0.45);">external:</span> Angi listing</li><li><span style="color: rgba(235, 235, 245, 0.45);">external:</span> BBB accreditation (already have)</li><li><span style="color: rgba(235, 235, 245, 0.45);">external:</span> HomeAdvisor pro page</li><li><span style="color: rgba(235, 235, 245, 0.45);">external:</span> Houzz professional profile</li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="task-card"
+       data-status="not_started"
+       data-priority="4"
+       data-month="2026-05"
+       data-category="manual-decisions"
+       data-tags="backlinks,authority,ongoing,2026-05"
+       data-search="backlink building program — target 10–20 new backlinks per month referring domains (moz) domain authority (moz)"
+       style="background: rgba(255, 69, 58, 0.15); border: 1px solid rgba(255, 69, 58, 0.30); border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: 1fr; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span style="background: rgba(191, 90, 242, 0.25); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0;">P4</span>
+      <span style="background: rgba(255, 69, 58, 0.15); color: #FF453A; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(255, 69, 58, 0.30);"><i class="fas fa-circle"></i> NOT STARTED</span>
+      <span style="background: rgba(191, 90, 242, 0.20); color: #BF5AF2; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 8px; letter-spacing: 0.4px; flex-shrink: 0; border: 1px solid rgba(191, 90, 242, 0.35);"><i class="fas fa-user-cog"></i> MANUAL / DECISIONS</span>
+      <span style="color: rgba(235, 235, 245, 0.55); font-size: 11px; flex: 1;">Created 2026-05 · <a href="reports/april-2026.html#task-backlink-program" style="color: rgba(235, 235, 245, 0.65); text-decoration: underline;">April 2026 Report</a></span>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 4px 0; color: #fff; font-size: 15px; font-weight: 600; line-height: 1.4;">Backlink building program — target 10–20 new backlinks per month</h3>
+      <div style="font-size: 12px; color: rgba(235, 235, 245, 0.6); line-height: 1.5;">AI Visibility &amp; Authority Building</div>
+    </div>
+    <div style="font-size: 12px; color: rgba(235, 235, 245, 0.78); background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 8px 10px; line-height: 1.55;"><strong style="color: rgba(235, 235, 245, 0.9);">Expected impact:</strong> DA 25–30 creates the authority buffer needed to hold marginal rankings against competitive pressure. Stops the slow keyword drift at its source.</div>
+    
+    <div style="background: rgba(255, 255, 255, 0.03); border-radius: 6px; padding: 10px 12px;">
+      <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">Latest metric impact</div>
+      <div style="font-size: 11px; color: rgba(235, 235, 245, 0.4);">No tracked metrics</div>
+    </div>
+    <details style="font-size: 12px;">
+      <summary style="cursor: pointer; color: rgba(235, 235, 245, 0.6); list-style: none; user-select: none; padding: 4px 0;">▾ Targets &amp; status history</summary>
+      <div style="margin-top: 6px;">
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px;">Targets</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: rgba(235, 235, 245, 0.75);"><li><span style="color: rgba(235, 235, 245, 0.45);">metric:</span> Referring domains (Moz) <span style="color: rgba(235, 235, 245, 0.5);">(target: &gt;= 100 by end of 2026)</span></li><li><span style="color: rgba(235, 235, 245, 0.45);">metric:</span> Domain Authority (Moz) <span style="color: rgba(235, 235, 245, 0.5);">(target: &gt;= 25 by end of 2026)</span></li></ul>
+        <div style="font-size: 10px; color: rgba(235, 235, 245, 0.45); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 10px;">Status history</div>
+        <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 11px; line-height: 1.5; color: rgba(235, 235, 245, 0.65);">
+    <li><strong style="color: rgba(235, 235, 245, 0.85);">2026-05</strong> · Not Started <span style="color: rgba(235, 235, 245, 0.55);">— Created from monthly SEO report analysis</span></li>
+  </ul>
+      </div>
+    </details>
+  </div>
+</div>
+<div id="empty" class="empty" style="display: none;">No tasks match the current filters.</div>
+
+<a href="#" id="back-to-top" aria-label="Back to top" style="position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 214, 10, 0.20); border: 1px solid rgba(255, 214, 10, 0.45); color: #FFD60A; display: none; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; backdrop-filter: blur(8px); transition: transform 0.15s ease, background 0.15s ease; z-index: 100;" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+    <i class="fas fa-arrow-up"></i>
+</a>
+<style>
+#back-to-top:hover { background: rgba(255, 214, 10, 0.32); transform: translateY(-2px); }
+</style>
+
+<script>
+function applyFilters() {
+  const status = document.getElementById('filter-status').value;
+  const priority = document.getElementById('filter-priority').value;
+  const month = document.getElementById('filter-month').value;
+  const category = document.getElementById('filter-category').value;
+  const search = (document.getElementById('filter-search').value || '').toLowerCase().trim();
+  let visible = 0;
+  for (const card of document.querySelectorAll('.task-card')) {
+    let show = true;
+    if (status && card.dataset.status !== status) show = false;
+    if (priority && card.dataset.priority !== priority) show = false;
+    if (month && card.dataset.month !== month) show = false;
+    if (category && card.dataset.category !== category) show = false;
+    if (search && !card.dataset.search.includes(search)) show = false;
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  }
+  document.getElementById('empty').style.display = visible === 0 ? 'block' : 'none';
+}
+['filter-status','filter-priority','filter-month','filter-category'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
+document.getElementById('filter-search').addEventListener('input', applyFilters);
+
+// Back-to-top: visible after scrolling past 400px.
+const btt = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  btt.style.display = window.scrollY > 400 ? 'flex' : 'none';
+});
+</script>
+</body>
+</html>
