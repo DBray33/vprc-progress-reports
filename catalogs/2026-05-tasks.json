@@ -303,12 +303,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-gutter-overhaul",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Existing gutter-maintenance-installation.html overhauled: title/meta/H1 aligned to Birdsboro formula, 7 new image-rich content sections integrating new iStock images, inline font-size overrides removed, page-wide structure cleaned. Did not create a 'dedicated landing page' as catalog suggested because the existing page is already the dedicated landing page; user clarified the intent was full content overhaul of existing."
         }
       ],
       "targetType": "keyword-cluster",
