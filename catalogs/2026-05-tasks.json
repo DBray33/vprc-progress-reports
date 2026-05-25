@@ -366,12 +366,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-schema-validation",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Schema validation fixes applied across 8 key pages. Added missing 'provider' fields to 18 nested Service entries on index.html, residential-roof-repairs.html, and roof-replacement-installation.html. Added 'name' to root Service block + inlined name+address on SpecialAnnouncement on index.html. All 8 target pages now pass required-field validation."
         }
       ],
       "targetType": "site-wide",
@@ -432,12 +438,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-thin-content",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Expanded budget-roof-cost.html from 204 words to ~983 words: 7-factor cost breakdown grid, regional pricing context for PA, 5-question FAQ section, FAQPage schema mirroring the visible FAQ, internal links to financing options and hail damage steps blog. Updated title/meta to differentiate from instant-roof-quote page."
         }
       ],
       "targetType": "page-list",
@@ -562,12 +574,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-storm-content",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Substantively covered by existing blog content: blog/spring-storm-roof-damage-pennsylvania.html (1360 lines, comprehensive coverage of wind/hail/debris damage + insurance claim guidance + scam avoidance) and the new blog/post-storm-roof-inspection-guide-lehigh-valley.html (publishes 5/24, DIY ground-level inspection guide). Creating a third blog on the same topic would dilute SEO rather than help."
         }
       ],
       "targetType": "page",
@@ -598,12 +616,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-snippet-restructure",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Restructured blog/roof-repair-or-replace-guide.html: replaced 5 single-word H2s with 8 question-style H2s opening with 40-80 word direct answers, added decision-matrix table mapping situations to patch/repair/replace recommendation, rewrote FAQPage schema with 8 questions mirroring H2s for featured snippet eligibility."
         }
       ],
       "targetType": "page",
@@ -634,12 +658,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-topic-clusters",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Added 'From Our Blog' resource sections to 4 hub pages (roof-replacement-installation, residential-roof-repairs, siding-installation, commercial-roofing) creating hub-down topic-cluster linking with descriptive blurbs and CTAs. Gutter hub being redesigned in separate session; will mirror pattern when complete."
         }
       ],
       "targetType": "site-wide",
