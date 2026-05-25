@@ -15,12 +15,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-title-tag-audit",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page-list",
@@ -71,7 +77,7 @@
           "label": "Commercial roof repair emergency signs"
         }
       ],
-      "summary": "Even a 0.5pp CTR improvement on the 5,500 dormant impressions = ~25–30 additional clicks per month per page; across all 9 pages that's a meaningful chunk of the -30% click drop, with no new rankings required.",
+      "summary": "Even a 0.5pp CTR improvement on the 5,500 dormant impressions = ~25\u201330 additional clicks per month per page; across all 9 pages that's a meaningful chunk of the -30% click drop, with no new rankings required.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -83,7 +89,7 @@
     {
       "id": "black-streaks-2026-05",
       "slug": "black-streaks",
-      "title": "Black streaks blog post — improve CTR from position 10.5",
+      "title": "Black streaks blog post \u2014 improve CTR from position 10.5",
       "priority": 1,
       "priorityGroup": "Recover Click Volume",
       "category": "code-content",
@@ -91,12 +97,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-black-streaks",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page",
@@ -111,7 +123,7 @@
           "query": "black streaks on roof"
         }
       ],
-      "summary": "Specific high-impact instance of the broader striking-distance audit. Page is already at #10.5 — even modest CTR gains here unlock immediate clicks.",
+      "summary": "Specific high-impact instance of the broader striking-distance audit. Page is already at #10.5 \u2014 even modest CTR gains here unlock immediate clicks.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -132,12 +144,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-financing-push",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page",
@@ -148,7 +166,7 @@
           "label": "Roof financing options"
         }
       ],
-      "summary": "Position 13.8 → top 10 on a page with 2,298 monthly impressions could unlock 50–150 additional clicks per month from a high-intent audience.",
+      "summary": "Position 13.8 \u2192 top 10 on a page with 2,298 monthly impressions could unlock 50\u2013150 additional clicks per month from a high-intent audience.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -169,12 +187,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-replicate-birdsboro",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "site-wide",
@@ -215,7 +239,7 @@
           "label": "Whitehall (target)"
         }
       ],
-      "summary": "Birdsboro proved the template works (96 → 7). Rolling it across 5+ additional cities multiplies that win — each new city is potentially another double-digit-position lift on its own commercial keywords.",
+      "summary": "Birdsboro proved the template works (96 \u2192 7). Rolling it across 5+ additional cities multiplies that win \u2014 each new city is potentially another double-digit-position lift on its own commercial keywords.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -229,7 +253,7 @@
     {
       "id": "easton-page-2026-05",
       "slug": "easton-page",
-      "title": "Easton location page — add 800 words of neighborhood-specific content",
+      "title": "Easton location page \u2014 add 800 words of neighborhood-specific content",
       "priority": 1,
       "priorityGroup": "Recover Click Volume",
       "category": "code-content",
@@ -237,12 +261,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-easton-page",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page",
@@ -253,7 +283,7 @@
           "label": "Easton service area"
         }
       ],
-      "summary": "Replicates the Birdsboro success template (96.5 → 7.3) for another high-priority service area.",
+      "summary": "Replicates the Birdsboro success template (96.5 \u2192 7.3) for another high-priority service area.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -309,7 +339,7 @@
           "query": "rain gutter repair"
         }
       ],
-      "summary": "1–3% CTR on 12K+ impressions = 120–360 additional monthly clicks. Turns dormant impressions into a new lead source.",
+      "summary": "1\u20133% CTR on 12K+ impressions = 120\u2013360 additional monthly clicks. Turns dormant impressions into a new lead source.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -476,7 +506,7 @@
     {
       "id": "backlink-program-2026-05",
       "slug": "backlink-program",
-      "title": "Backlink building program — target 10–20 new backlinks per month",
+      "title": "Backlink building program \u2014 target 10\u201320 new backlinks per month",
       "priority": 4,
       "priorityGroup": "AI Visibility & Authority Building",
       "category": "manual-decisions",
@@ -505,7 +535,7 @@
           "target": ">= 25 by end of 2026"
         }
       ],
-      "summary": "DA 25–30 creates the authority buffer needed to hold marginal rankings against competitive pressure. Stops the slow keyword drift at its source.",
+      "summary": "DA 25\u201330 creates the authority buffer needed to hold marginal rankings against competitive pressure. Stops the slow keyword drift at its source.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -542,7 +572,7 @@
           "label": "Spring storm checklist (new)"
         }
       ],
-      "summary": "Captures leads from homeowners in the immediate post-storm buying window — the highest-intent moment in the roofing year.",
+      "summary": "Captures leads from homeowners in the immediate post-storm buying window \u2014 the highest-intent moment in the roofing year.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -639,7 +669,7 @@
           "label": "Hub: Commercial"
         }
       ],
-      "summary": "Topic clusters compound over time — the strongest sites in any niche use this pattern. Builds long-term topical authority.",
+      "summary": "Topic clusters compound over time \u2014 the strongest sites in any niche use this pattern. Builds long-term topical authority.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
@@ -659,12 +689,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-keyword-focus-list",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "keyword-cluster",
@@ -718,7 +754,7 @@
           "query": "roofers in allentown pa"
         }
       ],
-      "summary": "12 specific keywords picked for highest leverage — each has a concrete action (page rewrite, GBP post, portfolio feature, internal linking, dedicated landing page). Should produce measurable click gains within 30–45 days.",
+      "summary": "12 specific keywords picked for highest leverage \u2014 each has a concrete action (page rewrite, GBP post, portfolio feature, internal linking, dedicated landing page). Should produce measurable click gains within 30\u201345 days.",
       "result": null,
       "metricSnapshots": [],
       "tags": [
