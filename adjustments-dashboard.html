@@ -113,6 +113,7 @@ details summary::-webkit-details-marker { display: none; }
   </select>
   <input id="filter-search" type="search" placeholder="Search title, target page or keyword…">
   <button class="clear" onclick="document.querySelectorAll('.filter-bar select').forEach(s=>s.value='');document.getElementById('filter-search').value='';applyFilters();">Clear</button>
+  <div id="filter-count" style="margin-left: auto; font-size: 12px; color: rgba(235, 235, 245, 0.7);">Showing <span id="filter-count-visible">23</span> of <span id="filter-count-total">23</span></div>
 </div>
 
 <div class="cards" id="cards">
@@ -1137,26 +1138,52 @@ details summary::-webkit-details-marker { display: none; }
 
 <script>
 function applyFilters() {
-  const status = document.getElementById('filter-status').value;
-  const priority = document.getElementById('filter-priority').value;
-  const month = document.getElementById('filter-month').value;
-  const category = document.getElementById('filter-category').value;
-  const search = (document.getElementById('filter-search').value || '').toLowerCase().trim();
-  let visible = 0;
-  for (const card of document.querySelectorAll('.task-card')) {
-    let show = true;
-    if (status && card.dataset.status !== status) show = false;
-    if (priority && card.dataset.priority !== priority) show = false;
-    if (month && card.dataset.month !== month) show = false;
-    if (category && card.dataset.category !== category) show = false;
-    if (search && !card.dataset.search.includes(search)) show = false;
-    card.classList.toggle('hidden', !show);
-    if (show) visible++;
+  try {
+    const get = id => (document.getElementById(id) || {}).value || '';
+    const status = get('filter-status');
+    const priority = get('filter-priority');
+    const month = get('filter-month');
+    const category = get('filter-category');
+    const search = get('filter-search').toLowerCase().trim();
+    const cards = document.querySelectorAll('.task-card');
+    let visible = 0;
+    cards.forEach(card => {
+      let show = true;
+      if (status && (card.dataset.status || '') !== status) show = false;
+      if (priority && (card.dataset.priority || '') !== priority) show = false;
+      if (month && (card.dataset.month || '') !== month) show = false;
+      if (category && (card.dataset.category || '') !== category) show = false;
+      if (search && !(card.dataset.search || '').toLowerCase().includes(search)) show = false;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    const empty = document.getElementById('empty');
+    if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
+    const visEl = document.getElementById('filter-count-visible');
+    const totEl = document.getElementById('filter-count-total');
+    if (visEl) visEl.textContent = visible;
+    if (totEl) totEl.textContent = cards.length;
+  } catch (e) {
+    console.error('Filter error:', e);
   }
-  document.getElementById('empty').style.display = visible === 0 ? 'block' : 'none';
 }
-['filter-status','filter-priority','filter-month','filter-category'].forEach(id => document.getElementById(id).addEventListener('change', applyFilters));
-document.getElementById('filter-search').addEventListener('input', applyFilters);
+
+function wireFilters() {
+  ['filter-status', 'filter-priority', 'filter-month', 'filter-category'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', applyFilters);
+  });
+  const search = document.getElementById('filter-search');
+  if (search) search.addEventListener('input', applyFilters);
+  // Initialize counter on load
+  applyFilters();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', wireFilters);
+} else {
+  wireFilters();
+}
 
 // Back-to-top: visible after scrolling past 400px.
 const btt = document.getElementById('back-to-top');
