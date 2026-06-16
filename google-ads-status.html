@@ -121,6 +121,7 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
     </div>
 
     <div class="actions">
+      <button class="btn" id="saveBtn"><i class="fas fa-cloud-arrow-up"></i> Save now</button>
       <span id="saveStatus" class="save-status"><span class="sdot"></span> Loading your saved entries…</span>
     </div>
 
@@ -149,47 +150,81 @@ const KEY = "vprc-ads-status-v1";
 let store = {};
 try { store = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { store = {}; }
 
-function save() { localStorage.setItem(KEY, JSON.stringify(store)); }
-function get(id) { return store[id] || {}; }
-function set(id, k, v) { store[id] = store[id] || {}; store[id][k] = v; save(); queueSync(); }
-
-// ---- shared backend sync (Netlify function + Blobs); localStorage is the offline cache ----
-// Access is gated site-wide by netlify/edge-functions/gate.js; the backend
-// trusts that gate's cookie (sent automatically), so this page needs no
-// password of its own.
+// ---- persistence ----
+// localStorage is the authoritative on-device copy (written synchronously on
+// every edit, so nothing is ever lost on this device). The Netlify function +
+// Blobs store is the shared backup so entries follow Gunnar across devices.
+// Access is gated site-wide by netlify/edge-functions/gate.js and the backend
+// trusts that gate's cookie (sent automatically same-origin), so this page
+// needs no password of its own.
 const API = "/.netlify/functions/ads-status";
-function authHeaders(extra) { return Object.assign({}, extra || {}); }
-function setStatus(text, color, pulse) {
+let dirty = false;     // unsaved-to-server changes exist
+let saveTimer = null;
+
+function persistLocal() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+function get(id) { return store[id] || {}; }
+function set(id, k, v) {
+  store[id] = store[id] || {};
+  store[id][k] = v;
+  persistLocal();        // instant, reliable on-device save
+  dirty = true;
+  scheduleSave();        // push to the shared server (debounced)
+}
+
+function setSaveUI(state) {
   const e = document.getElementById("saveStatus");
   if (!e) return;
-  e.innerHTML = '<span class="sdot" style="background:' + (color || "rgba(235,235,245,0.4)") + '"></span> ' + text;
+  const map = {
+    saving:  ["rgba(10,132,255,0.9)", "Saving..."],
+    saved:   ["rgba(52,199,89,0.9)",  "All changes saved"],
+    offline: ["rgba(255,214,10,0.9)", "Saved on this device - will sync when back online"],
+    loading: ["rgba(235,235,245,0.4)", "Loading your saved entries..."],
+  };
+  const [color, text] = map[state] || map.saved;
+  e.innerHTML = '<span class="sdot" style="background:' + color + '"></span> ' + text;
 }
-async function syncDown() {
+
+function scheduleSave() {
+  setSaveUI("saving");
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveNow, 1000);
+}
+
+async function saveNow() {
+  clearTimeout(saveTimer);
+  if (!dirty) { setSaveUI("saved"); return true; }
+  setSaveUI("saving");
   try {
-    const r = await fetch(API, { cache: "no-store", headers: authHeaders() });
-    if (!r.ok) throw new Error("bad");
-    const server = await r.json();
-    for (const [id, f] of Object.entries(server || {})) store[id] = { ...(store[id] || {}), ...f };
-    save();
-    setStatus("All changes saved", "rgba(52,199,89,0.9)");
+    const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(store) });
+    if (!r.ok) throw new Error("save " + r.status);
+    dirty = false;
+    setSaveUI("saved");
+    return true;
   } catch (e) {
-    setStatus("Working offline — saved on this device, will sync when back online", "rgba(255,214,10,0.9)");
+    setSaveUI("offline");  // localStorage still holds everything; user can retry
+    return false;
   }
 }
-let syncTimer = null;
-function queueSync() {
-  setStatus("Saving…", "rgba(10,132,255,0.9)");
-  clearTimeout(syncTimer);
-  syncTimer = setTimeout(async () => {
-    try {
-      const r = await fetch(API, { method: "POST", headers: authHeaders({ "Content-Type": "application/json" }), body: JSON.stringify(store) });
-      if (!r.ok) throw new Error("bad");
-      setStatus("All changes saved", "rgba(52,199,89,0.9)");
-    } catch (e) {
-      setStatus("Saved on this device — could not reach the server, will retry", "rgba(255,214,10,0.9)");
+
+async function syncDown() {
+  try {
+    const r = await fetch(API, { cache: "no-store" });
+    if (!r.ok) throw new Error("load " + r.status);
+    const server = await r.json();
+    // Merge server into local with LOCAL-WINS: never discard an edit made on
+    // this device. The server only fills in fields this device doesn't have.
+    for (const [id, f] of Object.entries(server || {})) {
+      store[id] = Object.assign({}, f, store[id] || {});
     }
-  }, 800);
+    persistLocal();
+  } catch (e) { /* offline - keep the local copy */ }
 }
+
+// Nudge a manual Save if there are changes not yet pushed to the shared store
+// (localStorage already has them; this only matters for cross-device sync).
+window.addEventListener("beforeunload", (e) => {
+  if (dirty) { e.preventDefault(); e.returnValue = ""; }
+});
 function statusClass(s) { return s ? "s-" + s.replace(/[^A-Za-z]/g, "") : ""; }
 function num(v) { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) ? 0 : n; }
 function money(n) { return "$" + Math.round(n).toLocaleString(); }
@@ -228,7 +263,7 @@ function valueInput(lead) {
   const inp = document.createElement("input");
   inp.className = "val"; inp.type = "text"; inp.inputMode = "numeric";
   inp.placeholder = lead.estMid ? "est " + money(lead.estMid) : "$";
-  const s = get(lead.id); if (s.value) inp.value = s.value;
+  const s = get(lead.id); if (s.value !== undefined) inp.value = s.value;
   inp.addEventListener("input", () => { set(lead.id, "value", inp.value); recompute(); });
   return inp;
 }
@@ -283,6 +318,9 @@ function numCell(lead, colspan) {
 function render() {
   const ga = document.getElementById("gaTable");
   const lsa = document.getElementById("lsaTable");
+  // Idempotent: drop any previously-rendered rows (keep the header) so render()
+  // can safely run again after syncDown without duplicating rows.
+  for (const t of [ga, lsa]) { while (t.rows.length > 1) t.deleteRow(1); }
   for (const lead of LEADS) {
     const tr = document.createElement("tr");
     tr.id = "row-" + lead.id;
@@ -319,7 +357,15 @@ function render() {
   recompute();
 }
 
-async function init() { await syncDown(); render(); }
+async function init() {
+  const sb = document.getElementById("saveBtn");
+  if (sb) sb.addEventListener("click", saveNow);
+  render();                 // instant render from the on-device copy (never blank)
+  setSaveUI("loading");
+  await syncDown();         // reconcile with the shared server
+  render();                 // re-render with merged data
+  setSaveUI(dirty ? "offline" : "saved");
+}
 
 init();
 </script>
