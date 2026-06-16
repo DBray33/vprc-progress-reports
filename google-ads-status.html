@@ -61,6 +61,13 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
 #saveBtn.dirty:hover { background:linear-gradient(135deg,#3ddb66,#2aa049); transform:translateY(-1px); }
 @keyframes savePulse { 0%{box-shadow:0 0 0 0 rgba(52,199,89,0.55);} 50%{box-shadow:0 0 16px 3px rgba(52,199,89,0.65);} 100%{box-shadow:0 0 0 0 rgba(52,199,89,0);} }
 @media (prefers-reduced-motion: reduce) { #saveBtn.dirty { animation:none; box-shadow:0 0 14px 2px rgba(52,199,89,0.6); } }
+/* Floating, always-visible Save bar pinned to the top-right of the viewport. */
+#saveBar { position:fixed; top:14px; right:14px; z-index:1000; display:flex; align-items:center; gap:10px;
+  background:rgba(28,28,30,0.72); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border:0.5px solid rgba(255,255,255,0.12); border-radius:14px; padding:7px 8px 7px 14px; box-shadow:0 6px 24px rgba(0,0,0,0.45); }
+#saveBar .save-status { font-size:12px; white-space:nowrap; }
+#saveBar #saveBtn { padding:9px 16px; }
+@media (max-width:640px) { #saveBar { top:10px; right:10px; padding:6px; gap:6px; } #saveBar .save-status { display:none; } }
 .save-status { font-size:13px; color:rgba(235,235,245,0.6); display:inline-flex; align-items:center; gap:8px; }
 .save-status .sdot { width:9px; height:9px; border-radius:50%; background:rgba(235,235,245,0.4); display:inline-block; }
 .footer { text-align:center; padding:24px 16px 40px; font-size:12px; color:rgba(235,235,245,0.45); }
@@ -127,9 +134,9 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
       </div>
     </div>
 
-    <div class="actions">
-      <button class="btn" id="saveBtn" disabled><i class="fas fa-cloud-arrow-up"></i> Save changes</button>
+    <div id="saveBar">
       <span id="saveStatus" class="save-status"><span class="sdot"></span> Loading your saved entries…</span>
+      <button class="btn" id="saveBtn" disabled><i class="fas fa-cloud-arrow-up"></i> Save changes</button>
     </div>
 
     <h2>Search &amp; Phone Leads</h2>
