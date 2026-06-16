@@ -3,6 +3,8 @@
 //   ?src=cr&id=<callrail_call_id>     -> CallRail (looks up the recording, follows redirect)
 //   ?src=lsa&u=<attachment_url>       -> LSA (fetches the Google attachment with an OAuth token)
 // Always requires &pass=<VPRC_ADS_PASSWORD>.
+// Buffers the file and honors HTTP Range requests (206) so <audio> can load/seek/play
+// (Safari in particular refuses media served as a plain 200 with no length/range support).
 const PASS = process.env.VPRC_ADS_PASSWORD || "gunnar";
 const CALLRAIL_ACCT = "340673951";
 
@@ -38,14 +40,26 @@ export default async (request) => {
     } else {
       return new Response("bad src", { status: 400 });
     }
+
     const a = await fetch(audioUrl, { headers, redirect: "follow" });
     if (!a.ok) return new Response("upstream " + a.status, { status: 502 });
-    return new Response(a.body, {
-      headers: {
-        "Content-Type": a.headers.get("content-type") || "audio/mpeg",
-        "Cache-Control": "private, max-age=3600",
-      },
-    });
+    const ctype = a.headers.get("content-type") || "audio/mpeg";
+    const full = Buffer.from(await a.arrayBuffer());
+    const total = full.length;
+
+    const range = request.headers.get("range");
+    const base = { "Content-Type": ctype, "Accept-Ranges": "bytes", "Cache-Control": "private, max-age=3600" };
+    const m = range && range.match(/bytes=(\d*)-(\d*)/);
+    if (m) {
+      const start = m[1] ? parseInt(m[1], 10) : 0;
+      const end = m[2] ? parseInt(m[2], 10) : total - 1;
+      const slice = full.subarray(start, end + 1);
+      return new Response(slice, {
+        status: 206,
+        headers: { ...base, "Content-Range": `bytes ${start}-${end}/${total}`, "Content-Length": String(slice.length) },
+      });
+    }
+    return new Response(full, { status: 200, headers: { ...base, "Content-Length": String(total) } });
   } catch (e) {
     return new Response("error: " + e.message, { status: 500 });
   }
