@@ -67,10 +67,23 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
 .legend { display:flex; gap:14px; flex-wrap:wrap; font-size:11px; color:rgba(235,235,245,0.6); margin:6px 0 0 8px; }
 .legend span { display:inline-flex; align-items:center; gap:5px; }
 .dot { width:11px; height:11px; border-radius:3px; display:inline-block; }
+.gate { position:fixed; inset:0; background:#000; display:flex; align-items:center; justify-content:center; z-index:9999; padding:20px; }
+.gate-box { background:rgba(28,28,30,0.85); border:0.5px solid rgba(255,255,255,0.12); border-radius:16px; padding:28px; width:320px; max-width:100%; text-align:center; }
+.gate-box h2 { margin:0 0 6px; padding:0; }
+.gate-box input { width:100%; padding:11px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.18); background:rgba(58,58,60,0.5); color:#fff; font-size:15px; font-family:inherit; }
 </style>
 </head>
 <body>
-<div class="container">
+<div id="gate" class="gate">
+  <div class="gate-box">
+    <h2>Valley Peak Ads</h2>
+    <p style="color:rgba(235,235,245,0.6); font-size:13px; margin-bottom:14px;">Enter the password to view this page.</p>
+    <input id="gatePass" type="password" placeholder="Password" autocomplete="current-password" />
+    <button id="gateBtn" class="btn" style="width:100%; margin-top:12px;">Unlock</button>
+    <p id="gateErr" style="color:#FF453A; font-size:12px; margin-top:10px; display:none;">Incorrect password.</p>
+  </div>
+</div>
+<div class="container" id="app" style="display:none;">
   <div class="header">
     <a href="index.html" class="back-button"><i class="fas fa-chevron-left"></i> Reports Home</a>
     <h1>Google Ads &amp; Local Services</h1>
@@ -153,8 +166,16 @@ function save() { localStorage.setItem(KEY, JSON.stringify(store)); }
 function get(id) { return store[id] || {}; }
 function set(id, k, v) { store[id] = store[id] || {}; store[id][k] = v; save(); queueSync(); }
 
+// ---- password gate (deters casual access; real protection needs a paid Netlify plan) ----
+const GATE_PASS = "gunnar";
+function unlockApp() {
+  document.getElementById("gate").style.display = "none";
+  document.getElementById("app").style.display = "block";
+}
+
 // ---- shared backend sync (Netlify function + Blobs); localStorage is the offline cache ----
 const API = "/.netlify/functions/ads-status";
+function authHeaders(extra) { return Object.assign({ "x-vprc-pass": sessionStorage.getItem("vprc-pass") || "" }, extra || {}); }
 function setStatus(text, color, pulse) {
   const e = document.getElementById("saveStatus");
   if (!e) return;
@@ -162,7 +183,7 @@ function setStatus(text, color, pulse) {
 }
 async function syncDown() {
   try {
-    const r = await fetch(API, { cache: "no-store" });
+    const r = await fetch(API, { cache: "no-store", headers: authHeaders() });
     if (!r.ok) throw new Error("bad");
     const server = await r.json();
     for (const [id, f] of Object.entries(server || {})) store[id] = { ...(store[id] || {}), ...f };
@@ -178,7 +199,7 @@ function queueSync() {
   clearTimeout(syncTimer);
   syncTimer = setTimeout(async () => {
     try {
-      const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(store) });
+      const r = await fetch(API, { method: "POST", headers: authHeaders({ "Content-Type": "application/json" }), body: JSON.stringify(store) });
       if (!r.ok) throw new Error("bad");
       setStatus("All changes saved", "rgba(52,199,89,0.9)");
     } catch (e) {
@@ -315,7 +336,23 @@ function render() {
   recompute();
 }
 
-(async () => { await syncDown(); render(); })();
+async function init() { await syncDown(); render(); }
+
+(function gate() {
+  const inp = document.getElementById("gatePass");
+  const btn = document.getElementById("gateBtn");
+  const err = document.getElementById("gateErr");
+  if (sessionStorage.getItem("vprc-pass") === GATE_PASS) { unlockApp(); init(); return; }
+  function attempt() {
+    if (inp.value === GATE_PASS) {
+      sessionStorage.setItem("vprc-pass", inp.value);
+      unlockApp(); init();
+    } else { err.style.display = "block"; inp.select(); }
+  }
+  btn.addEventListener("click", attempt);
+  inp.addEventListener("keydown", (e) => { if (e.key === "Enter") attempt(); });
+  inp.focus();
+})();
 </script>
 </body>
 </html>

@@ -6,8 +6,13 @@ import { getStore } from "@netlify/blobs";
 
 const STORE = "vprc-ads-status";
 const KEY = "state";
+const PASS = process.env.VPRC_ADS_PASSWORD || "gunnar";
 
 export default async (request, context) => {
+  // gate every read/write on the shared password
+  if ((request.headers.get("x-vprc-pass") || "") !== PASS) {
+    return new Response("Unauthorized", { status: 401 });
+  }
   const store = getStore(STORE);
 
   if (request.method === "GET") {
