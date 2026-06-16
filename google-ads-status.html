@@ -34,7 +34,8 @@ table { width:100%; border-collapse:collapse; font-size:12.5px; }
 th { text-align:left; color:rgba(235,235,245,0.6); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.4px; padding:8px 6px; border-bottom:1px solid rgba(255,255,255,0.12); white-space:nowrap; }
 td { padding:7px 6px; border-bottom:0.5px solid rgba(255,255,255,0.07); vertical-align:middle; }
 th.r, td.r { text-align:right; }
-tr.lead-row { transition:background 0.2s; }
+tr.lead-row { transition:background 0.2s; cursor:pointer; }
+tr.lead-row:hover .numcell { text-decoration:underline; }
 .muted { color:rgba(235,235,245,0.5); }
 .numcell { cursor:pointer; white-space:nowrap; user-select:none; color:#0a84ff; font-weight:600; }
 .numcell .caret { display:inline-block; width:10px; transition:transform 0.15s; }
@@ -140,6 +141,7 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
     </div>
 
     <h2>Search &amp; Phone Leads</h2>
+    <p class="note">Click anywhere on a row to open its full details. Names can be edited - type over "Caller" once you know who it was.</p>
     <div class="card">
       <table id="gaTable">
         <tr><th>#</th><th>Date</th><th>Name</th><th>Contact</th><th>What they wanted</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
@@ -147,7 +149,7 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
     </div>
 
     <h2>Local Services Ads Leads</h2>
-    <p class="note">Mostly phone calls. Add a name if you remember the caller. Tap the number for details.</p>
+    <p class="note">Mostly phone calls. Add a name if you remember the caller. Click anywhere on a row to open its full details.</p>
     <div class="card">
       <table id="lsaTable">
         <tr><th>#</th><th>Date</th><th>Phone</th><th>Name</th><th class="r">Calls</th><th class="r">Talk</th><th>Charged</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
@@ -324,16 +326,18 @@ function buildDetailCell(lead, cols) {
 function tintRow(id, status) { const tr = document.getElementById("row-" + id); if (tr) tr.className = "lead-row " + statusClass(status); }
 function cell(text, cls) { const td = document.createElement("td"); if (cls) td.className = cls; td.textContent = text; return td; }
 function cellNode(node, cls) { const td = document.createElement("td"); if (cls) td.className = cls; td.appendChild(node); return td; }
+function toggleDetail(id) {
+  const det = document.getElementById("det-" + id);
+  if (!det) return;
+  const open = det.style.display === "table-row";
+  det.style.display = open ? "none" : "table-row";
+  const nc = document.querySelector("#row-" + id + " .numcell");
+  if (nc) nc.classList.toggle("open", !open);
+}
 function numCell(lead, colspan) {
   const td = document.createElement("td");
   td.className = "numcell";
   td.innerHTML = '<span class="caret">▸</span> ' + lead.num;
-  td.addEventListener("click", () => {
-    const det = document.getElementById("det-" + lead.id);
-    const open = det.style.display === "table-row";
-    det.style.display = open ? "none" : "table-row";
-    td.classList.toggle("open", !open);
-  });
   return td;
 }
 
@@ -347,6 +351,12 @@ function render() {
     const tr = document.createElement("tr");
     tr.id = "row-" + lead.id;
     tr.className = "lead-row " + statusClass(currentStatus(lead));
+    // Clicking anywhere on the row opens/closes its details, except when the
+    // click lands on an editable control (status, value, name) so those stay usable.
+    tr.addEventListener("click", (e) => {
+      if (e.target.closest("input, select, textarea, button, a, option")) return;
+      toggleDetail(lead.id);
+    });
     const cols = lead.section === "ga" ? 8 : 10;
     if (lead.section === "ga") {
       tr.appendChild(numCell(lead));
