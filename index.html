@@ -1380,10 +1380,16 @@ footer {
       </div>
 
       <div class="content">
-        <button class="copy-full-report-btn" onclick="copyFullReport()">
-          <i class="fas fa-copy"></i>
-          Copy Dashboard Summary
-        </button>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px;">
+          <button class="copy-full-report-btn" style="width:auto; flex:1 1 240px; margin-bottom:0;" onclick="copyFullReport()">
+            <i class="fas fa-copy"></i>
+            Copy Dashboard Summary
+          </button>
+          <a class="copy-full-report-btn" href="google-ads-status.html" style="width:auto; flex:1 1 240px; margin-bottom:0; text-decoration:none;">
+            <i class="fas fa-bullhorn"></i>
+            Google Ads &amp; LSA Status
+          </a>
+        </div>
 
         <div class="intro">
           <h2>PERFORMANCE REPORTS</h2>
@@ -1392,42 +1398,42 @@ footer {
         </div>
 
         <div class="stats-banner">
-          <h3>LATEST PERFORMANCE (APRIL 2026)</h3>
+          <h3>LATEST PERFORMANCE (MAY 2026)</h3>
           <div class="stats-grid">
-            <a href="reports/april-2026.html" class="stat-item">
-              <div class="stat-value">651</div>
+            <a href="reports/may-2026.html" class="stat-item">
+              <div class="stat-value">608</div>
               <div class="stat-label">Total Users</div>
               <div
                 class="stat-change negative"
-              >-1.5% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 661 in Mar</span></div>
+              >-6.6% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 651 in Apr</span></div>
             </a>
-            <a href="reports/april-2026.html" class="stat-item">
-              <div class="stat-value">166</div>
+            <a href="reports/may-2026.html" class="stat-item">
+              <div class="stat-value">190</div>
               <div class="stat-label">Organic Clicks</div>
               <div
-                class="stat-change negative"
-              >-30% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 237 in Mar</span></div>
+                class="stat-change positive"
+              >+14.5% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 166 in Apr</span></div>
             </a>
             <a
-              href="reports/april-2026.html#form-submissions"
+              href="reports/may-2026.html#form-submissions"
               class="stat-item"
             >
-              <div class="stat-value">17</div>
+              <div class="stat-value">24</div>
               <div class="stat-label">Form Submissions</div>
               <div
-                class="stat-change negative"
-              >-37% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 27 in Mar</span></div>
+                class="stat-change positive"
+              >+20% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 20 in Apr</span></div>
               
             </a>
             <a
-              href="reports/april-2026.html#keywords"
+              href="reports/may-2026.html#keywords"
               class="stat-item"
             >
-              <div class="stat-value">347</div>
+              <div class="stat-value">375</div>
               <div class="stat-label">Ranked Keywords</div>
               <div
-                class="stat-change negative"
-              >-6.5% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 371 in Mar</span></div>
+                class="stat-change positive"
+              >+3.3% <span style="color: rgba(235, 235, 245, 0.45); font-weight: 500;">vs 363 in Apr</span></div>
             </a>
           </div>
         </div>
@@ -1466,21 +1472,37 @@ footer {
           </div>
         </div>
 
-        <a href="adjustments-dashboard.html" style="display: flex; align-items: center; gap: 16px; background: linear-gradient(135deg, rgba(255, 214, 10, 0.18) 0%, rgba(255, 159, 10, 0.10) 100%); border: 1px solid rgba(255, 214, 10, 0.40); border-radius: 14px; padding: 18px 22px; text-decoration: none; margin: 24px 0 28px 0;">
-            <i class="fas fa-tasks" style="color: #FFD60A; font-size: 28px; flex-shrink: 0;"></i>
-            <div style="flex: 1;">
-                <div style="color: #FFD60A; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px;">Adjustments Dashboard</div>
-                <div style="color: rgba(235, 235, 245, 0.85); font-size: 13px; line-height: 1.5;">Cross-month view of every SEO task: status, priority, target metric trends, and what's working. Updated each report cycle.</div>
-            </div>
-            <span style="color: #FFD60A; font-size: 13px; font-weight: 600; white-space: nowrap;">Open dashboard →</span>
-        </a>
-
         <h2 class="section-title">MONTHLY REPORTS</h2>
         <div class="reports-grid">
-            <a href="reports/april-2026.html" class="report-card report-card-latest">
+            <a href="reports/may-2026.html" class="report-card report-card-latest">
               <span class="report-card-latest-badge">LATEST</span>
               <div class="report-month">
                 <i class="fas fa-file-alt" style="color: #34C759;"></i>
+                May 2026
+              </div>
+              <div class="report-date">
+                <i class="far fa-calendar"></i>
+                Reporting Period:
+                May 1-31, 2026
+              </div>
+              <div class="report-highlights">
+                <h4>KEY HIGHLIGHTS</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>190 organic clicks</strong> (+14.5%)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>375 keywords</strong> (+3.3%)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>24 form submissions</strong> (+20%)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>1 AI referral</strong> - AI converting</li>
+                </ul>
+              </div>
+              <div class="view-report">
+                View Full Report
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="reports/april-2026.html" class="report-card">
+              
+              <div class="report-month">
+                <i class="fas fa-file-alt"></i>
                 April 2026
               </div>
               <div class="report-date">
@@ -1492,8 +1514,8 @@ footer {
                 <h4>KEY HIGHLIGHTS</h4>
                 <ul>
                     <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>166 organic clicks</strong> (-30% - notable decline)</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>347 keywords</strong> (-6.5%)</li>
-                    <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>17 form submissions</strong> (-37% - notable decline)</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>363 keywords</strong> (-2.2%)</li>
+                    <li><i class="fas fa-exclamation-triangle" style="color: #FF9F0A;"></i> <strong>20 form submissions</strong> (-25.9% - notable decline)</li>
                     <li><i class="fas fa-check-circle"></i> <strong>46.6% engagement</strong> (+4.2pp)</li>
                 </ul>
               </div>
@@ -1648,7 +1670,6 @@ footer {
     </div>
 
     <footer>
-      <p>Prepared by Keystone Web Solutions</p>
       <p>Professional SEO & Digital Marketing Services</p>
     </footer>
 
@@ -1662,11 +1683,11 @@ footer {
       (function () {
       document.querySelectorAll('a[href^="#"]').forEach(function (anchor) { anchor.addEventListener('click', function (e) { var href = anchor.getAttribute('href'); if (href && href.length > 1) { e.preventDefault(); var t = document.querySelector(href); if (t) t.scrollIntoView({ behavior: 'smooth' }); } }); });
       var ctx = document.getElementById('clicksChart');
-      var clicksMax = 550; var impressionsMax = 109000;
+      var clicksMax = 550; var impressionsMax = 168000;
       // Per-month annotations shown as a footnote in the tooltip. Add entries
       // here as Google or another data source changes methodology over time.
       var monthNotes = { 'Sep 2025': 'GSC sampling changed by Google.' };
-      if (ctx && window.Chart) { new Chart(ctx, { type: 'bar', data: { labels: ["May 2025","Jun 2025","Jul 2025","Aug 2025","Sep 2025","Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026"], datasets: [{ type: 'bar', label: 'Organic Clicks', data: [152,92,123,91,102,136,170,135,252,365,237,166], backgroundColor: ["rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(52, 199, 89, 0.8)"], borderColor: ["rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(52, 199, 89, 1)"], borderWidth: 2, borderRadius: 8, yAxisID: 'yClicks', order: 2 }, { type: 'line', label: 'Impressions', data: [81175,73170,69214,90316,54640,37696,54490,70028,74413,78820,83032,87797], borderColor: 'rgba(255, 214, 10, 0.95)', backgroundColor: 'rgba(255, 214, 10, 0.12)', borderWidth: 2, pointBackgroundColor: 'rgba(255, 214, 10, 1)', pointBorderColor: 'rgba(255, 214, 10, 1)', pointRadius: 4, pointHoverRadius: 6, tension: 0.25, fill: false, yAxisID: 'yImpressions', order: 1 }] }, options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false }, plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(28, 28, 30, 0.95)', titleColor: '#ffffff', bodyColor: 'rgba(235, 235, 245, 0.9)', footerColor: 'rgba(255, 214, 10, 0.95)', footerFont: { size: 11, weight: '400', style: 'italic' }, footerMarginTop: 8, borderColor: 'rgba(255, 255, 255, 0.1)', borderWidth: 1, cornerRadius: 8, padding: 12, callbacks: { label: function (c) { var n = (c.parsed.y || 0).toLocaleString(); return c.dataset.label + ': ' + n; }, footer: function (items) { var label = items && items[0] && items[0].label; var note = monthNotes[label]; return note ? ['', '⚠ ' + note] : ''; } } } }, scales: { yClicks: { display: false, type: 'linear', position: 'left', beginAtZero: true, max: clicksMax }, yImpressions: { display: false, type: 'linear', position: 'right', beginAtZero: true, max: impressionsMax }, x: { grid: { display: false }, ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } } } } } }); }
+      if (ctx && window.Chart) { new Chart(ctx, { type: 'bar', data: { labels: ["Jun 2025","Jul 2025","Aug 2025","Sep 2025","Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026"], datasets: [{ type: 'bar', label: 'Organic Clicks', data: [92,123,91,102,136,170,135,252,365,237,166,190], backgroundColor: ["rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(10, 132, 255, 0.6)","rgba(52, 199, 89, 0.8)"], borderColor: ["rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(10, 132, 255, 1)","rgba(52, 199, 89, 1)"], borderWidth: 2, borderRadius: 8, yAxisID: 'yClicks', order: 2 }, { type: 'line', label: 'Impressions', data: [73170,69214,90316,54640,37696,54490,70028,74413,78820,83032,87797,139262], borderColor: 'rgba(255, 214, 10, 0.95)', backgroundColor: 'rgba(255, 214, 10, 0.12)', borderWidth: 2, pointBackgroundColor: 'rgba(255, 214, 10, 1)', pointBorderColor: 'rgba(255, 214, 10, 1)', pointRadius: 4, pointHoverRadius: 6, tension: 0.25, fill: false, yAxisID: 'yImpressions', order: 1 }] }, options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false }, plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(28, 28, 30, 0.95)', titleColor: '#ffffff', bodyColor: 'rgba(235, 235, 245, 0.9)', footerColor: 'rgba(255, 214, 10, 0.95)', footerFont: { size: 11, weight: '400', style: 'italic' }, footerMarginTop: 8, borderColor: 'rgba(255, 255, 255, 0.1)', borderWidth: 1, cornerRadius: 8, padding: 12, callbacks: { label: function (c) { var n = (c.parsed.y || 0).toLocaleString(); return c.dataset.label + ': ' + n; }, footer: function (items) { var label = items && items[0] && items[0].label; var note = monthNotes[label]; return note ? ['', '⚠ ' + note] : ''; } } } }, scales: { yClicks: { display: false, type: 'linear', position: 'left', beginAtZero: true, max: clicksMax }, yImpressions: { display: false, type: 'linear', position: 'right', beginAtZero: true, max: impressionsMax }, x: { grid: { display: false }, ticks: { color: 'rgba(235, 235, 245, 0.6)', font: { size: 11 } } } } } }); }
       var leftCtx = document.getElementById('leftAxisChart');
       if (leftCtx && window.Chart) { new Chart(leftCtx, { type: 'bar', data: { labels: [''], datasets: [{ data: [0], backgroundColor: 'rgba(0,0,0,0)', borderColor: 'rgba(0,0,0,0)' }] }, options: { responsive: true, maintainAspectRatio: false, animation: false, events: [], plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { y: { beginAtZero: true, max: clicksMax, position: 'left', grid: { display: false }, ticks: { color: 'rgba(10, 132, 255, 0.85)', font: { size: 11 } } }, x: { display: true, grid: { display: false }, ticks: { display: false }, border: { display: false } } } } }); }
       var rightCtx = document.getElementById('rightAxisChart');
@@ -1674,7 +1695,7 @@ footer {
       // Scroll the chart container all the way right so the most recent month is visible by default. Uses requestAnimationFrame so the scroll happens after Chart.js has laid out the canvas.
       var scroller = document.getElementById('chartScroll');
       if (scroller) { requestAnimationFrame(function () { scroller.scrollLeft = scroller.scrollWidth; }); }
-      window.copyFullReport = function () { var report = "VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY\n=============================================\n\nLATEST PERFORMANCE (APRIL 2026)\n"; navigator.clipboard.writeText(report).then(function () { var btn = document.querySelector('.copy-full-report-btn'); if (!btn) return; btn.classList.add('copied'); btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!'; setTimeout(function () { btn.classList.remove('copied'); btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary'; }, 2000); }); };
+      window.copyFullReport = function () { var report = "VALLEY PEAK ROOFING - SEO DASHBOARD SUMMARY\n=============================================\n\nLATEST PERFORMANCE (MAY 2026)\n"; navigator.clipboard.writeText(report).then(function () { var btn = document.querySelector('.copy-full-report-btn'); if (!btn) return; btn.classList.add('copied'); btn.innerHTML = '<i class="fas fa-check"></i> Copied to Clipboard!'; setTimeout(function () { btn.classList.remove('copied'); btn.innerHTML = '<i class="fas fa-copy"></i> Copy Dashboard Summary'; }, 2000); }); };
       })();
     </script>
   </body>

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-09T15:41:13.349Z",
+  "generated_at": "2026-06-16T13:04:09.580Z",
   "property": {
     "id": "valley-peak-roofing",
     "name": "Valley Peak Roofing Co.",
@@ -63,6 +63,14 @@
           "clicks": 0,
           "impressions": 1081,
           "position": 25.57,
+          "source": "GSC",
+          "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 0,
+          "impressions": 1495,
+          "position": 20.68,
           "source": "GSC",
           "targetCount": 1
         }
@@ -254,6 +262,14 @@
           "position": 30.4,
           "source": "GSC",
           "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 0,
+          "impressions": 1495,
+          "position": 29.35,
+          "source": "GSC",
+          "targetCount": 1
         }
       ],
       "tags": [
@@ -377,6 +393,14 @@
           "position": 43.63,
           "source": "GSC",
           "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 4,
+          "impressions": 35211,
+          "position": 36.27,
+          "source": "GSC",
+          "targetCount": 1
         }
       ],
       "tags": [
@@ -441,6 +465,14 @@
           "clicks": 0,
           "impressions": 1008,
           "position": 18.73,
+          "source": "GSC",
+          "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 0,
+          "impressions": 1092,
+          "position": 20.04,
           "source": "GSC",
           "targetCount": 1
         }
@@ -544,12 +576,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-title-tag-audit",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page-list",
@@ -610,6 +648,14 @@
           "position": 9.98,
           "source": "GSC",
           "targetCount": 9
+        },
+        {
+          "month": "2026-05",
+          "clicks": 7,
+          "impressions": 6763,
+          "position": 11.72,
+          "source": "GSC",
+          "targetCount": 8
         }
       ],
       "tags": [
@@ -629,12 +675,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-black-streaks",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page",
@@ -659,6 +711,14 @@
           "position": 10.6,
           "source": "GSC",
           "targetCount": 2
+        },
+        {
+          "month": "2026-05",
+          "clicks": 7,
+          "impressions": 3329,
+          "position": 10.98,
+          "source": "GSC",
+          "targetCount": 2
         }
       ],
       "tags": [
@@ -679,12 +739,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-financing-push",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page",
@@ -703,6 +769,14 @@
           "clicks": 4,
           "impressions": 2298,
           "position": 13.78,
+          "source": "GSC",
+          "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 11,
+          "impressions": 1708,
+          "position": 15.55,
           "source": "GSC",
           "targetCount": 1
         }
@@ -725,12 +799,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-replicate-birdsboro",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "site-wide",
@@ -781,6 +861,14 @@
           "position": 22.83,
           "source": "GSC",
           "targetCount": 7
+        },
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 10159,
+          "position": 22.36,
+          "source": "GSC",
+          "targetCount": 7
         }
       ],
       "tags": [
@@ -802,12 +890,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-easton-page",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "page",
@@ -826,6 +920,14 @@
           "clicks": 0,
           "impressions": 2199,
           "position": 14.92,
+          "source": "GSC",
+          "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 3460,
+          "position": 16.11,
           "source": "GSC",
           "targetCount": 1
         }
@@ -847,12 +949,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-gutter-overhaul",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Existing gutter-maintenance-installation.html overhauled: title/meta/H1 aligned to Birdsboro formula, 7 new image-rich content sections integrating new iStock images, inline font-size overrides removed, page-wide structure cleaned. Did not create a 'dedicated landing page' as catalog suggested because the existing page is already the dedicated landing page; user clarified the intent was full content overhaul of existing."
         }
       ],
       "targetType": "keyword-cluster",
@@ -893,6 +1001,14 @@
           "position": 44.89,
           "source": "GSC",
           "targetCount": 5
+        },
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 15124,
+          "position": 38.63,
+          "source": "GSC",
+          "targetCount": 5
         }
       ],
       "tags": [
@@ -913,12 +1029,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-schema-validation",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Schema validation fixes applied across 8 key pages. Added missing 'provider' fields to 18 nested Service entries on index.html, residential-roof-repairs.html, and roof-replacement-installation.html. Added 'name' to root Service block + inlined name+address on SpecialAnnouncement on index.html. All 8 target pages now pass required-field validation."
         }
       ],
       "targetType": "site-wide",
@@ -969,6 +1091,14 @@
           "position": 38.13,
           "source": "GSC",
           "targetCount": 6
+        },
+        {
+          "month": "2026-05",
+          "clicks": 17,
+          "impressions": 44003,
+          "position": 32.79,
+          "source": "GSC",
+          "targetCount": 6
         }
       ],
       "tags": [
@@ -988,12 +1118,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-thin-content",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Expanded budget-roof-cost.html from 204 words to ~983 words: 7-factor cost breakdown grid, regional pricing context for PA, 5-question FAQ section, FAQPage schema mirroring the visible FAQ, internal links to financing options and hail damage steps blog. Updated title/meta to differentiate from instant-roof-quote page."
         }
       ],
       "targetType": "page-list",
@@ -1012,6 +1148,14 @@
           "clicks": 0,
           "impressions": 1232,
           "position": 29.8,
+          "source": "GSC",
+          "targetCount": 1
+        },
+        {
+          "month": "2026-05",
+          "clicks": 2,
+          "impressions": 2353,
+          "position": 23.93,
           "source": "GSC",
           "targetCount": 1
         }
@@ -1127,12 +1271,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-storm-content",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Substantively covered by existing blog content: blog/spring-storm-roof-damage-pennsylvania.html (1360 lines, comprehensive coverage of wind/hail/debris damage + insurance claim guidance + scam avoidance) and the new blog/post-storm-roof-inspection-guide-lehigh-valley.html (publishes 5/24, DIY ground-level inspection guide). Creating a third blog on the same topic would dilute SEO rather than help."
         }
       ],
       "targetType": "page",
@@ -1163,12 +1313,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-snippet-restructure",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Restructured blog/roof-repair-or-replace-guide.html: replaced 5 single-word H2s with 8 question-style H2s opening with 40-80 word direct answers, added decision-matrix table mapping situations to patch/repair/replace recommendation, rewrote FAQPage schema with 8 questions mirroring H2s for featured snippet eligibility."
         }
       ],
       "targetType": "page",
@@ -1208,12 +1364,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-topic-clusters",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Added 'From Our Blog' resource sections to 4 hub pages (roof-replacement-installation, residential-roof-repairs, siding-installation, commercial-roofing) creating hub-down topic-cluster linking with descriptive blurbs and CTAs. Gutter hub being redesigned in separate session; will mirror pattern when complete."
         }
       ],
       "targetType": "site-wide",
@@ -1259,6 +1421,14 @@
           "position": 40.92,
           "source": "GSC",
           "targetCount": 5
+        },
+        {
+          "month": "2026-05",
+          "clicks": 6,
+          "impressions": 39885,
+          "position": 34.75,
+          "source": "GSC",
+          "targetCount": 5
         }
       ],
       "tags": [
@@ -1278,12 +1448,18 @@
       "sourceReport": "april-2026.html",
       "sourceReportLabel": "April 2026 Report",
       "sourceReportAnchor": "task-keyword-focus-list",
-      "status": "not_started",
+      "status": "completed",
       "statusHistory": [
         {
           "month": "2026-05",
           "status": "not_started",
           "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
         }
       ],
       "targetType": "keyword-cluster",
@@ -1347,6 +1523,14 @@
           "position": 7.02,
           "source": "GSC",
           "targetCount": 12
+        },
+        {
+          "month": "2026-05",
+          "clicks": 3,
+          "impressions": 11659,
+          "position": 18.22,
+          "source": "GSC",
+          "targetCount": 12
         }
       ],
       "tags": [
@@ -1355,6 +1539,1062 @@
         "gbp",
         "content",
         "internal-links",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "title-tag-audit-2026-06",
+      "slug": "title-tag-audit",
+      "title": "Rewrite title tags + meta descriptions on the 12 top-20 pages getting zero clicks",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-title-tag-audit",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-06",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        }
+      ],
+      "targetType": "page-list",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/residential-roof-repairs",
+          "label": "/residential-roof-repairs"
+        },
+        {
+          "type": "page",
+          "url": "/roof-replacement-installation",
+          "label": "/roof-replacement-installation"
+        },
+        {
+          "type": "page",
+          "url": "/instant-roof-quote",
+          "label": "/instant-roof-quote"
+        },
+        {
+          "type": "page",
+          "url": "/blog/roof-inspection-after-snowstorm-eastern-pa",
+          "label": "/blog/roof-inspection-after-snowstorm-eastern-pa"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-wind-gap-pa",
+          "label": "/service-areas/roofing-wind-gap-pa"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-whitehall-pa",
+          "label": "/service-areas/roofing-whitehall-pa"
+        },
+        {
+          "type": "page",
+          "url": "/blog/best-month-roof-replacement",
+          "label": "/blog/best-month-roof-replacement"
+        },
+        {
+          "type": "page",
+          "url": "/blog/can-roof-problem-wait-until-spring",
+          "label": "/blog/can-roof-problem-wait-until-spring"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-birdsboro-pa",
+          "label": "/service-areas/roofing-birdsboro-pa"
+        },
+        {
+          "type": "page",
+          "url": "/blog/winter-siding-installation-lehigh-valley",
+          "label": "/blog/winter-siding-installation-lehigh-valley"
+        },
+        {
+          "type": "page",
+          "url": "/roof-cost",
+          "label": "/roof-cost"
+        },
+        {
+          "type": "page",
+          "url": "/blog/roof-inspection-home-buying-bethlehem",
+          "label": "/blog/roof-inspection-home-buying-bethlehem"
+        }
+      ],
+      "summary": "Even a 0.5pp CTR improvement on the 9800 dormant impressions = a meaningful chunk of recovered clicks per month, with no new rankings required.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 0,
+          "impressions": 9807,
+          "position": 15.87,
+          "source": "GSC",
+          "targetCount": 12
+        }
+      ],
+      "tags": [
+        "ctr",
+        "title-tags",
+        "source:rule"
+      ]
+    },
+    {
+      "id": "gutter-cluster-recovery-2026-06",
+      "slug": "gutter-cluster-recovery",
+      "title": "Continue gutter cluster recovery — content + on-page improvements",
+      "priority": 2,
+      "priorityGroup": "Gutter Cluster Recovery",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-gutter-cluster-recovery",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-06",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        }
+      ],
+      "targetType": "keyword-cluster",
+      "targets": [
+        {
+          "type": "keyword",
+          "query": "gutter repair"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter repair near me"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter replacement"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter installation near me"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter installation services"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter repair services"
+        }
+      ],
+      "summary": "Gutter cluster still generating 35,195 monthly impressions with 2 clicks. Position improvements + content depth could unlock significant traffic.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 16598,
+          "position": 38.66,
+          "source": "GSC",
+          "targetCount": 6
+        }
+      ],
+      "tags": [
+        "content",
+        "gutter",
+        "source:rule"
+      ]
+    },
+    {
+      "id": "directory-citations-2026-06",
+      "slug": "directory-citations",
+      "title": "Build directory presence on Yelp, Angi, BBB, HomeAdvisor, Houzz",
+      "priority": 4,
+      "priorityGroup": "AI Visibility & Authority Building",
+      "category": "manual-decisions",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-directory-citations",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-06",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "external",
+          "label": "Yelp profile"
+        },
+        {
+          "type": "external",
+          "label": "Angi listing"
+        },
+        {
+          "type": "external",
+          "label": "BBB accreditation"
+        },
+        {
+          "type": "external",
+          "label": "HomeAdvisor pro page"
+        },
+        {
+          "type": "external",
+          "label": "Houzz professional profile"
+        }
+      ],
+      "summary": "Closing the ChatGPT visibility gap requires presence on third-party directories. Ongoing manual outreach effort.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "citations",
+        "ai-visibility",
+        "directories",
+        "ongoing",
+        "source:rule"
+      ]
+    },
+    {
+      "id": "keyword-focus-list-2026-06",
+      "slug": "keyword-focus-list",
+      "title": "Focus list: 12 high-potential keywords to push this month",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-keyword-focus-list",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-06",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        }
+      ],
+      "targetType": "keyword-cluster",
+      "targets": [
+        {
+          "type": "keyword",
+          "query": "roof replacement contractors"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing companies"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing contractors near me"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing contractor"
+        },
+        {
+          "type": "keyword",
+          "query": "roof replacement near me"
+        },
+        {
+          "type": "keyword",
+          "query": "roofers"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing business near me"
+        },
+        {
+          "type": "keyword",
+          "query": "shingle roofers"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing companies near me"
+        },
+        {
+          "type": "keyword",
+          "query": "free roofing estimate center valley pa"
+        },
+        {
+          "type": "keyword",
+          "query": "online estimates roofers near me"
+        },
+        {
+          "type": "keyword",
+          "query": "roof repair"
+        }
+      ],
+      "summary": "12 specific keywords picked for highest leverage — each has a concrete action (page rewrite, GBP post, portfolio feature, internal linking, dedicated landing page). Should produce measurable click gains within 30–45 days.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 3,
+          "impressions": 15648,
+          "position": 3.09,
+          "source": "GSC",
+          "targetCount": 12
+        }
+      ],
+      "tags": [
+        "keyword-focus",
+        "ctr",
+        "gbp",
+        "content",
+        "internal-links",
+        "source:rule"
+      ],
+      "recommended": [
+        [
+          "roof replacement contractors (1687 impr · pos 1.2 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roofing companies (1592 impr · pos 1.8 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ],
+        [
+          "roofing contractors near me (1693 impr · pos 2.2 · 2 clicks)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "roofing contractor (1318 impr · pos 1.5 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ],
+        [
+          "roof replacement near me (1268 impr · pos 2.4 · 0 clicks)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "roofers (1155 impr · pos 3.0 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ],
+        [
+          "roofing business near me (1133 impr · pos 1.1 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "shingle roofers (1101 impr · pos 1.1 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roofing companies near me (1784 impr · pos 3.4 · 1 click)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "free roofing estimate center valley pa (1282 impr · pos 6.3 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ],
+        [
+          "online estimates roofers near me (888 impr · pos 8.9 · 0 clicks)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "roof repair (747 impr · pos 9.2 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ]
+      ]
+    },
+    {
+      "id": "backlink-program-2026-06",
+      "slug": "backlink-program",
+      "title": "Backlink building program — target 10–20 new backlinks per month",
+      "priority": 4,
+      "priorityGroup": "AI Visibility & Authority Building",
+      "category": "manual-decisions",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-backlink-program",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-06",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "metric",
+          "label": "Referring domains (Moz)",
+          "target": ">= 100"
+        },
+        {
+          "type": "metric",
+          "label": "Domain Authority (Moz)",
+          "target": ">= 25"
+        }
+      ],
+      "summary": "DA growth requires consistent link acquisition. Ongoing monthly program.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "backlinks",
+        "authority",
+        "ongoing",
+        "source:rule"
+      ]
+    },
+    {
+      "id": "black-streaks-2026-06",
+      "slug": "black-streaks",
+      "title": "Black streaks blog post — improve CTR from position 10.5",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-black-streaks",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/black-streaks-on-roof-causes.html",
+          "label": "Black Streaks blog (.html)"
+        },
+        {
+          "type": "keyword",
+          "query": "black streaks on roof"
+        }
+      ],
+      "summary": "Specific high-impact instance of the broader striking-distance audit. Page is already at #10.5 — even modest CTR gains here unlock immediate clicks.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 7,
+          "impressions": 3329,
+          "position": 10.98,
+          "source": "GSC",
+          "targetCount": 2
+        }
+      ],
+      "tags": [
+        "ctr",
+        "title-tags",
+        "blog",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "financing-push-2026-06",
+      "slug": "financing-push",
+      "title": "Push the financing page to page one with content + internal-link work",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-financing-push",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/roof-financing-options",
+          "label": "Roof financing options"
+        }
+      ],
+      "summary": "Position 13.8 → top 10 on a page with 2,298 monthly impressions could unlock 50–150 additional clicks per month from a high-intent audience.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 11,
+          "impressions": 1708,
+          "position": 15.55,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "content",
+        "internal-links",
+        "financing",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "replicate-birdsboro-2026-06",
+      "slug": "replicate-birdsboro",
+      "title": "Audit Birdsboro/Hamburg winning formula + roll out to 5+ additional service area pages",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-replicate-birdsboro",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-birdsboro-pa",
+          "label": "Birdsboro (template source)"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-hamburg-pa",
+          "label": "Hamburg (template source)"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-easton-pa",
+          "label": "Easton (target)"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-allentown-pa",
+          "label": "Allentown (target)"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-coopersburg-pa",
+          "label": "Coopersburg (target)"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-macungie-pa",
+          "label": "Macungie (target)"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-whitehall-pa",
+          "label": "Whitehall (target)"
+        }
+      ],
+      "summary": "Birdsboro proved the template works (96 → 7). Rolling it across 5+ additional cities multiplies that win — each new city is potentially another double-digit-position lift on its own commercial keywords.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 10159,
+          "position": 22.36,
+          "source": "GSC",
+          "targetCount": 7
+        }
+      ],
+      "tags": [
+        "content",
+        "service-area",
+        "gbp",
+        "template-rollout",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "easton-page-2026-06",
+      "slug": "easton-page",
+      "title": "Easton location page — add 800 words of neighborhood-specific content",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-easton-page",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Implementation completed via Claude Code execution pass"
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-easton-pa",
+          "label": "Easton service area"
+        }
+      ],
+      "summary": "Replicates the Birdsboro success template (96.5 → 7.3) for another high-priority service area.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 3460,
+          "position": 16.11,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "content",
+        "service-area",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "gutter-overhaul-2026-06",
+      "slug": "gutter-overhaul",
+      "title": "Create dedicated gutter services landing page + full content overhaul",
+      "priority": 2,
+      "priorityGroup": "Gutter Cluster Recovery",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-gutter-overhaul",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Existing gutter-maintenance-installation.html overhauled: title/meta/H1 aligned to Birdsboro formula, 7 new image-rich content sections integrating new iStock images, inline font-size overrides removed, page-wide structure cleaned. Did not create a 'dedicated landing page' as catalog suggested because the existing page is already the dedicated landing page; user clarified the intent was full content overhaul of existing."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "keyword-cluster",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/gutter-repair-installation-lehigh-valley",
+          "label": "New gutter landing page"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter repair"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter repair near me"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter installation near me"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter replacement"
+        },
+        {
+          "type": "keyword",
+          "query": "rain gutter repair"
+        }
+      ],
+      "summary": "1–3% CTR on 12K+ impressions = 120–360 additional monthly clicks. Turns dormant impressions into a new lead source.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 1,
+          "impressions": 15124,
+          "position": 38.63,
+          "source": "GSC",
+          "targetCount": 5
+        }
+      ],
+      "tags": [
+        "content",
+        "gutter",
+        "new-page",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "schema-validation-2026-06",
+      "slug": "schema-validation",
+      "title": "Fix schema validation errors across 8 key pages",
+      "priority": 3,
+      "priorityGroup": "Technical Foundation",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-schema-validation",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Schema validation fixes applied across 8 key pages. Added missing 'provider' fields to 18 nested Service entries on index.html, residential-roof-repairs.html, and roof-replacement-installation.html. Added 'name' to root Service block + inlined name+address on SpecialAnnouncement on index.html. All 8 target pages now pass required-field validation."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/",
+          "label": "Homepage"
+        },
+        {
+          "type": "page",
+          "url": "/gutter-maintenance-installation",
+          "label": "Gutter page"
+        },
+        {
+          "type": "page",
+          "url": "/residential-roof-repairs",
+          "label": "Residential repairs"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-easton-pa",
+          "label": "Easton service area"
+        },
+        {
+          "type": "page",
+          "url": "/commercial-roofing",
+          "label": "Commercial roofing"
+        },
+        {
+          "type": "page",
+          "url": "/roof-replacement-lehigh-valley",
+          "label": "Roof replacement Lehigh Valley"
+        },
+        {
+          "type": "page",
+          "url": "/roof-financing-options",
+          "label": "Financing options"
+        }
+      ],
+      "summary": "Foundational fix that supports both CTR improvements (rich snippets) and AI visibility (cleaner data signals for AI agents).",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 17,
+          "impressions": 44003,
+          "position": 32.79,
+          "source": "GSC",
+          "targetCount": 6
+        }
+      ],
+      "tags": [
+        "schema",
+        "technical",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "thin-content-2026-06",
+      "slug": "thin-content",
+      "title": "Fix thin content and low text-to-HTML ratio on 6 pages",
+      "priority": 3,
+      "priorityGroup": "Technical Foundation",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-thin-content",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Expanded budget-roof-cost.html from 204 words to ~983 words: 7-factor cost breakdown grid, regional pricing context for PA, 5-question FAQ section, FAQPage schema mirroring the visible FAQ, internal links to financing options and hail damage steps blog. Updated title/meta to differentiate from instant-roof-quote page."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page-list",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/budget-roof-cost",
+          "label": "Budget roof cost"
+        }
+      ],
+      "summary": "Thin pages can't rank for the queries they target. Expanding gives the existing forms/calculators the editorial context they need.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 2,
+          "impressions": 2353,
+          "position": 23.93,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "content",
+        "technical",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "storm-content-2026-06",
+      "slug": "storm-content",
+      "title": "Spring storm roof inspection checklist for Eastern PA",
+      "priority": 5,
+      "priorityGroup": "Seasonal Content & Featured Snippets",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-storm-content",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Substantively covered by existing blog content: blog/spring-storm-roof-damage-pennsylvania.html (1360 lines, comprehensive coverage of wind/hail/debris damage + insurance claim guidance + scam avoidance) and the new blog/post-storm-roof-inspection-guide-lehigh-valley.html (publishes 5/24, DIY ground-level inspection guide). Creating a third blog on the same topic would dilute SEO rather than help."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/spring-storm-roof-inspection-checklist-eastern-pa",
+          "label": "Spring storm checklist (new)"
+        }
+      ],
+      "summary": "Captures leads from homeowners in the immediate post-storm buying window — the highest-intent moment in the roofing year.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "content",
+        "seasonal",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "snippet-restructure-2026-06",
+      "slug": "snippet-restructure",
+      "title": "Restructure roof repairs vs replacement page for featured snippets",
+      "priority": 5,
+      "priorityGroup": "Seasonal Content & Featured Snippets",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-snippet-restructure",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Restructured blog/roof-repair-or-replace-guide.html: replaced 5 single-word H2s with 8 question-style H2s opening with 40-80 word direct answers, added decision-matrix table mapping situations to patch/repair/replace recommendation, rewrote FAQPage schema with 8 questions mirroring H2s for featured snippet eligibility."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/roof-repair-or-replace-guide",
+          "label": "Roof repair vs replacement guide"
+        }
+      ],
+      "summary": "Featured snippet wins drive a step-change in click volume from existing rankings.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "content",
+        "snippets",
+        "2026-05"
+      ]
+    },
+    {
+      "id": "topic-clusters-2026-06",
+      "slug": "topic-clusters",
+      "title": "Create topic cluster linking strategy for roofing services",
+      "priority": 5,
+      "priorityGroup": "Seasonal Content & Featured Snippets",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-topic-clusters",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-05",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-05",
+          "status": "completed",
+          "date": "2026-05-25",
+          "note": "Added 'From Our Blog' resource sections to 4 hub pages (roof-replacement-installation, residential-roof-repairs, siding-installation, commercial-roofing) creating hub-down topic-cluster linking with descriptive blurbs and CTAs. Gutter hub being redesigned in separate session; will mirror pattern when complete."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/",
+          "label": "Hub: Homepage"
+        },
+        {
+          "type": "page",
+          "url": "/roof-replacement-lehigh-valley",
+          "label": "Hub: Roof Replacement"
+        },
+        {
+          "type": "page",
+          "url": "/residential-roof-repairs",
+          "label": "Hub: Roof Repair"
+        },
+        {
+          "type": "page",
+          "url": "/siding-installation",
+          "label": "Hub: Siding"
+        },
+        {
+          "type": "page",
+          "url": "/gutter-maintenance-installation",
+          "label": "Hub: Gutters"
+        },
+        {
+          "type": "page",
+          "url": "/commercial-roofing",
+          "label": "Hub: Commercial"
+        }
+      ],
+      "summary": "Topic clusters compound over time — the strongest sites in any niche use this pattern. Builds long-term topical authority.",
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-05",
+          "clicks": 6,
+          "impressions": 39885,
+          "position": 34.75,
+          "source": "GSC",
+          "targetCount": 5
+        }
+      ],
+      "tags": [
+        "internal-links",
+        "topical-authority",
         "2026-05"
       ]
     }
