@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valley Peak Roofing - Google Ads & LSA Status</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
+body { font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",sans-serif;
+  background:#000; color:#fff; min-height:100vh; font-size:15px; line-height:1.47; letter-spacing:-0.022em; }
+.container { max-width:1200px; margin:0 auto; }
+.header { background:rgba(28,28,30,0.5); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border:0.5px solid rgba(255,255,255,0.1); border-radius:16px; padding:16px; margin:16px 16px 0 16px; }
+.back-button { color:#0a84ff; text-decoration:none; font-size:17px; display:inline-flex; align-items:center; gap:6px; margin-bottom:12px; }
+.header h1 { font-size:28px; font-weight:700; letter-spacing:-0.5px; margin-bottom:4px; }
+.header p { font-size:13px; color:rgba(235,235,245,0.6); }
+.content { padding:16px; }
+h2 { font-size:20px; font-weight:700; margin:28px 0 14px 0; letter-spacing:-0.3px; padding-left:8px; }
+.stats-banner { background:rgba(28,28,30,0.5); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border:0.5px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px 16px; margin:16px 0; }
+.stats-banner h3 { margin-top:0; color:#0A84FF; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:16px; }
+.stat-item { background:rgba(58,58,60,0.3); border:0.5px solid rgba(255,255,255,0.1); border-radius:12px; padding:16px; text-align:center; }
+.stat-value { font-size:23px; font-weight:700; color:#fff; margin-bottom:4px; }
+.stat-label { font-size:11px; color:rgba(235,235,245,0.6); text-transform:uppercase; letter-spacing:0.5px; }
+.stat-note { font-size:10px; color:rgba(235,235,245,0.45); font-style:italic; margin-top:3px; }
+.card { background:rgba(28,28,30,0.5); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border:0.5px solid rgba(255,255,255,0.1); border-radius:16px; padding:16px; margin:16px 0; overflow-x:auto; }
+.note { font-size:12px; color:rgba(235,235,245,0.55); margin:2px 0 12px 8px; }
+table { width:100%; border-collapse:collapse; font-size:12.5px; }
+th { text-align:left; color:rgba(235,235,245,0.6); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.4px; padding:8px 6px; border-bottom:1px solid rgba(255,255,255,0.12); white-space:nowrap; }
+td { padding:7px 6px; border-bottom:0.5px solid rgba(255,255,255,0.07); vertical-align:middle; }
+th.r, td.r { text-align:right; }
+tr.lead-row { transition:background 0.2s; }
+.muted { color:rgba(235,235,245,0.5); }
+.numcell { cursor:pointer; white-space:nowrap; user-select:none; color:#0a84ff; font-weight:600; }
+.numcell .caret { display:inline-block; width:10px; transition:transform 0.15s; }
+.numcell.open .caret { transform:rotate(90deg); }
+.detail-row > td { background:rgba(10,10,12,0.55); color:rgba(235,235,245,0.8); font-size:12.5px; line-height:1.5; padding:12px 16px; }
+.detail-row .dtext { white-space:pre-wrap; }
+.detail-row textarea { width:100%; min-height:74px; margin-top:2px; background:rgba(58,58,60,0.5); color:#fff; border:1px solid rgba(255,255,255,0.18); border-radius:8px; padding:8px 10px; font-family:inherit; font-size:12.5px; line-height:1.5; resize:vertical; }
+.edit-detail-btn { margin-top:8px; background:rgba(58,58,60,0.5); border:1px solid rgba(255,255,255,0.18); color:#0a84ff; border-radius:7px; padding:4px 11px; font-size:12px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
+.edit-detail-btn:hover { border-color:rgba(10,132,255,0.5); }
+select.status, input.val, input.nm { background:rgba(58,58,60,0.5); color:#fff; border:1px solid rgba(255,255,255,0.18);
+  border-radius:7px; padding:5px 7px; font-size:12.5px; font-family:inherit; width:100%; }
+input.val { text-align:right; }
+select.status:focus, input.val:focus, input.nm:focus { outline:none; border-color:#0a84ff; }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 4px 0; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,rgba(10,132,255,0.3),rgba(99,102,241,0.3));
+  border:1px solid rgba(10,132,255,0.4); border-radius:12px; padding:12px 18px; color:#fff; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.2s; }
+.btn:hover { background:linear-gradient(135deg,rgba(10,132,255,0.5),rgba(99,102,241,0.5)); transform:translateY(-1px); }
+.btn.copied { background:linear-gradient(135deg,rgba(52,199,89,0.4),rgba(52,199,89,0.3)); border-color:rgba(52,199,89,0.6); }
+.btn.ghost { background:rgba(58,58,60,0.4); border-color:rgba(255,255,255,0.18); }
+.save-status { font-size:13px; color:rgba(235,235,245,0.6); display:inline-flex; align-items:center; gap:8px; }
+.save-status .sdot { width:9px; height:9px; border-radius:50%; background:rgba(235,235,245,0.4); display:inline-block; }
+.footer { text-align:center; padding:24px 16px 40px; font-size:12px; color:rgba(235,235,245,0.45); }
+.footer a { color:rgba(235,235,245,0.7); }
+.s-Won { background:rgba(52,199,89,0.16); }
+.s-Open { background:rgba(255,214,10,0.14); }
+.s-Lost { background:rgba(255,69,58,0.15); }
+.s-Cold { background:rgba(142,142,147,0.16); }
+.s-New { background:rgba(10,132,255,0.16); }
+.s-NotanadLead { background:rgba(142,142,147,0.16); }
+.legend { display:flex; gap:14px; flex-wrap:wrap; font-size:11px; color:rgba(235,235,245,0.6); margin:6px 0 0 8px; }
+.legend span { display:inline-flex; align-items:center; gap:5px; }
+.dot { width:11px; height:11px; border-radius:3px; display:inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <a href="index.html" class="back-button"><i class="fas fa-chevron-left"></i> Reports Home</a>
+    <h1>Google Ads &amp; Local Services</h1>
+    <p>Lead status and value tracker. Tap a lead number to see full details. Set the status and enter what the job was (or would have been) worth. Your entries save automatically on this device.</p>
+  </div>
+  <div class="content">
+
+    <div class="stats-banner">
+      <h3>Spend vs. Value</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">$9,910</div>
+          <div class="stat-label">Total Ad Spend</div>
+          <div class="stat-note">Google $7,740 + LSA ~$2,170</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="cardAdsEst">$0</div>
+          <div class="stat-label">Ads Manager Est. Revenue</div>
+          <div class="stat-note">Ads manager estimate, all leads</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="cardVprcEst">$0</div>
+          <div class="stat-label">VPRC Est. Value</div>
+          <div class="stat-note">Your values, all leads</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="cardEarned">$0</div>
+          <div class="stat-label">Earned (Won jobs)</div>
+          <div class="stat-note">Your value on Won leads</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="cardNet">$0</div>
+          <div class="stat-label">Net vs. Spend</div>
+          <div class="stat-note">Earned minus total spend</div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="dot" style="background:rgba(52,199,89,0.7)"></span>Won</span>
+        <span><span class="dot" style="background:rgba(255,214,10,0.7)"></span>Open</span>
+        <span><span class="dot" style="background:rgba(255,69,58,0.7)"></span>Lost</span>
+        <span><span class="dot" style="background:rgba(142,142,147,0.7)"></span>Cold / N/A</span>
+        <span><span class="dot" style="background:rgba(10,132,255,0.7)"></span>New</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <span id="saveStatus" class="save-status"><span class="sdot"></span> Loading your saved entries…</span>
+    </div>
+
+    <h2>Search &amp; Phone Leads</h2>
+    <div class="card">
+      <table id="gaTable">
+        <tr><th>#</th><th>Date</th><th>Name</th><th>Contact</th><th>What they wanted</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
+      </table>
+    </div>
+
+    <h2>Local Services Ads Leads</h2>
+    <p class="note">Mostly phone calls. Add a name if you remember the caller. Tap the number for details.</p>
+    <div class="card">
+      <table id="lsaTable">
+        <tr><th>#</th><th>Date</th><th>Phone</th><th>Name</th><th class="r">Calls</th><th class="r">Talk</th><th>Charged</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
+      </table>
+    </div>
+
+    <div class="footer">
+      Website by <a href="https://keystonewebsolutions.com" target="_blank">Keystone Web Solutions</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const SPEND_TOTAL = 9910;
+const LEADS = [{"id":"ga1","section":"ga","num":"1","date":"Apr 6","name":"Rita Gleason","contact":"(610) 504-4404","desc":"Siding piece off front of row home","est":"$150-500","estMid":325,"status":"Lost","details":"Form (siding). Message: “Part of siding came off of top front of house right under the roof of my row home.” Small row-home siding patch. Gunnar: not worth it."},{"id":"ga2","section":"ga","num":"2","date":"Apr 13","name":"Jason Brendlinger","contact":"(484) 955-4648","desc":"Missing shingles + dormer; full replacement quote out","est":"$360-18,500","estMid":9430,"status":"Open","details":"Form, Free Inspection, Coopersburg 18036. Message: “I'm missing a couple of shingles and my dormer has some shingles missing on the sides.” Gunnar: inspected late Apr and gave a FULL REPLACEMENT quote, no response yet. Kat following up."},{"id":"ga3","section":"ga","num":"3","date":"May 6","name":"Diane","contact":"(914) 786-2574","desc":"Certified roofer + written estimate","est":"$360-1,750","estMid":1055,"status":"Lost","details":"Form, Roof Repair, Whitehall 18052. Message: “I need a certified roofer saying what needs to be done and a written estimate.” Gunnar: never reached her (was in Hawaii, got back too late)."},{"id":"ga4","section":"ga","num":"4","date":"May 6","name":"Dewayne Lewis","contact":"(484) 861-8977","desc":"Roof replacement; patio leak","est":"$9,000-18,500","estMid":13750,"status":"Open","details":"Form, Roof Replacement, Whitehall 18052. Message: “Roof needs to be replaced and leaks in the padio.” Gunnar: full replacement estimate out, no response yet."},{"id":"ga5","section":"ga","num":"5","date":"May 12","name":"David Platt","contact":"(484) 894-0888","desc":"8x11 shed roof replacement","est":"$350-1,200","estMid":775,"status":"Open","details":"Form, Roof Replacement, Wescosville 18106. Message: “Replace the roof on an 8' x 11' shed.” Within 1 month. Gunnar: shed roof replacement quoted, no response."},{"id":"ga6","section":"ga","num":"6","date":"May 14","name":"Quakertown caller","contact":"(267) 374-0572","desc":"Metal awning over front steps (voicemail)","est":"$475-1,250","estMid":863,"status":"Lost","details":"Phone (CallRail), 1m10s to voicemail. Wanted a metal roof awning over the front steps. Gunnar texted a callback, never heard back."},{"id":"ga7","section":"ga","num":"7","date":"May 16","name":"Diane Folland","contact":"(484) 602-7207","desc":"Zinc strip ripping off; wants inspection","est":"$150-750","estMid":450,"status":"Lost","details":"Form, Free Inspection, Orefield 18069. Message: “I believe zinc strip is ripping off roof and not sure if any damage. Would like a roof check and estimate. Don't want a small issue becoming a big issue!” Gunnar: called to schedule, never heard back."},{"id":"ga8","section":"ga","num":"8","date":"May 22","name":"Dolores Jandris","contact":"(610) 703-6557","desc":"Wind damage, missing shingles (Erie referral)","est":"$500-2,500","estMid":1500,"status":"Lost","details":"Form, Roof Repair, Whitehall 18052. Message: “Your name was given by my Erie adjuster. We have missing shingles from wind and some loose. We were told it doesn't reach our deductible so we must pay.” Gunnar: sent a repair estimate, never heard back, thinks price was too high."},{"id":"ga9","section":"ga","num":"9","date":"May 24","name":"Barry George","contact":"(484) 264-3225","desc":"Replacement, TWO properties","est":"$18,000-37,000","estMid":27500,"status":"Open","details":"Form, Roof Replacement, Wescosville 18106. Message: “I have two properties to look at, please call me to set up a time.” Gunnar: MET with him, good lead, two estimates out for two separate properties."},{"id":"ga10","section":"ga","num":"10","date":"May 24","name":"Herminio Cameron","contact":"(484) 560-4140","desc":"Roof repair, no details given","est":"$360-1,750","estMid":1055,"status":"Cold","details":"Form, Roof Repair, Allentown 18102. No message left. Gunnar: no notes, thinks he called with no response, never met. Kat following up."},{"id":"ga11","section":"ga","num":"11","date":"Jun 6","name":"Mclaughlin C.","contact":"(484) 274-1793","desc":"Phone: searched new roof installation","est":"$9,000-18,500","estMid":13750,"status":"Open","details":"Phone (CallRail), 36s. Searched “new roof installation,” called but no real conversation, then revisited the roof replacement page the next morning. Warm, flagged for callback."},{"id":"ga12","section":"ga","num":"12","date":"Jun 10","name":"Caller","contact":"(484) 707-4693","desc":"Phone: short / unclear call","est":"$360-1,750","estMid":1055,"status":"Cold","details":"Phone (CallRail), 32s. Gunnar answered, caller mumbling, possible butt dial. Flagged for callback."},{"id":"ga13","section":"ga","num":"13","date":"Jun 10","name":"Caller","contact":"(914) 438-1190","desc":"Existing customer - NOT from the ad","est":"n/a","estMid":0,"status":"Not an ad lead","details":"Phone (ad call button), 6m06s. NOT an ad-originated lead: she was already a customer via the instant quote tool ~10 days earlier and signed a full replacement. The ad just billed us for a call from an existing customer."},{"id":"ga14","section":"ga","num":"14","date":"Jun 11","name":"Caller","contact":"(610) 428-1331","desc":"Phone: small siding repair","est":"$300-1,500","estMid":900,"status":"Open","details":"Phone (ad call button), 5m18s. Small siding repair. Gunnar going out to look and estimate."},{"id":"ga15","section":"ga","num":"15","date":"May 16","name":"Caller","contact":"(610) 413-4006","desc":"Phone: short ad call","est":"$360-1,750","estMid":1055,"status":"Cold","details":"Phone (ad call button), 41s, May 16. Short call, local 610 number."},{"id":"ga16","section":"ga","num":"16","date":"Apr 15","name":"Caller","contact":"number not retained","desc":"Phone: 3-min ad call (older)","est":"$360-1,750","estMid":1055,"status":"Cold","details":"Phone (ad call button), 3m08s, Apr 15. Real conversation; full number lost to Google's retention window (484 local area code)."},{"id":"ga17","section":"ga","num":"17","date":"Jun 13","name":"Sara Sommer","contact":"(814) 330-5669","desc":"Bad prior storm repair redo + vent issue","est":"$360-3,500","estMid":1930,"status":"New","details":"Form, Roof Repair, Whitehall 18052, searched “roofing company near me.” Message: “Roof and siding was repaired after a storm 5-10 years ago and wasn't correctly done. Also another exterior vent issue around the siding.” 814 area code (Altoona/Central PA, likely relocated)."},{"id":"ga18","section":"ga","num":"18","date":"Jun 15","name":"Stephen Rohrb","contact":"(610) 967-4420","desc":"Phone: ~20yr roof, needs replacement","est":"$9,000-18,500","estMid":13750,"status":"New","details":"Phone (CallRail), 6m36s, Emmaus. Widow, retired, recently bought the home. ~20-year-old roof with shingles missing; transcript flags “roof replacement.” Qualified, answered by Gunnar."},{"id":"lsa1","section":"lsa","num":"1","date":"2026-06-11","phone":"+16107463368","name":"","calls":"2","talk":"8:03","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 2 call(s), total talk 8:03. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa2","section":"lsa","num":"2","date":"2026-06-08","phone":"+19089635551","name":"","calls":"1","talk":"2:52","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 2:52. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa3","section":"lsa","num":"3","date":"2026-05-27","phone":"+17177080410","name":"","calls":"1","talk":"5:34","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 5:34. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa4","section":"lsa","num":"4","date":"2026-05-08","phone":"+16104516878","name":"","calls":"1","talk":"5:50","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 5:50. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa5","section":"lsa","num":"5","date":"2026-05-04","phone":"+15706914666","name":"","calls":"1","talk":"0:06","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:06. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa6","section":"lsa","num":"6","date":"2026-04-29","phone":"+12012406122","name":"","calls":"1","talk":"0:46","charged":"Yes","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:46. Charged by Google. Ads manager estimate: — (short call, no value assigned). Call recording is in the internal dashboard."},{"id":"lsa7","section":"lsa","num":"7","date":"2026-04-28","phone":"+14843028488","name":"","calls":"0","talk":"","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 0 call(s), total talk 0:00. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa8","section":"lsa","num":"8","date":"2026-04-23","phone":"+16102821100","name":"","calls":"1","talk":"0:11","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:11. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa9","section":"lsa","num":"9","date":"2026-04-21","phone":"+14848025545","name":"","calls":"1","talk":"7:39","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 7:39. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa10","section":"lsa","num":"10","date":"2026-04-17","phone":"+13059844147","name":"","calls":"1","talk":"2:04","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 2:04. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa11","section":"lsa","num":"11","date":"2026-04-15","phone":"+13476830590","name":"","calls":"1","talk":"","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:00. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa12","section":"lsa","num":"12","date":"2026-04-13","phone":"+13479480165","name":"","calls":"1","talk":"0:16","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:16. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa13","section":"lsa","num":"13","date":"2026-04-06","phone":"+14845414838","name":"","calls":"4","talk":"8:04","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 4 call(s), total talk 8:04. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa14","section":"lsa","num":"14","date":"2026-02-10","phone":"+19082055091","name":"","calls":"1","talk":"0:07","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:07. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa15","section":"lsa","num":"15","date":"2026-02-10","phone":"+16107517114","name":"","calls":"2","talk":"0:39","charged":"Yes","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 2 call(s), total talk 0:39. Charged by Google. Ads manager estimate: — (short call, no value assigned). Call recording is in the internal dashboard."},{"id":"lsa16","section":"lsa","num":"16","date":"2026-02-04","phone":"+16105976615","name":"","calls":"1","talk":"1:47","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 1:47. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa17","section":"lsa","num":"17","date":"2026-02-03","phone":"+16109054131","name":"","calls":"1","talk":"1:59","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 1:59. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa18","section":"lsa","num":"18","date":"2026-02-02","phone":"+17045771455","name":"","calls":"1","talk":"2:37","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 2:37. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa19","section":"lsa","num":"19","date":"2026-01-26","phone":"","name":"","calls":"1","talk":"0:11","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:11. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa20","section":"lsa","num":"20","date":"2026-01-16","phone":"+19735176866","name":"","calls":"1","talk":"1:50","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 1:50. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa21","section":"lsa","num":"21","date":"2026-01-14","phone":"+16105978323","name":"","calls":"2","talk":"4:00","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 2 call(s), total talk 4:00. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa22","section":"lsa","num":"22","date":"2026-01-08","phone":"+18573840409","name":"","calls":"1","talk":"3:22","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 3:22. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa23","section":"lsa","num":"23","date":"2026-01-07","phone":"+14848281683","name":"","calls":"1","talk":"3:46","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 3:46. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa24","section":"lsa","num":"24","date":"2025-12-30","phone":"+14845771855","name":"","calls":"2","talk":"15:41","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 2 call(s), total talk 15:41. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa25","section":"lsa","num":"25","date":"2025-12-30","phone":"+16104170603","name":"","calls":"1","talk":"0:43","charged":"Yes","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:43. Charged by Google. Ads manager estimate: — (short call, no value assigned). Call recording is in the internal dashboard."},{"id":"lsa26","section":"lsa","num":"26","date":"2025-12-01","phone":"+14842746994","name":"","calls":"1","talk":"5:08","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 5:08. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa27","section":"lsa","num":"27","date":"2025-11-12","phone":"+12154782807","name":"","calls":"1","talk":"1:58","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 1:58. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa28","section":"lsa","num":"28","date":"2025-10-21","phone":"+16105339585","name":"","calls":"1","talk":"0:50","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:50. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa29","section":"lsa","num":"29","date":"2025-10-20","phone":"+16103903364","name":"","calls":"2","talk":"2:47","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 2 call(s), total talk 2:47. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa30","section":"lsa","num":"30","date":"2025-10-14","phone":"+16104427493","name":"","calls":"1","talk":"3:59","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 3:59. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa31","section":"lsa","num":"31","date":"2025-10-13","phone":"+14847355551","name":"","calls":"1","talk":"0:56","charged":"Yes","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:56. Charged by Google. Ads manager estimate: — (short call, no value assigned). Call recording is in the internal dashboard."},{"id":"lsa32","section":"lsa","num":"32","date":"2025-10-08","phone":"+12023558985","name":"Shail Shah","calls":"0","talk":"","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead from Shail Shah. 0 call(s), total talk 0:00. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa33","section":"lsa","num":"33","date":"2025-10-07","phone":"+12154595689","name":"","calls":"1","talk":"2:36","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 2:36. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa34","section":"lsa","num":"34","date":"2025-09-18","phone":"","name":"","calls":"0","talk":"","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 0 call(s), total talk 0:00. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa35","section":"lsa","num":"35","date":"2025-09-05","phone":"+16104629689","name":"","calls":"3","talk":"5:12","charged":"Yes","est":"$9,000-18,500","estMid":13750,"status":"","details":"Local Services Ad phone lead. 3 call(s), total talk 5:12. Charged by Google. Ads manager estimate: $9,000-18,500 (long call, treated as replacement-grade). Call recording is in the internal dashboard."},{"id":"lsa36","section":"lsa","num":"36","date":"2025-09-01","phone":"","name":"","calls":"0","talk":"","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 0 call(s), total talk 0:00. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."},{"id":"lsa37","section":"lsa","num":"37","date":"2025-08-13","phone":"+16098203363","name":"","calls":"1","talk":"1:24","charged":"Yes","est":"$360-1,750","estMid":1055,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 1:24. Charged by Google. Ads manager estimate: $360-1,750 (treated as repair-grade). Call recording is in the internal dashboard."},{"id":"lsa38","section":"lsa","num":"38","date":"2025-07-29","phone":"+12059010401","name":"","calls":"1","talk":"0:12","charged":"No","est":"—","estMid":0,"status":"","details":"Local Services Ad phone lead. 1 call(s), total talk 0:12. Not charged. Ads manager estimate: — (not charged by Google). Call recording is in the internal dashboard."}];
+const STATUSES = ["", "Won", "Open", "Lost", "Cold", "New", "Not an ad lead"];
+const KEY = "vprc-ads-status-v1";
+let store = {};
+try { store = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { store = {}; }
+
+function save() { localStorage.setItem(KEY, JSON.stringify(store)); }
+function get(id) { return store[id] || {}; }
+function set(id, k, v) { store[id] = store[id] || {}; store[id][k] = v; save(); queueSync(); }
+
+// ---- shared backend sync (Netlify function + Blobs); localStorage is the offline cache ----
+const API = "/.netlify/functions/ads-status";
+function setStatus(text, color, pulse) {
+  const e = document.getElementById("saveStatus");
+  if (!e) return;
+  e.innerHTML = '<span class="sdot" style="background:' + (color || "rgba(235,235,245,0.4)") + '"></span> ' + text;
+}
+async function syncDown() {
+  try {
+    const r = await fetch(API, { cache: "no-store" });
+    if (!r.ok) throw new Error("bad");
+    const server = await r.json();
+    for (const [id, f] of Object.entries(server || {})) store[id] = { ...(store[id] || {}), ...f };
+    save();
+    setStatus("All changes saved", "rgba(52,199,89,0.9)");
+  } catch (e) {
+    setStatus("Working offline — saved on this device, will sync when back online", "rgba(255,214,10,0.9)");
+  }
+}
+let syncTimer = null;
+function queueSync() {
+  setStatus("Saving…", "rgba(10,132,255,0.9)");
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(async () => {
+    try {
+      const r = await fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(store) });
+      if (!r.ok) throw new Error("bad");
+      setStatus("All changes saved", "rgba(52,199,89,0.9)");
+    } catch (e) {
+      setStatus("Saved on this device — could not reach the server, will retry", "rgba(255,214,10,0.9)");
+    }
+  }, 800);
+}
+function statusClass(s) { return s ? "s-" + s.replace(/[^A-Za-z]/g, "") : ""; }
+function num(v) { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) ? 0 : n; }
+function money(n) { return "$" + Math.round(n).toLocaleString(); }
+function currentStatus(lead) { const s = get(lead.id); return s.status !== undefined ? s.status : lead.status; }
+function vprcValue(lead) { const s = get(lead.id); return s.value ? num(s.value) : 0; }
+
+function recompute() {
+  let adsEst = 0, vprcEst = 0, earned = 0;
+  for (const lead of LEADS) {
+    const st = currentStatus(lead);
+    if (st !== "Not an ad lead") { adsEst += (lead.estMid || 0); vprcEst += vprcValue(lead); }
+    if (st === "Won") earned += vprcValue(lead);
+  }
+  document.getElementById("cardAdsEst").textContent = money(adsEst);
+  document.getElementById("cardVprcEst").textContent = money(vprcEst);
+  document.getElementById("cardEarned").textContent = money(earned);
+  const net = earned - SPEND_TOTAL;
+  const netEl = document.getElementById("cardNet");
+  netEl.textContent = (net < 0 ? "-$" : "$") + Math.abs(Math.round(net)).toLocaleString();
+  netEl.style.color = net >= 0 ? "#34C759" : "#FF453A";
+}
+
+function statusSelect(lead) {
+  const cur = currentStatus(lead);
+  const sel = document.createElement("select");
+  sel.className = "status";
+  for (const s of STATUSES) {
+    const o = document.createElement("option");
+    o.value = s; o.textContent = s || "—"; if (s === cur) o.selected = true;
+    sel.appendChild(o);
+  }
+  sel.addEventListener("change", () => { set(lead.id, "status", sel.value); tintRow(lead.id, sel.value); recompute(); });
+  return sel;
+}
+function valueInput(lead) {
+  const inp = document.createElement("input");
+  inp.className = "val"; inp.type = "text"; inp.inputMode = "numeric";
+  inp.placeholder = lead.estMid ? "est " + money(lead.estMid) : "$";
+  const s = get(lead.id); if (s.value) inp.value = s.value;
+  inp.addEventListener("input", () => { set(lead.id, "value", inp.value); recompute(); });
+  return inp;
+}
+function nameInput(lead) {
+  const inp = document.createElement("input");
+  inp.className = "nm"; inp.type = "text"; inp.placeholder = "add name";
+  const s = get(lead.id); inp.value = s.name !== undefined ? s.name : (lead.name || "");
+  inp.addEventListener("input", () => { set(lead.id, "name", inp.value); });
+  return inp;
+}
+function detailText(lead) { const s = get(lead.id); return s.details !== undefined ? s.details : lead.details; }
+function buildDetailCell(lead, cols) {
+  const td = document.createElement("td"); td.colSpan = cols;
+  const wrap = document.createElement("div");
+  const txt = document.createElement("div"); txt.className = "dtext"; txt.textContent = detailText(lead);
+  const btn = document.createElement("button"); btn.className = "edit-detail-btn"; btn.innerHTML = '<i class="fas fa-pen"></i> Edit details';
+  let editing = false, ta = null;
+  btn.addEventListener("click", () => {
+    if (!editing) {
+      ta = document.createElement("textarea"); ta.value = detailText(lead);
+      ta.addEventListener("input", () => { set(lead.id, "details", ta.value); });
+      wrap.replaceChild(ta, txt);
+      btn.innerHTML = '<i class="fas fa-check"></i> Done';
+      editing = true; ta.focus();
+    } else {
+      txt.textContent = detailText(lead);
+      wrap.replaceChild(txt, ta);
+      btn.innerHTML = '<i class="fas fa-pen"></i> Edit details';
+      editing = false;
+    }
+  });
+  wrap.appendChild(txt); wrap.appendChild(document.createElement("br")); wrap.appendChild(btn);
+  td.appendChild(wrap);
+  return td;
+}
+function tintRow(id, status) { const tr = document.getElementById("row-" + id); if (tr) tr.className = "lead-row " + statusClass(status); }
+function cell(text, cls) { const td = document.createElement("td"); if (cls) td.className = cls; td.textContent = text; return td; }
+function cellNode(node, cls) { const td = document.createElement("td"); if (cls) td.className = cls; td.appendChild(node); return td; }
+function numCell(lead, colspan) {
+  const td = document.createElement("td");
+  td.className = "numcell";
+  td.innerHTML = '<span class="caret">▸</span> ' + lead.num;
+  td.addEventListener("click", () => {
+    const det = document.getElementById("det-" + lead.id);
+    const open = det.style.display === "table-row";
+    det.style.display = open ? "none" : "table-row";
+    td.classList.toggle("open", !open);
+  });
+  return td;
+}
+
+function render() {
+  const ga = document.getElementById("gaTable");
+  const lsa = document.getElementById("lsaTable");
+  for (const lead of LEADS) {
+    const tr = document.createElement("tr");
+    tr.id = "row-" + lead.id;
+    tr.className = "lead-row " + statusClass(currentStatus(lead));
+    const cols = lead.section === "ga" ? 8 : 10;
+    if (lead.section === "ga") {
+      tr.appendChild(numCell(lead));
+      tr.appendChild(cell(lead.date, "muted"));
+      tr.appendChild(cell(lead.name));
+      tr.appendChild(cell(lead.contact, "muted"));
+      tr.appendChild(cell(lead.desc));
+      tr.appendChild(cell(lead.est, "muted"));
+      tr.appendChild(cellNode(statusSelect(lead)));
+      tr.appendChild(cellNode(valueInput(lead)));
+      ga.appendChild(tr);
+    } else {
+      tr.appendChild(numCell(lead));
+      tr.appendChild(cell(lead.date, "muted"));
+      tr.appendChild(cell(lead.phone));
+      tr.appendChild(cellNode(nameInput(lead)));
+      tr.appendChild(cell(lead.calls, "r muted"));
+      tr.appendChild(cell(lead.talk, "r muted"));
+      tr.appendChild(cell(lead.charged, "muted"));
+      tr.appendChild(cell(lead.est, "muted"));
+      tr.appendChild(cellNode(statusSelect(lead)));
+      tr.appendChild(cellNode(valueInput(lead)));
+      lsa.appendChild(tr);
+    }
+    const det = document.createElement("tr");
+    det.id = "det-" + lead.id; det.className = "detail-row"; det.style.display = "none";
+    det.appendChild(buildDetailCell(lead, cols));
+    (lead.section === "ga" ? ga : lsa).appendChild(det);
+  }
+  recompute();
+}
+
+(async () => { await syncDown(); render(); })();
+</script>
+</body>
+</html>

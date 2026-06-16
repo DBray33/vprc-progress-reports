@@ -1,0 +1,9 @@
+{
+  "name": "vprc-progress-reports",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Valley Peak Roofing progress reports site (static) + ads-status backend function.",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
