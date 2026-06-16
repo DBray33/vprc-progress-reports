@@ -351,7 +351,7 @@ function render() {
     if (lead.section === "ga") {
       tr.appendChild(numCell(lead));
       tr.appendChild(cell(lead.date, "muted"));
-      tr.appendChild(cell(lead.name));
+      tr.appendChild(cellNode(nameInput(lead)));
       tr.appendChild(cell(lead.contact, "muted"));
       tr.appendChild(cell(lead.desc));
       tr.appendChild(cell(lead.est, "muted"));
