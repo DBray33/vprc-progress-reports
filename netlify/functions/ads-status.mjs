@@ -8,9 +8,23 @@ const STORE = "vprc-ads-status";
 const KEY = "state";
 const PASS = process.env.VPRC_ADS_PASSWORD || "gunnar";
 
+// The site-wide gate (netlify/edge-functions/gate.js) sets this cookie after a
+// successful login. We trust it here so the page needs no password of its own.
+const GATE_COOKIE = "vprc_gate";
+const GATE_TOKEN = "v1-" + PASS;
+
+function isAuthorized(request) {
+  const cookies = request.headers.get("cookie") || "";
+  if (cookies.split(";").some((c) => c.trim() === `${GATE_COOKIE}=${GATE_TOKEN}`)) {
+    return true;
+  }
+  // Legacy fallback for any older client that still sends the header.
+  return (request.headers.get("x-vprc-pass") || "") === PASS;
+}
+
 export default async (request, context) => {
-  // gate every read/write on the shared password
-  if ((request.headers.get("x-vprc-pass") || "") !== PASS) {
+  // Gate every read/write on the site-wide login (cookie) or legacy header.
+  if (!isAuthorized(request)) {
     return new Response("Unauthorized", { status: 401 });
   }
   const store = getStore(STORE);

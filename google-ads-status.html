@@ -74,16 +74,7 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
 </style>
 </head>
 <body>
-<div id="gate" class="gate">
-  <div class="gate-box">
-    <h2>Valley Peak Ads</h2>
-    <p style="color:rgba(235,235,245,0.6); font-size:13px; margin-bottom:14px;">Enter the password to view this page.</p>
-    <input id="gatePass" type="password" placeholder="Password" autocomplete="current-password" />
-    <button id="gateBtn" class="btn" style="width:100%; margin-top:12px;">Unlock</button>
-    <p id="gateErr" style="color:#FF453A; font-size:12px; margin-top:10px; display:none;">Incorrect password.</p>
-  </div>
-</div>
-<div class="container" id="app" style="display:none;">
+<div class="container" id="app">
   <div class="header">
     <a href="index.html" class="back-button"><i class="fas fa-chevron-left"></i> Reports Home</a>
     <h1>Google Ads &amp; Local Services</h1>
@@ -147,10 +138,6 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
         <tr><th>#</th><th>Date</th><th>Phone</th><th>Name</th><th class="r">Calls</th><th class="r">Talk</th><th>Charged</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
       </table>
     </div>
-
-    <div class="footer">
-      Website by <a href="https://keystonewebsolutions.com" target="_blank">Keystone Web Solutions</a>
-    </div>
   </div>
 </div>
 
@@ -166,16 +153,12 @@ function save() { localStorage.setItem(KEY, JSON.stringify(store)); }
 function get(id) { return store[id] || {}; }
 function set(id, k, v) { store[id] = store[id] || {}; store[id][k] = v; save(); queueSync(); }
 
-// ---- password gate (deters casual access; real protection needs a paid Netlify plan) ----
-const GATE_PASS = "gunnar";
-function unlockApp() {
-  document.getElementById("gate").style.display = "none";
-  document.getElementById("app").style.display = "block";
-}
-
 // ---- shared backend sync (Netlify function + Blobs); localStorage is the offline cache ----
+// Access is gated site-wide by netlify/edge-functions/gate.js; the backend
+// trusts that gate's cookie (sent automatically), so this page needs no
+// password of its own.
 const API = "/.netlify/functions/ads-status";
-function authHeaders(extra) { return Object.assign({ "x-vprc-pass": sessionStorage.getItem("vprc-pass") || "" }, extra || {}); }
+function authHeaders(extra) { return Object.assign({}, extra || {}); }
 function setStatus(text, color, pulse) {
   const e = document.getElementById("saveStatus");
   if (!e) return;
@@ -338,21 +321,7 @@ function render() {
 
 async function init() { await syncDown(); render(); }
 
-(function gate() {
-  const inp = document.getElementById("gatePass");
-  const btn = document.getElementById("gateBtn");
-  const err = document.getElementById("gateErr");
-  if (sessionStorage.getItem("vprc-pass") === GATE_PASS) { unlockApp(); init(); return; }
-  function attempt() {
-    if (inp.value === GATE_PASS) {
-      sessionStorage.setItem("vprc-pass", inp.value);
-      unlockApp(); init();
-    } else { err.style.display = "block"; inp.select(); }
-  }
-  btn.addEventListener("click", attempt);
-  inp.addEventListener("keydown", (e) => { if (e.key === "Enter") attempt(); });
-  inp.focus();
-})();
+init();
 </script>
 </body>
 </html>
