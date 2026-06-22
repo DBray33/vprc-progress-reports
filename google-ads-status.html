@@ -111,11 +111,6 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
           <div class="stat-note">Google $7,740 + LSA ~$2,170</div>
         </div>
         <div class="stat-item">
-          <div class="stat-value" id="cardAdsEst">$0</div>
-          <div class="stat-label">Ads Manager Est. Revenue</div>
-          <div class="stat-note">Ads manager estimate, all leads</div>
-        </div>
-        <div class="stat-item">
           <div class="stat-value" id="cardVprcEst">$0</div>
           <div class="stat-label">VPRC Est. Value</div>
           <div class="stat-note">Your values, all leads</div>
@@ -149,7 +144,7 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
     <p class="note">Click anywhere on a row to open its full details. Names can be edited - type over "Caller" once you know who it was.</p>
     <div class="card">
       <table id="gaTable">
-        <tr><th>#</th><th>Date</th><th>Name</th><th>Contact</th><th>What they wanted</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
+        <tr><th>#</th><th>Date</th><th>Name</th><th>Contact</th><th>What they wanted</th><th>Status</th><th>VPRC est value $</th></tr>
       </table>
     </div>
 
@@ -157,7 +152,7 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
     <p class="note">Mostly phone calls. Add a name if you remember the caller. Click anywhere on a row to open its full details, where you can play the call recording and read the transcript.</p>
     <div class="card">
       <table id="lsaTable">
-        <tr><th>#</th><th>Date</th><th>Phone</th><th>Name</th><th class="r">Calls</th><th class="r">Talk</th><th>Charged</th><th>Est. value</th><th>Status</th><th>VPRC est value $</th></tr>
+        <tr><th>#</th><th>Date</th><th>Phone</th><th>Name</th><th class="r">Calls</th><th class="r">Talk</th><th>Charged</th><th>Status</th><th>VPRC est value $</th></tr>
       </table>
     </div>
   </div>
@@ -261,13 +256,12 @@ function currentStatus(lead) { const s = get(lead.id); return s.status !== undef
 function vprcValue(lead) { const s = get(lead.id); return s.value ? num(s.value) : 0; }
 
 function recompute() {
-  let adsEst = 0, vprcEst = 0, earned = 0;
+  let vprcEst = 0, earned = 0;
   for (const lead of LEADS) {
     const st = currentStatus(lead);
-    if (st !== "Not an ad lead") { adsEst += (lead.estMid || 0); vprcEst += vprcValue(lead); }
+    if (st !== "Not an ad lead") { vprcEst += vprcValue(lead); }
     if (st === "Won") earned += vprcValue(lead);
   }
-  document.getElementById("cardAdsEst").textContent = money(adsEst);
   document.getElementById("cardVprcEst").textContent = money(vprcEst);
   document.getElementById("cardEarned").textContent = money(earned);
   const net = earned - SPEND_TOTAL;
@@ -387,14 +381,13 @@ function render() {
       if (e.target.closest("input, select, textarea, button, a, option")) return;
       toggleDetail(lead.id);
     });
-    const cols = lead.section === "ga" ? 8 : 10;
+    const cols = lead.section === "ga" ? 7 : 9;
     if (lead.section === "ga") {
       tr.appendChild(numCell(lead));
       tr.appendChild(cell(lead.date, "muted"));
       tr.appendChild(cellNode(nameInput(lead)));
       tr.appendChild(cell(lead.contact, "muted"));
       tr.appendChild(cell(lead.desc));
-      tr.appendChild(cell(lead.est, "muted"));
       tr.appendChild(cellNode(statusSelect(lead)));
       tr.appendChild(cellNode(valueInput(lead)));
       ga.appendChild(tr);
@@ -406,7 +399,6 @@ function render() {
       tr.appendChild(cell(lead.calls, "r muted"));
       tr.appendChild(cell(lead.talk, "r muted"));
       tr.appendChild(cell(lead.charged, "muted"));
-      tr.appendChild(cell(lead.est, "muted"));
       tr.appendChild(cellNode(statusSelect(lead)));
       tr.appendChild(cellNode(valueInput(lead)));
       lsa.appendChild(tr);
