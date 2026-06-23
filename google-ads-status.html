@@ -111,9 +111,14 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
           <div class="stat-note">Google $7,740 + LSA ~$2,170</div>
         </div>
         <div class="stat-item">
-          <div class="stat-value" id="cardVprcEst">$0</div>
-          <div class="stat-label">VPRC Est. Value</div>
-          <div class="stat-note">Your values, all leads</div>
+          <div class="stat-value" id="cardGaVal">$0</div>
+          <div class="stat-label">Google Ads Est. Value</div>
+          <div class="stat-note">Your values, search/form leads</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="cardLsaVal">$0</div>
+          <div class="stat-label">LSA Est. Value</div>
+          <div class="stat-note">Your values, Local Services leads</div>
         </div>
         <div class="stat-item">
           <div class="stat-value" id="cardEarned">$0</div>
@@ -256,13 +261,17 @@ function currentStatus(lead) { const s = get(lead.id); return s.status !== undef
 function vprcValue(lead) { const s = get(lead.id); return s.value ? num(s.value) : 0; }
 
 function recompute() {
-  let vprcEst = 0, earned = 0;
+  let gaVal = 0, lsaVal = 0, earned = 0;
   for (const lead of LEADS) {
     const st = currentStatus(lead);
-    if (st !== "Not an ad lead") { vprcEst += vprcValue(lead); }
+    if (st !== "Not an ad lead") {
+      if (lead.section === "lsa") lsaVal += vprcValue(lead);
+      else gaVal += vprcValue(lead);
+    }
     if (st === "Won") earned += vprcValue(lead);
   }
-  document.getElementById("cardVprcEst").textContent = money(vprcEst);
+  document.getElementById("cardGaVal").textContent = money(gaVal);
+  document.getElementById("cardLsaVal").textContent = money(lsaVal);
   document.getElementById("cardEarned").textContent = money(earned);
   const net = earned - SPEND_TOTAL;
   const netEl = document.getElementById("cardNet");
@@ -285,7 +294,7 @@ function statusSelect(lead) {
 function valueInput(lead) {
   const inp = document.createElement("input");
   inp.className = "val"; inp.type = "text"; inp.inputMode = "numeric";
-  inp.placeholder = lead.estMid ? "est " + money(lead.estMid) : "$";
+  inp.placeholder = "$";
   const s = get(lead.id); if (s.value !== undefined) inp.value = s.value;
   inp.addEventListener("input", () => { setField(lead.id, "value", inp.value, ""); recompute(); });
   return inp;
