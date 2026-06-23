@@ -112,13 +112,13 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
         </div>
         <div class="stat-item">
           <div class="stat-value" id="cardGaVal">$0</div>
-          <div class="stat-label">Google Ads Est. Value</div>
-          <div class="stat-note">Your values, search/form leads</div>
+          <div class="stat-label">Google Ads Potential</div>
+          <div class="stat-note">If every search lead won (your value or est)</div>
         </div>
         <div class="stat-item">
           <div class="stat-value" id="cardLsaVal">$0</div>
-          <div class="stat-label">LSA Est. Value</div>
-          <div class="stat-note">Your values, Local Services leads</div>
+          <div class="stat-label">LSA Potential</div>
+          <div class="stat-note">If every LSA lead won (your value or est)</div>
         </div>
         <div class="stat-item">
           <div class="stat-value" id="cardEarned">$0</div>
@@ -240,10 +240,11 @@ async function syncDown() {
     const r = await fetch(API, { cache: "no-store" });
     if (!r.ok) throw new Error("load " + r.status);
     const server = await r.json();
-    // Merge server into local with LOCAL-WINS: never discard an edit made on
-    // this device. The server only fills in fields this device doesn't have.
+    // SERVER-WINS: the shared server is the source of truth across devices, so an
+    // entry made on another device (e.g. Kat's) always shows here. syncDown only runs
+    // at load, before any local editing, so this can't clobber a fresh local edit.
     for (const [id, f] of Object.entries(server || {})) {
-      store[id] = Object.assign({}, f, store[id] || {});
+      store[id] = Object.assign({}, store[id] || {}, f);
     }
     persistLocal();
   } catch (e) { /* offline - keep the local copy */ }
@@ -259,14 +260,16 @@ function num(v) { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); retur
 function money(n) { return "$" + Math.round(n).toLocaleString(); }
 function currentStatus(lead) { const s = get(lead.id); return s.status !== undefined ? s.status : lead.status; }
 function vprcValue(lead) { const s = get(lead.id); return s.value ? num(s.value) : 0; }
+// Potential value of a lead "as if won": the entered value if there is one, else our estimate.
+function effectiveValue(lead) { const v = vprcValue(lead); return v > 0 ? v : (lead.estMid || 0); }
 
 function recompute() {
   let gaVal = 0, lsaVal = 0, earned = 0;
   for (const lead of LEADS) {
     const st = currentStatus(lead);
     if (st !== "Not an ad lead") {
-      if (lead.section === "lsa") lsaVal += vprcValue(lead);
-      else gaVal += vprcValue(lead);
+      if (lead.section === "lsa") lsaVal += effectiveValue(lead);
+      else gaVal += effectiveValue(lead);
     }
     if (st === "Won") earned += vprcValue(lead);
   }
@@ -294,7 +297,7 @@ function statusSelect(lead) {
 function valueInput(lead) {
   const inp = document.createElement("input");
   inp.className = "val"; inp.type = "text"; inp.inputMode = "numeric";
-  inp.placeholder = "$";
+  inp.placeholder = lead.estMid ? "est " + money(lead.estMid) : "$";
   const s = get(lead.id); if (s.value !== undefined) inp.value = s.value;
   inp.addEventListener("input", () => { setField(lead.id, "value", inp.value, ""); recompute(); });
   return inp;
