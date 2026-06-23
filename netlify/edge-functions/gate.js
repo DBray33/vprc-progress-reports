@@ -10,8 +10,16 @@
 // whole property. Auth is remembered for 30 days via an HttpOnly cookie.
 
 const PASS = Netlify.env.get("VPRC_ADS_PASSWORD") || "gunnar";
+const PASS_KWS = Netlify.env.get("VPRC_ADS_PASSWORD_KWS") || "dan";
 const COOKIE = "vprc_gate";
-const TOKEN = "v1-" + PASS; // stable cookie value we validate against
+const USER_COOKIE = "vprc_user"; // readable by page JS; identifies who is editing
+// Each password -> cookie token + display role. Tokens stay "v1-<pass>" so existing
+// Valley Peak logins keep working; KWS is added alongside.
+const USERS = {
+  [PASS]: { token: "v1-" + PASS, role: "Valley Peak" },
+  [PASS_KWS]: { token: "v1-" + PASS_KWS, role: "Dan" },
+};
+const VALID_TOKENS = Object.values(USERS).map((u) => u.token);
 const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
 
 function loginPage(next, error) {
@@ -57,9 +65,10 @@ export default async (request, context) => {
 
   // Already authenticated?
   const cookies = request.headers.get("cookie") || "";
-  const authed = cookies
-    .split(";")
-    .some((c) => c.trim() === `${COOKIE}=${TOKEN}`);
+  const authed = cookies.split(";").some((c) => {
+    const t = c.trim();
+    return t.startsWith(COOKIE + "=") && VALID_TOKENS.includes(t.slice(COOKIE.length + 1));
+  });
   if (authed) return context.next();
 
   // Login submission
@@ -72,11 +81,17 @@ export default async (request, context) => {
       pass = "";
     }
     const next = url.searchParams.get("next") || "/";
-    if (pass === PASS) {
+    const u = USERS[pass];
+    if (u) {
       const headers = new Headers({ location: next });
       headers.append(
         "set-cookie",
-        `${COOKIE}=${TOKEN}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${MAX_AGE}`,
+        `${COOKIE}=${u.token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${MAX_AGE}`,
+      );
+      // readable identity cookie (NOT HttpOnly) so the page can stamp edits with who made them
+      headers.append(
+        "set-cookie",
+        `${USER_COOKIE}=${encodeURIComponent(u.role)}; Path=/; Secure; SameSite=Lax; Max-Age=${MAX_AGE}`,
       );
       return new Response(null, { status: 302, headers });
     }

@@ -6,7 +6,19 @@
 // Buffers the file and honors HTTP Range requests (206) so <audio> can load/seek/play
 // (Safari in particular refuses media served as a plain 200 with no length/range support).
 const PASS = process.env.VPRC_ADS_PASSWORD || "gunnar";
+const PASS_KWS = process.env.VPRC_ADS_PASSWORD_KWS || "dan";
+const VALID_TOKENS = ["v1-" + PASS, "v1-" + PASS_KWS];
 const CALLRAIL_ACCT = "340673951";
+
+function authed(request) {
+  const cookies = request.headers.get("cookie") || "";
+  if (cookies.split(";").some((c) => {
+    const t = c.trim();
+    return t.startsWith("vprc_gate=") && VALID_TOKENS.includes(t.slice(10));
+  })) return true;
+  const p = new URL(request.url).searchParams.get("pass") || "";
+  return p === PASS || p === PASS_KWS;
+}
 
 async function googleToken() {
   const body = new URLSearchParams({
@@ -20,8 +32,8 @@ async function googleToken() {
 }
 
 export default async (request) => {
+  if (!authed(request)) return new Response("Unauthorized", { status: 401 });
   const u = new URL(request.url);
-  if ((u.searchParams.get("pass") || "") !== PASS) return new Response("Unauthorized", { status: 401 });
   const src = u.searchParams.get("src");
   try {
     let audioUrl, headers = {};

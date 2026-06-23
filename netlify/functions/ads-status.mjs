@@ -7,19 +7,22 @@ import { getStore } from "@netlify/blobs";
 const STORE = "vprc-ads-status";
 const KEY = "state";
 const PASS = process.env.VPRC_ADS_PASSWORD || "gunnar";
+const PASS_KWS = process.env.VPRC_ADS_PASSWORD_KWS || "dan";
 
 // The site-wide gate (netlify/edge-functions/gate.js) sets this cookie after a
 // successful login. We trust it here so the page needs no password of its own.
 const GATE_COOKIE = "vprc_gate";
-const GATE_TOKEN = "v1-" + PASS;
+const VALID_TOKENS = ["v1-" + PASS, "v1-" + PASS_KWS];
 
 function isAuthorized(request) {
   const cookies = request.headers.get("cookie") || "";
-  if (cookies.split(";").some((c) => c.trim() === `${GATE_COOKIE}=${GATE_TOKEN}`)) {
-    return true;
-  }
-  // Legacy fallback for any older client that still sends the header.
-  return (request.headers.get("x-vprc-pass") || "") === PASS;
+  if (cookies.split(";").some((c) => {
+    const t = c.trim();
+    return t.startsWith(GATE_COOKIE + "=") && VALID_TOKENS.includes(t.slice(GATE_COOKIE.length + 1));
+  })) return true;
+  // Legacy / script fallback (e.g. server-side backups send the header).
+  const h = request.headers.get("x-vprc-pass") || "";
+  return h === PASS || h === PASS_KWS;
 }
 
 export default async (request, context) => {
