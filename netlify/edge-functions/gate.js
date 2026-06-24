@@ -61,10 +61,6 @@ function loginPage(next, error) {
 }
 
 export default async (request, context) => {
-  // TEMP (2026-06-24): password gate DISABLED so an external tool (Manus) can
-  // crawl the full reports site. To RE-ENABLE the gate, delete the next line.
-  return context.next();
-
   const url = new URL(request.url);
 
   // Already authenticated?
