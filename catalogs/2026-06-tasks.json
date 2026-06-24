@@ -961,6 +961,81 @@
         "topical-authority",
         "2026-05"
       ]
+    },
+    {
+      "id": "aeo-blog-content-2026-06",
+      "slug": "aeo-blog-content",
+      "title": "Publish AEO-focused blog cluster: 5 new posts + 2 refreshed (Quick Answer + FAQ schema)",
+      "priority": 4,
+      "priorityGroup": "AI Visibility & Authority Building",
+      "category": "code-content",
+      "createdMonth": "2026-06",
+      "sourceReport": "may-2026.html",
+      "sourceReportLabel": "May 2026 Report",
+      "sourceReportAnchor": "task-aeo-blog-content",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-06",
+          "status": "not_started",
+          "note": "Created from May report AI-visibility gap analysis: high-intent roofing topics where the site was absent from AI answers and weak in search."
+        },
+        {
+          "month": "2026-06",
+          "status": "completed",
+          "date": "2026-06-11",
+          "note": "Published 5 new AEO-optimized blog posts and refreshed 2 existing ones. New posts: gutter repair vs replacement guide, storm and hail roof damage first steps, signs an aging roof is failing, how to choose a roofing contractor in the Lehigh Valley, and commercial roof maintenance for property managers. Refreshed in place (original URLs, slugs, hero images, and datePublished preserved): roof repair or replacement decision guide (new 5-factor decision matrix) and roof ventilation guide (re-centered on the IRC 1/150 rule, removed keyword stuffing). Every post ships a Quick Answer callout near the top for AI extraction, three JSON-LD schemas (BlogPosting, BreadcrumbList, FAQPage with 4 Q&As each), internal links to relevant service pages, a credentials block (PA HIC #PA171380, BBB A+, Owens Corning Platinum), a 6-item related-reading list, a cited Sources block, and geo meta tags. Site integration: blog-data.js and our-blog.html updated with all 7 entries, homepage featured section and More Expert Insights auto-populated, cache versions bumped across 43 HTML files. All 22 JSON-LD blocks validate, all 36 related-reading links resolve, all new image URLs return 200. Deployed to valleypeakroof.com (commits 8dd42a1, d14beb9)."
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/gutter-repair-vs-replacement-guide",
+          "label": "New: gutter repair vs replacement"
+        },
+        {
+          "type": "page",
+          "url": "/blog/storm-and-hail-roof-damage-guide",
+          "label": "New: storm and hail roof damage"
+        },
+        {
+          "type": "page",
+          "url": "/blog/is-my-aging-roof-failing",
+          "label": "New: aging roof warning signs"
+        },
+        {
+          "type": "page",
+          "url": "/blog/how-to-choose-a-roofing-contractor-lehigh-valley",
+          "label": "New: how to choose a contractor"
+        },
+        {
+          "type": "page",
+          "url": "/blog/commercial-roof-maintenance-property-managers",
+          "label": "New: commercial roof maintenance"
+        },
+        {
+          "type": "page",
+          "url": "/blog/roof-repairs-vs-replacement",
+          "label": "Refreshed: roof repair vs replacement decision guide"
+        },
+        {
+          "type": "page",
+          "url": "/blog/does-your-home-need-roof-ventilation",
+          "label": "Refreshed: roof ventilation guide"
+        }
+      ],
+      "summary": "Directly targets the ChatGPT and AI-answer visibility gap: Quick Answer callouts plus FAQPage schema are exactly what AI assistants extract and cite. Five new high-intent topics plus two refreshed posts widen the answerable surface area and build topical authority across the repair, replacement, storm, and commercial clusters.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "content",
+        "aeo",
+        "ai-visibility",
+        "blog",
+        "schema",
+        "2026-06"
+      ]
     }
   ]
 }
