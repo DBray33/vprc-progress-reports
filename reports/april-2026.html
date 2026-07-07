@@ -2221,10 +2221,10 @@ footer {
     </summary>
     <div style="padding: 0 16px 14px 16px; border-top: 1px solid rgba(255, 214, 10, 0.15); padding-top: 12px;">
         <p style="font-size: 13px; line-height: 1.55; color: rgba(235, 235, 245, 0.85); margin: 0;">
-            Each month we run <strong>204 customer-style search prompts</strong> against three AI platforms — <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong> — for <strong>612 total AI responses</strong>. Every prompt is hand-curated, <strong>non-branded</strong> (the queries don't mention "Valley Peak Roofing"), and targets the language a real homeowner or property manager in Valley Peak Roofing's service area would actually type when looking to hire a roofer. We then count whether Valley Peak Roofing was mentioned in the AI's answer — purely organic discovery, no advertising, no prompting. <a href="april-2026-ai-visibility.html" style="color: #FFD60A; text-decoration: underline;">See the queries and results here</a>.
+            Each month we run <strong>204 customer-style search prompts</strong> against three AI platforms - <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong> - for <strong>612 total AI responses</strong>. Every prompt is hand-curated, <strong>non-branded</strong> (the queries don't mention "Valley Peak Roofing"), and targets the language a real homeowner or property manager in Valley Peak Roofing's service area would actually type when looking to hire a roofer. Each prompt × platform is sampled multiple times and averaged into an inclusion rate, then a small language-model judge reads every answer to decide whether Valley Peak Roofing was recommended - purely organic discovery, no advertising, no prompting. <a href="april-2026-ai-visibility.html" style="color: #FFD60A; text-decoration: underline;">See the queries and results here</a>.
         </p>
         <p style="font-size: 13px; line-height: 1.55; color: rgba(235, 235, 245, 0.85); margin: 8px 0 0 0;">
-            The <strong style="color: #FFD60A;">AI Visibility Rate</strong> below is the percentage of those 612 AI responses that mentioned Valley Peak Roofing. Every prompt × platform combination is one independent test — no double-counting if the brand is named multiple times in a single response.
+            The <strong style="color: #FFD60A;">AI Visibility Rate</strong> below is the average inclusion rate across all 204 prompts × 3 platforms, measured over 612 AI responses. Every prompt × platform combination is one independent test - no double-counting if the brand is named multiple times in a single response. <strong>95% confidence band: 33–41%</strong> - month-to-month moves that stay inside this band aren't statistically significant.
         </p>
     </div>
 </details>
@@ -2241,12 +2241,18 @@ details[open] > summary > i.ai-platform-chevron { transform: rotate(180deg); }
         <div class="metric-card-content">
             <div class="metric-card-front">
                 <div class="metric-value" style="color: #FFD60A;">37%</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> +12pp vs Mar
+                </div>
                 <div class="metric-change neutral">
                     <i class="fas fa-robot"></i> 226 of 612 responses
                 </div>
+                <div class="metric-change neutral">
+                    <i class="fas fa-plus-minus"></i> 95% CI 33–41%
+                </div>
             </div>
             <div class="metric-card-back">
-                Per-query mention rate. Each prompt × platform = one binary trial. The most mathematically objective single score.
+                Average inclusion rate across every prompt × platform, each sampled multiple times and read by a language-model judge. 95% confidence band: 33–41% — changes inside this band aren't significant.
             </div>
         </div>
     </div>
@@ -2255,6 +2261,9 @@ details[open] > summary > i.ai-platform-chevron { transform: rotate(180deg); }
         <div class="metric-card-content">
             <div class="metric-card-front">
                 <div class="metric-value">58%</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> +11pp vs Mar
+                </div>
                 <div class="metric-change neutral">
                     <i class="fas fa-bullseye"></i> 118 of 204 prompts
                 </div>
@@ -2269,6 +2278,9 @@ details[open] > summary > i.ai-platform-chevron { transform: rotate(180deg); }
         <div class="metric-card-content">
             <div class="metric-card-front">
                 <div class="metric-value">45%</div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> +12pp vs Mar
+                </div>
                 <div class="metric-change neutral">
                     <i class="fas fa-trophy"></i> Gemini
                 </div>
@@ -2283,12 +2295,29 @@ details[open] > summary > i.ai-platform-chevron { transform: rotate(180deg); }
         <div class="metric-card-content">
             <div class="metric-card-front">
                 <div class="metric-value">1.1<span style="font-size: 14px; color: rgba(235, 235, 245, 0.4);"> / 3</span></div>
+                <div class="metric-change positive">
+                    <i class="fas fa-arrow-up"></i> +0.4 vs Mar
+                </div>
                 <div class="metric-change neutral">
                     <i class="fas fa-layer-group"></i> Platforms per prompt
                 </div>
             </div>
             <div class="metric-card-back">
                 Average number of platforms (out of 3) that mentioned Valley Peak Roofing per customer question. Higher = more consistent visibility.
+            </div>
+        </div>
+    </div>
+    <div class="metric-card">
+        <h4>Share of Voice</h4>
+        <div class="metric-card-content">
+            <div class="metric-card-front">
+                <div class="metric-value">100%</div>
+                <div class="metric-change neutral">
+                    <i class="fas fa-users"></i> vs. named competitors
+                </div>
+            </div>
+            <div class="metric-card-back">
+                Of all the businesses the AI judge named across these answers, 100% of the "mentions" were Valley Peak Roofing. Measures how much of the AI conversation this brand owns versus every other business the AIs recommend.
             </div>
         </div>
     </div>
@@ -2331,12 +2360,12 @@ details[open] > summary > i.ai-platform-chevron { transform: rotate(180deg); }
             Each AI platform sources information differently, which is why the mention rates vary so much:
         </p>
         <ul style="font-size: 13px; line-height: 1.6; color: rgba(235, 235, 245, 0.8); margin: 0; padding-left: 20px;">
-            <li><strong style="color: #FFD60A;">Gemini</strong> uses <strong>Google Search Grounding</strong> — it pulls live data from Google's local pack, organic results, and Maps. Strong Google rankings translate almost directly into Gemini visibility.</li>
+            <li><strong style="color: #FFD60A;">Gemini</strong> uses <strong>Google Search Grounding</strong> - it pulls live data from Google's local pack, organic results, and Maps. Strong Google rankings translate almost directly into Gemini visibility.</li>
             <li><strong style="color: #FFD60A;">ChatGPT</strong> uses Bing-based web search and leans heavily on <strong>aggregator sites</strong> (Yelp, Angi, BBB, HomeAdvisor). It's more conservative about naming small local businesses unless they're prominent on those third-party platforms.</li>
             <li><strong style="color: #FFD60A;">Perplexity</strong> mixes web search with citation-heavy sources, often surfacing aggregator pages first.</li>
         </ul>
         <p style="font-size: 13px; line-height: 1.55; color: rgba(235, 235, 245, 0.8); margin: 10px 0 0 0;">
-            <strong>What this means for strategy:</strong> Gemini visibility is largely a downstream effect of Google rankings. Closing the ChatGPT gap requires building presence on third-party platforms — fully-built Yelp profile, claimed Angi listing, BBB accreditation, HomeAdvisor pro page, optimized Google Business Profile.
+            <strong>What this means for strategy:</strong> Gemini visibility is largely a downstream effect of Google rankings. Closing the ChatGPT gap requires building presence on third-party platforms - fully-built Yelp profile, claimed Angi listing, BBB accreditation, HomeAdvisor pro page, optimized Google Business Profile.
         </p>
     </div>
 </details>
@@ -2346,51 +2375,6 @@ details[open] > summary > i.ai-platform-chevron { transform: rotate(180deg); }
 </a>
 
 
-            <!-- 10. SERP Features -->
-            <h2 id="serp-features"><i class="fas fa-star"></i> SERP Features <span style="font-size: 11px; font-weight: 400; color: rgba(235, 235, 245, 0.4);">(Where Valley Peak Roofing appears beyond standard results)</span></h2>
-            <p style="font-size: 13px; color: rgba(235, 235, 245, 0.6); margin-bottom: 12px;">Point-in-time snapshot of where Valley Peak Roofing appears in Google SERP features right now. Each number is the count of keywords where the domain <strong>holds</strong> that feature — not just features that exist on the page. Tracked monthly to measure growth.</p>
-            
-            <div class="table-wrapper"><table>
-                <thead>
-                    <tr>
-                        <th>SERP Feature</th>
-                        <th>What It Means</th>
-                        <th style="text-align: center;">Keywords</th>
-                        <th style="text-align: center;">Prev</th>
-                        <th style="text-align: center;">Change</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Local Pack</strong></td>
-                        <td style="font-size: 12px; color: rgba(235, 235, 245, 0.5);">Google Maps 3-pack for local searches</td>
-                        <td style="text-align: center; font-weight: 600;">9</td>
-                        <td style="text-align: center;">9</td>
-                        <td style="text-align: center;">
-                            —
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>AI Overview</strong></td>
-                        <td style="font-size: 12px; color: rgba(235, 235, 245, 0.5);">Cited in Google&#x27;s AI-generated answer</td>
-                        <td style="text-align: center; font-weight: 600;">6</td>
-                        <td style="text-align: center;">5</td>
-                        <td style="text-align: center; color: #34C759; font-weight: 600;">
-                            +1
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Featured Snippet</strong></td>
-                        <td style="font-size: 12px; color: rgba(235, 235, 245, 0.5);">Answer box at the top of search results</td>
-                        <td style="text-align: center; font-weight: 600;">1</td>
-                        <td style="text-align: center;">1</td>
-                        <td style="text-align: center;">
-                            —
-                        </td>
-                    </tr>
-                </tbody>
-            </table></div>
-            
 
             <!-- 11. Top Traffic Pages -->
             <h2 id="top-pages"><i class="fas fa-file-alt"></i> Top Traffic Pages Analysis</h2>

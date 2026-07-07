@@ -1507,10 +1507,10 @@ footer {
             <div style="background: rgba(255, 214, 10, 0.06); border: 0.5px solid rgba(255, 214, 10, 0.2); border-radius: 12px; padding: 16px 18px; margin: 0 0 16px 0;">
                 <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #FFD60A; margin-bottom: 8px;"><i class="fas fa-info-circle"></i> How This Test Works</div>
                 <p style="font-size: 13.5px; line-height: 1.55; color: rgba(235, 235, 245, 0.88); margin: 0 0 8px 0;">
-                    Each month we run <strong>204 customer-style search prompts</strong> against three AI platforms — <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong> — for <strong>612 total AI responses</strong>. Every prompt is hand-curated, <strong>non-branded</strong> (the queries don't mention "Valley Peak Roofing"), and targets the language a real homeowner or property manager in Valley Peak Roofing's service area would actually type when looking to hire a roofer. We then count whether Valley Peak Roofing was mentioned in the AI's answer — purely organic discovery, no advertising, no prompting.
+                    Each month we run <strong>204 customer-style search prompts</strong> against three AI platforms — <strong>ChatGPT</strong>, <strong>Gemini</strong>, and <strong>Perplexity</strong> — for <strong>612 total AI responses</strong>. Every prompt is hand-curated, <strong>non-branded</strong> (the queries don't mention "Valley Peak Roofing"), and targets the language a real homeowner or property manager in Valley Peak Roofing's service area would actually type when looking to hire a roofer. Each prompt × platform is sampled multiple times and averaged into an inclusion rate. A small language-model judge then reads every answer and decides whether Valley Peak Roofing was recommended — purely organic discovery, no advertising, no prompting.
                 </p>
                 <p style="font-size: 13.5px; line-height: 1.55; color: rgba(235, 235, 245, 0.88); margin: 0;">
-                    The <strong style="color: #FFD60A;">AI Visibility Rate</strong> is the percentage of those 612 AI responses that mentioned Valley Peak Roofing. Every prompt × platform combination is one independent test — no double-counting if the brand is named multiple times in a single response. The same locked prompt list is used every month so the metric is comparable over time.
+                    The <strong style="color: #FFD60A;">AI Visibility Rate</strong> is the average inclusion rate across all 204 prompts × 3 platforms, measured over 612 AI responses. Every prompt × platform combination is one independent test — no double-counting if the brand is named multiple times in a single response. The same locked prompt list is used every month so the metric is comparable over time. <strong>95% confidence band: 33–41%</strong> — month-to-month moves that stay inside this band aren't statistically significant.
                 </p>
             </div>
 
@@ -1519,7 +1519,7 @@ footer {
                 <div class="aiv-card primary">
                     <div class="aiv-card-label">AI Visibility Rate</div>
                     <div class="aiv-card-value">37%</div>
-                    <div class="aiv-card-sub">226 of 612 AI responses mentioned Valley Peak Roofing</div>
+                    <div class="aiv-card-sub">226 of 612 AI responses mentioned Valley Peak Roofing · 95% CI 33–41%</div>
                 </div>
                 <div class="aiv-card">
                     <div class="aiv-card-label">Reach</div>
@@ -1535,6 +1535,11 @@ footer {
                     <div class="aiv-card-label">Avg Depth</div>
                     <div class="aiv-card-value">1.1</div>
                     <div class="aiv-card-sub">Average platforms (out of 3) that mentioned Valley Peak Roofing per question</div>
+                </div>
+                <div class="aiv-card">
+                    <div class="aiv-card-label">Share of Voice</div>
+                    <div class="aiv-card-value">100%</div>
+                    <div class="aiv-card-sub">Valley Peak Roofing's share of every business the AI judge named across these answers</div>
                 </div>
             </div>
 
