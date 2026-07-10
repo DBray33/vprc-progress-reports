@@ -2,9 +2,13 @@
 // private (never a public URL). Two sources:
 //   ?src=cr&id=<callrail_call_id>     -> CallRail (looks up the recording, follows redirect)
 //   ?src=lsa&u=<attachment_url>       -> LSA (fetches the Google attachment with an OAuth token)
-// Always requires &pass=<VPRC_ADS_PASSWORD>.
-// Buffers the file and honors HTTP Range requests (206) so <audio> can load/seek/play
-// (Safari in particular refuses media served as a plain 200 with no length/range support).
+// Auth: the site gate cookie (vprc_gate) or &pass=<VPRC_ADS_PASSWORD>.
+//
+// The browser's <audio> element sends a Range request on play/seek. We forward that Range
+// header to the upstream (both CallRail storage and Google LSA support byte ranges) and
+// stream the upstream body straight through - no buffering. That keeps large recordings from
+// hitting the function's memory/time limits, and preserves the Content-Length / Content-Range
+// headers Safari requires to actually play and seek the audio.
 const PASS = process.env.VPRC_ADS_PASSWORD || "gunnar";
 const PASS_KWS = process.env.VPRC_ADS_PASSWORD_KWS || "dan";
 const VALID_TOKENS = ["v1-" + PASS, "v1-" + PASS_KWS];
@@ -36,7 +40,7 @@ export default async (request) => {
   const u = new URL(request.url);
   const src = u.searchParams.get("src");
   try {
-    let audioUrl, headers = {};
+    let audioUrl, upstreamHeaders = {};
     if (src === "cr") {
       const id = u.searchParams.get("id");
       if (!id) return new Response("missing id", { status: 400 });
@@ -48,30 +52,28 @@ export default async (request) => {
     } else if (src === "lsa") {
       audioUrl = u.searchParams.get("u");
       if (!audioUrl) return new Response("missing u", { status: 400 });
-      headers = { Authorization: "Bearer " + (await googleToken()) };
+      upstreamHeaders.Authorization = "Bearer " + (await googleToken());
     } else {
       return new Response("bad src", { status: 400 });
     }
 
-    const a = await fetch(audioUrl, { headers, redirect: "follow" });
-    if (!a.ok) return new Response("upstream " + a.status, { status: 502 });
-    const ctype = a.headers.get("content-type") || "audio/mpeg";
-    const full = Buffer.from(await a.arrayBuffer());
-    const total = full.length;
-
+    // Forward the browser's Range header so the upstream returns exactly the requested
+    // slice (206), then pass its body + range headers through without buffering.
     const range = request.headers.get("range");
-    const base = { "Content-Type": ctype, "Accept-Ranges": "bytes", "Cache-Control": "private, max-age=3600" };
-    const m = range && range.match(/bytes=(\d*)-(\d*)/);
-    if (m) {
-      const start = m[1] ? parseInt(m[1], 10) : 0;
-      const end = m[2] ? parseInt(m[2], 10) : total - 1;
-      const slice = full.subarray(start, end + 1);
-      return new Response(slice, {
-        status: 206,
-        headers: { ...base, "Content-Range": `bytes ${start}-${end}/${total}`, "Content-Length": String(slice.length) },
-      });
+    if (range) upstreamHeaders.Range = range;
+
+    const a = await fetch(audioUrl, { headers: upstreamHeaders, redirect: "follow" });
+    if (!a.ok && a.status !== 206) return new Response("upstream " + a.status, { status: 502 });
+
+    const out = new Headers();
+    out.set("Content-Type", a.headers.get("content-type") || "audio/mpeg");
+    out.set("Accept-Ranges", "bytes");
+    out.set("Cache-Control", "private, max-age=3600");
+    for (const h of ["content-length", "content-range"]) {
+      const v = a.headers.get(h);
+      if (v) out.set(h, v);
     }
-    return new Response(full, { status: 200, headers: { ...base, "Content-Length": String(total) } });
+    return new Response(a.body, { status: a.status, headers: out });
   } catch (e) {
     return new Response("error: " + e.message, { status: 500 });
   }
