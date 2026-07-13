@@ -30,6 +30,9 @@ h2 { font-size:20px; font-weight:700; margin:28px 0 14px 0; letter-spacing:-0.3p
 .card { background:rgba(28,28,30,0.5); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px);
   border:0.5px solid rgba(255,255,255,0.1); border-radius:16px; padding:16px; margin:16px 0; overflow-x:auto; }
 .note { font-size:12px; color:rgba(235,235,245,0.55); margin:2px 0 12px 8px; }
+.note-white { color:#fff; font-size:13px; }
+.note-list { margin:4px 0 10px 26px; }
+.note-list li { margin:3px 0; }
 table { width:100%; border-collapse:collapse; font-size:12.5px; }
 th { text-align:left; color:rgba(235,235,245,0.6); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.4px; padding:8px 6px; border-bottom:1px solid rgba(255,255,255,0.12); white-space:nowrap; }
 td { padding:7px 6px; border-bottom:0.5px solid rgba(255,255,255,0.07); vertical-align:middle; }
@@ -161,8 +164,16 @@ select.status:focus, input.val:focus, input.nm:focus { outline:none; border-colo
     </div>
 
     <h2>Google Ads Leads</h2>
-    <p class="note"><strong>These are the leads from your Google Search ads.</strong> In your inbox they arrive as "VPRC Google Ads Roof Repair Form," "VPRC Google Ads Roof Replacement Form," or "VPRC Google Ads Roofing Contractor Form." The email says "Submitted From: Google Ads Landing Page" and shows a long web address. Phone calls from the ads are listed here too, we add those for you.</p>
-    <p class="note">Click anywhere on a row to open its full details. Names can be edited, type over "Caller" once you know who it was. The faint gray dollar amounts are placeholder estimates Dan filled in, not real quotes. Type over any of them with the actual value once you have it. Use the Notes button on a row to log follow-up (calls, texts, appointments), kept separate from the details.</p>
+    <p class="note note-white"><strong>These are the leads from your Google Search ads.</strong> You can spot them in your inbox by any of these:</p>
+    <ul class="note note-white note-list">
+      <li>Subject line <strong>"VPRC Google Ads Roof Repair Form"</strong></li>
+      <li>Subject line <strong>"VPRC Google Ads Roof Replacement Form"</strong></li>
+      <li>Subject line <strong>"VPRC Google Ads Roofing Contractor Form"</strong></li>
+      <li>The email says <strong>"Submitted From: Google Ads Landing Page"</strong></li>
+      <li>It shows a long web address</li>
+    </ul>
+    <p class="note note-white">Phone calls from the ads are listed here too, I add those for you.</p>
+    <p class="note note-white">Click anywhere on a row to open its full details. Names can be edited, type over "Caller" once you know who it was. The faint gray dollar amounts are placeholder estimates Dan filled in, not real quotes. Type over any of them with the actual value once you have it. Use the Notes button on a row to log follow-up (calls, texts, appointments), kept separate from the details.</p>
     <div class="card">
       <table id="gaTable">
         <tr><th>#</th><th>Date</th><th>Name</th><th>Contact</th><th>What they wanted</th><th>Status</th><th>VPRC est value $</th></tr>
