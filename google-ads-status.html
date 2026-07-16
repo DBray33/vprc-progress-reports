@@ -127,7 +127,7 @@ body { background:#ffffff; color:#1d1d1f; }
 .url-ex { color:rgba(0,0,0,0.62); background:rgba(0,0,0,0.05); }
 th { color:rgba(0,0,0,0.5); border-bottom-color:rgba(0,0,0,0.14); }
 td { border-bottom-color:rgba(0,0,0,0.08); }
-.muted { color:rgba(0,0,0,0.5); }
+.muted { color:#1d1d1f; }
 .numcell { color:#0066cc; }
 .detail-row > td { background:#f5f5f7; color:rgba(0,0,0,0.8); }
 .detail-row textarea { background:#ffffff; color:#1d1d1f; border-color:rgba(0,0,0,0.2); }
@@ -226,14 +226,14 @@ select.status, input.val, input.nm { background:#ffffff; color:#1d1d1f; border-c
     <h2>Google Ads Leads</h2>
     <p class="note note-white"><strong>These are the leads from your Google Search ads.</strong> You can spot them in your inbox by any of these:</p>
     <ul class="note note-white note-list">
-      <li>Subject line <strong>"VPRC Google Ads Roof Repair Form"</strong></li>
-      <li>Subject line <strong>"VPRC Google Ads Roof Replacement Form"</strong></li>
-      <li>Subject line <strong>"VPRC Google Ads Roofing Contractor Form"</strong></li>
+      <li>Subject line <strong>"VPRC Google Ad Lead (Roof repair ad)"</strong></li>
+      <li>Subject line <strong>"VPRC Google Ad Lead (Roof replacement ad)"</strong></li>
+      <li>Subject line <strong>"VPRC Google Ad Lead (Roofing contractor ad)"</strong></li>
       <li>The email says <strong>"Submitted From: Google Ads Landing Page"</strong></li>
       <li>It shows a long web address, like <span class="url-ex">valleypeakroof.com/roof-replacement-lehigh-valley?utm_source=google&amp;utm_medium=cpc&amp;gclid=Cj0KCQjw9ZLSBhCc...</span></li>
     </ul>
     <p class="note note-white">Phone calls from the ads are listed here too, I add those for you.</p>
-    <p class="note note-white">Click anywhere on a row to open its full details. Names can be edited, type over "Caller" once you know who it was. The faint gray dollar amounts are placeholder estimates Dan filled in, not real quotes. Type over any of them with the actual value once you have it. Use the Notes button on a row to log follow-up (calls, texts, appointments), kept separate from the details.</p>
+    <p class="note note-white">Click anywhere on a row to open its full details. Names can be edited, type over "Caller" once you know who it was. Enter what a job was (or would have been) worth in the value box when you know it. Use the Notes button on a row to log follow-up (calls, texts, appointments), kept separate from the details.</p>
     <div class="card">
       <table id="gaTable">
         <tr><th>#</th><th>Date</th><th>Name</th><th>Contact</th><th>What they wanted</th><th>Status</th><th>VPRC est value $</th></tr>
@@ -405,7 +405,7 @@ function valueInput(lead) {
   const wrap = document.createElement("div"); wrap.className = "val-wrap"; wrap.id = "val-" + lead.id;
   const inp = document.createElement("input");
   inp.className = "val"; inp.type = "text"; inp.inputMode = "numeric";
-  inp.placeholder = lead.estMid ? "est " + money(lead.estMid) : "$";
+  inp.placeholder = "$";
   const s = get(lead.id); if (s.value !== undefined) inp.value = s.value;
   const tag = document.createElement("div");
   const setTag = () => { const who = editorOf(lead.id, "value"); tag.className = byTagClass(who); tag.textContent = who ? "by " + who : ""; };
