@@ -1,0 +1,7 @@
+# Wins
+
+- **#1 Rankings Surged to 27**, Position-one keyword count grew to 27 (<strong style="color: #34C759;">+17.4% MoM</strong>), the strongest positive ranking signal of the month and evidence that site authority is consolidating on high-value terms.
+- **Five Keywords Gained 67-81 Positions**, "Residential roof replacement near me" (position 99 to 18), "instant roof estimate" (79.6 to 11), "insulated vinyl siding near me" (81 to 13), "residential roof leak repair" (77 to 9), and "skylight repair near me" (73.5 to 6) all made dramatic page-one entries in a single month.
+- **17 Clean Leads with Zero Spam**, The site generated 17 legitimate form submissions with 0 spam and only 1 duplicate, including 7 roof replacements and 5 siding jobs, demonstrating strong conversion quality from organic traffic.
+- **AI Visibility Reach at 53%**, Valley Peak Roofing was mentioned on at least one AI platform in 108 of 204 tested prompts, with Perplexity leading at a 34% mention rate, establishing a measurable early-mover advantage in AI search.
+- **Siding Lead Volume Validates Content Investment**, 5 siding leads this month, coinciding with "insulated vinyl siding near me" jumping 68 positions, confirms that siding content is generating real business outcomes and warrants further expansion.
