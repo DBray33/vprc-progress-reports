@@ -61,6 +61,10 @@ function loginPage(next, error) {
 }
 
 export default async (request, context) => {
+  // TEMP (2026-07-23): password gate DISABLED for Manus research crawl of the
+  // June report. To RE-ENABLE, delete the next line.
+  return context.next();
+
   const url = new URL(request.url);
 
   // Already authenticated?
