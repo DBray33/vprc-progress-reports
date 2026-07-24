@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-24T15:37:03.209Z",
+  "generated_at": "2026-07-24T15:48:12.906Z",
   "property": {
     "id": "valley-peak-roofing",
     "name": "Valley Peak Roofing Co.",
@@ -4169,6 +4169,256 @@
         "aeo",
         "blog",
         "2026-07"
+      ]
+    },
+    {
+      "id": "ice-dam-blog-post-rewrite-title-meta-to--2026-07",
+      "slug": "ice-dam-blog-post-rewrite-title-meta-to-capture-clicks-from-position-10-1",
+      "title": "Ice dam blog post: rewrite title/meta to capture clicks from position 10.1",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-07",
+      "sourceReport": "june-2026.html",
+      "sourceReportLabel": "June 2026 Report",
+      "sourceReportAnchor": "task-ice-dam-blog-post-rewrite-title-meta-to-capture-clicks-from-position-10-1",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-07",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-07",
+          "status": "completed",
+          "date": "2026-07-24",
+          "note": "Full content refresh: new 51-char title 'Ice Dams on Your Roof: Warning Signs and What to Do', evergreen reframe (summer as prep season), all dollar figures stripped, 5-question FAQ with schema, stale HowTo schema removed."
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/ice-dam-prevention-roof-leaks-pennsylvania",
+          "label": "Ice dam post"
+        }
+      ],
+      "summary": null,
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-06",
+          "clicks": 0,
+          "impressions": 4381,
+          "position": 10.14,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "2026-07",
+        "july-execution"
+      ]
+    },
+    {
+      "id": "gutter-maintenance-page-fix-title-trunca-2026-07",
+      "slug": "gutter-maintenance-page-fix-title-truncation-rewrite-meta-to-compete-for-28-641-impressions",
+      "title": "Gutter page: fix title truncation, rewrite meta to compete for 28,641 impressions",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-07",
+      "sourceReport": "june-2026.html",
+      "sourceReportLabel": "June 2026 Report",
+      "sourceReportAnchor": "task-gutter-maintenance-page-fix-title-truncation-rewrite-meta-to-compete-for-28-641-impressions",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-07",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-07",
+          "status": "completed",
+          "date": "2026-07-24",
+          "note": "Retitled 'Gutter Repair & Installation in the Lehigh Valley' (49 chars, was 76 and truncating), H1 rewritten, gutter replacement added to a repair H2, four repair FAQs with FAQPage schema, pricing stripped, free roof inspection made the primary CTA. Dedicated repair page deliberately rejected: one consolidated page."
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/gutter-maintenance-installation",
+          "label": "Gutter page"
+        }
+      ],
+      "summary": null,
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-06",
+          "clicks": 4,
+          "impressions": 28641,
+          "position": 37.05,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "2026-07",
+        "july-execution"
+      ]
+    },
+    {
+      "id": "budget-roof-cost-page-restructure-conten-2026-07",
+      "slug": "budget-roof-cost-page-restructure-content-to-win-featured-snippets-for-roof-replacement-cost-queries",
+      "title": "Budget roof cost page: restructure content to win featured snippets",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-07",
+      "sourceReport": "june-2026.html",
+      "sourceReportLabel": "June 2026 Report",
+      "sourceReportAnchor": "task-budget-roof-cost-page-restructure-content-to-win-featured-snippets-for-roof-replacement-cost-queries",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-07",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-07",
+          "status": "completed",
+          "date": "2026-07-24",
+          "note": "New 55-char title, 48-word direct-answer paragraph under the H1, seven cost factors restructured as a scannable 3-column table, FAQPage schema on the existing FAQ, every dollar figure removed (site is now fully price-free)."
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/budget-roof-cost",
+          "label": "Budget roof cost"
+        }
+      ],
+      "summary": null,
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-06",
+          "clicks": 0,
+          "impressions": 2035,
+          "position": 37.09,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "2026-07",
+        "july-execution"
+      ]
+    },
+    {
+      "id": "build-an-internal-linking-network-connec-2026-07",
+      "slug": "build-an-internal-linking-network-connecting-service-pages-location-pages-blog-posts",
+      "title": "Build an internal linking network connecting service pages, location pages, blog posts",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-07",
+      "sourceReport": "june-2026.html",
+      "sourceReportLabel": "June 2026 Report",
+      "sourceReportAnchor": "task-build-an-internal-linking-network-connecting-service-pages-location-pages-blog-posts",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-07",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-07",
+          "status": "completed",
+          "date": "2026-07-24",
+          "note": "Twelve-placement pass: Easton page and storm/hail post cross-linked both directions, hail-damage-steps and Allentown storm posts link the June storm/hail post, ice dam post links gutter and financing pages, skylight page now linked from relevant blog posts, new Easton blog post wired into the Easton cluster. Neutral anchor text throughout."
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/",
+          "label": "Site-wide"
+        }
+      ],
+      "summary": null,
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-06",
+          "clicks": 0,
+          "impressions": 53,
+          "position": 2.7,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "2026-07",
+        "july-execution"
+      ]
+    },
+    {
+      "id": "winter-siding-blog-post-remove-stale-sea-2026-07",
+      "slug": "winter-siding-blog-post-remove-stale-seasonal-references-fix-title-truncation-and-reframe-for-year-round-value",
+      "title": "Winter siding blog post: remove stale seasonal references, reframe for year-round value",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-07",
+      "sourceReport": "june-2026.html",
+      "sourceReportLabel": "June 2026 Report",
+      "sourceReportAnchor": "task-winter-siding-blog-post-remove-stale-seasonal-references-fix-title-truncation-and-reframe-for-year-round-value",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "month": "2026-07",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        },
+        {
+          "month": "2026-07",
+          "status": "completed",
+          "date": "2026-07-24",
+          "note": "Full refresh: new 54-char title 'When to Install Siding in the Lehigh Valley, by Season', restructured as a four-season timing guide with a season-by-season table (VSI and James Hardie manual citations), winter content kept as one section, pricing-discount claims removed, FAQ block added."
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/winter-siding-installation-lehigh-valley",
+          "label": "Winter siding post"
+        }
+      ],
+      "summary": null,
+      "result": null,
+      "metricSnapshots": [
+        {
+          "month": "2026-06",
+          "clicks": 0,
+          "impressions": 2093,
+          "position": 8.38,
+          "source": "GSC",
+          "targetCount": 1
+        }
+      ],
+      "tags": [
+        "2026-07",
+        "july-execution"
       ]
     }
   ]
