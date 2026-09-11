@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "catalog_month": "2026-09",
+  "source_report": "august-2026.html",
+  "generated_at": "2026-09-08T23:02:47.429Z",
+  "auto_generated": true,
+  "tasks": [
+    {
+      "id": "homepage-two-urls-in-search-console-point-business-profile-link-at-canonical-2026-09",
+      "slug": "homepage-two-urls-in-search-console-point-business-profile-link-at-canonical",
+      "title": "Homepage reports as two URLs in Search Console: point the Business Profile link at the canonical URL",
+      "priority": 1,
+      "priorityGroup": "Critical Zero-Click Pages at Positions 1-2",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-homepage-two-urls-in-search-console-point-business-profile-link-at-canonical",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "site",
+      "targets": [],
+      "summary": "No ranking change expected. This is a reporting fix: it stops the homepage from looking like a position-19 page and makes month-to-month homepage comparisons clean. It costs one profile edit.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "roof-financing-options-page-restructure-for-zero-click-query-capture-on-roofing-payment-plans-2026-09",
+      "slug": "roof-financing-options-page-restructure-for-zero-click-query-capture-on-roofing-payment-plans",
+      "title": "Roof Financing Options page — restructure for zero-click query capture on 'roofing payment plans'",
+      "priority": 1,
+      "priorityGroup": "Critical Zero-Click Pages at Positions 1-2",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-roof-financing-options-page-restructure-for-zero-click-query-capture-on-roofing-payment-plans",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/roof-financing-options",
+          "label": "/roof-financing-options"
+        }
+      ],
+      "summary": "A featured snippet on 'roofing payment plans' at position 12 could push the page into the top 5 and recover an estimated 20-40 clicks per month from this query alone, with compounding gains across related financing queries.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "wind-gap-pa-page-add-local-proof-content-to-convert-impressions-at-position-14-2026-09",
+      "slug": "wind-gap-pa-page-add-local-proof-content-to-convert-impressions-at-position-14",
+      "title": "Wind Gap PA page — add local proof content to convert impressions at position 14",
+      "priority": 2,
+      "priorityGroup": "High-Impression Zero-Click Location Pages",
+      "category": "content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-wind-gap-pa-page-add-local-proof-content-to-convert-impressions-at-position-14",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-wind-gap-pa",
+          "label": "/service-areas/roofing-wind-gap-pa"
+        }
+      ],
+      "summary": "Improving the snippet and adding unique local content for a page already averaging position 14 across 1,052 impressions should generate an estimated 25-50 clicks per month if CTR rises to the 2.5-4% range typical for position 8-12 after content improvements support a ranking lift.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "easton-pa-and-bethlehem-pa-location-pages-rewrite-snippets-to-earn-first-clicks-2026-09",
+      "slug": "easton-pa-and-bethlehem-pa-location-pages-rewrite-snippets-to-earn-first-clicks",
+      "title": "Easton PA and Bethlehem PA location pages — rewrite snippets to earn first clicks",
+      "priority": 2,
+      "priorityGroup": "High-Impression Zero-Click Location Pages",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-easton-pa-and-bethlehem-pa-location-pages-rewrite-snippets-to-earn-first-clicks",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "site",
+      "targets": [],
+      "summary": "Better-optimized snippets will not move positions on their own but will improve click-through once these pages reach page 2 through ongoing content and authority work, converting a portion of the existing 2,000-plus combined monthly impressions into measurable traffic.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "fix-schema-validation-errors-across-all-9-audited-service-and-blog-pages-2026-09",
+      "slug": "fix-schema-validation-errors-across-all-9-audited-service-and-blog-pages",
+      "title": "Fix schema validation errors across all 9 audited service and blog pages",
+      "priority": 2,
+      "priorityGroup": "High-Impression Zero-Click Location Pages",
+      "category": "content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-fix-schema-validation-errors-across-all-9-audited-service-and-blog-pages",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page-list",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/",
+          "label": "/"
+        },
+        {
+          "type": "page",
+          "url": "/roof-financing-options",
+          "label": "/roof-financing-options"
+        },
+        {
+          "type": "page",
+          "url": "/blog/black-streaks-on-roof-causes",
+          "label": "/blog/black-streaks-on-roof-causes"
+        },
+        {
+          "type": "page",
+          "url": "/blog/ice-dam-prevention-roof-leaks-pennsylvania",
+          "label": "/blog/ice-dam-prevention-roof-leaks-pennsylvania"
+        },
+        {
+          "type": "page",
+          "url": "/design-your-roof",
+          "label": "/design-your-roof"
+        },
+        {
+          "type": "page",
+          "url": "/blog/berks-county-winter-snow-loads",
+          "label": "/blog/berks-county-winter-snow-loads"
+        },
+        {
+          "type": "page",
+          "url": "/residential-roof-repairs",
+          "label": "/residential-roof-repairs"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-easton-pa",
+          "label": "/service-areas/roofing-easton-pa"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-bethlehem-pa",
+          "label": "/service-areas/roofing-bethlehem-pa"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-wind-gap-pa",
+          "label": "/service-areas/roofing-wind-gap-pa"
+        },
+        {
+          "type": "page",
+          "url": "/siding-installation",
+          "label": "/siding-installation"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-reading-pa",
+          "label": "/service-areas/roofing-reading-pa"
+        },
+        {
+          "type": "page",
+          "url": "/roof-replacement-installation",
+          "label": "/roof-replacement-installation"
+        }
+      ],
+      "summary": "Fixing schema across these 13 pages opens the door to rich results on high-impression pages. Review stars on the homepage alone (34,000-plus combined impressions) could lift CTR by 1-3 percentage points, representing an estimated 340-1,000 additional clicks per month.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "publish-how-to-prepare-your-roof-for-winter-in-the-lehigh-valley-september-seasonal-post-2026-09",
+      "slug": "publish-how-to-prepare-your-roof-for-winter-in-the-lehigh-valley-september-seasonal-post",
+      "title": "Publish: 'How to Prepare Your Roof for Winter in the Lehigh Valley' — September seasonal post",
+      "priority": 3,
+      "priorityGroup": "Content Gaps and Seasonal Opportunity",
+      "category": "content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-publish-how-to-prepare-your-roof-for-winter-in-the-lehigh-valley-september-seasonal-post",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "site",
+      "targets": [],
+      "summary": "A well-structured fall prep guide targeting Lehigh Valley homeowners can rank for multiple long-tail queries in the 'roof winterization', 'prepare roof for winter', and 'fall roof inspection' clusters, generating organic traffic through November and recurring seasonal traffic in future years.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "storm-and-hail-damage-guide-add-insurance-claim-walkthrough-and-faq-to-boost-position-21-9-2026-09",
+      "slug": "storm-and-hail-damage-guide-add-insurance-claim-walkthrough-and-faq-to-boost-position-21-9",
+      "title": "Storm and Hail Damage Guide — add insurance claim walkthrough and FAQ to boost position 21.9",
+      "priority": 3,
+      "priorityGroup": "Content Gaps and Seasonal Opportunity",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-storm-and-hail-damage-guide-add-insurance-claim-walkthrough-and-faq-to-boost-position-21-9",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/storm-and-hail-roof-damage-guide",
+          "label": "/blog/storm-and-hail-roof-damage-guide"
+        }
+      ],
+      "summary": "Adding 600-900 words of structured content and FAQ markup to a page already averaging position 21.9 across 907 impressions could push it into the 12-18 range, which is where clicks begin to appear and where featured snippet eligibility improves significantly.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "commercial-roofing-page-expand-thin-content-to-address-921-impressions-stuck-at-position-24-9-2026-09",
+      "slug": "commercial-roofing-page-expand-thin-content-to-address-921-impressions-stuck-at-position-24-9",
+      "title": "Commercial Roofing page — expand thin content to address 921 impressions stuck at position 24.9",
+      "priority": 3,
+      "priorityGroup": "Content Gaps and Seasonal Opportunity",
+      "category": "content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-commercial-roofing-page-expand-thin-content-to-address-921-impressions-stuck-at-position-24-9",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/commercial-roofing",
+          "label": "/commercial-roofing"
+        }
+      ],
+      "summary": "Adding 700-1,000 words of targeted commercial roofing content to a page already indexed at position 24.9 with nearly 1,000 monthly impressions is a direct path to reaching page 2 and eventually page 1, where commercial leads with high contract values can be captured.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "build-internal-link-network-from-blog-posts-to-commercial-and-financing-pages-2026-09",
+      "slug": "build-internal-link-network-from-blog-posts-to-commercial-and-financing-pages",
+      "title": "Build internal link network from blog posts to commercial and financing pages",
+      "priority": 4,
+      "priorityGroup": "Internal Linking and Authority Distribution",
+      "category": "content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-build-internal-link-network-from-blog-posts-to-commercial-and-financing-pages",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page-list",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/commercial-roofing",
+          "label": "/commercial-roofing"
+        },
+        {
+          "type": "page",
+          "url": "/roof-financing-options",
+          "label": "/roof-financing-options"
+        },
+        {
+          "type": "page",
+          "url": "/blog/storm-and-hail-roof-damage-guide",
+          "label": "/blog/storm-and-hail-roof-damage-guide"
+        }
+      ],
+      "summary": "Adding 6-8 contextual internal links from existing high-impression blog and service pages to the commercial and financing pages can improve Google's crawl frequency and topical authority for those pages, supporting a 3-8 position improvement over 6-10 weeks.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "homepage-compress-images-and-reduce-page-size-above-1mb-flagged-in-audit-2026-09",
+      "slug": "homepage-compress-images-and-reduce-page-size-above-1mb-flagged-in-audit",
+      "title": "Homepage — compress images and reduce page size above 1MB flagged in audit",
+      "priority": 5,
+      "priorityGroup": "Homepage Performance and Low Text Ratio Fix",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-homepage-compress-images-and-reduce-page-size-above-1mb-flagged-in-audit",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Created from monthly SEO report analysis"
+        }
+      ],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/",
+          "label": "/"
+        }
+      ],
+      "summary": "Reducing homepage load size to under 500KB by converting images to WebP and deferring non-critical scripts can improve Core Web Vitals scores, reduce bounce rate on mobile, and support the homepage's rankings for branded and local queries.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "source:report-plan"
+      ]
+    },
+    {
+      "id": "title-tag-audit-2026-09",
+      "slug": "title-tag-audit",
+      "title": "Rewrite title tags + meta descriptions on the 5 top-20 pages getting zero clicks",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-title-tag-audit",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-08",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        },
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "page-list",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-wind-gap-pa",
+          "label": "/service-areas/roofing-wind-gap-pa"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-whitehall-pa",
+          "label": "/service-areas/roofing-whitehall-pa"
+        },
+        {
+          "type": "page",
+          "url": "/blog/winter-siding-installation-lehigh-valley",
+          "label": "/blog/winter-siding-installation-lehigh-valley"
+        },
+        {
+          "type": "page",
+          "url": "/our-blog",
+          "label": "/our-blog"
+        },
+        {
+          "type": "page",
+          "url": "/service-areas/roofing-hamburg-pa",
+          "label": "/service-areas/roofing-hamburg-pa"
+        }
+      ],
+      "summary": "Even a 0.5pp CTR improvement on the 1600 dormant impressions = a meaningful chunk of recovered clicks per month, with no new rankings required.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "ctr",
+        "title-tags",
+        "source:carry-forward"
+      ]
+    },
+    {
+      "id": "gutter-cluster-recovery-2026-09",
+      "slug": "gutter-cluster-recovery",
+      "title": "Continue gutter cluster recovery — content + on-page improvements",
+      "priority": 2,
+      "priorityGroup": "Gutter Cluster Recovery",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-gutter-cluster-recovery",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-08",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        },
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "keyword-cluster",
+      "targets": [
+        {
+          "type": "keyword",
+          "query": "gutter repair"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter repair near me"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter replacement"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter installation near me"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter installation services"
+        },
+        {
+          "type": "keyword",
+          "query": "gutter replacement near me"
+        }
+      ],
+      "summary": "Gutter cluster still generating 17,369 monthly impressions with 1 clicks. Position improvements + content depth could unlock significant traffic.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "content",
+        "gutter",
+        "source:carry-forward"
+      ]
+    },
+    {
+      "id": "directory-citations-2026-09",
+      "slug": "directory-citations",
+      "title": "Build directory presence on Yelp, Angi, BBB, HomeAdvisor, Houzz",
+      "priority": 4,
+      "priorityGroup": "AI Visibility & Authority Building",
+      "category": "manual-decisions",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-directory-citations",
+      "status": "in_progress",
+      "statusHistory": [
+        {
+          "month": "2026-08",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        },
+        {
+          "month": "2026-08",
+          "status": "in_progress",
+          "date": "2026-08-28",
+          "note": "Yelp business profile rebuilt Aug 27-28: services list, hours, Bethlehem address, description, photos, messaging on. Remaining: Angi, BBB, HomeAdvisor, Houzz (handled outside the report)."
+        },
+        {
+          "month": "2026-09",
+          "status": "in_progress",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "external",
+          "label": "Yelp profile"
+        },
+        {
+          "type": "external",
+          "label": "Angi listing"
+        },
+        {
+          "type": "external",
+          "label": "BBB accreditation"
+        },
+        {
+          "type": "external",
+          "label": "HomeAdvisor pro page"
+        },
+        {
+          "type": "external",
+          "label": "Houzz professional profile"
+        }
+      ],
+      "summary": "Closing the ChatGPT visibility gap requires presence on third-party directories. Ongoing manual outreach effort.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "citations",
+        "ai-visibility",
+        "directories",
+        "ongoing",
+        "source:carry-forward"
+      ]
+    },
+    {
+      "id": "keyword-focus-list-2026-09",
+      "slug": "keyword-focus-list",
+      "title": "Focus list: 12 high-potential keywords to push this month",
+      "priority": 1,
+      "priorityGroup": "Recover Click Volume",
+      "category": "code-content",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-keyword-focus-list",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-08",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        },
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "keyword-cluster",
+      "targets": [
+        {
+          "type": "keyword",
+          "query": "roofing companies"
+        },
+        {
+          "type": "keyword",
+          "query": "roof replacement contractors"
+        },
+        {
+          "type": "keyword",
+          "query": "roofers"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing contractor"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing contractors near me"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing companies near me"
+        },
+        {
+          "type": "keyword",
+          "query": "shingle roofers"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing business near me"
+        },
+        {
+          "type": "keyword",
+          "query": "roof replacement near me"
+        },
+        {
+          "type": "keyword",
+          "query": "metal roofers"
+        },
+        {
+          "type": "keyword",
+          "query": "roof repair"
+        },
+        {
+          "type": "keyword",
+          "query": "roofing payment plans"
+        }
+      ],
+      "summary": "12 specific keywords picked for highest leverage — each has a concrete action (page rewrite, GBP post, portfolio feature, internal linking, dedicated landing page). Should produce measurable click gains within 30–45 days.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "keyword-focus",
+        "ctr",
+        "gbp",
+        "content",
+        "internal-links",
+        "source:carry-forward"
+      ],
+      "recommended": [
+        [
+          "roofing companies (2070 impr · pos 1.7 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ],
+        [
+          "roof replacement contractors (1957 impr · pos 1.1 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roofers (1931 impr · pos 1.2 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roofing contractor (1904 impr · pos 1.5 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roofing contractors near me (1810 impr · pos 1.8 · 1 click)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "roofing companies near me (1742 impr · pos 2.5 · 2 clicks)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "shingle roofers (1345 impr · pos 1.1 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roofing business near me (1316 impr · pos 1.1 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roof replacement near me (1201 impr · pos 2.3 · 0 clicks)",
+          "'Near me' query — weights GBP signals heavily. Strengthen GBP with weekly geo-tagged posts + review velocity. Rewrite homepage/service-page title and meta to better match generic-near-me intent."
+        ],
+        [
+          "metal roofers (848 impr · pos 1.2 · 0 clicks)",
+          "SERP-feature anomaly — auditing the SERP for what's taking the click. Ensure LocalBusiness + Service schema fires on the relevant page. Likely needs a focused landing page targeting the query verbatim."
+        ],
+        [
+          "roof repair (470 impr · pos 8.3 · 0 clicks)",
+          "Page-1 ranking with zero clicks — pure CTR problem. Title and meta description rewrite on the ranking page. Add FAQ schema if the query is question-style."
+        ],
+        [
+          "roofing payment plans (852 impr · pos 12.7 · 0 clicks)",
+          "Striking-distance keyword. Add internal links to the ranking page with this query as anchor text. Expand on-page content depth around the keyword's intent."
+        ]
+      ]
+    },
+    {
+      "id": "backlink-program-2026-09",
+      "slug": "backlink-program",
+      "title": "Backlink building program — target 10–20 new backlinks per month",
+      "priority": 4,
+      "priorityGroup": "AI Visibility & Authority Building",
+      "category": "manual-decisions",
+      "createdMonth": "2026-09",
+      "sourceReport": "august-2026.html",
+      "sourceReportLabel": "August 2026 Report",
+      "sourceReportAnchor": "task-backlink-program",
+      "status": "not_started",
+      "statusHistory": [
+        {
+          "month": "2026-08",
+          "status": "not_started",
+          "note": "Auto-generated by rule engine"
+        },
+        {
+          "month": "2026-09",
+          "status": "not_started",
+          "note": "Carried forward from previous catalog"
+        }
+      ],
+      "targetType": "site-wide",
+      "targets": [
+        {
+          "type": "metric",
+          "label": "Referring domains (Moz)",
+          "target": ">= 100"
+        },
+        {
+          "type": "metric",
+          "label": "Domain Authority (Moz)",
+          "target": ">= 25"
+        }
+      ],
+      "summary": "DA growth requires consistent link acquisition. Ongoing monthly program.",
+      "result": null,
+      "metricSnapshots": [],
+      "tags": [
+        "backlinks",
+        "authority",
+        "ongoing",
+        "source:carry-forward"
+      ]
+    }
+  ]
+}
