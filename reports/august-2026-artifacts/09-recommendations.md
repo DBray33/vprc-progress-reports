@@ -20,9 +20,9 @@
 
 **Priority:** High
 
-## 3. Publish Two September Content Pieces Targeting Pre-Winter Buyer Intent Before the Season Peaks
+## 3. Refresh the Existing Pre-Winter Posts in September Before the Season Peaks
 
-**Problem:** Ranked keywords grew only 0.7% MoM to 290, organic sessions grew approximately 19.9% MoM to 356, and the site has no confirmed content targeting the fall preparation and pre-winter inspection queries that roofing SEO research identifies as the highest-converting September topics.
+**Problem:** Ranked keywords grew only 0.7% MoM to 290, organic sessions grew approximately 19.9% MoM to 356, and the site's existing pre-winter posts rank on pages 2 to 3 heading into the fall preparation and pre-winter inspection season that roofing SEO research identifies as the highest-converting September topics.
 
 **Action:** 
 

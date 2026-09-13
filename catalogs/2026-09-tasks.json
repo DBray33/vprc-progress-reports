@@ -2,7 +2,7 @@
   "schema_version": 1,
   "catalog_month": "2026-09",
   "source_report": "august-2026.html",
-  "generated_at": "2026-09-08T23:02:47.429Z",
+  "generated_at": "2026-09-11T19:44:30.961Z",
   "auto_generated": true,
   "tasks": [
     {
@@ -224,16 +224,16 @@
       ]
     },
     {
-      "id": "publish-how-to-prepare-your-roof-for-winter-in-the-lehigh-valley-september-seasonal-post-2026-09",
-      "slug": "publish-how-to-prepare-your-roof-for-winter-in-the-lehigh-valley-september-seasonal-post",
-      "title": "Publish: 'How to Prepare Your Roof for Winter in the Lehigh Valley' — September seasonal post",
+      "id": "refresh-winter-roof-prep-guide-with-fall-inspection-checklist-2026-09",
+      "slug": "refresh-winter-roof-prep-guide-with-fall-inspection-checklist",
+      "title": "Refresh: Winter Roof Prep Guide, with a built-in fall inspection checklist (September seasonal post)",
       "priority": 3,
       "priorityGroup": "Content Gaps and Seasonal Opportunity",
-      "category": "content",
+      "category": "code-content",
       "createdMonth": "2026-09",
       "sourceReport": "august-2026.html",
       "sourceReportLabel": "August 2026 Report",
-      "sourceReportAnchor": "task-publish-how-to-prepare-your-roof-for-winter-in-the-lehigh-valley-september-seasonal-post",
+      "sourceReportAnchor": "task-refresh-winter-roof-prep-guide-with-fall-inspection-checklist",
       "status": "not_started",
       "statusHistory": [
         {
@@ -242,8 +242,14 @@
           "note": "Created from monthly SEO report analysis"
         }
       ],
-      "targetType": "site",
-      "targets": [],
+      "targetType": "page",
+      "targets": [
+        {
+          "type": "page",
+          "url": "/blog/winter-roof-preparation-pennsylvania-guide",
+          "label": "/blog/winter-roof-preparation-pennsylvania-guide"
+        }
+      ],
       "summary": "A well-structured fall prep guide targeting Lehigh Valley homeowners can rank for multiple long-tail queries in the 'roof winterization', 'prepare roof for winter', and 'fall roof inspection' clusters, generating organic traffic through November and recurring seasonal traffic in future years.",
       "result": null,
       "metricSnapshots": [],
