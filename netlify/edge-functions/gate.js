@@ -60,16 +60,73 @@ function loginPage(next, error) {
   });
 }
 
+// KWS-only content (Dan, 2026-09-13): the client login must not see the
+// "Progress from Last Month's Tasks" banner or the Adjustments Dashboard.
+// Templates wrap those in <!--kws-only--> ... <!--/kws-only-->. Reports
+// rendered before those markers existed are handled by the two fallbacks:
+// the .post-exec-banners container and any link to the dashboard.
+function removeElement(html, tagStart, tag) {
+  const open = new RegExp("<" + tag + "\\b", "gi");
+  const close = new RegExp("</" + tag + "\\s*>", "gi");
+  let i = html.indexOf(">", tagStart);
+  if (i === -1) return html;
+  let depth = 1;
+  let pos = i + 1;
+  while (depth > 0 && pos < html.length) {
+    open.lastIndex = pos;
+    close.lastIndex = pos;
+    const o = open.exec(html);
+    const c = close.exec(html);
+    if (!c) return html;
+    if (o && o.index < c.index) {
+      depth++;
+      pos = o.index + 1;
+    } else {
+      depth--;
+      pos = c.index + c[0].length;
+    }
+  }
+  return html.slice(0, tagStart) + html.slice(pos);
+}
+
+function stripKwsOnly(html) {
+  html = html.replace(/<!--kws-only-->[\s\S]*?<!--\/kws-only-->/g, "");
+  let idx;
+  while ((idx = html.search(/<div[^>]*class="[^"]*post-exec-banners[^"]*"/i)) !== -1) {
+    const next = removeElement(html, idx, "div");
+    if (next === html) break;
+    html = next;
+  }
+  html = html.replace(
+    /<a\b[^>]*href="[^"]*adjustments-dashboard\.html"[\s\S]*?<\/a>/gi,
+    "",
+  );
+  return html;
+}
+
 export default async (request, context) => {
   const url = new URL(request.url);
 
   // Already authenticated?
   const cookies = request.headers.get("cookie") || "";
-  const authed = cookies.split(";").some((c) => {
+  let token = null;
+  for (const c of cookies.split(";")) {
     const t = c.trim();
-    return t.startsWith(COOKIE + "=") && VALID_TOKENS.includes(t.slice(COOKIE.length + 1));
-  });
-  if (authed) return context.next();
+    if (t.startsWith(COOKIE + "=")) {
+      const v = t.slice(COOKIE.length + 1);
+      if (VALID_TOKENS.includes(v)) token = v;
+    }
+  }
+  if (token) {
+    const res = await context.next();
+    if (token === USERS[PASS_KWS].token) return res;
+    const ct = res.headers.get("content-type") || "";
+    if (!ct.includes("text/html")) return res;
+    const html = stripKwsOnly(await res.text());
+    const headers = new Headers(res.headers);
+    headers.delete("content-length");
+    return new Response(html, { status: res.status, headers });
+  }
 
   // Login submission
   if (request.method === "POST" && url.pathname === "/__gate") {
