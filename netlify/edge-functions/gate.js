@@ -101,6 +101,19 @@ function stripKwsOnly(html) {
     /<a\b[^>]*href="[^"]*adjustments-dashboard\.html"[\s\S]*?<\/a>/gi,
     "",
   );
+  // Fix Results is KWS-only too (Dan, 2026-09-13): drop its sidebar link and
+  // its page/section, in both the v2 pages and older single-page reports.
+  html = html.replace(
+    /<a\b[^>]*(?:href="#page-results"|data-page-link="results")[\s\S]*?<\/a>/gi,
+    "",
+  );
+  let p;
+  while ((p = html.search(/<(?:div|section)[^>]*id="(?:page-results|[a-z]+-fixes-complete)"/i)) !== -1) {
+    const tag = /^<section/i.test(html.slice(p, p + 8)) ? "section" : "div";
+    const next = removeElement(html, p, tag);
+    if (next === html) break;
+    html = next;
+  }
   return html;
 }
 
